@@ -90,12 +90,72 @@ width="px"
 />
 ]
 
+<<<<<<< HEAD
 
 ---
 ![be smart](smart.gif)
 
 
 ---
+=======
+---
+class: top left  
+![](reskilling.gif)
+
+
+---
+![be smart](smart.gif)
+---
+
+![Reskill](reskill.gif)
+
+---
+
+![Future](Future.gif)
+
+
+---
+class: top left  
+
+# Skill-gap
+
+> ##   .pink[Gone are the days of a straight-line path through college to work to promotion to career to retirement.]
+
+.pull-left[
+## Upskilling  
+### .pink[Upskilling is deepening your knowledge and skills in your current domain.]  
+
+]
+
+--
+.pull-right[
+## Reskilling
+### .pink[Reskilling is extending your knowledge and skills to new domains.]
+]
+---
+class: left middle
+
+> # .big[“The ability to learn faster than your competitors may be the only sustainable competitive advantage.”] 
+
+.footnote[Peter Senge, ‘The Fifth Discipline’]
+
+---
+class: top left
+background-image: url(jobs.jpg)
+background-size: cover
+
+# ABL : Always Be Learning.
+
+<span role="img" aria-label="Preparing for jobs which not exist yet"></span> 
+
+---
+class: left middle
+
+> # .big[“The ability to learn faster than your competitors may be the only sustainable competitive advantage.”] 
+
+.footnote[Peter Senge, ‘The Fifth Discipline’]
+---
+>>>>>>> ee49410e03d859997ab2cbffb69ec053e3ac9bda
 class: top left
 > ## .big[Large trade deficit after having current account surplus of $424 million in July last year. Pakistan has gone through this boom and bust cycles many times before: an import-driven boom, balance of payments crisis, International Monetary Fund (IMF) bailout, stabilisation, a period of growth and then back to a crisis. This time is no different.]
 ---
@@ -260,6 +320,148 @@ Cement, Textile, Fertilizers, Cars…. (all domestic consumption, no export)
  > Why Nations Fail: Daren Acemoglu and James A. Robinson
  
 ---
+<<<<<<< HEAD
+=======
+## What to do ?
+
+ - Pakistan's economic and export problems are deep and structural 
+ - Focusing on fixing twin deficit (CAD & FD) is misplaced. Addressing symptoms will not cure the disease
+ - Build up domestic capacity to innovate, to organize and to manage  - An Economist Job: not to tell what to do and what not 
+
+ - But tell cost of doing business as usual vs develop your software and progress 
+
+ - Talent will not stay 
+
+ - Production over Commerce 
+
+ - Our full focus on meeting dollar demand is misplaced
+
+ - Social contract goods  
+
+ - Cities have key role in provision of social contract goods 
+
+--
+- Most of economic thinking:
+“How can living-standards be improved for most of humanity” 
+
+- Answers vary while Question remain same 
+- Eternal struggle for mankind 
+Preachers, utopians philosophers and many others: 
+Everyone defends one’s utopia that people lot can be improved if follow their description 
+- Dev. Community: prey to descriptive approach 
+- Experts: pretend to have solutions 
+- We are all told :  Implement, Implement … 
+- Monitoring mechanisms: MDGs, SDGs 
+- 70 years of experts dev.policy, aid funding and many consultant, plan… 
+- Development has eluded a large number of countries : Why is that? 
+---
+- Donors and Experts : Easy answers 
+- Prescriptions are not implemented 
+- Lack of political will : If success, they celebrate otherwise blame 
+- Best practices 
+- How can same policies for all countries 
+- Practices well known ,govt implementing agency 
+- Approach : Top-down (All solutions from foreign experts)
+Land-cruisers, consultants … results are the same
+
+---
+## What is wrong with this model/approach
+
+- Ideological models and experts assume: Society and development: Eng phenomenon 
+- Plan properly and then everyone will live according to the plan and good things will happen 
+
+- Eng: Inert materials 
+
+- Social problems: self-willed, individualistic human beings 
+
+- People: ambitions, plans &desires individually and collectively
+People don’t change because consultant want 
+
+- Most serious economists moved away from this approach 
+---
+- Economy: set of ind and groups decisions 
+ - Bottom-up
+    - Economy: Productivity, products, activity, trade and exchange, transaction among many others 
+    - Even well motivated plans to send children to schools failed
+    - Parents decisions more complex than donors assume
+    - Development not uniform across the countries
+
+ - Local issues, cultures & community, social and human capital plays a critical role 
+ 
+ - Planners try their best even out these difficult often at huge cost with very little success
+
+---
+Revenue Targets missed: More taxes   64 WHT
+
+ - Is starving PSEs and Universities of working capital something to cheer?
+
+ - Complexities of the 21st Century
+
+ - Energy: Lack of professional regularity capacity
+
+ - Rent seeking commitments to IPPs
+
+ - Losses due to structural and poor governance problems
+
+ - Circular debt chokes up the system
+
+---
+
+## Getting the basics right
+
+ - Economy is not rocket science 
+ - Qs” What are the basics? 
+ - Basics: high revenue, high export, high growth, low dollar rupee ER etc with low inflation 
+ - WOW: Simple and easy : Economy is not rocket science 
+ - Wishing all good things is economics and economist is supposed to help governments to do all these good things with magic stick 
+ - 5-Year plans for all Basics
+ 
+---
+- Securing property rights 
+ - Strengthening contracting 
+ - Reducing transaction costs 
+ - Reducing and reforming markets for efficiency 
+ - Removing incentives for rent seeking and putting incentives for entrepreneurship 
+   - For Example : W/o good governance: no wish list will happen as plan after plan failed due to poor governance
+
+> > “All of us have to come out of our comfort zone and encourage discussion and debate”
+
+## Hayek, Change and Complexity
+
+>> It is, perhaps, worth stressing that economic problems arsie always and only in consequences of change. 
+The Use of Knowledge in Society
+---
+
+## Get the growth model
+ - Export led policies help China, SK and others 
+ - Special Economic Zones 
+ - Digitization (Inequality)
+ - Reverse Myopia
+ Build the capacity to play long game where decisions 20 years from now
+ -> Long game: who we are as a nation? 
+ -> Where we want to go?
+ 
+---
+
+## Boosting Domestic Productivity
+ -> Boosting domestic productivity which means raising the capacities and capabilities of your people 
+ -> Our focus : Ask US to do this, ask China for Gawadar/CPEC 
+ -> Not focusing on building domestic institutions, improving domestic capacity 
+ -> Why don't governments focus 
+   - One needs hard work, local thinking, building teams, build institutions 
+   - Hire right competent people
+   - no to nepotism
+  -> Easy not to do any of that 
+  
+  > Learning how to catch a fish...
+  
+ -> Broad conceptual parameters
+   - Education, Health investment for better inputs
+   - Boosting domestic productivity
+   - Agriculture
+
+---
+>>>>>>> ee49410e03d859997ab2cbffb69ec053e3ac9bda
 
 WB reports that South Asia will grow at 3.4 % over the three year period. India will grow at 8.4 % while Pakistan at 3.4 %. Pakistan is lagging behind and clubbed together with Afghanistan where 30-35% people are not ready for vaccination. 
 Bangladesh achieved a lot by boosting its export and even Bhutan did well by attracting tourism. We had long fiscal challenges and even cant affort now to put more burden on people by increasing energy prices. 
@@ -267,7 +469,11 @@ Bangladesh achieved a lot by boosting its export and even Bhutan did well by att
     - Reduction in current account deficit
     - expansion in exports 
 
+<<<<<<< HEAD
 ## CAD --- [cause for concern](https://www.brecorder.com/news/40128736)
+=======
+## CAD --- cause for concern (Anjum Ibrahim brecoder)
+>>>>>>> ee49410e03d859997ab2cbffb69ec053e3ac9bda
 
 ### Major components of current account deficit
 + Trade 
@@ -425,8 +631,12 @@ PTI  2018 : Bit late but loan from some frinds
 PPPP : Power contracts favorable to suppliers
 PMLN : CPEC contracts favorable to suppliers
 PTI : circular debt 1.2 trillion to 2.4 trillion reflecting poor performance
+<<<<<<< HEAD
 PMLN left external financing needs of 9.6% of GDP in 2017-18
 PTI  left external financing needs of 9.5% of GDP in 2021-22
+=======
+
+>>>>>>> ee49410e03d859997ab2cbffb69ec053e3ac9bda
 #### SOE
 > SOE asquired large budgetary injections despite all 3 previous regimes pledged to the IMF for restructure and privatization.
 
@@ -577,6 +787,7 @@ Balance: Government in public investment in certain sectors and come out of non-
 Inflation is consequence of BOP, fiscal deficit
 Stronger Progressive Taxation
 Political uncertainty : itself a result of
+<<<<<<< HEAD
 ---
 class: top left
 # [Growth in imports](https://www.brecorder.com/news/40169472/growth-in-imports)
@@ -737,3 +948,5 @@ The Use of Knowledge in Society
    - Education, Health investment for better inputs
    - Boosting domestic productivity
    - Agriculture
+=======
+>>>>>>> ee49410e03d859997ab2cbffb69ec053e3ac9bda

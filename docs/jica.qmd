@@ -1,0 +1,159 @@
+---
+title: "[Development of Industry and Industrial Policy]{.flow}"
+subtitle: "JICA and School of Sociology"
+author: "Zahid Asghar"
+date: today
+format:
+  revealjs: 
+    theme: [default, custom.css, styles.scss]
+    title-slide-attributes:
+      data-background-image: images/jica_pak.jpg
+      data-background-size: 40%
+      data-background-position: 100% 100%
+editor: visual
+---
+
+
+## [Kawasakinomics]{.flow} 
+
+-   Bottom up approach 
+-   Tough competition : explore the unexplored 
+-   Continuous upgrade : products can be imitated as Korea, China and many others have imitated Japan. e.g Korea in electronic industry
+
+-   Not natural resource but highly trained human capital is main factor for strong industrial base
+
+-   Industrial development is basically a Talent war :  Japan, Singapore, Israel
+
+## Implicit in the oft-repeated Japanese statement, 
+>“We are an island nation with no natural resources,”  
+
+is the understanding that these deficiencies have only served to spur Japan’s competitive innovation.
+
+Strong industrial base must be backed by the strength of the institutions, high quality human capital 
+
+## Domestic demand
+[A nation’s companies gain competitive advantage if domestic buyers are the world’s most sophisticated and demanding buyers for the product or service. Sophisticated, demanding buyers provide a window into advanced customer needs; they pressure companies to meet high standards; they prod them to improve, to innovate, and to upgrade into more advanced segments. As with factor conditions, demand conditions provide advantages by forcing companies to respond to tough challenges.](https://hbr.org/1990/03/the-competitive-advantage-of-nations) 
+-  e.g  Japanese pioneered compact, quiet air-conditioning units powered by energy-saving rotary compressors
+
+
+## Local intense Rivalary is key
+
+![Japanese firms: most intense domestic competion](images/japan_rivalary.png){.r-stretch}
+
+## Pakistan case
+
+Pakistani firms are uncompetitive, although heavily subsidized and protected by the government. In many of the prominent industries in which there is hardly any competition, and government has played a large role in distorting competition.
+
+
+## Policy consistency alone not enough
+
+Pakistan’s auto industry is an obvious example of the failure of import substitution policies. 
+-   First five-year auto development policy 2002: focused on achieving higher localization of cars through deletion programs and increasing the volume of local production to at least 500,000, aiming to achieve economies of scale. 
+-   Currently fourth auto development policy and despite the consistency of policies (high protection and localization), we are far from achieving these aims, as they were in many ways contradictory. 
+
+-   Pakistan has not been able to export a single car, and its auto-part exports at $15 million are not even one 0.3 per cent that of Turkey.
+
+## What is wrong
+
+-   Pakistan economy crashes every once in a while: feature by design
+    -   Very low investment rate
+    -   Fiscal problem: For every USD govt raises in revenue, it has to
+        spend 2.7 USD Income 1000 USD, spending 2700 USD
+    -   Sins: Income and pensions
+    -   If no borrowing, country to shut down
+-   Balance of Payment: X=1000, M=2750 USD 
+
+>   High Import taxes in the name of import substitution doing more damage than good
+
+
+## 
+
+![stagnancy](images/productivity_stagnation.png)
+
+
+
+## Why Export Matters
+
+-   global competitiveness
+
+-   Capacity to innovate and compete with the rest of the world
+
+-   1992: Indian export increased 13 times while Pak only doubles
+
+-   Vietnam : 15 B USD in 2001 and 220 B USD in 2018
+
+-   Export per capital India increased by 6.8 times while BD by 6.2 as
+    compared to Pakistan
+
+    -   Uncompetitiveness as compared to neighboring countries
+
+-   Export : dynamism, technology absorption and adaptation, building
+    reputation, brand names
+
+-   Sports, textile, surgical: no branding
+
+
+-   Reasons: Mangerial skills, organizational skills, skills, skills...
+
+
+
+## Complexity vs Complicated
+Aggregate productivity stagnant or declining : Farms/firms becoming less productive over time
+-   Productivity decline in firms specially in family-owned  
+
+-   Yield has grown but due to intensive use of inputs 
+
+-   On the import side: high duties negatively affected firms' productivity as well as sales and wages 
+
+-   Import duties  from 15% in FY10 to 21.3% in FY20 implying higher cost of importing intermediaries and capital equipment
+
+> Producitivity is key in all economic sectors from the point of view of employment, poverty reduction and export orientation
+
+## Flawed Economic Discourse
+
+Pipedreams: SEZs, Roads, Corridors, Gas pipelines
+
+Stuck: hardcore paradigm of development where as 
+
+Reality: Software is primary requirement and has symbiotic relationship with hardcore infrastructure
+
+
+
+## Boosting Domestic Productivity
+
+- Boosting domestic productivity which means raising the capacities
+and capabilities of your people  
+
+
+- Import taxes to protect domestic industry leading to no improvement in domestic capacity 
+
+> One needs hard work, local thinking, building teams, build institutions and throwing industry to tough competition by shedding protention diapers
+
+
+## Challenges
+
+-   Global market saturated with goods and services
+
+-   Challenges for Industrial Development in Digital Era 
+
+
+## Software : Cant be exported
+
+-   Rule of Law (Contracts are honored)
+
+-   Development and Allocation of Talent 
+
+-   Organisational and managerial capacity
+
+-   Knowledge acquisition 
+
+-   Stuck in MH paradigm
+
+
+>   All this : Cant be bought, domestic capacity and domestic reforms
+    One has to built all this as it can not be imported . Broad conceptual parameters - Education, Health investment for
+better inputs - Boosting domestic productivity 
+
+
+
+# [Thank you JICA]{.flow}{background-color="black" background-image="images/thankyou.webp" background-size="150px" background-repeat="repeat"} 

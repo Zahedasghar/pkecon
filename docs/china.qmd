@@ -1,0 +1,230 @@
+---
+format:
+  revealjs: 
+    theme: [default, custom.css, styles.scss]
+---
+
+##  {.title}
+
+::: r-fit-text
+[How China Escaped Poverty Trap]{.flow}
+:::
+
+::: {style="font-size: 80px"}
+Zahid Asghar
+:::
+
+Quaid-i-Azam University, Islamabad
+
+::: notes
+Hi everybody! Thank you so much for joining today's session.
+:::
+
+## Introduction
+
+
+
+## Pauper : Two gurus
+
+### Parable of pauper and two gurus reflects a fundamental problem of development in the real world
+
+-   All wealthy capitalist economies feature:
+    -   institutions of good governance, such as protection of private property rights, professional bureaucracies, modern courts, formal accountability, and pluralistic participation, which all seem necessary for successful markets.
+
+#### Which comes first in development - economic growth or good governance?
+
+::: notes
+First guru: Earn your first paycheck, once you will earn money, circumstances will improve and you will escape poverty. Second guru: "Start by doing as my rich clients do: attend college, mover to a safe town, and buy health insurance. You can only escape poverty by first creating the pre-requisites for wealth." Both advice clearly falls short. Attaining all these preconditions also appears to depend on the level of economic wealth. So how can poor and weak societies escape poverty traps? Which comes first in development - economic growth or good governances
+:::
+
+## 
+
+Modernization theory holds that
+
+-   "growth $\rightarrow$ good governance"
+-   " good governance $\rightarrow$ growth"
+-   "history $\rightarrow$ goog governance $\rightarrow$ growth
+
+Question : How development actually happens
+
+Is it really institutions of good governance so keenly proffered to developing countries today that launches markets? Or is it growth that enables *good governance*? Or is history destiny?
+
+::: notes
+First theory: as countries grow rich, a burgeoning middle class will demand greater accountability and protection of individuals rights... Harrod-Domar model: growth comes from capital investment ,but how do impoverished countries secure investment? Sachs: Such investments from rich countries but others argue aid has negative impact
+
+Second theory: WB, IMF, western policy makers and academics : first good governance then markets can grow So first checklist of best practices then wealthy Growth will naturally blossom from good institutions soil.
+
+Effect of history on development but not way out to escape poverty.
+:::
+
+### 1978 Starting Point
+
+1.  Poor than bottom billion countries like Chad, Bangladesh, Malawi
+2.  suffered foreign invasions and civil war, followed by 30 year tumult under Mao
+
+## Explanations for Chinese Development
+
+According to Why Nations Fail and others
+
+1.  "inclusive and non-extractive" (broadly speaking democratic) institutions lead to economic success but China has no democratic institutions
+2.  Eventually China's growth will slow down, but is it not the case with everyone
+3.  China has plenty of room to catch-up (byt then why others dont catch up)
+4.  Luck: China is lucky (not a valid argument), 40 years growth by sheer luck?
+
+##  {.only-reveal}
+
+5.  Explanation Beyond Luck: Cheap labour, foreign capital... but with many other countries as well Ingredeints $\rightarrow$ Cake
+6.  Bureaucratic incentives to aggressively pursue growth Incentive alone cant explain, China is huge
+7.  China's culture of hard work and entrepreneurship : but culture constant, how flucatuations All these explanations matter but how these are made together for grand picture of development
+
+Poverty $\rightarrow$ prosperity , not only economic problem
+
+## 
+
+
+![](images/chicken_egg.jpg)
+
+```{mermaid}
+flowchart LR
+  
+  C[egg] --> D[chicken]
+   D[chicken]--> C[egg]
+```
+
+## 
+
+All rich countries have good governance, rule of law , strong property rights
+
+### China model
+
+-   What is China model, many books and theories
+
+-   None of these models is complete
+
+-   China is big evolving elephant changing its color/size
+
+-   Million different description
+
+-   None of these models is replicable
+
+    -   limited knowledge for others
+
+## 
+
+-   Sequential element, development occurs in three steps
+
+1.First build markets with weak institutions
+
+2.  Conditions for adaptation is constantly evolving pattern
+
+## 
+
+```{mermaid}
+flowchart LR
+  
+  C[good governance or strong institutions] --> D[economic growth]
+   D[economic growth]--> C[good governance or strong institutions]
+```
+
+### Creating the right conditions for adaptation
+
+-   What are these conditions? Can they be created?
+
+-   Where and at what level they should be created?
+
+
+
+## Conventional wisdom
+
+policies $\rightarrow$ development 
+
+## Coevolutionary 
+Markets change government, government change markets
+If one asks people:
+> The economy and the bureaucracy interact and change together... Thesere must be a process. The government cant reform overnight. 
+
+Not only present data but historical perspective  
+
+Its too complicated 
+What do we learn by connecting snapshots?
+Depending on where and when you look within China , every model is correct but none is complete.
+
+Grand model
+A model about the SEQUENCE of development.
+
+What 
+
+Good governance/ strong institutions -\> \<- Economic wealth
+
+## 
+
+Egg Chicken images
+
+## Prosperity leads to strong insitutions
+
+(policy: give genrous aid, no string attached)
+
+Good/strong institutions \<- Economic Growth
+
+## Strong institutions lead to prosperity
+
+(policy: replicate suite of strong institutions in poor, weak nations)
+
+Good/strong institutions -\> Economic Growth
+
+Books: Economy and Society The Development State Why Nations Fail
+
+## 
+
+The imposition of good goverance standards "has been a roout cause of the deep problems encountered by developing countries." (Prichett & Woolcock)
+
+##3 History bequeathed strong institutions that led to prosperity (aka "path dependence") Favorable History -\> Good/Strong Institutions -\> Economic Growth
+
+Book: Why Nations Fail
+
+## 
+
+Once society gets organized in a certain way, this tends to persist... This persistence also explains why it is so difficult to make poor countries prosperous." In short poor countries are STUCK {.red}
+
+## 
+
+Conventional wisdom: Development is a linear process
+
+In reality: Development is a covolutionary process
+
+zig-zag diagram
+
+## 
+
+![](images/Blind_men_elephant.jpg)
+
+## Complexity vs complicated process
+
+## Preview of my approach
+
+A simple - but not simplistic- way of understanding development as a complex process
+
+## 
+
+Step1 : Harness existing weak institutions to build markets
+
+Step 2: Emerging markets stimulate strong institutions Step 3: Strong institutions perserve markets
+
+## Spark change in poor societies by leveraging what they already have... not with what we wish they could have {.orange}
+
+# The Case of China {background black}
+
+# In essence, what's the simple - but not simplistic way of development
+
+## 
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQY_rmsePJjGVN26uEzFCpXYokWwPwcvqTsw&usqp=CAU)
+
+# 
+
+```{mermaid}
+flowchart LR
+  
+  C[egg] --> D[chicken]
+   D[chicken]--> C[egg]
+```
