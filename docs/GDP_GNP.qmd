@@ -2,6 +2,7 @@
 format:
   revealjs: 
     theme: [default, custom.css, styles.scss]
+    chalkboard: true
 editor: visual
 ---
 
@@ -21,12 +22,9 @@ Quaid-i-Azam University, Islamabad
 Hi everybody! Thank you so much for joining today's session.
 :::
 
-
-
 ## Understanding the economy
 
-![gdp vs gnp](images/gdp.jpg) 
-
+![gdp vs gnp](images/gdp.jpg)
 
 ::: notes
 In this presentation, we will delve into two crucial economic indicators: Gross Domestic Product (GDP) and Gross National Product (GNP). Understanding these measures is essential for assessing a country's economic health and performance. We will explore their definitions, differences, and their significance in analyzing a nation's economic well-being.
@@ -36,103 +34,79 @@ In this presentation, we will delve into two crucial economic indicators: Gross 
 
 ![](images/gdp1.jpg)
 
+**Measures the monetary value of all final goods and services produced within a country's borders in a specific period (usually a year).**
 
-**Measures the monetary value of all final goods and services produced within a country's borders in a specific period (usually a year).** 
-
--   Focuses on economic activity happening within the geographical boundaries.
-Includes:
-  -   Manufacturing output
-  -   Agricultural production
-  -   Service industries (tourism, healthcare, etc.)
-  -   Government spending
-
+-   Focuses on economic activity happening within the geographical boundaries. Includes:
+-   Manufacturing output
+-   Agricultural production
+-   Service industries (tourism, healthcare, etc.)
+-   Government spending
 
 ::: notes
 Think of GDP as a snapshot of a country's internal economic activity. It captures the total value of all finished goods and services produced within its borders, regardless of who produces them. Whether it's a foreign company operating a factory or a local entrepreneur running a restaurant, their contribution to the final product or service falls under GDP if it takes place within the country's borders.
-
 :::
-
 
 ## 
 
-- GDP measures the total value of all goods and services produced within the geographical boundaries of a country during a specific period, typically a year or a quarter.
-- It includes the value of final goods and services produced by all sectors of the economy, including households, businesses, and government regardless of who producces them.Whether it's a foreign company operating a factory or a local entrepreneur running a restaurant, their contribution to the final product or service falls under GDP if it takes place within the country's borders.
-- GDP is often used as a key indicator of a country's economic health and standard of living.
-
+-   GDP measures the total value of all goods and services produced within the geographical boundaries of a country during a specific period, typically a year or a quarter.
+-   It includes the value of final goods and services produced by all sectors of the economy, including households, businesses, and government regardless of who producces them.Whether it's a foreign company operating a factory or a local entrepreneur running a restaurant, their contribution to the final product or service falls under GDP if it takes place within the country's borders.
+-   GDP is often used as a key indicator of a country's economic health and standard of living.
 
 ## Components of GDP
 
--   1. **Consumption (C):** Total spending by households on goods and services.
--   2. **Investment (I):** Total spending on capital goods, such as machinery, equipment, and construction.
--   3. **Government Spending (G):** Total spending by the government on goods and services.
--   4. **Net Exports (NX):** The value of exports minus the value of imports.
+-   
 
+    1.  **Consumption (C):** Total spending by households on goods and services.
 
-##  What is GNP?
+-   
 
-![](images/gnp.jpg) 
+    2.  **Investment (I):** Total spending on capital goods, such as machinery, equipment, and construction.
 
-Represents the market value of all final goods and services produced by a country's residents, regardless of their location.
-Focuses on the nationality of the producers, not the geographical location of production.
-Includes:
-Production by domestic companies abroad
-Earnings from foreign investments
-Excludes:
-Production within the country by foreign companies
+-   
+
+    3.  **Government Spending (G):** Total spending by the government on goods and services.
+
+-   
+
+    4.  **Net Exports (NX):** The value of exports minus the value of imports.
+
+## What is GNP?
+
+![](images/gnp.jpg)
+
+Represents the market value of all final goods and services produced by a country's residents, regardless of their location. Focuses on the nationality of the producers, not the geographical location of production. Includes: Production by domestic companies abroad Earnings from foreign investments Excludes: Production within the country by foreign companies
 
 ::: notes
 GNP offers a broader perspective, encompassing the economic contributions of a country's citizens beyond its borders. Imagine a Japanese car company operating a factory in the United States. While the car's production adds to the US GDP, it contributes to Japan's GNP due to the Japanese ownership. This wider lens helps understand a country's overall economic strength and its citizens' global economic involvement.
-
 :::
 
 ## Key Differences: GDP vs. GNP
 
-![](images/gdp_gnp.jpg)
+![](images/gdp_gnp.jpg){fig-align="center" }
 
-Focus:
-GDP: Location of production
-GNP: Nationality of producers
-Includes:
-GDP: All production within borders
-GNP: Domestic production only (regardless of location)
-Excludes:
-GDP: Domestic production by foreign companies
-GNP: Production within borders by foreign companies
-Values:
-Often similar for closed economies
-Can differ significantly for open economies
+Focus: GDP: Location of production GNP: Nationality of producers Includes: GDP: All production within borders GNP: Domestic production only (regardless of location) Excludes: GDP: Domestic production by foreign companies GNP: Production within borders by foreign companies Values: Often similar for closed economies Can differ significantly for open economies
 
 ::: notes
 The core difference lies in their perspectives. GDP measures what happens within a country's borders, while GNP focuses on the contributions of its citizens, no matter where they occur. This distinction can significantly impact their values. In a closed economy with minimal foreign interaction, GDP and GNP might be close. However, for open economies with substantial foreign trade and investment, the two metrics can diverge significantly.
-::: 
+:::
 
 ## When to Use Which?
 
-![](images/gdp2.jpg)
+![](images/gdp2.jpg){fig-align="center" width="669"}
 
-### GDP:
-Assessing domestic economic activity and living standards
-Comparing economic performance across countries with similar levels of openness
+-   Assessing domestic economic activity and living standards Comparing economic performance across countries with similar levels of openness
 
-### GNP:
-Understanding a country's global economic involvement
-Comparing economic performance across countries with diverse levels of openness
-Analyzing the well-being of a country's citizens, regardless of their location
+-   GNP: Understanding a country's global economic involvement Comparing economic performance across countries with diverse levels of openness Analyzing the well-being of a country's citizens, regardless of their location
 
 ::: notes
 Choosing the right metric depends on your specific question. If you're interested in a country's internal economic health and how well its residents are doing within its borders, GDP is a good starting point. However, if you want to understand a country's global economic footprint and the involvement of its citizens worldwide, GNP is the better choice. It's also crucial to consider the country's level of openness to foreign trade and investment, as this can significantly impact the two measures.
-
 :::
 
+## Gross National Product (GNP){.scrollable}
 
-
-
-
-### Gross National Product (GNP)
-
-- GNP measures the total value of all goods and services produced by the residents of a country, both domestically and abroad, during a specific period.
-- Unlike GDP, GNP includes income earned by residents from investments and work abroad, as well as income earned by foreign residents within the country.
-- GNP provides a broader measure of a country's economic output by accounting for its citizens' economic activities globally.
+-   GNP measures the total value of all goods and services produced by the residents of a country, both domestically and abroad, during a specific period.
+-   Unlike GDP, GNP includes income earned by residents from investments and work abroad, as well as income earned by foreign residents within the country.
+-   GNP provides a broader measure of a country's economic output by accounting for its citizens' economic activities globally.
 
 . . .
 
@@ -140,22 +114,19 @@ Choosing the right metric depends on your specific question. If you're intereste
 
 GNP = GDP + Net income earned from abroad
 
-- Net income earned from abroad includes income earned by residents from investments, dividends, interest, and wages in foreign countries, minus similar payments made to foreign residents within the country.
-
----
-
-### Key Differences
-
-1. **Scope:** GDP measures economic activity within a country's borders, while GNP measures economic activity by its residents globally.
-2. **Income Sources:** GDP includes income earned by both residents and non-residents within the country, while GNP includes income earned by residents globally.
-3. **Impact of Foreign Investment:** GNP is influenced by a country's investments and economic activities abroad, while GDP is not.
-
----
-
-### Conclusion
-
-- GDP and GNP are essential indicators for assessing the economic performance and standard of living of a country.
-- Understanding the differences between GDP and GNP helps policymakers, economists, and investors make informed decisions about economic policies, investments, and trade strategies.
+-   Net income earned from abroad includes income earned by residents from investments, dividends, interest, and wages in foreign countries, minus similar payments made to foreign residents within the country.
 
 
-## Questions?
+## Key Differences
+
+1.  **Scope:** GDP measures economic activity within a country's borders, while GNP measures economic activity by its residents globally.
+2.  **Income Sources:** GDP includes income earned by both residents and non-residents within the country, while GNP includes income earned by residents globally.
+3.  **Impact of Foreign Investment:** GNP is influenced by a country's investments and economic activities abroad, while GDP is not.
+
+
+## Conclusion
+
+-   GDP and GNP are essential indicators for assessing the economic performance and standard of living of a country.
+-   Understanding the differences between GDP and GNP helps policymakers, economists, and investors make informed decisions about economic policies, investments, and trade strategies.
+
+# Questions?
