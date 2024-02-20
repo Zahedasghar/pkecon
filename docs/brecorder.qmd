@@ -1,0 +1,35 @@
+
+## [Economic Morass is visibly deepening](https://www.brecorder.com/news/40289472) 
+
+
+```{r}
+
+
+# Create the dataframe
+rating_agency <- c("Moody's", "Standard and Poor's", "Fitch")
+last_update <- c("Caa3 (28 February 2023).\nhighly speculative and with\nlikelihood of being near or in\ndefault, but some possibility of\nrecovering principal and interest.",
+                 "CCC+ (22 December 2022).\nspeculative or junk grade\nindicating a high risk of default\non debt obligations.",
+                 "CCC (13 December 2023).\nSubstantial credit risk\nVery low margin for safety.\nDefault is a real possibility.")
+second_last_update <- c("Caa1 (6 October 2022)\nB3 rating - negative\nfrom stable (2 June 2022)",
+                        "B-(28 July 2022)\nB-/B (30 August 2022)",
+                        "CCC (10 July 2023)\nCCC-(14 February 2023)")
+third_last_update <- c("", "", "")
+
+# Create the dataframe
+rating_table <- data.frame(
+  "Rating agency" = rating_agency,
+  "Last update" = last_update,
+  "Second last update" = second_last_update,
+  "Third last Update" = third_last_update
+)
+library(gt)
+rating_table |> gt()
+```
+
+**Two observations in point** 
+- First : ratings remained poor during the tenure of the Shebaz Sharif government before induction of Ishaq Dar as FM but it went further down as he took oath due to his sustained defiance against impelementing IMF conditions by Moody's and S&P.
+
+> Clearly, new rules apply to Pakistan as the economic morass deepens with each administration (civilian and military) resisting implementation of politically challenging structural reforms, a trend that continues to this day indicated by: (i) the IMF decision in the 2019 loan agreement to place the onus to secure financing from international partners on Pakistan as in previous programmes approval by the Fund generated the external financing requirements; (ii) the linkage of pledged assistance by our international partners, including the three friendly countries – China, Saudi Arabia, and the United Arab Emirates, on being on an active IMF programme prior to disbursement; and (iii) the rating agencies not responding positively to a programme or tranche approval by the Fund. 
+
+
+> Moody’s comment post elections states that: “overall uncertainty around Pakistan’s ability to quickly negotiate a new IMF program after the current one expires in April 2024 remains very high…uncertainty around the extent of public protests because they may challenge the legitimacy of the new government. Social tensions may increase which would likely constrain the government’s ability to undertake reforms.”
