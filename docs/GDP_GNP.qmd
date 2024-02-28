@@ -45,34 +45,55 @@ In this presentation, we will delve into two crucial economic indicators: Gross 
 ::: notes
 Think of GDP as a snapshot of a country's internal economic activity. It captures the total value of all finished goods and services produced within its borders, regardless of who produces them. Whether it's a foreign company operating a factory or a local entrepreneur running a restaurant, their contribution to the final product or service falls under GDP if it takes place within the country's borders.
 :::
+## What is GDP? {auto-animate="true"}
 
-## 
+<center>
 
--   GDP measures the total value of all goods and services produced within the geographical boundaries of a country during a specific period, typically a year or a quarter.
--   It includes the value of final goods and services produced by all sectors of the economy, including households, businesses, and government regardless of who producces them.Whether it's a foreign company operating a factory or a local entrepreneur running a restaurant, their contribution to the final product or service falls under GDP if it takes place within the country's borders.
+GDP measures the total value of 
+
+::: {.fragment .grow .semi-fade-out}
+all [goods and services produced]{.flow},
+:::
+
+
+
+::: {.fragment .grow .semi-fade-out}
+within the geographical boundaries of a country
+:::
+
+::: {.fragment .grow .semi-fade-out}
+during a specific period, typically [a year or a quarter.]{style="color:red;"}
+:::
+
+</center>
+
+## GDP includes
+
+-   It includes the value of final goods and services produced by all sectors of the economy, including households, businesses, and government regardless of who produces them. Whether it's a foreign company operating a factory or a local entrepreneur running a restaurant, their contribution to the final product or service falls under GDP if it takes place within the country's borders.
 -   GDP is often used as a key indicator of a country's economic health and standard of living.
 
 ## Components of GDP
 
--   
+::: incremental
+   
 
-    1.  **Consumption (C):** Total spending by households on goods and services.
+-    1.  **Consumption (C):** Total spending by households on goods and services.
 
--   
+   
 
-    2.  **Investment (I):** Total spending on capital goods, such as machinery, equipment, and construction.
+-   2.  **Investment (I):** Total spending on capital goods, such as machinery, equipment, and construction.
 
--   
+   
 
-    3.  **Government Spending (G):** Total spending by the government on goods and services.
+-   3.  **Government Spending (G):** Total spending by the government on goods and services.
 
--   
+  
 
-    4.  **Net Exports (NX):** The value of exports minus the value of imports.
-
+-   4.  **Net Exports (NX):** The value of exports minus the value of imports.
+:::
 ## What is GNP?
 
-![](images/gnp.jpg)
+![](images/gnp.jpg){fig-align="left" }
 
 Represents the market value of all final goods and services produced by a country's residents, regardless of their location. Focuses on the nationality of the producers, not the geographical location of production. Includes: Production by domestic companies abroad Earnings from foreign investments Excludes: Production within the country by foreign companies
 
@@ -117,16 +138,53 @@ GNP = GDP + Net income earned from abroad
 -   Net income earned from abroad includes income earned by residents from investments, dividends, interest, and wages in foreign countries, minus similar payments made to foreign residents within the country.
 
 
-## Key Differences
+## Key Differences {.scrollable}
 
 1.  **Scope:** GDP measures economic activity within a country's borders, while GNP measures economic activity by its residents globally.
 2.  **Income Sources:** GDP includes income earned by both residents and non-residents within the country, while GNP includes income earned by residents globally.
 3.  **Impact of Foreign Investment:** GNP is influenced by a country's investments and economic activities abroad, while GDP is not.
 
-
-## Conclusion
-
 -   GDP and GNP are essential indicators for assessing the economic performance and standard of living of a country.
 -   Understanding the differences between GDP and GNP helps policymakers, economists, and investors make informed decisions about economic policies, investments, and trade strategies.
+
+
+
+## Limitations of GDP 
+
+-   **Excludes Non-Market Transactions**: GDP does not account for non-market activities such as household work, volunteerism, and the underground economy.
+
+-   **Ignores Distribution of Income**: GDP doesn't consider how income is distributed among the population. It's possible for GDP to rise while income inequality worsens.
+
+-   **Neglects Environmental Degradation**: GDP growth often comes at the expense of natural resources and environmental degradation, but GDP itself doesn't reflect these costs.
+
+## Limitations of GDP (contd.)
+
+-   **Ignores Quality of Life**: GDP does not capture factors such as education, healthcare, and overall quality of life, which are crucial for well-being but not directly related to economic output.
+
+-   **Doesn't Measure Informal Economy**: A significant portion of economic activity, especially in developing countries, occurs in the informal sector and is not reflected in GDP figures.
+
+-   **Focuses on Quantity, Not Quality**: GDP growth may not necessarily lead to improvements in overall well-being if it's driven by quantity rather than quality of goods and services produced.
+
+## Alternative Measures 
+
+Several alternative measures have been proposed to complement GDP: 
+
+::: incremental 
+
+-  **Gross National Happiness (GNH):** Measures the overall happiness and well-being of a population.
+
+-  **Human Development Index (HDI):** Considers factors such as life expectancy, education, and income.
+
+
+-  **Genuine Progress Indicator (GPI):** Attempts to account for social and environmental factors alongside economic ones. 
+
+::: 
+
+## Conclusion
+While GDP is a valuable indicator of economic activity, it's not sufficient on its own to gauge overall well-being and progress.
+But so far no single number is as powerful as GDP in capturing the complexity of a nation's economy.  
+
+
+
 
 # Questions?
