@@ -1,13 +1,13 @@
 ---
 title: "[Development of Industry and Industrial Policy]{.flow}"
-subtitle: "JICA and School of Sociology"
+
 author: "Zahid Asghar"
 date: today
 format:
   revealjs: 
     theme: [default, custom.css, styles.scss]
     title-slide-attributes:
-      data-background-image: images/jica_pak.jpg
+      data-background-image: images/industrial.jpeg
       data-background-size: 40%
       data-background-position: 100% 100%
 editor: visual
@@ -47,7 +47,9 @@ Pakistani firms are uncompetitive, although heavily subsidized and protected by 
 
 ## Policy consistency alone not enough
 
-Pakistan’s auto industry is an obvious example of the failure of import substitution policies. 
+Pakistan’s auto industry is an obvious example of the failure of import substitution policies.  
+-   Auto industry has been protected for the last 40 years, but it has not been able to achieve economies of scale, and the cost of production is still high. 
+
 -   First five-year auto development policy 2002: focused on achieving higher localization of cars through deletion programs and increasing the volume of local production to at least 500,000, aiming to achieve economies of scale. 
 -   Currently fourth auto development policy and despite the consistency of policies (high protection and localization), we are far from achieving these aims, as they were in many ways contradictory. 
 
@@ -97,8 +99,10 @@ Pakistan’s auto industry is an obvious example of the failure of import substi
 
 
 
-## Complexity vs Complicated
-Aggregate productivity stagnant or declining : Farms/firms becoming less productive over time
+## Complexity vs Complicated 
+
+Aggregate productivity stagnant or declining : Farms/firms becoming less productive over time 
+
 -   Productivity decline in firms specially in family-owned  
 
 -   Yield has grown but due to intensive use of inputs 

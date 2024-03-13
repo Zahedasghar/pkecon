@@ -1,0 +1,138 @@
+---
+format:
+  pdf: 
+    theme: [default, custom.css, styles.scss]
+    chalkboard: true
+editor: visual
+---
+
+##  {.title}
+
+::: r-fit-text
+[Measuring Inflation and dealing with it]{.flow}
+:::
+
+::: {style="font-size: 80px"}
+Zahid Asghar
+:::
+
+Quaid-i-Azam University, Islamabad
+
+::: notes
+Hi everybody! Thank you so much for joining today's session.
+:::
+
+## Real GDP vs Nominal GDP
+
+-   **Real GDP** is adjusted for inflation and is often used to compare economic output over time.
+
+-   **Nominal GDP** is not adjusted for inflation and is often used to compare economic output between countries or regions.
+
+## Understanding Inflation
+
+-   Inflation is the rate at which the general level of prices for goods and services is rising, and subsequently, the purchasing power of currency is falling.
+
+-   It's measured as an annual percentage increase in the Consumer Price Index (CPI)
+
+## Consumer Price Index (CPI)
+
+-   The CPI measures the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services.
+
+-   Components typically include food, transportation, housing, medical care, apparel, recreation, education, and communication.
+
+-   It's one of the most widely used measures of inflation.
+
+## CPI Calculation
+
+-   CPI is calculated by comparing the cost of a fixed basket of goods and services at different points in time.
+
+-   The percentage change in the CPI over a specified period gives the inflation rate for that period.
+
+## Sensitive Price Index (SPI)
+
+-   SPI measures the average change in prices of a fixed basket of goods and services whose prices are sensitive to changes in the overall price level. Vegetables, fruits, and other essential items are often included in the SPI.
+
+Weekly SPI is computed by the Pakistan Bureau of Statistics.
+
+## Wholesale Price Index (WPI)
+
+-   WPI measures the average change in the prices of goods traded in bulk, primarily at the wholesale level.
+
+-   It is used as a substitute for producer price index (PPI) in some countries.
+
+-   WPI is calculated by taking a weighted average of the prices of a basket of goods at the wholesale level.
+
+-   It's often used by policymakers and economists to understand inflationary pressures at earlier stages of the supply chain.
+
+## GDP Deflator
+
+-   The GDP deflator is a measure of the price of all the goods and services included in the GDP expressed in the prices prevailing during the base year.
+
+-   It's calculated by dividing nominal GDP by real GDP and multiplying by 100.
+
+-   CPI on the other hand measures the price changes in a basket of goods and services consumed by urban/rural consumers.
+
+## Pakistan CPI calculation mechanism
+
+-   The Pakistan Bureau of Statistics (PBS) calculates the CPI for national,urban areas and rural areas by collecting data from 35 cities across the country.
+
+-   The data is collected from markets for 487 items, including 53 essential items, 33 food items, and 401 non-food items.
+
+## Conclusion
+
+-   Understanding inflation and its various measures, such as CPI, SPI, and WPI, is crucial for policymakers, businesses, and individuals to make informed decisions regarding monetary policy, investment, and consumption.
+
+-   Each index serves a specific purpose and provides unique insights into the dynamics of price changes in an economy.
+
+Dealing with inflation at the national level requires a combination of monetary, fiscal, and supply-side policies. Here's a strategy that can be adopted:
+
+
+# Measures to deal with inflation
+
+
+## Monetary Policy Instruments
+
+
+- **Interest Rates:** Central banks can use monetary policy tools to influence interest rates. Increasing interest rates can reduce consumer spending and borrowing, thereby dampening demand and inflationary pressures.
+  
+- **Open Market Operations:** Central banks can buy or sell government securities to control the money supply in the economy. Selling securities reduces the money supply, curbing inflation.
+  
+- **Reserve Requirements:** Adjusting reserve requirements for banks can affect the amount of money available for lending. Increasing reserve requirements reduces the amount of money banks can lend, reducing inflationary pressures.
+
+## Fiscal Policy
+
+- **Taxation:** Increasing taxes can reduce disposable income and consumer spending, thereby lowering aggregate demand and inflation.
+  
+- **Government Spending:** The government can reduce spending to lower aggregate demand. However, this needs to be balanced to avoid negatively impacting essential services or investment in infrastructure.
+  
+- **Subsidies:** Targeted subsidies can alleviate the burden of rising prices on essential goods and services for low-income households.
+
+## Supply-Side Policies
+
+- **Improving Productivity:** Policies aimed at improving productivity can help to increase the supply of goods and services, reducing upward pressure on prices.
+  
+- **Infrastructure Investment:** Investing in infrastructure can reduce bottlenecks in supply chains and improve efficiency, helping to lower production costs and inflationary pressures.
+  
+- **Market Reforms:** Removing barriers to entry and promoting competition can increase efficiency and innovation, leading to lower prices for consumers.
+
+## Wage and Price Controls
+
+- **Wage Restraint:** Encouraging moderate wage growth through negotiation and cooperation between employers and employees can help to prevent cost-push inflation.
+  
+- **Price Controls:** In extreme cases, the government may impose price controls on essential goods to prevent excessive price increases.
+
+## Exchange Rate Policy
+
+- **Currency Appreciation:** A stronger currency can reduce the cost of imports, lowering the price of imported goods and services and reducing inflationary pressures.
+  
+- **Foreign Exchange Intervention:** Central banks can intervene in foreign exchange markets to stabilize the currency and manage inflationary pressures.
+
+## Inflation Targeting
+
+- Central banks may adopt inflation targeting frameworks, setting explicit targets for inflation and adjusting monetary policy to achieve these targets over the medium term.
+
+**7. Communication and Transparency:**
+
+- Central banks and policymakers should communicate their inflation objectives, policy actions, and economic outlook clearly to the public and financial markets to manage expectations and anchor long-term inflation expectations.
+
+Implementing these measures requires careful coordination and monitoring to ensure effectiveness while minimizing unintended consequences on economic growth, employment, and income distribution. Additionally, policymakers should consider the specific context and characteristics of the economy when designing and implementing inflation control measures.

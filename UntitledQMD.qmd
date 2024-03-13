@@ -1,0 +1,99 @@
+---
+format:
+  revealjs: 
+    theme: [default, custom.css, styles.scss]
+    chalkboard: true
+editor: visual
+---
+
+##  {.title}
+
+::: r-fit-text
+[Understanding the economy]{.flow}
+:::
+
+::: {style="font-size: 80px"}
+Zahid Asghar
+:::
+
+Quaid-i-Azam University, Islamabad
+
+::: notes
+Hi everybody! Thank you so much for joining today's session.
+:::
+
+
+## Real GDP vs Nominal GDP
+
+- **Real GDP** is adjusted for inflation and is often used to compare economic output over time.
+
+- **Nominal GDP** is not adjusted for inflation and is often used to compare economic output between countries or regions. 
+
+
+
+
+## Understanding Inflation
+
+
+
+
+- Inflation is the rate at which the general level of prices for goods and services is rising, and subsequently, the purchasing power of currency is falling.
+
+- It's measured as an annual percentage increase in the Consumer Price Index (CPI) 
+
+## Consumer Price Index (CPI)
+
+- The CPI measures the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services.
+
+- Components typically include food, transportation, housing, medical care, apparel, recreation, education, and communication.
+
+- It's one of the most widely used measures of inflation.
+
+## CPI Calculation
+
+- CPI is calculated by comparing the cost of a fixed basket of goods and services at different points in time.
+
+- The percentage change in the CPI over a specified period gives the inflation rate for that period.
+
+## Sensitive Price Index (SPI)
+
+- SPI measures the average change in prices of a fixed basket of goods and services whose prices are sensitive to changes in the overall price level. Vegetables, fruits, and other essential items are often included in the SPI.
+
+Weekly SPI is computed by the Pakistan Bureau of Statistics. 
+
+## Wholesale Price Index (WPI)
+
+- WPI measures the average change in the prices of goods traded in bulk, primarily at the wholesale level.
+
+- It is used as a substitute for producer price index (PPI) in some countries.
+- WPI is calculated by taking a weighted average of the prices of a basket of goods at the wholesale level.
+
+- It's often used by policymakers and economists to understand inflationary pressures at earlier stages of the supply chain.
+
+
+
+## GDP Deflator 
+
+- The GDP deflator is a measure of the price of all the goods and services included in the GDP expressed in the prices prevailing during the base year. 
+
+- It's calculated by dividing nominal GDP by real GDP and multiplying by 100.
+
+- CPI on the other hand measures the price changes in a basket of goods and services consumed by urban/rural consumers.
+
+## Pakistan CPI calculation mechanism
+
+- The Pakistan Bureau of Statistics (PBS) calculates the CPI for national,urban areas and rural areas by collecting data from 35 cities across the country. 
+
+- The data is collected from markets for 487 items, including 53 essential items, 33 food items, and 401 non-food items. 
+
+
+
+
+
+
+
+## Conclusion
+
+- Understanding inflation and its various measures, such as CPI, SPI, and WPI, is crucial for policymakers, businesses, and individuals to make informed decisions regarding monetary policy, investment, and consumption.
+
+- Each index serves a specific purpose and provides unique insights into the dynamics of price changes in an economy.
