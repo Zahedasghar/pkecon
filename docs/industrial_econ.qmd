@@ -20,7 +20,7 @@ editor: visual
 
 ![](images/industrial1.jpeg){.center width="438"}
 
-The industrial sector is a significant contributor to Pakistan's GDP. As of 2023, it contributes approximately 22% to the GDP. This sector plays a vital role in job creation, foreign exchange earnings, and overall economic development.
+The industrial sector is a significant contributor to Pakistan's GDP. As of 2023, it contributes approximately 19% to the GDP. This sector plays a vital role in job creation, foreign exchange earnings, and overall economic development.
 
 ::: notes
 The industrial sector is a key driver of Pakistan's economy. It contributes a significant portion to the GDP, creating jobs, generating foreign exchange earnings, and fostering overall economic development. The exact percentage contribution can fluctuate slightly year to year.
@@ -172,15 +172,19 @@ These distortions hinder export-led growth and efficiency.
 
 ---
 
-**Import Substitution and FDI**
+**Import Substitution**
 
 - Import Substitution and FDI Challenges
   - Import substitution remains a dominant strategy for industrial development, supported by decision-makers. While advocated for saving foreign exchange, it hinders export competitiveness.
   - Protected import substitution industries, being noncompetitive, contribute to the permanent burden on foreign exchange by relying on imported inputs.
+  
+--- 
+
+-   **Foreign Direct Investment (FDI)**
   - Foreign Direct Investment (FDI) in Pakistan's industrial sector tends to be market-seeking rather than efficiency-seeking. Multinational Enterprises (MNEs) focus on local production, consuming foreign exchange for imported inputs and repatriating profits abroad. 
+  
+-   **Policy Capture**
   - Policy capture is prevalent in Pakistan's industrial structure, leading to inefficiency and reliance on state interventions and protection. Subsidies and protection fail to address viability concerns post-subsidy withdrawal, perpetuating industry dependence on state support and inhibiting growth beyond infancy stage.
-
-
 
 ---
 

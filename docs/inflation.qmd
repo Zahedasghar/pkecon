@@ -1,6 +1,6 @@
 ---
 format:
-  pdf: 
+  revealjs: 
     theme: [default, custom.css, styles.scss]
     chalkboard: true
 editor: visual
