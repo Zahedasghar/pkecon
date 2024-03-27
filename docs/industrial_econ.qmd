@@ -164,7 +164,7 @@ The industrial sector of Pakistan has the potential to be a significant driver o
     -   Structural adjustment programs were implemented in response to economic crises, leading to liberalization and opening up of markets.
     -   These policies aimed to attract foreign investment and promote export-oriented industries.
 
-------------------------------------------------------------------------
+---
 
 **Contemporary Industrial Landscape**
 
@@ -261,3 +261,34 @@ These distortions hinder export-led growth and efficiency.
 **Challenges and Goals** Developing an effective industrial policy faces challenges from vested interests and maneuvering of policy forums. The vital goal is to steer the transition towards an efficiency-driven export-led economy in the medium term and innovation-driven in the long term.
 
 **Conclusion** Building a globally competitive industrial structure requires strategic reforms and a long-term vision. Despite challenges, the goal of achieving export-led growth and innovation-driven economy remains paramount for Pakistan's industrial development.
+
+##  {.fragment .current-only}
+
+**Addressing Weak Industrial Base in Punjab**
+
+- Industrial Advisory Council, supported by Punjab's government, aims to revamp the province's industrial sector.
+- Textile industry identified as pivotal due to its contribution to the economy.
+- Garment sector singled out for future growth due to its potential for employment generation and foreign exchange earnings.
+
+**Challenges and Opportunities**
+
+- Current state: Most Pakistani garment manufacturers focus on low-value products and lack competitiveness in global markets.
+- The study commissioned by the International Growth Center highlighted key areas for improvement: [market access, trade policies, customs procedures, skills, energy, and cluster formation.](.red)
+- Recommendations endorsed by Punjab's Chief Minister, leading to the formation of sub-committees for policy implementation.
+
+--- 
+
+**Harnessing Opportunities under CPEC**
+
+- China-Pakistan Economic Corridor (CPEC) presents unprecedented opportunities and risks for Pakistan's industry.
+- China's shift away from garment exports due to rising labor costs creates a gap that Pakistan can fill.
+- Need for a consistent and coherent strategy from the government to capitalize on this opportunity.
+
+---
+**Collaborative Efforts and Strategies** 
+
+- Government of Punjab seeks support from the International Growth Center to identify measures for promoting industrial cooperation under CPEC.
+- Focus areas include aligning public investments with economic clusters, creating an attractive environment for Chinese investment, and streamlining business processes.
+- Highlighting the importance of renegotiating the Free Trade Agreement with China to maximize industrial cooperation benefits. 
+
+

@@ -1,0 +1,359 @@
+---
+title: "The Backbone of Pakistan's Economy: Agriculture"
+subtitle: "Key Drivers, Challenges, and Opportunities"
+format:
+  revealjs: 
+    theme: [default, custom.css, styles.scss]
+    chalkboard: true
+editor: visual
+---
+
+## 
+
+![](images/agri.jpeg){.center width="438"} 
+
+Agriculture is the cornerstone of Pakistan's economy, employing a significant portion of the workforce and contributing substantially to the GDP. This presentation will explore the key aspects of this vital sector, highlighting its strengths, challenges, and opportunities for growth. 
+
+## GDP Contribution
+
+![](images/agri_share.png){.center width="438"} 
+
+## Ranking 
+
+![](images/agri_share1.png){.center width="438"} 
+
+## {.fragment .current-only}
+
+**Contribution to GDP:** 
+
+   - Agriculture contributes around 18.5% to Pakistan's GDP.
+   - It is the largest sector of the economy, employing about 38% of the labor force. 
+   - Major source of foreign exchange earnings through exports
+
+
+**Major Crops:** 
+
+   - Wheat: Pakistan is one of the largest producers of wheat in the world, with annual production averaging around 25-27 million metric tons.
+   - Rice: Rice is another important crop, with Pakistan being one of the top exporters of rice globally.
+
+--- 
+
+   - Sugarcane: Pakistan is among the top 10 producers of sugarcane, with significant cultivation in Punjab and Sindh provinces.
+   - Cotton: Cotton is a major cash crop, supporting the textile industry and contributing to export earnings.
+   - Maize: Maize production has been increasing steadily, with demand driven by the poultry and livestock sectors.
+
+**Livestock:** 
+
+   - Livestock contributes approximately 60% to the agriculture sector and 11% to the overall GDP.
+   - Pakistan has one of the largest livestock populations in the world, including cattle, buffalo, sheep, and goats.
+   - The livestock sector provides a vital source of income and nutrition for rural households.
+
+--- 
+
+**Fisheries:** 
+
+   - Pakistan has a coastline of about 1,046 kilometers, supporting a thriving fisheries sector.  
+   
+   - Fish production is estimated at over 0.8 million metric tons annually, including marine and inland fisheries. 
+   
+   - Aquaculture is gaining importance, with increasing investment in fish farming and shrimp cultivation.
+
+--- 
+
+**Forestry:** 
+
+   - Forest cover in Pakistan is relatively low, at around 5% of the total land area. 
+   
+   - Timber production is limited, with most forests consisting of scrubland and non-commercial tree species. 
+   
+   - Efforts are underway to increase afforestation and conservation through reforestation programs. 
+
+
+::: notes
+Pakistan's agricultural sector is a significant employer, providing livelihoods for nearly half of the country's workforce. It is also a crucial contributor to the national economy, accounting for around 19% of GDP. Additionally, agriculture plays a vital role in generating foreign exchange through exports of crops like rice, cotton, and fruits. 
+
+:::
+
+
+## {.fragment .current-only}
+
+
+
+![](images/crop.png){.center width="538"}
+---
+
+![](images/crop1.png){.center width="538"}
+---
+
+![](images/crop3.png){.center width="538"}
+
+## Major Crops
+
+-   Wheat, rice, sugarcane, and cotton are the major crops
+
+-   Wheat: Staple food grain, ensuring food security
+-   Cotton: Cash crop, vital for textile industry and exports
+-   Rice: Important export crop, generating foreign exchange
+-   Sugarcane: Used for producing sugar, a key domestic commodity
+-   Fruits & Vegetables: Mangoes, oranges, kinnow, dates, onions, contributing to dietary needs and exports
+
+::: notes
+Pakistan's agricultural sector cultivates a diverse range of crops. Wheat, the main food grain, is essential for ensuring national food security. Cotton, a cash crop, is crucial for the textile industry and a major export earner. Rice is another significant export crop, contributing to foreign exchange. Sugarcane is used to produce sugar, a vital domestic commodity. Fruits and vegetables, including mangoes, oranges, kinnow, dates, and onions, contribute to the dietary needs of the population and hold export potential.
+
+:::
+
+## Key issues in Agriculture {.scrollable}
+
+-   Stagnating crop yields with wide gaps between progressive and average farmers; 
+
+-   Poor quality and inadequate supply of inputs and lack of infrastructure; 
+
+-   Under-performance of rural factor and input markets; 
+
+-   High pre and post-harvest losses; 
+
+-   Declining investment in research, development and extension; 
+
+-   Frequent insect and pest attacks and high incidence of crop and livestock diseases; 
+
+-   Knowledge gap; 
+
+-   Insufficient capital and financial resources;
+Poor infrastructure and low value addition; 
+
+-   Lack of international competitiveness of some agricultural commodities; 
+
+
+## Challenges in the Agriculture Sector 
+
+- Lack of modern farming techniques and technology.
+- Water scarcity and inefficient irrigation systems.
+- Dependence on weather conditions and vulnerability to climate change.
+- Low productivity and yield per hectare.
+- Fragmented land ownership and small landholdings.
+- Limited access to credit and financial services.
+- Post-harvest losses and inadequate storage facilities.
+- Pests and diseases affecting crops and livestock.
+- Poor infrastructure and transportation networks.
+- Limited value addition and processing facilities.
+
+## Opportunities in the Agriculture Sector 
+
+- Potential for diversification into high-value crops such as fruits, vegetables, and spices.
+- Adoption of modern farming practices and technologies.
+- Investment in irrigation infrastructure and water management systems.
+- Promotion of organic farming and sustainable agriculture practices.
+- Development of agribusiness and value chains.
+- Encouragement of youth involvement in agriculture through entrepreneurship.
+- Export potential for agricultural products in international markets. 
+
+## 
+
+- Integration of Information and Communication Technology (ICT) in agriculture.
+- Collaboration with research institutions and universities for innovation.
+- Government support through policies, subsidies, and incentives. 
+-Low crop diversification; 
+
+-   Highly skewed distribution of farm size and low economy of size and scale; 
+
+-   Inadequate supply of water and inefficient use of available water resources; and 
+
+-   Poor technology & information communication mechanism.
+
+
+
+
+# Live Stock 
+
+![](images/agri3.jpg){.center width="438"}
+
+::: notes
+Speaker Notes
+Livestock plays a crucial role in Pakistan's agricultural sector, contributing significantly to the economy and livelihoods. This slide deck will explore the importance of livestock, highlighting various aspects like production, contribution to food security, and challenges faced by the sector. By understanding the significance of livestock, we can develop strategies for its sustainable growth and development.
+
+:::
+
+## Livestock Production in Pakistan
+
+-   Diverse range of livestock species: Cattle, buffalo, sheep, goats, poultry
+-   Significant contribution to GDP: Approximately 11.6% (2023 estimate)
+-   Provides livelihood for millions: Farmers, herders, dairy workers, etc.
+-   Source of essential food products: Meat, milk, eggs
+
+::: notes
+Pakistan boasts a diverse range of livestock species, including cattle, buffalo, sheep, goats, and poultry. This sector significantly contributes to the national GDP, estimated to be around 11.6% in 2023. Livestock provides essential food products like meat, milk, and eggs, ensuring food security for the population. The sector also serves as a vital source of income and livelihood for millions of farmers, herders, dairy workers, and others involved in the production and marketing chain.
+
+:::
+
+## Importance of Livestock: Beyond Food Security
+
+-   Source of income and employment generation
+-   Provides raw materials for industries: Leather, wool, etc.
+-   Manure used as organic fertilizer: Improves soil fertility
+-   Draft power for agricultural activities: Plowing, transportation
+
+::: notes
+The importance of livestock extends beyond food security. It serves as a crucial source of income and employment generation for millions of people in rural areas. The hides and skins of animals are used in the leather industry, while wool finds application in textile production. Livestock manure serves as a valuable organic fertilizer, improving soil fertility and crop yields. Additionally, draft animals like oxen are used for plowing fields and transporting goods in rural areas, contributing to agricultural activities.
+
+:::
+
+## Challenges in the Livestock Sector 
+
+![](images/agri4.png){.center width="438"}
+
+-   Feed and water scarcity: Impacts animal health and productivity 
+
+-   Inadequate disease control measures: Increases livestock mortality 
+
+-   Traditional farming practices: Limits efficiency and productivity 
+
+-   Lack of access to veterinary services: Limits disease prevention and treatment
+Marketing inefficiencies: Low returns for farmers
+
+
+::: notes
+Despite its importance, the livestock sector faces several challenges that hinder its growth potential. Feed and water scarcity, particularly in arid regions, impacts animal health and productivity. Inadequate disease control measures can lead to outbreaks, causing significant livestock mortality. Traditional farming practices often lack efficiency and productivity compared to modern methods. Limited access to veterinary services in rural areas hinders disease prevention and treatment. Additionally, marketing inefficiencies lead to low returns for farmers, discouraging investment in the sector.
+
+:::
+
+## Enhancing Livestock Production: The Way Forward
+
+-   Investment in feed and water security: Improved infrastructure and management 
+
+-   Strengthening disease control programs: Vaccination drives, veterinary services 
+
+-   Promoting modern farming practices: Introduction of new technologies 
+
+-   Expanding access to veterinary services: Outreach programs in rural areas 
+
+-   Development of efficient marketing channels: Connecting farmers with fair markets
+
+::: notes
+Addressing the challenges faced by the livestock sector is crucial for its sustainable growth and development. Investments in feed and water security through improved infrastructure and management practices are essential. Strengthening disease control programs with vaccination drives and expanded veterinary services can significantly reduce livestock mortality. Promoting modern farming practices that leverage new technologies can enhance productivity and efficiency. Expanding access to veterinary services, particularly in rural areas through outreach programs, can ensure timely diagnosis and treatment of animal diseases. Finally, developing efficient marketing channels that connect farmers with fair markets can improve their returns, incentivizing investment in the sector.
+
+:::
+
+## {.fragment .current-only}
+
+**Summary: Crops and Livestock in Pakistan's Economy**
+
+
+**Crops:**
+-   Backbone of the economy: Employ a large portion of the workforce and contribute significantly to GDP. 
+
+-   Major crops: Wheat (staple food), cotton (cash crop), rice (export), sugarcane (sugar production), fruits & vegetables (dietary needs and exports).
+Challenges: Water scarcity, limited technology, post-harvest losses, climate change, land degradation. 
+
+-   Opportunities: Modernization, improved water management, better storage & transport, climate-smart practices, research & development.
+
+---
+
+**Livestock:**
+
+-   Vital component: Significant contribution to GDP, food security, and livelihoods. 
+
+-   Production: Diverse livestock (cattle, buffalo, sheep, goats, poultry). 
+
+-   Importance: Meat, milk, eggs, income generation, raw materials, manure (fertilizer), draft power. 
+
+-   Challenges: Feed & water scarcity, disease control, traditional practices, limited veterinary services, marketing inefficiencies. 
+
+-   Enhancing Production: Invest in feed & water security, strengthen disease control, promote modern practices, expand veterinary services, develop efficient marketing channels.
+
+Overall, a thriving crop and livestock sector is essential for a strong and prosperous Pakistan. 
+
+
+# Public Policy
+
+## {.fragment .current-only}
+
+- Focus on Present Predicament of Agriculture in Pakistan
+- Acknowledgment of Sector's Precarious State
+- Attribution of Blame to State Policies
+- Emphasis on Influence of Public Policy
+- Basic Question: How to Make Agriculture Productive, Profitable, and Sustainable?
+
+--- 
+
+**SChallenges for Agriculture in Pakistan**
+1. **Productivity Enhancement and Cost Reduction**
+2. **Adaptation to Climate Change and Mitigation**
+3. **Shift in Consumer Demand towards High-Value Products**
+
+--- 
+
+**Key Policy Issues**
+- Land Access, Quality, and Use
+- Water Resources Management
+- Technology Transfer and Adoption
+- Market Structure and Regulation
+- Subsidies, Taxes, and Investments
+
+--- 
+
+**1. Land Policy**
+- Access and Ownership Issues
+- Land Record Digitization
+- Protection of Farmland
+- Distorted Price Signals
+
+--- 
+
+**2. Water Resources Management**
+- Water Conservation
+- Demand-Driven Irrigation
+- Regulatory Framework for Groundwater
+- Farm-Level Water Management
+
+**3. Technology Transfer**
+- Increased Investment in Research and Extension
+- Adoption of Profitable and Sustainable Technologies
+- Respect for Intellectual Property Rights
+- Reorientation of Research and Extension Systems
+
+--- 
+
+**4.Agricultural Markets**
+- Role of Government in Market Regulation
+- Reduction of Intermediaries
+- Fair Pricing Mechanisms
+- Role of Private Sector in Market Operations
+
+**5.Subsidies, Taxes, and Investments**
+- Reduction of Subsidies on Farm Inputs
+- Equitable Taxation on Agricultural Income
+- Increased Public Investment in Rural Infrastructure
+- Promotion of Private Sector Investments
+
+
+
+
+## Absentee Landlordism and Taxation {.scrollable}
+
+The critique of absentee landlordism refers to the examination and criticism of the phenomenon where individuals or entities own agricultural land but do not actively participate in its cultivation or management. Here are some key points of critique:
+
+1. **Resource Misallocation**: Absentee landlords often prioritize profit over sustainable land management or community welfare. This can lead to misallocation of resources and neglect of the land's long-term productivity.
+
+2. **Wealth Concentration**: Absentee landlords may accumulate large tracts of land, concentrating wealth and power in the hands of a few individuals or entities. This can exacerbate social and economic inequality within rural communities.
+
+3. **Negative Impact on Rural Development**: Absentee ownership can hinder local economic development by limiting opportunities for local farmers and businesses. It may also result in reduced investment in infrastructure and services in rural areas.
+
+4. **Land Tenure Issues**: Absentee landlords may lease land to tenant farmers under exploitative or unfair terms, leading to land tenure insecurity and perpetuating poverty among rural populations.
+
+5. **Environmental Concerns**: Absentee landlords may prioritize short-term profit over environmental conservation, leading to unsustainable land use practices, deforestation, soil degradation, and other environmental harms.
+
+6. **Lack of Accountability**: Absentee landlords may not be directly affected by the consequences of their land management decisions, leading to a lack of accountability for negative social, economic, and environmental impacts.
+
+Critiques of absentee landlordism often advocate for policies and interventions that promote equitable land distribution, empower local farmers, and encourage responsible land stewardship for sustainable rural development.
+
+## {.fragment .current-only}
+
+- Advocacy for Equitable Taxation on Agricultural Income
+- Need for Constitutional Amendment to Allow Federal Taxation on Agriculture
+
+---
+
+- Urgent Need for Systemic Approach to Agriculture
+- Advocacy for Integrated Farming Systems
+- Critique of Unfair Taxation System
+- Call for Constitutional Amendment to Allow Federal Taxation on Agricultural Income
