@@ -1,0 +1,154 @@
+---
+title: "From Swimming in Sand to High and Sustainable Growth" 
+subtitle: "A roadmap to reduce distortions in the allocation of
+resources and talent in the Pakistani economy" 
+author: "World Bank"
+format:
+  revealjs: 
+    theme: [default, custom.css, styles.scss]
+    chalkboard: true
+editor: visual
+
+---
+
+---
+## {.fragment .fade-up}
+
+---
+
+![](images/usaid1.jpeg){.r-stretch} 
+
+---  
+
+![](images/Blind_men_elephant.jpg) {.r-stretch}
+
+---
+
+![From swiming...](images/wb_report.png)
+
+--- 
+
+### Introduction 
+
+- Focus: Performance of Pakistan in growth areas 
+
+    - Productivity 
+    
+    - Growth of firms and investment 
+    
+    - Female labor force participation 
+    
+- Objective: Address distortions affecting growth and propose reforms
+
+---
+
+### Slide 3: Productivity Dynamics 
+
+- Decline in aggregate productivity over the past decade 
+- 23% contraction in firms' productivity due to COVID-19 
+- Stronger contractions in family-owned firms 
+- Agriculture: 
+    - Yields growth due to input use 
+    - Falling total factor productivity with provincial variations
+
+---
+
+### Allocative Efficiency Gains 
+
+- Modest allocative efficiency gains observed 
+
+- Systematic losses in agriculture in Punjab 
+
+- Eliminating distortions can lead to 30% productivity gains
+
+---
+
+## Export Productivity Premium 
+
+- Significant productivity premium for exporters 
+
+- Declining share of exporting firms and exports 
+
+- Duty Drawback of Taxes (DDT) impact: Small positive impact and high cost/benefit ratio
+
+---
+
+### Import Duties Impact 
+
+- High import duties on intermediates affect productivity, sales, and wages 
+
+- All manufacturing sectors experienced increased duties 
+- Negative effects largest for small exporters
+
+---
+
+### Climate Change and Agriculture 
+
+- Climate change threatens agricultural productivity 
+
+- Crops negatively affected by higher temperatures and rainfall variations 
+
+- Importance of investing in adaptation technologies
+
+---
+
+### Private Investment and FDI 
+
+- Decline in productivity linked to low investment rates 
+- FDI remained below 1% of GDP 
+
+- Limited growth of firms due to size-dependent policies and crowding out by government borrowing 
+
+
+---
+
+### Insider-Outsider Dynamics 
+
+- Powerful 'insiders' influencing policies 
+
+- Distortions at the expense of outsiders and growth 
+
+- Reforms require strong political leadership and civil society
+
+---
+
+### Female Labor Force Participation 
+
+- Pakistan's lower-than-average FLFP 
+
+- Misallocation of female talent 
+
+- GDP gains of 5-23% by closing the female employment gap
+
+---
+
+## Proposed Reforms 
+
+- Remove distortions to improve aggregate productivity 
+
+    - Tax policy, Trade policy, Export schemes, Size-dependent policies, Agriculture subsidies, Working conditions for women 
+    
+- Complementary reforms for positive impact 
+
+    - Fiscal space, Credit, Managerial practices, Business climate, Investment framework, Insolvency regime
+
+---
+
+### Policy Implementation 
+
+- Implement reforms sequentially 
+
+- Engage academia for evidence-based policymaking 
+
+- Ensure transparency and public scrutiny
+
+---
+
+### Conclusion 
+
+- Importance of addressing distortions for growth 
+
+- Global challenges post-COVID-19 and Ukraine war 
+
+- Need for strong political will and civil society involvement
+

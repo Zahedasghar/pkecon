@@ -36,6 +36,9 @@ Hi everybody! Thank you so much for joining today's session.
 
 ![](images/usaid1.jpeg){.r-stretch}
 
+## [Serious issues in IMF programmes: time for urgent reforms](https://www.brecorder.com/news/40330084/serious-issues-in-imf-programmes-time-for-urgent-reform)
+
+
 ## Why Export Matters
 
 -   global competitiveness
@@ -59,6 +62,8 @@ Hi everybody! Thank you so much for joining today's session.
 -   Reasons: Mangerial skills, organizational skills
 
 ## GDP calculation in process
+
+
 
 ![](images/low_consumption.png){.r-stretch}
 
@@ -118,7 +123,9 @@ NFC : Devolution is good with responsibility but NFC More resources to provinces
     -   1990s: 34 %
     -   2000s: 20%
 
-![stagnancy](images/productivity_stagnation.png)
+## 
+
+![stagnancy](images/productivity_stagnation.png){.r-stretch}
 
 ## Flawed Economic Discourse
 
