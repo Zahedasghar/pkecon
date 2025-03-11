@@ -260,7 +260,7 @@ Addressing the challenges faced by the livestock sector is crucial for its susta
 
 ##  {.fragment .current-only}
 
---- 
+------------------------------------------------------------------------
 
 **Summary: Crops and Livestock in Pakistan's Economy**
 
@@ -300,81 +300,81 @@ Overall, a thriving crop and livestock sector is essential for a strong and pros
 
 **Challenges for Agriculture in Pakistan**
 
-1. **Productivity Enhancement and Cost Reduction**
+1.  **Productivity Enhancement and Cost Reduction**
 
-2. **Adaptation to Climate Change and Mitigation**
+2.  **Adaptation to Climate Change and Mitigation**
 
-3. **Shift in Consumer Demand towards High-Value Products**
+3.  **Shift in Consumer Demand towards High-Value Products**
 
 ------------------------------------------------------------------------
 
 **Key Policy Issues**
 
-- Land Access, Quality, and Use
+-   Land Access, Quality, and Use
 
-- Water Resources Management
+-   Water Resources Management
 
-- Technology Transfer and Adoption
+-   Technology Transfer and Adoption
 
-- Market Structure and Regulation
+-   Market Structure and Regulation
 
-- Subsidies, Taxes, and Investments
+-   Subsidies, Taxes, and Investments
 
 ------------------------------------------------------------------------
 
 **1. Land Policy**
 
-- Access and Ownership Issues
+-   Access and Ownership Issues
 
-- Land Record Digitization
+-   Land Record Digitization
 
-- Protection of Farmland
+-   Protection of Farmland
 
-- Distorted Price Signals
+-   Distorted Price Signals
 
 ------------------------------------------------------------------------
 
 **2. Water Resources Management**
 
-- Water Conservation
+-   Water Conservation
 
-- Demand-Driven Irrigation
+-   Demand-Driven Irrigation
 
-- Regulatory Framework for Groundwater
+-   Regulatory Framework for Groundwater
 
-- Farm-Level Water Management
+-   Farm-Level Water Management
 
 **3. Technology Transfer**
 
-- Increased Investment in Research and Extension
+-   Increased Investment in Research and Extension
 
-- Adoption of Profitable and Sustainable Technologies
+-   Adoption of Profitable and Sustainable Technologies
 
-- Respect for Intellectual Property Rights
+-   Respect for Intellectual Property Rights
 
-- Reorientation of Research and Extension Systems
+-   Reorientation of Research and Extension Systems
 
 ------------------------------------------------------------------------
 
 **4.Agricultural Markets**
 
- - Role of Government in Market Regulation
+-   Role of Government in Market Regulation
 
- - Reduction of Intermediaries
+-   Reduction of Intermediaries
 
- - Fair Pricing Mechanisms
+-   Fair Pricing Mechanisms
 
- - Role of Private Sector in Market Operations
+-   Role of Private Sector in Market Operations
 
 **5.Subsidies, Taxes, and Investments**
 
- - Reduction of Subsidies on Farm Inputs
+-   Reduction of Subsidies on Farm Inputs
 
- - Equitable Taxation on Agricultural Income
+-   Equitable Taxation on Agricultural Income
 
- - Increased Public Investment in Rural Infrastructure
+-   Increased Public Investment in Rural Infrastructure
 
- - Promotion of Private Sector Investments
+-   Promotion of Private Sector Investments
 
 ## Absentee Landlordism and Taxation {.scrollable}
 
@@ -396,12 +396,249 @@ Critiques of absentee landlordism often advocate for policies and interventions 
 
 ##  {.fragment .current-only}
 
---- 
+------------------------------------------------------------------------
 
 -   Advocacy for Equitable Taxation on Agricultural Income
+
 -   Need for Constitutional Amendment to Allow Federal Taxation on Agriculture
 
 -   Urgent Need for Systemic Approach to Agriculture
+
 -   Advocacy for Integrated Farming Systems
+
 -   Critique of Unfair Taxation System
+
 -   Call for Constitutional Amendment to Allow Federal Taxation on Agricultural Income
+
+# Why Agriculture?
+
+-   One of the most complex problems of the 21st century
+-   Perfect confluence of bleeding-edge technologies:
+    -   Genetics
+    -   Big Data / Data Science
+    -   Artificial Intelligence / Machine Learning
+    -   Remote Sensing
+    -   Image Processing
+    -   Internet of Things
+    -   Drones
+    -   Robotics
+    -   Logistics
+    -   Weather forecasting
+    -   FinTech
+    -   Climate-smart sustainability
+
+------------------------------------------------------------------------
+
+# Largest Exporters of Agriculture Products
+
+| Country       | Exports (Billion USD) |
+|---------------|-----------------------|
+| United States | 118.3                 |
+| Netherlands   | 79                    |
+| Germany       | 70.8                  |
+| France        | 68                    |
+| Brazil        | 55.4                  |
+
+------------------------------------------------------------------------
+
+# Main Issues of the Agriculture Sector in Pakistan (Upstream)
+
+-   The incredible shrinking farm
+-   Access to formal credit
+-   Access to viable crop/livestock insurance
+-   Knowledge of modern/best practices
+-   Access to good quality inputs
+-   Overburdened Agriculture Extension system
+-   Lack of Updated Data
+-   Lack of appreciation of Climate Change
+-   Sub-optimum crop choices for soil/climate
+
+------------------------------------------------------------------------
+
+# Main Issues of the Agriculture Sector in Pakistan (Production)
+
+-   Knowledge of modern/best practices
+-   Overburdened Agriculture Extension system
+-   Poor access to modern machinery
+-   Lack of accurate information on weather
+-   Insufficient soil testing
+-   Over/Under fertilization
+-   High use of pesticide
+-   Poor Irrigation Practices
+
+------------------------------------------------------------------------
+
+# Agriculture Landscape: Average Farm Size
+
+![Agriculture Landscape: Average Farm Size](image.png)
+
+-   Pakistan: Average Farm Area (6.4 acres), Average Cultivated Area (5.2 acres)
+
+-   KP: 3.6 acres (Farm), 2.9 acres (Cultivated)
+
+-   Punjab: 5.6 acres (Farm), 5.1 acres (Cultivated)
+
+-   Sindh: 8.8 acres (Farm), 6.9 acres (Cultivated)
+
+-   Baluchistan: 22.7 acres (Farm), 9.7 acres (Cultivated)
+
+    # Main Issues of the Agriculture Sector in Pakistan (Downstream)
+
+    -   Poor market access
+    -   Layers of Middlemen between farm and fork
+    -   Right price for the produce
+    -   Insufficient / inappropriate storage
+    -   Insufficient / inappropriate transportation
+    -   Very high post-harvest losses
+    -   Very high wastage of food
+
+    ------------------------------------------------------------------------
+
+    # Agriculture Landscape: Average Farm Size
+
+    ![Agriculture Landscape: Average Farm Size](image.png)
+
+    -   Pakistan: Average Farm Area (6.4 acres), Average Cultivated Area (5.2 acres)
+    -   KP: 3.6 acres (Farm), 2.9 acres (Cultivated)
+    -   Punjab: 5.6 acres (Farm), 5.1 acres (Cultivated)
+    -   Sindh: 8.8 acres (Farm), 6.9 acres (Cultivated)
+    -   Baluchistan: 22.7 acres (Farm), 9.7 acres (Cultivated)
+
+    ------------------------------------------------------------------------
+
+    # Agriculture Landscape: Yield Comparison (MT/HA)
+
+    | Crop      | Pakistan | India | Bangladesh | China | Pakistan (20/21) |
+    |-----------|----------|-------|------------|-------|------------------|
+    | Maize     | 4.79     | 3.02  | 8.21       | 6.10  | 5.97             |
+    | Onions    | 14.11    | 16.78 | 9.73       | 22.08 | \-               |
+    | Potatoes  | 23.67    | 22.56 | 20.41      | 18.76 | \-               |
+    | Rice      | 3.84     | 3.88  | 4.74       | 7.03  | 2.52             |
+    | Tomatoes  | 9.44     | 24.65 | 13.69      | 59.40 | \-               |
+    | Wheat     | 2.85     | 3.37  | 3.13       | 5.42  | 2.97             |
+    | Citrus    | 11.21    | 12.93 | 4.70       | 15.19 | \-               |
+    | Sugarcane | 60.95    | 79.68 | 40.36      | 76.89 | 69.54            |
+
+    *Note: Holland has an average yield of 495 mt/ha for tomatoes*
+
+# Agriculture Landscape: Post Harvest Losses
+
+-   As high as 40% in fruits and vegetables
+-   As high as 20% in grains
+-   Poor post-harvest practices:
+    -   Improper drying – aflatoxins
+    -   Improper storage (ancient godowns – sacked grains), no temperature and humidity control (PASSCO has capacity to store only 15% of wheat production)
+    -   Poor packaging & Transportation
+-   **Estimated loss:** US\$ 5 billion annually
+
+------------------------------------------------------------------------
+
+# Agriculture Landscape: Water Use Comparison
+
+| Region                | Fresh Water Withdrawal for Agriculture |
+|-----------------------|----------------------------------------|
+| South Asia            | 91%                                    |
+| MENA                  | 85%                                    |
+| Sub Saharan Africa    | 81%                                    |
+| LATAM & Caribbean     | 72%                                    |
+| East Asia & Pacific   | 72%                                    |
+| Europe & Central Asia | 36%                                    |
+| Pakistan              | 94%                                    |
+
+------------------------------------------------------------------------
+
+# Agriculture
+
+## Agriculture Landscape: Pesticide Use
+
+### Pesticide Use Data
+
+-   **Source**: Statistical Yearbook 2022 (FAO)
+-   **Key Issue**: Pesticide use in Pakistan has remained constant since 2005
+
+### Data Table (Pesticide Use in Tonnes)
+
+| Country | 2000 | 2005 | 2010 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 |
+|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
+| Nigeria | \- | \- | \- | \- | \- | \- | \- | \- | \- |
+| North Macedonia | 296 | 149 | 98 | 98 | 98 | 98 | 98 | 98 | 98 |
+| Norway | 348 | 519 | 699 | 631 | 676 | 671 | 614 | 604 | 688 |
+| Oman | 45 | 151 | 256 | 333 | 347 | 275 | 204 | 305 | 1,703 |
+| **Pakistan** | **27,885** | **11,871** | **11,872** | **11,872** | **11,872** | **11,872** | **11,872** | **11,872** | **11,872** |
+
+### Key Findings
+
+-   Pesticide use in Pakistan (2017): **206,000 tons**
+-   **1169% increase** in pesticide use in the last two decades
+
+### Conclusion
+
+-   Urgent need to analyze and regulate pesticide usage trends
+
+-   Potential environmental and health concerns
+
+    ## Farm Size, Credit & Insurance
+
+    ::::: columns
+    ::: {.column width="50%"}
+    ### Credit & Lending
+
+    -   **State Bank’s Agri Lending Target**: Rs. 1.8 trillion (FY 2023), **67% disbursed**
+    -   **Commercial Banks**:
+        -   Do not offer **collateral-less lending**
+        -   Generally **do not lend** to farmers with \<12.5 acres
+    -   **Farmers' Loan Needs**:
+        -   **Bullet Loans** (5-6 months, Rs 100K/acre)
+        -   **Machinery Loans** (3-5 years tenor)
+    -   **Challenges**:
+        -   **80-90%** of farmers rely on **microfinance/informal sector**
+        -   Interest rates **approaching 50%**
+        -   Collaboration with **Fintechs & Banks** for value chains
+    :::
+
+    ::: {.column width="50%"}
+    ### Crop Insurance
+
+    -   **Standard Crop Insurance**:
+        -   Govt must declare a **disaster-hit area**
+        -   Farmers must **file claims**
+        -   **Claims adjuster** validation required
+        -   **Payouts take 8-10 months**
+    -   **Parametric Insurance**:
+        -   **Successful pilots in Pakistan**
+        -   **Payouts during crop lifecycle**
+        -   **Who will pay for insurance?**
+        -   
+    :::
+    :::::
+
+## Soil Testing
+
+-   **Slow process**
+-   **Farmers do not practice it**
+-   **Takes several days** for results
+-   **Without soil analysis**, suboptimal fertilizer use → **poor soil health**
+-   **Variation in results** – 80%
+
+### Innovation & Future Outlook
+
+-   **MIT collaboration**: Developing a **low-cost real-time soil testing kit**
+-   **Planned pilot in Pakistan this year**
+
+![](images/clipboard-2616420731.png)
+
+![](images/clipboard-462831942.png)
+
+![![](images/clipboard-1521304814.png)](images/clipboard-4081675549.png)
+
+![](images/clipboard-3301912485.png)
+
+![](images/clipboard-1420369496.png)
+
+![](images/clipboard-3870479035.png)
+
+![](images/clipboard-3118202591.png)
+
+![![](images/clipboard-3762857846.png)](images/clipboard-3322729246.png)
+
+![](images/clipboard-597665183.png)
