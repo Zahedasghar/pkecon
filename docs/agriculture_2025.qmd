@@ -559,7 +559,7 @@ Critiques of absentee landlordism often advocate for policies and interventions 
 ### Data Table (Pesticide Use in Tonnes)
 
 | Country | 2000 | 2005 | 2010 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 |
-|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+|----|----|----|----|----|----|----|----|----|----|
 | Nigeria | \- | \- | \- | \- | \- | \- | \- | \- | \- |
 | North Macedonia | 296 | 149 | 98 | 98 | 98 | 98 | 98 | 98 | 98 |
 | Norway | 348 | 519 | 699 | 631 | 676 | 671 | 614 | 604 | 688 |

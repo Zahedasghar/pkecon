@@ -1,0 +1,156 @@
+---
+title: "Getting Out of the Economic Boom-Bust Cycle"
+subtitle: "An Analysis of Pakistan's Economic Challenges and Recommendations"
+author: "Zahid Asghar, Quaid-i-Azam University, Islamabad"
+format:
+  revealjs: 
+    theme: [default, custom.css, styles.scss]
+    chalkboard: true
+editor: visual
+---
+
+## Atlas of Economic Complexity
+
+![Harvard Atlas of Economic Complexity](https://atlas.cid.harvard.edu/countries/1/overview)
+
+
+
+
+## Historical Economic Overview
+
+[**Getting out of Boom-Bust Cycle**](https://www.brecorder.com/news/40355109/getting-out-of-the-economic-boom-bust-cycle)
+
+
+- **Consumption-Oriented Economy:** Since independence, Pakistan's growth has been driven by consumption and a focus on light industries. 
+
+- **Government's Role:** Limited regulation and suboptimal economic policies have led to high transaction costs.
+
+---
+
+### 🔍 **Consumption-Oriented Economy**  
+- **What it means:** 
+  - Pakistan’s economic growth has primarily been driven by domestic consumption rather than investment or exports.
+  - Instead of producing goods and services for export (which would earn foreign exchange), a significant portion of economic activity is focused on satisfying local consumer demand.
+  - This pattern is common in developing countries where consumption is prioritized over savings and investment in productive sectors.
+
+- **Light Industries Focus:** 
+  - The emphasis has traditionally been on *light industries* like textiles, food processing, and consumer goods rather than heavy industries like steel, machinery, or technology-driven sectors.
+  - Light industries require less capital and technology, making them easier to establish but limiting the potential for high-value, complex production.
+
+---
+
+### 🔍 **Government’s Role**  
+- **What it means:** 
+  - The government has not effectively regulated the economy to promote balanced growth, investment, and industrialization.
+  - **Limited Regulation:** There is often inadequate oversight or strategic planning for economic development, leading to inefficiencies and missed growth opportunities.
+  - **Suboptimal Economic Policies:** Policies may not be well-designed to encourage investment, technological advancement, or export growth. Often, they are short-term focused or inconsistent, leading to market distortions.
+  - **High Transaction Costs:** Due to bureaucracy, corruption, poor infrastructure, or inefficient institutions, businesses face higher costs to operate. This discourages investment and innovation.
+
+---
+
+### 💡 **In simpler terms:**  
+- Pakistan’s economy relies heavily on people spending money on goods and services (consumption) instead of making things to sell abroad (exports) or investing in building advanced industries.
+- The government’s policies and regulations have not been strong or effective enough to lower business costs and encourage broader economic growth.
+
+---
+
+## Consequences of Current Policies
+
+- **Market Fundamentalism:** Emphasis on market-driven price signals has fostered a consumption-heavy society with insufficient savings.
+- **Import Pressures:** Lack of significant import-substituting industries has increased reliance on foreign goods.
+
+---
+
+### **1. Price-Wage Spiral**
+- **Definition:** It's a cycle where rising prices (inflation) lead to higher wages as workers demand more pay to keep up with the cost of living. The higher wages, in turn, increase production costs for companies, which then raise their prices to maintain profit margins, causing further inflation. 
+- **In context:** Investments in **light industries** (e.g., consumer goods, textiles, food processing) can lead to rapid growth and demand for labor. As labor demand rises, so do wages. If this process continues unchecked, it contributes to **inflation** and economic volatility, especially when workers continuously demand higher wages to match the rising prices.
+
+---
+
+### **2. Structural Disequilibrium**
+- **Definition:** This occurs when there is an imbalance between supply and demand due to structural factors within an economy, particularly in industries that are slow to adapt or change.
+**Heavy industries** (e.g., steel, mining, manufacturing) tend to have **low elasticity** in supply and demand. This means they are not very responsive to changes in market conditions—producing more or less takes time and investment. Because of this sluggishness, these industries often experience **boom-bust cycles** where periods of rapid growth (booms) are followed by sudden downturns (busts). The inability to quickly adjust supply to meet changing demand perpetuates these cycles.
+
+---
+
+### **Why These Matter**
+- **Combined Effect:** When an economy has a **price-wage spiral** happening in light industries and **structural disequilibrium** in heavy industries, it creates a recipe for economic instability. Inflation from the price-wage spiral can harm heavy industries that struggle to adjust their output, worsening the boom-bust cycle. 
+- **Policy Implication:** Managing these issues often requires targeted economic policies—like controlling wage growth or improving supply flexibility in heavy industries—to stabilize the economy.
+
+
+
+
+## Impact on Industrial Development
+
+- **Light vs. Heavy Industry:** Preference for quick profits in light industries has deterred investments in heavy industries.
+- **Skills and Labor Market:** Skilled labor gravitates towards light industries, hindering the development of a robust heavy industrial sector.
+
+---
+
+## Inflationary Pressures and Economic Instability
+
+- **Price-Wage Spiral:** Investments in light industries contribute to inflation and economic volatility.
+- **Structural Disequilibrium:** Low elasticity in supply and demand within heavy industries perpetuates the boom-bust cycle.
+
+---
+
+## Critique of Neoliberal Policies
+
+- **Austerity Measures:** Overemphasis on austerity suppresses aggregate demand without addressing supply-side constraints.
+- **Twin Deficits:** Current account and fiscal deficits remain unresolved, leading to unsustainable debt levels.
+
+---
+
+## Alternative Approach: Dual-Track Pricing Mechanism
+
+- **China's Model:** In the 1980s, China implemented a dual-track pricing system to balance market liberalization with government regulation.
+- **Policy Recommendation:** Pakistan could adopt a similar strategy to stabilize prices and encourage industrial growth.
+
+---
+
+## Addressing Climate Change and Economic Resilience
+
+- **Climate Vulnerability:** Pakistan is among the most climate-vulnerable countries.
+- **Policy Implication:** Economic reforms should incorporate climate resilience to ensure sustainable development.
+
+---
+
+## Pakistan vs. South Korea & China - Heavy vs. Light Industry Comparison
+
+### Pakistan (Primarily Light Industry Focused)
+- **Major Light Industries:**
+  - Textiles & Garments: Nearly 60% of total exports; Low value addition.
+  - Sports Goods: Particularly in Sialkot; Limited innovation and low value addition.
+  - Leather Products: Shoes, gloves, jackets; Limited technological innovation.
+- **Weak Heavy Industry:** Steel, Automobiles, Chemicals, Energy - all underdeveloped.
+
+---
+
+### South Korea (Heavy Industry Focused)
+- **Major Heavy Industries:** Steel, Automobiles, Electronics.
+- **Outcome:** High-value exports, resilience, and consistent growth.
+
+---
+
+### China (Balanced Approach - Heavy Industry Dominance)
+- **Major Heavy Industries:** Steel, Machinery, Energy.
+- **Outcome:** Robust growth due to diversified industrial base and value addition.
+
+---
+
+## Comparison Table {.scrollable}
+
+```{r}
+library(knitr)
+comparison_table <- data.frame(
+  Aspect = c("Industrial Base", "Value Addition", "Export Structure", "Economic Stability", "Technology & Innovation"),
+  Pakistan = c("Light industries dominate.", "Low.", "Narrow (Textiles).", "Boom-bust cycles.", "Low investment."),
+  South_Korea = c("Heavy industries dominate.", "High.", "Diversified.", "Consistent growth.", "High R&D investment."),
+  China = c("Balanced heavy & light industries.", "High.", "Diversified.", "Resilient.", "High R&D investment.")
+)
+
+kable(comparison_table, format = "html", table.attr = 'class="table table-striped"')
+
+```
+
+

@@ -1,6 +1,13 @@
 ---
-title: "ISSUES IN PAKISTAN ECONOMY"
+title: "Economy of Pakistan"
+author: "Prof.Dr. Zahid Asghar"
+format: html
+toc: true
+toc-depth: 2
+number-sections: true
+date: "March 2025"
 ---
+
 
 ## COURSE DESCRIPTION
 This course gives an overview of economic issues of Pakistan. Starting from national
@@ -27,95 +34,129 @@ Upon Successful Completion, the Students Should be able to:
 
 # COURSE CONTENTS 
 
-## Quick Review of National Income Accounts
-- GDP (Nominal and Real) and GNP
-- Measure of Inflation and Employment
-- Measures of Social Welfare
-- Beyond GDP
-- Basic Needs Approach
-- HDI Approach
 
-## Process of Industrialisation in Pakistan - Key issues one Industry in Pakistan 
 
-## Agriculture Development in Pakistan- Critical Issues
+## **Course Outline**
 
-## Power Sector - Issues and Reform 
+### **Module 1: Introduction to the Economy of Pakistan**
+- **Overview of Pakistan’s Economic Structure**
+  - GDP Composition (Agriculture, Industry, Services)
+  - Employment Distribution Across Sectors
+- **Historical Context of Economic Development (1960s to Present)**
+  - Comparative Analysis: Pakistan vs. China, India, Bangladesh, Vietnam, Malaysia
+  - Decadal Growth Trends and Shifts in Sectoral Contributions
 
-## Trade - Regimes and Policy 
+---
 
-## Public Finance- Resource Mobilization and Taxation
+### **Module 2: Macroeconomic Challenges**
+- **Persistent Balance of Payment Issues**
+  - Import-Driven Booms and Crises
+  - IMF Programs: Repeated Bailouts & Structural Issues
+- **Fiscal Challenges**
+  - Low Revenue Generation and High Expenditure
+  - Fiscal Deficit and Circular Debt (Energy Sector Focus)
+  - NFC Award and Devolution without Accountability
+- **Inflation and Unemployment: Trends and Causes**
+  - Economic Growth vs. Job Creation
+  - Structural Unemployment and Underemployment
 
-## Debts and Deficits- Budget deficit and debt sustainability 
+---
 
-## IMF, World Bank and Role of Aid in Pakistan 
+### **Module 3: Sectoral Analysis of Pakistan’s Economy**
 
-## Devolution and Decentralisation - 18 th Amendment and implications 
+#### **3.1. Agriculture Sector**
+- **Importance of Agriculture in Pakistan’s Economy**
+  - Contribution to GDP, Employment, and Exports
+- **Challenges in Agriculture**
+  - Low Productivity and Yield Gaps (Comparative Analysis with China and Egypt)
+  - Water Scarcity and Inefficient Irrigation Systems
+  - Limited R&D and Technology Adoption
+- **Policy Reforms and Future Prospects**
 
-## Social Sectors - Status and Performance in Health and Education 
+#### **3.2. Industrial Sector**
+- **Overview of Pakistan’s Manufacturing Base**
+  - Textiles, Surgical Instruments, Sports Goods, Cement, Fertilizers
+- **Challenges in Industrial Productivity**
+  - Lack of Innovation, Branding, and Technology Upgradation
+  - Heavy Protectionism and Import-Substitution Bias
+  - Energy Crisis and High Input Costs
+- **Policy Recommendations for Revitalizing Industry**
 
-## Poverty in Pakistan - Persistence and Remedy
+#### **3.3. Services Sector**
+- **Growth and Composition of the Services Sector**
+  - Banking, Telecommunications, Trade, and Retail
+  - Emerging Sectors: IT, E-commerce, Tourism
+- **Challenges and Opportunities**
+  - High Informality and Low Tax Base
+  - Technological Transformation and Digitalization
+- **Policy Framework for Enhancing Competitiveness**
 
-## Urbanisation - Patterns, Growth of the Middle Class, and Study of Cities
+---
 
-## The State, Institutions, Civil Society and Democratisation- Governance and the Political Economy
+### **Module 4: Productivity and Competitiveness**
+- **Aggregate Productivity Trends**
+  - Declining Productivity in Agriculture and Industry
+  - Productivity vs. Resource Allocation
+- **Export Competitiveness**
+  - Lack of Innovation and Branding
+  - Comparative Analysis of Export Growth: Pakistan vs. India, Bangladesh, Vietnam
+  - Structural Barriers to Export Growth (Duty Drawback of Taxes, Import Duties)
 
-# Real Challenges to Pakistan Economy 
+---
 
-- Poverty
-- Unemployment
-- Inflation
-- Income Inequality
-- Human Development
-- Social Sector Development
-- Education
-- Health
-- Population
-- Environment
-- Water
-- Agriculture
-- Industry
-- Services
-- Infrastructure
-- Governance
-- Corruption
-- Political Instability
-- Law and Order
-- Energy Crises
-- Rising Circular Debt
-- External Debt
-- Balance of Payments
-- Exchange Rate
-- Trade
-- Investment
-- Fiscal Policy
-- Monetary Policy
-- Financial Sector
-- Taxation
-- Public Expenditure
-- Public Debt
-- Public Sector Enterprises
-- Privatization
-- External Assistance
-- Foreign Exchange Reserves
-- External Debt
-- Balance of Payments
-- Exchange Rate
-- Trade
-- Investment
-- Fiscal Policy
-- Monetary Policy
-- Financial Sector
-- Taxation
-- Public Expenditure
-- Public Debt
-- Public Sector Enterprises
+### **Module 5: Institutional and Structural Barriers**
+- **Extractive vs. Inclusive Institutions**
+  - Law and Order, Property Rights, Market Regulation
+  - Inequality and Rent-Seeking Behavior
+- **Governance Issues and Policy Failures**
+  - Flawed Economic Discourse and Myopic Approaches
+  - Protectionism and Anti-Export Bias
+  - Lack of Accountability and Political Instability
+- **The Role of Public Sector Enterprises (PSEs)**
+  - Performance Issues and Structural Reform Needs
+  - Privatization vs. Restructuring Debate
 
-# TEACHING METHODOLOGY
-- Lectures
-- In Class Activities
-- Group Discussion
-- Guest Lectures (optional)
-- Term Paper (optional)
+---
+
+### **Module 6: Economic Policies and Reforms**
+- **Industrial and Trade Policies**
+  - Special Economic Zones (SEZs) and Export-Led Growth Models
+  - Tariff Rationalization and Export Financing
+- **Fiscal Policies and Taxation Reforms**
+  - Revenue Generation Strategies
+  - Reforming Public Sector Enterprises (PSEs)
+- **Agricultural Policies and Rural Development**
+  - Yield Improvement, R&D, and Technological Adoption
+- **Services Sector Reforms**
+  - Enhancing Digital Infrastructure and E-Government
+  - Promoting Innovation in Financial and IT Services
+
+---
+
+### **Module 7: Technological Development and Future Growth**
+- **The Role of Innovation and Technology in Economic Growth**
+  - Digitalization and Its Impact on Industry and Services
+  - Technological Upgradation in Agriculture
+- **Investment in Human Capital and Institutional Capacity Building**
+- **Promoting Entrepreneurship and Productivity Enhancement**
+
+---
+
+### **Module 8: The Way Forward**
+- **Policy Recommendations for Sustainable Economic Growth**
+  - Building Domestic Capacity
+  - Promoting Inclusive Economic Institutions
+  - Enhancing Competitiveness in Global Markets
+- **The Role of Creativity, Innovation, and Governance**
+  - Learning from International Best Practices
+  - Addressing Structural Barriers and Promoting Meritocracy
+
+---
+
+### **Module 9: Conclusion and Review**
+- **Summary of Key Issues and Recommended Policy Reforms**
+- **Open Discussion: Future Prospects of Pakistan's Economy**
+
 
 ## ASSESSMENT
 - Mid Term Evaluation: 50%
