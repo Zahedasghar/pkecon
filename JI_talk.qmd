@@ -1,0 +1,118 @@
+---
+title: "Growth vs Stabilization: Rethinking Pakistan’s Economic Strategy"
+subtitle: "A 20-Minute Presentation"
+author: "Zahid Asghar"
+date: "2025-05-09"
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    transition: slide
+---
+
+## Opening Context
+
+- Pakistan has entered 25 IMF programs since 1988
+- IMF focus has always been **stabilization**:
+  - Monetary tightening
+  - Fiscal austerity
+  - Utility price hikes
+  - Market-based exchange rate
+- Yet, economic crises repeat — why?
+
+---
+
+## The Stabilization Trap
+
+- Tools used repeatedly:
+  - High interest rates
+  - Cuts to subsidies
+  - Currency devaluation
+- Consequences:
+  - Investment collapse
+  - Jobless recovery
+  - Development spending squeezed
+
+---
+
+## What Stabilization Achieves
+
+- Inflation control (short-term)
+- FX reserve buildup
+- Signals to donors and IFIs
+- BUT:
+  - Temporary
+  - Lacks sustainable growth impact
+
+---
+
+## The Missing Ingredient — Growth
+
+- Without growth:
+  - No revenue expansion
+  - No employment generation
+  - No fiscal room for defense, education, health
+- Youth bulge = risk if opportunities don’t grow
+
+---
+
+## What Growth Requires
+
+1. **Human Capital**
+   - Education, health, skills
+2. **Business Climate Reforms**
+   - Reduce red tape, enforce contracts
+3. **Export Diversification**
+   - Beyond textiles: IT, value-added agri, manufacturing
+4. **Infrastructure**
+   - Energy, transport, connectivity
+5. **Credit Access**
+   - Support for SMEs and startups
+
+---
+
+## IMF: Need for a New Lens
+
+- Stabilization must **enable**, not strangle growth
+- IMF conditionalities should:
+  - Incentivize investment
+  - Avoid pro-cyclical cuts
+  - Support productivity reforms
+
+---
+
+## Sectoral Impact
+
+- **Defense**: Needs long-term fiscal space
+- **Education & Health**: Get cut during austerity
+- **Youth**: Face rising unemployment
+- **Women**: Bear cost of inflation, services withdrawal
+
+---
+
+## A Path Forward
+
+- National consensus on long-term economic strategy
+- Push for IMF programs with:
+  - Growth-linked benchmarks
+  - Investment-oriented reforms
+- Stabilization **with** a growth engine
+
+---
+
+## Conclusion
+
+- Stabilization without growth = stagnation
+- Growth is not a luxury — it’s a necessity
+- Let’s break the 40-year cycle
+- Move from **austerity** to **opportunity**
+
+---
+
+## Q&A
+
+- Ask me about:
+  - Alternatives to current stabilization approach
+  - Role of provinces in growth
+  - Youth employment strategy
+  - Social spending under IMF programs

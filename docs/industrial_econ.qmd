@@ -228,27 +228,63 @@ Divergent Views : National industrial policy vs. market-led development. While s
 
 These distortions hinder export-led growth and efficiency.
 
-------------------------------------------------------------------------
+------------------------------------------------------------------------ 
 
-**Anti-Export Bias** - Pakistan’s industrial architecture exhibits an anti-export bias due to high import tariffs, incentivizing domestic industries to prioritize local sales over exports. - For instance, a product priced at \$100 globally, after a 20% import tariff, is sold for \$120 domestically, discouraging exports. - This bias results in multiple damages: (a) Consumers pay higher prices domestically, (b) Domestic producers, shielded from competition, rely on captive domestic markets, and (c) Even if production costs are below \$100, exporters find it more profitable to sell domestically at \$120. - Thus, the anti-export bias hampers export competitiveness and perpetuates reliance on domestic markets.
+## {.scrollable}
+**Anti-Export Bias** 
+- Pakistan’s industrial architecture exhibits an anti-export bias due to high import tariffs, incentivizing domestic industries to prioritize local sales over exports. 
+Policies and incentives favor producing for the domestic market over exporting goods.
+
+**Impact:** Makes exports less competitive because resources (like subsidies, cheaper credit, or tariff protections) are tilted toward local consumption instead of export-driven production.
+
+Example: If a textile company makes more profit selling locally due to government incentives or high import duties on finished goods, it won’t be motivated to export — even if there's demand abroad. 
+
+- For instance, a product priced at \$100 globally, after a 20% import tariff, is sold for \$120 domestically, discouraging exports. 
+
+- This bias results in multiple damages:  
+
+(a) Consumers pay higher prices domestically, 
+
+(b) Domestic producers, shielded from competition, rely on captive domestic markets, and 
+
+(c) Even if production costs are below \$100, exporters find it more profitable to sell domestically at \$120.  
+- Thus, the anti-export bias hampers export competitiveness and perpetuates reliance on domestic markets.
 
 ------------------------------------------------------------------------
 
 **Import Substitution**
 
--   Import Substitution and FDI Challenges
-    -   Import substitution remains a dominant strategy for industrial development, supported by decision-makers. While advocated for saving foreign exchange, it hinders export competitiveness.
+What it means: Focus on producing goods domestically that were previously imported, often through protective policies like high tariffs.
+
+Impact: Can create short-term industrial growth, but long-term it often leads to inefficiency, lack of competition, and poor quality products.
+
+Example: Instead of encouraging innovation and exports, industries get comfortable making low-quality goods just for the local market because foreign competition is blocked. 
+
     -   Protected import substitution industries, being noncompetitive, contribute to the permanent burden on foreign exchange by relying on imported inputs.
 
 ------------------------------------------------------------------------
 
 -   **Foreign Direct Investment (FDI)**
 
--   Foreign Direct Investment (FDI) in Pakistan's industrial sector tends to be market-seeking rather than efficiency-seeking. Multinational Enterprises (MNEs) focus on local production, consuming foreign exchange for imported inputs and repatriating profits abroad.
+Foreign companies invest in Pakistan mainly to sell to the local market, not to make it an export hub or part of a global supply chain. 
 
--   **Policy Capture**
 
--   Policy capture is prevalent in Pakistan's industrial structure, leading to inefficiency and reliance on state interventions and protection. Subsidies and protection fail to address viability concerns post-subsidy withdrawal, perpetuating industry dependence on state support and inhibiting growth beyond infancy stage.
+**Impact:** Limits technology transfer, innovation, and export potential. FDI doesn’t enhance industrial capabilities — it just serves local demand.
+
+**Example:** A multinational car company setting up assembly plants just to sell cars in Pakistan, rather than making parts or vehicles for export.
+
+---
+
+**Policy Capture**
+
+Industrial or political elites influence policy to benefit themselves — often at the expense of fair competition and public good. 
+
+
+**Impact:** Leads to favoritism, rent-seeking, and inefficient allocation of resources. New or smaller players find it hard to enter markets.
+
+Example: A big industrial group lobbying for favorable tax breaks or import restrictions, which hurt innovation and create monopolies.
+
+
 
 ------------------------------------------------------------------------
 

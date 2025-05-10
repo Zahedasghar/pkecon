@@ -78,7 +78,47 @@ editor: visual
 - **Policy Implication:** Managing these issues often requires targeted economic policies—like controlling wage growth or improving supply flexibility in heavy industries—to stabilize the economy.
 
 
+::: {.notes}
 
+
+### 🔍 **"Low elasticity in supply and demand" — what does it mean?**
+
+- **Elasticity** refers to how much **supply** or **demand** changes when **prices** change.
+- When something is **low in elasticity**, it means that even if prices go up or down, supply or demand **doesn’t adjust quickly**.
+
+---
+
+### 🏭 **Applied to heavy industries:**
+
+- **Heavy industries** (like steel, cement, oil refining) involve:
+  - Large investments
+  - Long setup times
+  - Limited flexibility to quickly scale up or down
+
+#### So when prices **rise**:
+- Demand may increase slightly.
+- Supply can’t increase fast because of the time and cost to expand production.
+
+#### When prices **fall**:
+- Supply stays high because companies can’t shut down instantly.
+- Demand doesn't jump up quickly either.
+
+---
+
+### 📉 **How this causes a boom-bust cycle:**
+
+1. **Boom**: High demand + slow supply response = prices shoot up → attracts overinvestment.
+2. **Bust**: When demand falls, supply remains high → prices crash → losses and shutdowns.
+
+This **lag in adjustment** leads to **cycles** of overproduction followed by collapse — instead of smooth, stable growth.
+
+---
+
+### 🧠 In short:
+> **Low elasticity means heavy industries can't quickly adapt to changes in demand or price. This slow response creates cycles of rapid growth (booms) followed by sharp declines (busts).**
+
+
+:::
 
 ## Impact on Industrial Development
 

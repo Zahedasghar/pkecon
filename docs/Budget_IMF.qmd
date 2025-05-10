@@ -1,0 +1,56 @@
+---
+title: "Budget 2025-26: Balancing the Books or Building the Future?"
+subtitle: "Jamaat-e-Islami’s Pre-Budget Seminar "
+author: "Zahid Asghar"
+date: "2025-05-10"
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    transition: slide
+    title-slide-attributes:
+      data-background-image: images/imf_budget.webp
+      data-background-size: cover
+      data-background-opacity: "0.4"  # Reduces background dominance
+      data-background-color: "rgba(0, 0, 0, 0.5)"  # Adds dark overlay for text contrast
+    css: styles.css  # Optional: Reference external CSS for further customization
+execute:
+  freeze: auto
+--- 
+
+<style>
+.reveal .slides section img.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* OR use 'contain' to avoid cropping */
+  margin: 0;
+  padding: 0;
+}
+</style>
+
+
+
+![](images/goal.png){.fullscreen}
+
+---
+
+![](images/imf.png){.fullscreen}
+
+---
+
+![](images/tax_impact.png){.fullscreen}
+
+---
+
+![](images/interest_rate.png){.fullscreen}
+
+---
+
+![](images/img_growth.png){.fullscreen}
+
+---
+
+![](images/austerity_to_opportunity.png){.fullscreen}
+---
+
+![](images/tax.png){.fullscreen}

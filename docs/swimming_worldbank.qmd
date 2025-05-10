@@ -112,6 +112,85 @@ editor: visual
 
 ---
 
+## FLFPR {.scorllable} 
+
+> When it is said there is more females in labour force , will it not lead to less opportunities for male in a developing country where opportunities are already limited
+
+## Not really—labour‑market opportunities are not a fixed pie
+
+When women take paid jobs, three things usually happen that offset (and often exceed) any direct “competition” with men.
+
+---
+
+## Mechanism 1: Demand Expands
+
+**How it works**  
+Women’s earnings raise household spending and savings, which feeds back into higher demand for goods and services and therefore more hiring. Firms also invest when a larger, more skilled workforce becomes available.
+
+**Evidence**  
+An IMF cross‑country study finds that narrowing the female‑male participation gap by 6 percentage points could lift GDP by about 8% within a few years.
+
+---
+
+## Mechanism 2: Jobs Created Upstream & Downstream
+
+**How it works**  
+New female‑intensive industries pull in male workers in transport, logistics, sales, and management. Complementary skills matter more than substitutes.
+
+**Evidence**  
+Sectoral studies (VoxDev) show female factory growth rarely depresses male employment. Instead, it shifts men into higher-skill roles and raises household income.
+
+---
+
+## Mechanism 3: Productivity Gains
+
+**How it works**  
+Diverse teams innovate more. A broader talent pool lets firms match people to tasks better, raising total factor productivity.
+
+**Evidence**  
+IZA data shows that each 1% rise in women’s employment links to a 0.3-0.4% rise in labour productivity in developing countries.
+
+---
+
+## But Aren’t Jobs Already Scarce?
+
+Scarcity often reflects too little labour demand and productivity.  
+Policies promoting women’s work—childcare, transport, anti-discrimination, skills—also raise productivity and attract investment.
+
+**Examples**  
+Rwanda, Vietnam, and the Philippines have seen male employment ratios stay stable while GDP and total employment grew.
+
+---
+
+## Possible Short-Run Frictions
+
+**Sectoral crowding-out**  
+- Temporary male wage dips in easily substitutable jobs.
+- Solution: Reskilling and mobility support.
+
+**Social norms**  
+- Stigma may slow male entry into "female" sectors.
+- Solution: Norm shifts over time.
+
+---
+
+## What Should Policymakers Do?
+
+- **Grow the pie**: Promote manufacturing, services, and digital entrepreneurship.
+- **Equalize human-capital investment**: Remove tuition and STEM barriers.
+- **Support care infrastructure**: Child and elder care frees time and creates jobs.
+- **Tackle discrimination and informality**: Enforce equal-pay laws and ease business registration.
+
+---
+
+## Bottom Line
+
+More women in the workforce **increases** the total pool of decent jobs.  
+It raises productivity, expands markets, and stimulates investment that benefits everyone.
+
+
+
+
 ### Female Labor Force Participation 
 
 - Pakistan's lower-than-average FLFP 

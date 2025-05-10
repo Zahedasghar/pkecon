@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f9f9f9"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle">Impact of Exorbitant Taxes on Economic Sectors</text>
+  
+  <!-- Economic Sectors -->
+  <g id="formal-sector">
+    <!-- Formal Sector Box -->
+    <rect x="100" y="100" width="250" height="200" rx="10" fill="#a8d1ff" stroke="#2e74b5" stroke-width="2"/>
+    <text x="225" y="125" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Formal Sector</text>
+    
+    <!-- Formal Sector Characteristics -->
+    <text x="120" y="155" font-family="Arial" font-size="14">• Registered businesses</text>
+    <text x="120" y="180" font-family="Arial" font-size="14">• Pay taxes</text>
+    <text x="120" y="205" font-family="Arial" font-size="14">• Follow regulations</text>
+    <text x="120" y="230" font-family="Arial" font-size="14">• Access to formal credit</text>
+    <text x="120" y="255" font-family="Arial" font-size="14">• Legal protections</text>
+  </g>
+  
+  <g id="informal-sector">
+    <!-- Informal Sector Box -->
+    <rect x="450" y="100" width="250" height="200" rx="10" fill="#ffd9a8" stroke="#ed7d31" stroke-width="2"/>
+    <text x="575" y="125" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Informal Sector</text>
+    
+    <!-- Informal Sector Characteristics -->
+    <text x="470" y="155" font-family="Arial" font-size="14">• Unregistered businesses</text>
+    <text x="470" y="180" font-family="Arial" font-size="14">• Avoid taxes</text>
+    <text x="470" y="205" font-family="Arial" font-size="14">• Operate outside regulations</text>
+    <text x="470" y="230" font-family="Arial" font-size="14">• Limited access to credit</text>
+    <text x="470" y="255" font-family="Arial" font-size="14">• Limited scale & growth</text>
+  </g>
+  
+  <!-- Tax Pressure Arrow -->
+  <g id="tax-pressure">
+    <path d="M170 310 L170 340 L225 340" stroke="#d64545" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <rect x="110" y="310" width="120" height="60" rx="5" fill="#ffb3b3" stroke="#d64545" stroke-width="2"/>
+    <text x="170" y="335" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Exorbitant</text>
+    <text x="170" y="355" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Taxes</text>
+  </g>
+  
+  <!-- No Incentive Arrow -->
+  <g id="no-incentive">
+    <path d="M575 310 L575 340 L525 340" stroke="#d64545" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <rect x="520" y="310" width="120" height="60" rx="5" fill="#ffb3b3" stroke="#d64545" stroke-width="2"/>
+    <text x="580" y="335" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">No Incentive</text>
+    <text x="580" y="355" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">to Formalize</text>
+  </g>
+  
+  <!-- Main Impact Box -->
+  <g id="impact">
+    <rect x="250" y="310" width="300" height="100" rx="10" fill="#d9ead3" stroke="#548235" stroke-width="2"/>
+    <text x="400" y="335" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Economic Impacts</text>
+    <text x="400" y="360" font-family="Arial" font-size="14" text-anchor="middle">• Limited firm growth</text>
+    <text x="400" y="385" font-family="Arial" font-size="14" text-anchor="middle">• Reduced innovation & R&D investment</text>
+    <text x="400" y="410" font-family="Arial" font-size="14" text-anchor="middle">• Stagnant productivity</text>
+  </g>
+  
+  <!-- Arrows between sectors -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+        markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d64545"/>
+    </marker>
+  </defs>
+  
+  <!-- Formal to Informal Arrow -->
+  <g id="formal-to-informal">
+    <path d="M350 170 L450 170" stroke="#d64545" stroke-width="3" fill="none" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+    <text x="400" y="155" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#d64545">Exit from</text>
+    <text x="400" y="175" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#d64545">formal sector</text>
+  </g>
+  
+  <!-- Informal to Formal Arrow (crossed) -->
+  <g id="informal-to-formal-blocked">
+    <path d="M450 220 L350 220" stroke="#d64545" stroke-width="3" fill="none" stroke-dasharray="5,5"/>
+    <line x1="380" y1="205" x2="420" y2="235" stroke="#d64545" stroke-width="3"/>
+    <line x1="380" y1="235" x2="420" y2="205" stroke="#d64545" stroke-width="3"/>
+    <text x="400" y="255" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#d64545">No formalization</text>
+  </g>
+  
+  <!-- Arrow from impacts to economy cycle -->
+  <path d="M400 410 L400 440 L690 440 L690 280 L700 280" stroke="#548235" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  
+  <!-- Cycle of economic constraints -->
+  <g id="economic-cycle">
+    <circle cx="725" y="210" r="60" fill="none" stroke="#d64545" stroke-width="2"/>
+    <text x="725" y="175" font-family="Arial" font-size="12" text-anchor="middle">Small firms</text>
+    <text x="725" y="210" font-family="Arial" font-size="12" text-anchor="middle">Limited innovation</text>
+    <text x="725" y="245" font-family="Arial" font-size="12" text-anchor="middle">Economic stagnation</text>
+    
+    <!-- Rotating arrow -->
+    <path d="M725 150 A45 45 0 1 1 680 210" stroke="#d64545" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  </g>
+</svg>

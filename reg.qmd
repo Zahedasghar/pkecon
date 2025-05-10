@@ -1,0 +1,140 @@
+---
+---
+title: "Ordinary Least Squares (OLS) Regression"
+author: "Dr. Zahid Asghar"
+format: revealjs
+editor: visual
+highlight-style: github
+---
+
+## What is OLS?
+
+Ordinary Least Squares (OLS) is a method to estimate the coefficients of a linear regression model.
+
+We assume the model:
+
+$$
+y_i = \beta_0 + \beta_1 x_i + \varepsilon_i
+$$
+
+Where:
+- \( y_i \) is the dependent variable
+- \( x_i \) is the independent variable
+- \( \beta_0 \), \( \beta_1 \) are the coefficients
+- \( \varepsilon_i \) is the error term
+
+---
+
+## Objective of OLS
+
+OLS minimizes the **sum of squared residuals**:
+
+$$
+\text{Minimize} \quad \sum_{i=1}^n (y_i - \hat{y}_i)^2 = \sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)^2
+$$
+
+The solution yields the best linear unbiased estimators (BLUE) under the Gauss-Markov assumptions.
+
+---
+
+## Estimating Coefficients
+
+The OLS estimators are derived by solving:
+
+\[
+\begin{align*}
+\hat{\beta}_1 &= \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2} \\
+\hat{\beta}_0 &= \bar{y} - \hat{\beta}_1 \bar{x}
+\end{align*}
+\]
+
+---
+
+## OLS Assumptions
+
+To ensure valid inference, OLS relies on several assumptions:
+
+1. **Linearity**: Model is linear in parameters.
+2. **Independence**: Observations are independent.
+3. **Homoscedasticity**: Constant variance of residuals.
+4. **Normality**: Residuals are normally distributed (for inference).
+5. **No multicollinearity**: Predictors are not highly correlated.
+
+---
+
+## Matrix Formulation
+
+For multiple regression, the model becomes:
+
+$$
+\mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \boldsymbol{\varepsilon}
+$$
+
+- \( \mathbf{y} \): \( n \times 1 \) vector of responses  
+- \( \mathbf{X} \): \( n \times p \) matrix of predictors (with intercept)  
+- \( \boldsymbol{\beta} \): \( p \times 1 \) vector of coefficients  
+- \( \boldsymbol{\varepsilon} \): error terms
+
+Estimator:
+
+$$
+\hat{\boldsymbol{\beta}} = (\mathbf{X}^\top \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{y}
+$$
+
+---
+
+## OLS in R
+
+```{r}
+data(mtcars)
+model <- lm(mpg ~ wt, data = mtcars)
+summary(model)
+```
+
+---
+
+## Model Visualization
+
+```{r}
+plot(mtcars$wt, mtcars$mpg, main = "MPG vs Weight", xlab = "Weight", ylab = "MPG")
+abline(model, col = "blue")
+```
+
+---
+
+## Diagnostics
+
+Check model validity:
+
+```{r}
+par(mfrow = c(2,2))
+plot(model)
+```
+
+Use these plots to assess:
+- Residuals vs Fitted
+- Normal Q-Q
+- Scale-Location
+- Residuals vs Leverage
+
+---
+
+## Conclusion
+
+- OLS estimates the linear relationship between variables.
+- Assumptions must be checked for valid inference.
+- Extendable to multiple and polynomial regression.
+
+---
+
+```
+
+---
+
+### ✅ To use this:
+
+1. Save it as `ols_lecture.qmd` in your RStudio project.
+2. Click "Render" to generate the slides.
+3. Math is auto-rendered using MathJax in RevealJS.
+
+Would you like me to add speaker notes or make this version more interactive (like showing plots on click)?
