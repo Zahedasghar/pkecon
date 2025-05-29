@@ -1,8 +1,8 @@
 ---
 title: "Budget 2025-26: Balancing the Books or Building the Future?"
-subtitle: "Jamaat-e-Islami’s Pre-Budget Seminar "
+subtitle: "Pre-Budget Seminar by Jamaat-e-Islami"
 author: "Zahid Asghar"
-date: "2025-05-10"
+date: "2025-05-29"
 format:
   revealjs:
     theme: solarized
@@ -15,7 +15,7 @@ format:
       data-background-color: "rgba(0, 0, 0, 0.5)"  # Adds dark overlay for text contrast
     css: styles.css  # Optional: Reference external CSS for further customization
 execute:
-  freeze: auto
+  freeze: false
 --- 
 
 <style>
@@ -46,11 +46,20 @@ execute:
 
 ---
 
+![](images/tax.png){.fullscreen} 
+
+
+
+---
+
+![](images/local_elite.png){.fullscreen}
+
+---
+
+
 ![](images/img_growth.png){.fullscreen}
 
 ---
 
 ![](images/austerity_to_opportunity.png){.fullscreen}
----
 
-![](images/tax.png){.fullscreen}

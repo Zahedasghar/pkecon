@@ -1,0 +1,144 @@
+---
+title: "Farm to Failure: Higher Taxes Feeding Informal Sector"
+subtitle: "Economic Policy Analysis"
+author: "Zahid Asghar"
+date: "May 19, 2025"
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+    logo: https://your-logo-here.png
+    footer: "Source: Business Recorder"
+---
+
+## Executive Summary
+
+:::: {.columns}
+
+::: {.column width="60%"}
+- Federal government's high taxes on documented sectors **fueling informal economy**
+- Creating a **double negative impact**:
+  - Reduced consumption of nutritional products
+  - Growth of informal markets that evade taxes and food standards 
+- Focus sectors: **fruit juices** and **dairy products** (including infant formula)
+:::
+
+::: {.column width="40%"}
+![](https://via.placeholder.com/400x300)
+:::
+
+::::
+
+## The Laffer Curve Effect
+
+:::: {.columns}
+
+::: {.column width="60%"}
+- Higher tax rates becoming **counterproductive**
+- Fruit beverage industry example:
+  - FY20: 5% FED imposed → volumes ↓ 7%
+  - FY23: 10% FED mid-year, 20% in FY24 → volumes ↓ 45%
+  - Result: Government revenues now **falling**
+:::
+
+::: {.column width="40%"}
+```{r}
+#| echo: false
+#| fig-cap: "Laffer Curve Illustration"
+
+# Code for visualization would go here
+```
+:::
+
+::::
+
+## Impact on Fruit Juice Industry
+
+- Combined tax rate now at **42%**
+- Creates market opportunity for non-compliant players
+- Consumers shifting to **lower-quality, untaxed products**
+- Declining investment in value chain
+- **Increasing fruit wastage** that could be processed
+- Export potential diminishing
+
+## Dairy Industry Challenges
+
+:::: {.columns}
+
+::: {.column width="55%"}
+- Pakistan's packaged milk market still **nascent** (<10%)
+  - Compared to Egypt (40%) and Turkey (60%)
+- Shift from zero rating to **18% GST** in FY24
+  - Result: Industry volumes ↓ 20%+
+- Tax only on packaged products
+- Even loose milk prices increased to maintain price difference
+:::
+
+::: {.column width="45%"}
+```{r}
+#| echo: false
+#| fig-cap: "Packaged Milk Market Comparison"
+
+# Code for visualization would go here
+```
+:::
+
+::::
+
+## Health Implications
+
+- **Loose milk risks**: adulteration, carcinogenic substances
+- Pasteurization solves majority of problems
+- Most countries have low/no VAT on packaged dairy
+- Critical for Pakistan where:
+  - 70% of nutrition from wheat flour
+  - Dairy provides affordable alternative protein
+  - Two-thirds of packaged milk consumers are from **low-middle income groups**
+
+## Infant Formula & Nutrition
+
+:::: {.columns}
+
+::: {.column width="60%"}
+- Tax imposed on:
+  - Infant formula
+  - Baby food
+  - Fortified nutrition products
+- Problematic in a country with:
+  - High maternal malnutrition
+  - Prevalent child stunting
+- While breastfeeding is optimal, formula necessary for mothers with deficiencies
+:::
+
+::: {.column width="40%"}
+![](https://via.placeholder.com/400x300)
+:::
+
+::::
+
+## Economic Losses
+
+- **Value chain disruption** in both sectors
+- Farmers losing income opportunities
+- Increased food wastage
+- Lost export potential:
+  - Dairy industry: potential $150 million annual exports
+  - Fruit juices: Already exported to 30 countries
+  - Growing interest in Pakistani fruits and Halal products
+
+## Policy Recommendations
+
+1. **Revise tax strategy** on essential food items
+2. Consider **differential tax rates** based on nutritional value
+3. Focus on **enforcement of standards** rather than high taxation
+4. Support **value chain development** in agricultural sectors
+5. Promote **formalization through incentives** rather than punitive measures
+6. Review tax policy on infant formula and nutritional products
+
+
+
+**Questions & Discussion**
+
+Source: "Farm to failure: higher taxes feeding informal sector"  
+By Ali Khizar, Business Recorder  
+Published May 19, 2025
