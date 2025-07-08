@@ -1,5 +1,5 @@
 ---
-title: "Budget 2025–26 & IMF Negotiations: Key Takeaways"
+title: "Post Budget"
 author: "Zahid Asghar"
 format:
   revealjs:
@@ -8,45 +8,6 @@ format:
     transition: fade
 ---
 
-## 1. Context & Deadlock
-
-* **Parties:** Ministry of Finance ↔ IMF
-* **Issue:** IMF objections to fiscal development programs & forward commitments
-* **Data Requested:** Details on 500+ ongoing development schemes
-* **Throw-Forward Concern:** Development liabilities exceeded PKR 100 billion
-
----
-
-## 2. Salaried Class Relief
-
-* **Proposal:** Tax relief & reduced expenditures for salary earners
-* **IMF Stance:** Relief conditional on cuts in government spending or higher revenues
-* **Provincial Demands:** Provinces urged to limit their expenditures, boost own revenues
-
----
-
-## 3. FBR Shortfall & Enforcement
-
-* **Current Shortfall:** PKR 833 billion (FY25)
-* **Collections (Jul–Apr):** PKR 9,390 billion vs. target PKR 12,970 billion
-* **Response:** Stricter tax enforcement measures activated
-
----
-
-## 4. Call for Growth-Oriented Budget
-
-* **Business Forum (PBF):** Urged focus on economic revival over revenue targets
-* **Warning:** Additional taxes may stifle fragile recovery
-
----
-
-## 5. Government’s Narrative
-
-* **Claims of Relief:** Promise to reduce tax burden on salaried class
-* **Economic Performance:** Pakistan’s GDP surpassed USD 400 billion
-* **Global Recognition:** IMF highlights revenue doubling (PKR 9.6 → 18 trillion)
-
----
 
 ## 6. Expert Insights
 
@@ -72,20 +33,165 @@ format:
 
 ---
 
-## 8. Budget Allocations & Political Spending
 
-* **PSDP Surge:** +65% allocations vs. revenue growth
-* **MP/MLA Projects:** \~PKR 700 billion distributed across provinces
-* **Fiscal Trade-offs:** Increased political spending vs. tax burden on poor
+
+# Post-budget Analysis
+
+### Welcome & Overview
+
+
+* National Assembly passed Finance Act 2025
+* Budget size: Rs 17.6 trillion
+
+---
+
+### Slide 2: Budget Approval Highlights
+
+* No resistance from ruling allies, especially PPP
+* 90% of the final bill same as June 10 proposals
+* Minor but impactful changes included
 
 ---
 
-## 9. Cost of Utilities & Tax Competitiveness
+### Slide 3: Key Budget Additions
 
-* **Electricity & Gas Prices:** Higher than regional peers (India, Thailand)
-* **Tax Rates:** Corporate (61%), salaried (38%) vs. regional benchmarks
+* Rs 36 billion in new taxes added (Mini-Budget)
+* Tax concessions granted to powerful elite, well-connected individuals
+* Some controversial clauses negotiated (e.g. tax fraud arrests)
 
 ---
+
+### Slide 4: Budget Direction & Priorities
+
+* Less inflationary than previous year’s budget
+* Limited relief to salaried class (symbolic only)
+* Attempt to criminalize tax laws: income tax, sales tax, etc.
+* Ambiguous stance on cash economy vs digital economy
+
+---
+
+### Slide 5: Development vs Fiscal Consolidation
+
+* Development program (PSDP) reduced vs previous year
+* Defense budget increased by 20%
+* Fiscal consolidation visible: budget deficit target kept tight
+
+---
+
+### Slide 6: Budget Size & Key Figures
+
+* 2024–25 budget: Rs 18.9 trillion
+* 2025–26 budget: Rs 17.6 trillion
+* Major reduction due to drop in interest payments (22% to 11%)
+* Rs 1,600 billion saved in interest payments
+
+---
+
+### Slide 7: Major Expenditures (2025–26)
+
+* Interest payments: Rs 8,200 billion (46% of budget)
+* Defense: Rs 2,550 billion
+* Military pensions: Rs 742 billion
+* Civil pensions: Rs 1,000+ billion
+* PSDP: Rs 1,000 billion
+* Civil govt expenses: Rs 920 billion
+* BISP: Rs 722 billion
+
+---
+
+### Slide 8: New Taxes & Special Treatments
+
+* Rs 463 billion total new taxes
+* Special tax exemptions: Beaconhouse National University, Ziauddin University, Punjab Police Welfare, Army Benevolent Fund, NLC
+* Criticism on favoritism toward civilian elites
+
+---
+
+### Slide 9: Digital & Freelance Economy Taxation
+
+* Freelancers, e-commerce, IT services now under tax net
+* New digital taxes:
+
+  * 1–2% on online transactions
+  * 5% on foreign digital vendors (Digital Presence Act)
+* Concerns about discouraging digital growth
+
+---
+
+### Slide 10: Other Tax Additions
+
+* Solar panel import tax: 10% (reduced from 18%)
+* Carbon levy: Rs 250/litre (this year and next)
+* Chick tax: Rs 10 per one-day-old chick
+* Engine levy: 1–3% on fuel-based cars to subsidize EVs
+
+---
+
+### Slide 11: Income Tax Changes & PPP’s Role
+
+* PPP claimed relief up to Rs 1.2 million annual salary
+* Actual: Reduction of tax from 5% to 1% between Rs 600k–1.2m
+* No complete tax exemption as claimed
+
+---
+
+### Slide 12: Tax Enforcement Measures
+
+* New definition of "ineligible" person for high-value purchases
+* Thresholds relaxed after political pressure:
+
+  * Still allowed: Rs 70 lakh car, Rs 5 crore house, Rs 1 crore commercial property, Rs 1 crore cash withdrawal
+
+---
+
+### Slide 13: Arrests in Tax Fraud Cases
+
+* Arrest possible after inquiry within 3 months
+* 3-member FBR committee to decide
+* Accused can apply for bail post-arrest
+
+---
+
+### Slide 14: Overall Assessment
+
+* Budget direction remains ambiguous
+* Attempts at fiscal consolidation with mixed signals
+* Some reforms undermined by political compromises
+* Slight improvement over previous year’s inflationary budget
+
+---
+
+### Slide 15: Foreign Policy Segment (SCO Meetings)
+
+* Two key SCO summits in China: National Security Advisors & Defense Ministers
+* Pakistan diplomatically supported by 9 countries
+* India isolated over objection to joint statement draft
+
+---
+
+### Slide 16: Diplomatic Win for Pakistan
+
+* India’s objections on Pahalgam attack language not accepted
+* Pakistan’s stance on terrorism in Balochistan acknowledged
+* India left the forum without joint communique
+
+---
+
+### Slide 17: SCO Protocols & Implications
+
+* SCO decisions by consensus only
+* India’s isolation shows shift in regional alignments
+* Strong support for Pakistan from Russia, China, Iran, and Central Asian states
+
+---
+
+### Slide 18: Conclusion
+
+* Pakistan navigated a complex budget and regional diplomacy
+* Budget shows mixed progress on reforms
+* Regional dynamics favor Pakistan diplomatically (for now)
+
+
 
 ## 10. Key Policy Gaps
 
@@ -102,8 +208,4 @@ format:
 * **Structural Reforms:** Urgent need for pension, devolution, and PSDP rationalization
 * **Monitoring:** Close watch on tax enforcement and growth indicators
 
----
 
-## Thank You
-
-Questions & Discussion

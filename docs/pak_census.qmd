@@ -1,0 +1,352 @@
+---
+title: "Pakistan Census Data Analysis"
+subtitle: "Interactive Shiny Application for Census 2017 & 2023"
+author: "Prof. Dr. Zahid Asghar"
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    logo: ""
+    css: styles.css
+    footer: "PakPC Shiny App - https://myaseen208.shinyapps.io/PakPC/"
+    transition: slide
+    background-transition: fade
+    highlight-style: github
+    code-line-numbers: true
+    multiplex: false
+    controls: true
+    progress: true
+    history: false
+    hash: false
+    keyboard: true
+    overview: true
+    center: true
+    touch: true
+    loop: false
+    rtl: false
+    shuffle: false
+    fragments: true
+    embedded: false
+    help: true
+    showNotes: false
+    auto-slide: 0
+    auto-slide-stoppable: true
+    mouse-wheel: false
+    hide-inactive-cursor: true
+    # hide-cursor-timeout: 5000
+    # preview-links: false
+    # transition-speed: default
+    background-transition-speed: default
+    width: 1050
+    height: 700
+    margin: 0.1
+    min-scale: 0.2
+    max-scale: 2.0
+---
+
+# Pakistan Census Data Analysis {.title-slide}
+
+::: {.subtitle}
+🇵🇰 **PakPC Shiny App Demonstration**
+:::
+
+::: {.highlight-box}
+A comprehensive tool for analyzing Pakistan's population census data with advanced statistical capabilities and interactive visualizations
+
+**App URL:** [https://myaseen208.shinyapps.io/PakPC/](https://myaseen208.shinyapps.io/PakPC/)
+:::
+
+---
+
+# What is PakPC? {.section-slide}
+
+PakPC is a sophisticated Shiny application designed for in-depth analysis of Pakistan's Population Census data from both 2017 and 2023.
+
+::: {.columns}
+::: {.column width="33%"}
+### 📊 Data Integration
+Combines census data from multiple years for comprehensive analysis
+:::
+
+::: {.column width="33%"}
+### 🔍 Advanced Analytics
+Statistical models and cross-tabulations for deep insights
+:::
+
+::: {.column width="33%"}
+### 📈 Interactive Visualizations
+Dynamic charts and graphs for data exploration
+:::
+:::
+
+---
+
+# Who Can Benefit? {.section-slide}
+
+::: {.columns}
+::: {.column width="50%"}
+### 🎓 Researchers & Academics
+- Conduct detailed demographic studies
+- Population analysis and research
+- Academic publications and thesis work
+
+### 🏛️ Policymakers
+- Make informed policy decisions
+- Evidence-based planning
+- Resource allocation strategies
+:::
+
+::: {.column width="50%"}
+### 💼 Development Professionals
+- Plan development programs
+- Evaluate social initiatives
+- Monitor progress indicators
+
+### 📊 Data Analysts
+- Comprehensive statistical analysis
+- Advanced modeling techniques
+- Professional reporting
+:::
+:::
+
+---
+
+# Key Features & Capabilities {.section-slide}
+
+::: {.columns}
+::: {.column width="50%"}
+### 🗂️ Comprehensive Data Access
+- Complete census datasets from 2017 and 2023
+- Provincial, district, and tehsil-level data
+- Hierarchical geographic coverage
+
+### 🔗 Cross-tabulation Analysis
+- Detailed cross-tabulations
+- Relationship analysis between variables
+- Statistical significance testing
+:::
+
+::: {.column width="50%"}
+### 📊 Statistical Modeling
+- Diverse statistical models
+- Advanced demographic analysis
+- Econometric applications
+
+### 📈 Interactive Visualizations
+- Dynamic charts and maps
+- Customizable graphs
+- Export capabilities
+:::
+:::
+
+---
+
+# Data Coverage {.section-slide}
+
+::: {.comparison-table}
+| Geographic Level | Census 2017 | Census 2023 |
+|------------------|-------------|-------------|
+| **National** | ✅ Complete Coverage | ✅ Complete Coverage |
+| **Provincial** | ✅ All 4 Provinces + ICT | ✅ All 4 Provinces + ICT |
+| **District Level** | ✅ All Districts | ✅ All Districts |
+| **Tehsil Level** | ✅ Detailed Breakdown | ✅ Detailed Breakdown |
+:::
+
+::: {.highlight-box}
+**Total Population 2023:** 241,499,431  
+*(excluding Gilgit-Baltistan and Azad Kashmir)*
+:::
+
+---
+
+# Technical Architecture {.section-slide}
+
+Built on robust R ecosystem with modern web technologies
+
+::: {.columns}
+::: {.column width="50%"}
+### 📦 R Packages Integration
+- Utilizes PakPC2017 and PakPC2023 packages
+- Data access and manipulation
+- Statistical computing capabilities
+
+### 💻 Shiny Framework
+- Interactive web application
+- Reactive programming
+- Seamless user experience
+:::
+
+::: {.column width="50%"}
+### ☁️ Cloud Deployment
+- Hosted on shinyapps.io
+- Easy access and scalability
+- No local installation required
+
+### 🔓 Open Source
+- Free and open source software
+- GPL licensed
+- Community contributions welcome
+:::
+:::
+
+---
+
+# Demonstration Workflow {.section-slide}
+
+::: {.demo-steps}
+### Step-by-step exploration of the application's capabilities:
+
+1. **Application Overview** and Interface Navigation
+2. **Data Selection:** Census Year and Geographic Level
+3. **Demographic Variable** Exploration
+4. **Cross-tabulation Analysis** Examples
+5. **Statistical Modeling** Demonstrations
+6. **Interactive Visualization** Features
+7. **Comparative Analysis:** 2017 vs 2023
+8. **Export and Reporting** Capabilities
+:::
+
+---
+
+# Practical Use Cases {.section-slide}
+
+::: {.columns}
+::: {.column width="50%"}
+### 🏠 Housing Policy Research
+- Analyze housing conditions
+- Ownership patterns
+- Infrastructure needs assessment
+
+### 📚 Education Planning
+- Examine literacy rates
+- Educational attainment analysis
+- Age-specific enrollment studies
+:::
+
+::: {.column width="50%"}
+### 💼 Labor Market Analysis
+- Study employment patterns
+- Occupation distributions
+- Workforce trend analysis
+
+### 👥 Demographic Transitions
+- Track population growth
+- Age structure changes
+- Migration pattern analysis
+:::
+:::
+
+---
+
+# Research Applications {.section-slide}
+
+::: {.highlight-box}
+### 📈 Econometric Analysis Opportunities
+The application supports sophisticated econometric research through:
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+### 📈 Panel Data Analysis
+- Compare demographic changes between 2017 and 2023
+- Longitudinal studies
+- Fixed effects modeling
+
+### 🎯 Spatial Econometrics
+- Analyze spatial patterns
+- Regional variations
+- Geographic spillover effects
+:::
+
+::: {.column width="50%"}
+### 🔍 Causal Inference
+- Natural experiments design
+- Geographic variation exploitation
+- Difference-in-differences approaches
+
+### 📊 Microdata Analysis
+- Individual-level analysis
+- Household econometric studies
+- Behavioral modeling
+:::
+:::
+
+---
+
+# Getting Started {.section-slide}
+
+::: {.cta-section}
+### 🚀 Ready to Explore Pakistan Census Data?
+
+**Web Access:** [https://myaseen208.shinyapps.io/PakPC/](https://myaseen208.shinyapps.io/PakPC/)
+
+### Installation for Local Use:
+```r
+install.packages("PakPC")
+library(PakPC)
+runPakPC()
+```
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+### 🌐 Web Access
+- Use directly through browser
+- No installation required
+- Immediate access to data
+:::
+
+::: {.column width="50%"}
+### 💻 Local Installation
+- Install R package for offline use
+- Custom modifications possible
+- Full control over environment
+:::
+:::
+
+---
+
+# Thank You! {.title-slide}
+
+::: {.subtitle}
+Questions & Discussion
+:::
+
+::: {.cta-section}
+### 📧 Contact Information
+
+**App Developer:** myaseen208  
+**GitHub:** [github.com/myaseen208/PakPC](https://github.com/myaseen208/PakPC)  
+**CRAN Package:** [cran.r-project.org/package=PakPC](https://cran.r-project.org/package=PakPC)
+
+**App URL:** [https://myaseen208.shinyapps.io/PakPC/](https://myaseen208.shinyapps.io/PakPC/)
+:::
+
+::: {.highlight-box}
+*"Empowering evidence-based decision making through accessible demographic data analysis"*
+:::
+
+---
+
+# Appendix: Technical Details {.section-slide}
+
+### R Packages Used:
+- **PakPC2017**: Pakistan Population Census 2017 data
+- **PakPC2023**: Pakistan Population Census 2023 data  
+- **shiny**: Web application framework
+- **DT**: Interactive data tables
+- **plotly**: Interactive visualizations
+- **leaflet**: Interactive maps
+
+### Data Structure:
+- **Hierarchical**: Country → Province → District → Tehsil
+- **Variables**: Demographics, housing, education, employment
+- **Format**: Structured data frames with consistent coding
+
+### Statistical Methods:
+- Cross-tabulations with chi-square tests
+- Regression analysis capabilities
+- Spatial analysis tools
+- Time series comparisons

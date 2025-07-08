@@ -1,0 +1,173 @@
+/*-- scss:defaults --*/
+// Save this as custom.scss in the same directory as your .qmd file
+
+// Color variables
+$primary-color: #1e3c72;
+$secondary-color: #2a5298;
+$accent-color: #FFD700;
+$accent-secondary: #FFA500;
+$text-light: #F0F8FF;
+$text-accent: #87CEEB;
+$text-muted: #E6E6FA;
+
+// Font variables
+$font-family-sans-serif: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$presentation-font-size-root: 32px;
+$presentation-h1-font-size: 2.8rem;
+$presentation-h2-font-size: 2.2rem;
+$presentation-h3-font-size: 1.8rem;
+
+// Theme colors for reveal.js
+$theme: (
+  "primary": $accent-color,
+  "secondary": $accent-secondary,
+  "success": #28a745,
+  "info": $text-accent,
+  "warning": $accent-secondary,
+  "danger": #dc3545,
+  "light": $text-light,
+  "dark": $primary-color
+);
+
+/*-- scss:rules --*/
+
+// Main background
+.reveal {
+  background: linear-gradient(135deg, #{$primary-color} 0%, #{$secondary-color} 100%);
+  font-family: $font-family-sans-serif;
+  color: $text-light;
+}
+
+// Slide backgrounds
+.reveal .slides section {
+  color: $text-light;
+}
+
+// Headings
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  line-height: 1.2;
+}
+
+.reveal h1 {
+  font-size: $presentation-h1-font-size;
+  color: $accent-color;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.reveal h2 {
+  font-size: $presentation-h2-font-size;
+  color: $text-accent;
+}
+
+.reveal h3 {
+  font-size: $presentation-h3-font-size;
+  color: $text-accent;
+}
+
+// Links
+.reveal a {
+  color: $accent-color;
+  text-decoration: underline;
+  
+  &:hover {
+    color: $accent-secondary;
+    text-decoration: underline;
+  }
+}
+
+// Code
+.reveal pre {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.reveal code {
+  background: rgba(0,0,0,0.2);
+  color: $accent-color;
+  font-family: 'Courier New', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+// Tables
+.reveal table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reveal table th {
+  background: rgba(255,215,0,0.2);
+  color: $accent-color;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+}
+
+.reveal table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: $text-light;
+}
+
+.reveal table tr:last-child td {
+  border-bottom: none;
+}
+
+// Lists
+.reveal ul, .reveal ol {
+  color: $text-light;
+}
+
+.reveal ul li::marker,
+.reveal ol li::marker {
+  color: $accent-color;
+}
+
+// Blockquotes
+.reveal blockquote {
+  background: rgba(255,255,255,0.1);
+  border-left: 4px solid $accent-color;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  font-style: italic;
+  backdrop-filter: blur(5px);
+}
+
+// Controls
+.reveal .controls {
+  color: $accent-color;
+  bottom: 20px;
+  right: 20px;
+}
+
+.reveal .controls button {
+  color: $accent-color;
+  
+  &:hover {
+    color: $accent-secondary;
+  }
+}
+
+// Progress bar
+.reveal .progress {
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+}
+
+.reveal .progress span {
+  background: $accent-color;
+}
+
+// Slide numbers
+.reveal .slide-number {
+  background: rgba(0,0,0,0.3);
+  color: $accent-color;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 14px;
+}

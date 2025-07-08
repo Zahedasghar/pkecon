@@ -1,0 +1,300 @@
+---
+title: "Pakistan's Budget 2025: From Stabilization to Growth"
+subtitle: "Breaking the 40-Year Cycle: Beyond the 24th IMF Program"
+author: "Professor of Economics"
+date: "June 2025"
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    logo: ""
+    footer: "Pre-Budget Seminar: Stabilization vs Growth"
+    transition: slide
+#    background-transition: fade
+    highlight-style: github
+    code-line-numbers: false
+    incremental: false
+---
+
+## The 40-Year Question {background-color="#1e3c72"}
+
+::: {.fragment}
+> "Are 40 years not enough for stabilization?"
+:::
+
+::: {.fragment}
+- **24 IMF programs** and counting
+- Each time: *"It's a tough year, then we'll grow"*
+- **Growing population** + **Economic challenges**
+- Time for a **growth-focused budget**, not just balancing books
+:::
+
+::: {.fragment .highlight-box}
+**The Pattern Must Break**
+:::
+
+## Core Argument: Paradigm Shift {background-color="#2a5298"}
+
+::: {.columns}
+
+::: {.column width="50%"}
+### Current Approach
+- Stabilization focus
+- Austerity measures  
+- Short-term fixes
+- IMF dependency
+:::
+
+::: {.column width="50%"}
+### Proposed Approach
+- Growth orientation
+- Strategic investment
+- Long-term prosperity
+- Self-reliance
+:::
+
+:::
+
+::: {.fragment}
+### Economic Logic
+**Human capital investment → Job creation → Sustainable growth → Reduced IMF dependency**
+:::
+
+## Tax Relief & Administrative Efficiency {.smaller}
+
+::: {.panel-tabset}
+
+### Tax Reform
+- **Raise minimum taxable salary to Rs. 120,000**
+  - Ease burden on low-income earners
+  - Stimulate consumption demand
+  - Expand middle-class purchasing power
+
+### Political Economy Reform  
+- **Stop PSDP allocations for MNAs' projects**
+  - End political patronage in development spending
+  - **Same for Provincial Assembly members**
+  - Prioritize public needs over electoral politics
+
+### Austerity in Government
+- **No new cars for officials**
+- **Limit vehicles to 1300cc maximum**
+- **End free housing for officials**
+- **Reduce cabinet size**
+
+### Infrastructure Reallocation
+- **20% of Islamabad's underpass budget → Education & Health**
+  - Better allocation of public resources
+  - Human development priority
+
+:::
+
+## Investment in Human Capital {background-color="#2d5aa0"}
+
+::: {.columns}
+
+::: {.column width="60%"}
+### Priority Sectors
+
+**Education**
+- Build skilled workforce
+- Prepare for emerging industries
+- Address skills gap
+
+**Healthcare** 
+- Improve productivity through better health
+- Reduce long-term social costs
+- Enhance human development
+
+**Youth Employment**
+- Harness demographic dividend
+- Address growing population challenges
+- Create sustainable job opportunities
+
+:::
+
+::: {.column width="40%"}
+### Economic Rationale
+
+::: {.callout-important}
+## Key Insight
+*"A strong economy needs investment in people, not luxuries"*
+:::
+
+::: {.fragment}
+**Multiplier Effects:**
+- Education → Skills → Productivity
+- Health → Labor Force Participation  
+- Youth Employment → Consumption Growth
+:::
+
+:::
+
+:::
+
+## Expected Economic Impact {.smaller}
+
+::: {.panel-tabset}
+
+### Immediate Benefits
+::: {.incremental}
+- **Increased disposable income** for middle class
+- **Reduced government expenditure** on non-essentials  
+- **More efficient resource allocation**
+- **Enhanced public service delivery**
+- **Improved fiscal space** for priority investments
+:::
+
+### Long-term Growth Trajectory
+::: {.incremental}
+- **Job creation** in priority sectors
+- **Improved human development indices**
+- **Sustainable economic growth** patterns
+- **Reduced dependency** on IMF programs
+- **Enhanced export competitiveness**
+:::
+
+### Econometric Considerations
+::: {.incremental}
+- **Demand-side stimulus** through tax relief
+- **Supply-side improvements** via education/health investment  
+- **Public choice theory** application in ending patronage
+- **Endogenous growth model** through human capital
+:::
+
+:::
+
+## Policy Implementation Framework {background-color="#1e3c72"}
+
+### Phase 1: Immediate Reforms (0-6 months)
+- Implement tax threshold changes
+- Freeze government vehicle purchases
+- Cabinet size reduction
+
+### Phase 2: Structural Changes (6-18 months)  
+- Redirect PSDP allocations
+- Launch education/health investment programs
+- End free housing provisions
+
+### Phase 3: Growth Acceleration (18+ months)
+- Monitor employment creation
+- Assess human development outcomes
+- Evaluate IMF dependency reduction
+
+## Questions for Discussion {.smaller}
+
+::: {.columns}
+
+::: {.column width="50%"}
+### Policy Design
+- What additional sectors should receive priority?
+- How to ensure implementation without political resistance?
+- What metrics to track success?
+
+### Economic Analysis  
+- Expected GDP growth impact?
+- Employment multiplier effects?
+- Fiscal sustainability projections?
+:::
+
+::: {.column width="50%"}
+### Broader Implications
+- Regional competitiveness effects?
+- Social equity considerations?
+- Political economy constraints?
+
+### Your Perspective
+::: {.callout-note}
+## Discussion Prompt
+*"What do you think Pakistan's budget should prioritize? Share your ideas!"*
+:::
+:::
+
+:::
+
+## Conclusion: The Growth Imperative {background-color="#2a5298"}
+
+::: {.fragment}
+### The Economic Case
+- **40 years of stabilization** haven't delivered sustained growth
+- **Human capital investment** offers highest returns
+- **Efficient resource allocation** critical for fiscal health
+:::
+
+::: {.fragment}
+### The Social Case  
+- **Growing population** needs opportunities, not just stability
+- **Youth dividend** requires strategic investment
+- **Inequality** addressable through inclusive growth policies
+:::
+
+::: {.fragment .highlight-box}
+**Time to choose: Another decade of stabilization or the first decade of sustained growth?**
+:::
+
+---
+
+## Appendix: Additional Resources {.smaller}
+
+### Data Sources & References
+- Ministry of Finance, Government of Pakistan
+- State Bank of Pakistan Economic Data
+- IMF Article IV Consultation Reports
+- Pakistan Bureau of Statistics
+
+### Suggested Reading
+- Growth theory applications in developing economies
+- Public finance reform in South Asian context  
+- Human capital and economic development literature
+
+### Contact & Follow-up
+- Research collaboration opportunities
+- Policy implementation discussions
+- Econometric analysis partnerships
+
+---
+
+## Custom CSS (custom.scss) {.smaller}
+
+```scss
+// Save this as custom.scss in same directory
+.highlight-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1.5em;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.callout-important {
+  border-left: 5px solid #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+.reveal h1, .reveal h2 {
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.reveal .slides section {
+  text-align: left;
+}
+
+.reveal .slides section[data-background-color="#1e3c72"] h2,
+.reveal .slides section[data-background-color="#2a5298"] h2,
+.reveal .slides section[data-background-color="#2d5aa0"] h2 {
+  color: #ffffff;
+}
+
+.panel-tabset {
+  margin-top: 1em;
+}
+
+.fragment.highlight-box {
+  font-size: 1.2em;
+}
+```

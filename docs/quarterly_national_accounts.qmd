@@ -1,0 +1,182 @@
+---
+title: "Quarterly National Accounts: Essential Tool for Economic Policy"
+subtitle: "Analyzing Pakistan's Economic Performance Through QNA Data"
+author: "Prof. Zahid Asghar"
+date: "`r Sys.Date()`"
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    css: style.css
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    logo: ""
+    footer: "QNA App by Zahid Asghar and Muhammad Yaseen"
+    transition: slide
+    background-transition: fade
+    highlight-style: github
+    code-line-numbers: true
+    incremental: false
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Overview
+
+::: {.incremental style="font-size: 1.4em; line-height: 1.6;"}
+- **Traditional Challenge**: Annual accounts insufficient for timely policy decisions
+- **QNA Solution**: Quarterly snapshots enable rapid economic assessment
+- **Pakistan Context**: PBS launched QNA with 2015-16 base year
+- **Interactive Tool**: [Pakistan National Accounts App](https://myaseen208.shinyapps.io/PakNAcc/)
+:::
+
+::: {.notes}
+Welcome to our presentation on Quarterly National Accounts. We'll explore why QNA data is crucial for modern economic policy-making, especially in Pakistan's context.
+:::
+
+---
+
+## Why Quarterly Data Matters
+
+:::: {.columns}
+
+::: {.column width="50%" style="font-size: 1.3em; line-height: 1.5;"}
+### **Annual Limitations**
+- Reveals only long-term trends
+- Delayed policy responses
+- Missed early warning signals
+- Limited sectoral insights
+:::
+
+::: {.column width="50%" style="font-size: 1.3em; line-height: 1.5;"}
+### **Quarterly Advantages**
+- Real-time economic monitoring
+- Swift policy interventions
+- Early trend detection
+- Detailed sectoral analysis
+:::
+
+::::
+
+::: {.fragment style="font-size: 1.2em; margin-top: 40px; text-align: center; font-style: italic;"}
+*"High-quality, up-to-date information is crucial for informed decision-making and strategic economic management"*
+:::
+
+---
+
+## Three Pillars of QNA Utility
+
+### 1. Timely Decision-Making
+
+Quick identification and response to economic challenges without waiting for annual reports
+
+### 2. Trend Analysis & Early Warning
+
+Detection of economic overheating or downturns before they become critical
+
+### 3. Sectoral Insights
+
+Identification of growth drivers and declining sectors for targeted interventions
+
+---
+
+## Agriculture Sector Analysis
+
+```{r}
+#| eval: false
+#| fig-width: 10
+#| fig-height: 6
+
+# Visualizing Agriculture Performance
+agriculture_data <- QNA_con_cleaned1 %>%
+  filter(sector %in% c("Agriculture Sector", "Crops", "Livestock"))
+
+ggplot(agriculture_data, aes(x = Time, y = value, color = sector)) +
+  geom_line(size = 1.2) +
+  labs(title = "Pakistan Agriculture Sector: Quarterly Performance",
+       subtitle = "Constant Prices (PKR Million)",
+       x = "Time Period",
+       y = "Value (PKR Million)",
+       color = "Sector") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+---
+
+## Key Agricultural Insights
+
+:::: {.columns}
+
+::: {.column width="60%" style="font-size: 1.3em; line-height: 1.5;"}
+### **Seasonal Patterns**
+- Clear quarterly variations in production
+- Peak and trough identification
+- Weather impact assessment
+
+### **Sectoral Dynamics**
+- Crops vs. Livestock performance
+- Relative contribution analysis
+- Growth rate comparisons
+:::
+
+::: {.column width="40%"}
+::: {.callout-tip style="font-size: 1.1em;"}
+## Policy Application
+Monitor which quarters show consistent underperformance for targeted interventions
+:::
+
+::: {.callout-note style="font-size: 1.1em; margin-top: 20px;"}
+## Research Value
+Quarterly data enables robust econometric modeling of seasonal effects
+:::
+:::
+
+::::
+
+---
+
+## Policy Applications
+
+::: {.panel-tabset style="font-size: 1.3em;"}
+
+### Fiscal Policy
+- **Targeted Subsidies**: Sector-specific support based on quarterly performance
+- **Budget Adjustments**: Mid-year corrections using real-time data
+- **Agricultural Support**: Pre-harvest season interventions
+
+### Monetary Policy
+- **Interest Rate Decisions**: SBP's nuanced approach using sectoral data
+- **Credit Allocation**: Priority sectors identification
+- **Inflation Management**: Early warning system implementation
+
+### Regional Policy
+- **Geographic Targeting**: Provincial/regional intervention strategies
+- **Infrastructure Investment**: Data-driven resource allocation
+- **Development Programs**: Performance-based policy adjustments
+
+:::
+
+---
+
+## Interactive Analysis Tool
+
+### [Pakistan National Accounts App](https://myaseen208.shinyapps.io/PakNAcc/)
+
+::: {.incremental style="font-size: 1.4em; line-height: 1.6; margin: 40px 0;"}
+- **Real-time Visualization**: Interactive charts and graphs
+- **Sector Comparison**: Cross-sectoral analysis tools
+- **Growth Rate Analysis**: Quarterly and annual growth calculations
+- **Data Download**: Processed datasets for research
+- **User-Friendly Interface**: Accessible to policymakers and researchers
+:::
+
+::: {.callout-important style="font-size: 1.2em; margin-top: 40px;"} 
+
+## Access the Tool
+Visit: [myaseen208.shinyapps.io/PakNAcc](https://myaseen208.shinyapps.io/PakNAcc/) 
+
+:::
+

@@ -1,0 +1,260 @@
+---
+title: "Growth on Hold? Questioning the Logic of Prolonged Stabilisation"
+subtitle: "Balancing short-term macroeconomic control with the long-term need for structural investment — a post-budget reflection for Pakistan"
+date: 2025-07-04
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    toc: true
+    transition: fade
+    incremental: true
+    logo: logo.png
+---
+
+## Post-Budget Reflections: *Growth on Hold?* 
+
+  - What is Pakistan stabilising *from*?
+  - Who bears the cost of prolonged stabilisation?
+  - Can we afford to delay growth?
+- Krugman’s View: “Austerity in a depression is a trap — the more you cut, the weaker your economy becomes.”
+
+::: notes
+
+
+- **What is Pakistan stabilising *from*?**
+  - Years of twin deficits: high fiscal and current account imbalances
+  - Rapid reserve depletion in 2022–23 and exchange rate volatility
+  - Mounting debt repayments and IMF program conditions
+  - Inflation driven by supply shocks, energy tariffs, and monetisation
+
+- **Who bears the cost of prolonged stabilisation?**
+  - **Households**: Rising food, fuel, and utility prices with stagnant incomes
+  - **Small businesses**: Sluggish demand, costly borrowing, regulatory uncertainty
+  - **Youth & job-seekers**: Limited job creation and fewer opportunities in shrinking formal sectors
+  - **Public sector**: Development projects slowed or suspended; service delivery under strain
+
+- **Can we afford to delay growth?**
+  - A delayed recovery compounds informalisation and poverty
+  - Lost economic momentum undermines tax base, productivity, and investor confidence
+  - Risk of a low-growth trap where stabilisation becomes a permanent condition
+
+- > **Krugman’s Insight**: “Austerity in a depression is a trap — the more you cut, the weaker your economy becomes.”
+  - When aggregate demand is already low, cutting public spending only worsens contraction
+  - Fiscal consolidation without investment guarantees is self-defeating
+
+- **Why this matters in Pakistan now**:
+  - With inflation receding and primary surplus achieved, the question is:
+    **Can the state now pivot from preservation to preparation?** 
+    
+:::
+
+
+---
+
+##  The Budget and Its Priorities
+
+- **What it emphasizes**:
+  - IMF targets met: primary surplus, tax revenues, currency management
+  - Cuts in development spending, restraint in wage hikes
+- **What it ignores**:
+  - Weak job creation
+  - Productivity stagnation
+  - Rising energy costs without sectoral relief
+- A stabilising budget — but not a stimulating one.
+
+::: notes
+
+- **What it emphasizes**:
+  - **IMF Conditionality Fulfilled**: The budget secures key benchmarks — including a **primary fiscal surplus**, improved **tax-to-GDP ratio**, and **exchange rate flexibility** — keeping Pakistan on track for the next IMF tranche.
+  - **Revenue-First Approach**: Sharp focus on **indirect taxes** (e.g., GST on essentials, petroleum levy), **broadening the tax base** (especially documentation of the retail and real estate sectors), and digitisation of FBR.
+  - **Austerity in Development**: Significant **cuts in Public Sector Development Programme (PSDP)** allocations — many CPEC projects, water infrastructure, and regional development schemes are deferred.
+  - **Restrained Salary Growth**: Minimal increases in public sector wages and pensions despite high inflation — real incomes of civil servants and pensioners effectively shrink.
+
+- **What it ignores**:
+  - **Employment Crisis**: Budget lacks a **clear employment generation strategy**; no sector-specific incentives for SMEs, agri-based manufacturing, or services expansion.
+  - **Productivity Gaps**: No meaningful investment in **R&D**, **skills training**, or **value-added industry** — sectors that could lift total factor productivity remain underfunded.
+  - **Energy Burden**: Rising electricity and fuel prices passed on to consumers and businesses without **tariff rationalisation**, **efficiency reforms**, or **targeted relief for energy-intensive sectors**.
+
+- **Verdict**:
+  - This is a **budget of macroeconomic restraint**, not one of structural reform or inclusive growth.
+  - It may **stabilise the books**, but it does not **stimulate confidence, employment, or enterprise**.
+  - As Krugman warned in global contexts, **austerity during recovery weakens the engine before it even starts.**
+
+::: 
+
+
+
+---
+
+## The Logic of Stabilisation in Pakistan
+
+- **Why stabilise?**
+  - FX pressure from imports & debt repayments
+  - Prevent default & restore investor confidence
+  - Anchor inflation expectations
+- **What’s missing**:
+  - Long-term recovery path
+  - Role of state in rebuilding market confidence
+  - Growth guarantees for key sectors (SMEs, exports, agriculture)
+
+---
+
+## Krugman's Austerity Trap — Pakistan Version
+
+- **Krugman’s Argument**:
+  - Austerity deepens recessions when applied during downturns.
+  - Government spending *is* a stabiliser, not a threat.
+- **Pakistani Parallel**:
+  - Fiscal cuts reduce public investment → worsens unemployment
+  - Private sector hesitant → no crowd-in effect
+  - Stabilisation becomes stagnation
+
+---
+
+##  Growth Pressures on the Ground
+
+- **Labour Market Stress**:
+  - Youth bulge + jobless growth = social stress
+  - Urban informal sector squeezed by taxes and electricity costs
+- **Private Sector Frustration**:
+  - High interest rates = credit rationing
+  - Delayed refunds, rising input costs, import bottlenecks
+- **Provincial Disconnect**:
+  - Low public investment in southern Punjab, Balochistan, ex-FATA
+
+---
+
+## Slide 6: The Case for Smart Public Investment
+
+- **Strategic Areas**:
+  - Human capital: schooling quality, malnutrition, skills
+  - Connectivity: regional infrastructure, logistics, energy reforms
+  - Green growth: local solar, water management, agri-modernisation
+- **Pakistan's fiscal myth**:
+  - Development is “luxury” spending?
+  - Counterargument: it's the only path to inclusive resilience
+
+---
+
+## Slide 7: What Could Be Done Differently?
+
+- **Smart fiscal loosening**:
+  - Protect PSDP and social investment
+  - Link expenditure to employment and outputs
+- **Public-private hybrids**:
+  - Encourage blended financing with risk guarantees
+  - Green bond market, diaspora development funds
+- **Better targeting, not broad austerity**:
+  - Eliminate elite subsidies, protect productive ones
+  - Leverage real-time data (NADRA, BISP) for targeting 
+  - Leverage real-time data for electricity bills misused under 200 
+  - SOEs loss making 
+  
+  
+
+---
+
+## Political Economy of Prolonged Stabilisation
+
+- **Why reforms stall**:
+  - Short-term political costs
+  - Centre-province fragmentation
+  - Vested interests in energy, trade, land markets
+- **Donor dynamics**:
+  - “Do no harm” conditionalities → undercut reform ownership
+  - Disconnected from federal-provincial realities
+
+---
+
+## International Lessons (Krugman Meets South Asia)
+
+- **Egypt**: Cut too deep, growth stalled, social unrest rose.
+- **Bangladesh**: Kept incentives for exports, protected health/education.
+- **Ghana**: Debt reprofiling bought fiscal space, but stalled on delivery.
+- **Lesson**: Macro targets ≠ structural recovery. 
+
+
+::: notes 
+
+ *Krugman Meets South Asia*
+
+> "Austerity in a depression is a trap — the more you cut, the weaker your economy becomes." — *Paul Krugman*
+
+### 🏺 Egypt: Fiscal Orthodoxy, Social Dislocation
+- Adopted strict IMF-backed austerity in 2016–2020.
+- Subsidy cuts, currency devaluation, and rapid interest rate hikes.
+- Result: Macro stability was achieved briefly — but **growth remained jobless**, **inflation soared**, and **street-level unrest intensified**.
+- Lesson: Cutting too deep too fast **undermines political and social stability**, especially in economies with weak safety nets.
+
+### 🧵 Bangladesh: Growth Through Pragmatic Sequencing
+- Took a **calibrated approach** to stabilisation during 2008–2018.
+- Maintained key **export incentives**, especially for garments sector.
+- Continued **public investment in education, health**, and rural connectivity.
+- Result: Growth sustained above 6% for over a decade, with **moderate inflation and stable FX reserves**.
+- Lesson: **Targeted fiscal space** can support both macro goals and inclusive growth — if paired with sectoral focus and export dynamism.
+
+### 💸 Ghana: Fiscal Room Gained, Momentum Lost
+- Entered IMF program in 2015; implemented **debt reprofiling and fiscal consolidation**.
+- Gained short-term breathing space, but failed to deliver **domestic reform** or **infrastructure ramp-up**.
+- Political volatility and overreliance on commodity exports led to relapse into crisis by 2022.
+- Lesson: **Fiscal space alone isn’t enough** — without follow-through on reform and delivery capacity, stabilisation unravels. 
+
+:::
+
+---
+
+### 🧭 Cross-Country Takeaway for Pakistan
+- **Macro targets ≠ structural recovery**.
+- Fiscal restraint must be **sequenced with strategic investment** in growth drivers.
+- What distinguishes success stories is not austerity, but **the ability to protect and prioritise public goods**, sustain employment, and **build domestic capacity** — even during tough reforms.
+
+> **Pakistan must not confuse fiscal quiet with economic strength.**
+
+::: 
+
+---
+
+## Reimagining Stabilisation
+
+- **Can stabilisation be growth-positive?**
+  - Yes, *if sequenced well* and *targets productivity*
+- **Dual-track Strategy**:
+  - Track 1: Fiscal discipline & FX management
+  - Track 2: Public investment & social resilience
+- **Role of data & analytics**:
+  - Expenditure tracking, impact metrics, grievance redressal
+
+---
+
+## Slide 11: Concluding Reflections
+
+- Stabilisation is necessary — *but not sufficient*
+- Growth deferred is *justice deferred*
+- Pakistan needs:
+  - A fiscal strategy with a human face
+  - A macro plan with a micro delivery model
+  - A budget that invests in tomorrow, not just survives today
+
+---
+
+## Slide 12: Open Questions for Dialogue
+
+- Can the next IMF program allow room for pro-growth spending?
+- What political capital is needed to shift from cuts to smart investment?
+- Can provincial governments become growth engines under tight ceilings?
+
+---
+
+## Slide 13: Thank You
+
+- Connect: [LinkedIn | Twitter | Email]
+- Feedback welcome
+- Let's co-create smarter economic thinking for Pakistan
+
+---
+
+## Slide 14: Final Thought
+
+> “When a country cuts back on investment in people and progress to meet a short-term fiscal target, it mortgages its future.” — Inspired by Paul Krugman
+

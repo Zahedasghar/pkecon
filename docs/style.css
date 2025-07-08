@@ -1,0 +1,80 @@
+/* Fix for overlapping slide content in Reveal.js */
+
+/* Ensure proper spacing for r-stack fragments */
+.r-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 400px; /* Adjust based on your content */
+}
+
+.r-stack .fragment {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Alternative approach: Use margin instead of absolute positioning */
+.r-stack-alternative {
+    display: block;
+}
+
+.r-stack-alternative .fragment {
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+/* Ensure fragments have proper visibility transitions */
+.fragment.fade-in-then-semi-out {
+    opacity: 0;
+}
+
+.fragment.fade-in-then-semi-out.visible {
+    opacity: 1;
+}
+
+.fragment.fade-in-then-semi-out.semi-out {
+    opacity: 0.3;
+}
+
+.fragment.fade-in {
+    opacity: 0;
+}
+
+.fragment.fade-in.visible {
+    opacity: 1;
+}
+
+/* Specific styling for your Three Pillars slide */
+.three-pillars-slide h2 {
+    margin-bottom: 2rem;
+}
+
+.three-pillars-slide h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+}
+
+.three-pillars-slide p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* If you prefer sequential display instead of overlay */
+.sequential-display .fragment {
+    position: static;
+    transform: none;
+    margin: 2rem 0;
+    opacity: 0;
+}
+
+.sequential-display .fragment.visible {
+    opacity: 1;
+}

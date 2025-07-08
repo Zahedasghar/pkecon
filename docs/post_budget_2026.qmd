@@ -1,0 +1,143 @@
+---
+title: "Post-Budget 2025–26: Stabilisation vs Growth"
+subtitle: "Examining the Fragile Fiscal Outlook"
+author: "Zahid Asghar"
+date: "July 2025"
+format:
+  revealjs:
+    theme: solarized
+    slide-number: true
+    transition: fade
+---
+
+## Context & Budget Overview
+
+* Federal & provincial budgets for 2025–26 approved
+* Optimism about fiscal targets: revenues, expenditures, and deficits
+* Budgeted consolidated deficit: **Rs 6,501 billion** (3.9% of GDP) vs **Rs 7,444 billion** (5.6%) in 2024–25
+
+## A Rare Achievement?
+
+* Deficit below 4% of GDP for the **first time since 2003–04**
+* Complies with **Fiscal Responsibility & Debt Limitation Act**
+* Breakdown:
+
+  * **Federal deficit:** 5.0% of GDP
+  * **Provincial surplus:** 1.1% of GDP
+
+## Growth vs. Reality
+
+* **Quarterly GDP Growth:**
+
+  * Q1 (Jul–Sep): -1.2% YoY
+  * Q2 (Oct–Dec): -0.5% YoY
+  * Q3 (Jan–Mar): -0.8% YoY
+  * Q4 (Apr–Jun): Claimed +2.3% YoY (construction rebound)
+* **Construction Activity:**
+
+  * Negative growth in first three quarters
+  * Claimed strong turnaround in Q4 (housing & infrastructure)
+* **Household Income:** Average income per person has fallen over the last 3 years
+* **Unemployment & Poverty:** Rising joblessness; poverty now affecting \~10.5 million people
+
+## Target vs Reality – A Fragile Foundation
+
+* Deficit target (3.9% of GDP) vs IMF projection (5.1% of GDP)
+* Primary surplus targeted at 2.6% of GDP, IMF projects 1.6%
+* Over-optimism driven by:
+
+  * **Overestimated revenues**
+  * **Understated expenditures**
+
+## Revenue Ambitions
+
+* FBR revenue target: **20.5%** growth vs \~13% GDP growth
+* Implies 0.5% rise in tax-to-GDP ratio (after 1.4% jump in 2024–25)
+* National tax-to-GDP ratio projected at **13%**
+
+## Revenue Reality Check
+
+* Normal revenue growth (\~12%) implies **Rs 1230B shortfall**
+* Estimated gains from tax/admin measures: Rs 650B
+* Net risk: **Rs 580B shortfall**
+
+## Non-Tax Revenue Overstatements
+
+* SBP profit projected at **Rs 2400B** (near last year’s peak)
+* IMF expects **\~Rs 1000B** lower non-tax revenues
+* **Petroleum levy** assumptions too optimistic (↑26% increase assumed)
+
+## Total Revenue Risk
+
+* Combined revenue shortfall risk: **Rs 1780B** (\~1.5% of GDP)
+
+## Expenditure Targets – Seeming Restraint
+
+* Federal current expenditure target: **Rs 16,286B** vs Rs 16,390B in 2024–25
+* Despite hikes:
+
+  * Salaries ↑10%
+  * Pensions ↑7%
+  * Defence ↑17%
+  * BISP ↑20%
+
+## Unrealistic Assumptions on Cuts
+
+* **Debt servicing** projected to fall by Rs 740B
+
+  * Despite debt rising by 8%
+  * Assumes a large drop in interest rates (unlikely with high inflation and IMF conditions)
+* **Subsidies** cut by Rs 192B
+
+  * Most cuts in power sector; questionable due to structural inefficiencies
+
+## Expenditure Slippage Risk
+
+* Likely overspend: **Rs 900B** (\~0.7% of GDP)
+* Combined with revenue shortfall, federal deficit could reach **\~7.2%** of GDP
+
+## Provincial Budget Gaps
+
+* Cash surplus target for provinces: **Rs 1464B**
+* Punjab alone aims for Rs 963B surplus (Sindh budget shows a deficit)
+* Federal shortfalls → lower transfers → \~Rs 500B risk to provincial surplus
+
+## Summary of Risks
+
+| Category               | Risk (Rs B) | % of GDP |
+| :--------------------- | ----------: | -------: |
+| Revenue shortfall      |        1780 |     1.5% |
+| Expenditure overshoot  |         900 |     0.7% |
+| Provincial surplus gap |         500 |     0.4% |
+| **Total slippage**     |    **3180** | **2.6%** |
+
+→ Actual deficit could approach **6.5%**, not **3.9%**.
+
+## From Stabilisation to Fragility
+
+* Official narrative: *“Stabilisation success.”*
+* Reality: Growth sacrificed on weak fiscal assumptions
+* IMF targets appear more realistic than optimistic budget targets
+
+## Growth Implications
+
+* Spending cuts and high interest rates = **no pro-growth stimulus**
+* Revenue overreach → **higher tax burden**, dampening consumption & investment
+* Missed opportunity to balance **growth** and fiscal reform
+
+## Expert Critique & Policy Gaps
+
+* Stability is largely driven by lower global oil and commodity prices (external factors), not domestic policy reforms *(Miftah Ismail)*
+* No structural reforms implemented – pending **NFC Award** update, pension overhaul, and devolution commitments (18th Amendment) remain unaddressed
+* Fiscal strategy leans on tax hikes instead of broadening the base; core expenditures (defence, pensions) continue to rise without significant reform
+
+## The Way Forward
+
+* **Revenue credibility:** Implement administrative reforms and set realistic targets
+* **Expenditure discipline:** Contain non-productive expenditures (e.g. losses, untargeted subsidies)
+* **Rebalance priorities:** Invest more in development & human capital for growth
+* **Realism with IMF:** Maintain a credible, realistic engagement with IMF targets
+
+## Closing Thought
+
+> “Budgets built on fragile foundations can neither stabilise the economy nor promote inclusive growth.”
