@@ -1,0 +1,35 @@
+/* Logo styling for RevealJS presentations */
+  .reveal .slide-logo {
+    height: 100px !important;
+    width: auto !important;
+    max-width: 200px !important;
+    top: 20px !important;
+    right: 20px !important;
+    opacity: 0.9;
+    z-index: 1000;
+  }
+
+/* Optional: Logo hover effect */
+  .reveal .slide-logo:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+/* Progress bar and slide number styling to match */
+  .reveal .progress {
+    color: #1f4e79;
+      height: 3px;
+  }
+
+.reveal .slide-number {
+  color: #1f4e79;
+    font-size: 14px;
+  font-weight: bold;
+}
+
+/* Optional: Better logo positioning on title slide */
+  .reveal .title-slide .slide-logo {
+    top: 30px !important;
+    right: 30px !important;
+    height: 120px !important;
+  }

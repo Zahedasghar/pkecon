@@ -7,12 +7,13 @@ date: "`r format(Sys.Date(), '%B %d, %Y')`"
 format:
   revealjs:
     theme: [default, custom.scss]
+    css: logo-style.css
     slide-number: true
     scrolling: true
     #toc: true
     transition: fade
     incremental: true
-    logo: logo.png
+    logo: qau1.jpg
     footer: "Post-Budget Economic Analysis | School of Economics"
     code-fold: true
     code-summary: "Show R Code"
