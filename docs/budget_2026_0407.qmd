@@ -13,7 +13,7 @@ format:
     fontsize: 11pt
     mainfont: "Times New Roman"
     columns: 1
-    toc: true
+    #toc: true
     toc-depth: 2
     number-sections: true
     fig-width: 7

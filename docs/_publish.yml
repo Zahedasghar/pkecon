@@ -1,0 +1,4 @@
+- source: budget_analysis.qmd
+  quarto-pub:
+    - id: ec4cc9c2-f86b-46ee-a092-721e825cb97d
+      url: https://zahid.quarto.pub/growth-on-hold
