@@ -9,7 +9,7 @@ format:
     theme: [default, custom.scss]
     css: logo-style.css
     slide-number: true
-    scrolling: true
+    #scrolling: true
     #toc: true
     transition: fade
     incremental: false
@@ -479,75 +479,7 @@ debt_data %>%
   )
 ```
 
-
-
----
-
-## Fiscal Multipliers: The Mathematics of Policy Choice {.center}
-
-```{r fiscal-multipliers, fig.height=6}
-multiplier_long <- multiplier_data %>%
-  pivot_longer(cols = c(Short_Term, Long_Term), names_to = "Period", values_to = "Multiplier") %>%
-  mutate(Period = str_replace(Period, "_", "-"))
-
-p1 <- ggplot(multiplier_long, aes(x = Multiplier, y = reorder(Type, Multiplier), fill = Period)) +
-  geom_col(position = "dodge", width = 0.7, alpha = 0.8) +
-  geom_vline(xintercept = 1, linetype = "dashed", color = "gray50", linewidth = 1) +
-  geom_text(aes(label = Multiplier), 
-            position = position_dodge(width = 0.7),
-            hjust = ifelse(multiplier_long$Multiplier > 0, -0.1, 1.1), 
-            size = 3.5, fontface = "bold") +
-  scale_fill_manual(values = pak_colors[c(1,3)]) +
-  labs(title = "Fiscal Multipliers: Not All Spending is Equal",
-       subtitle = "GDP impact per rupee of government expenditure",
-       x = "Multiplier Effect", y = NULL) +
-  annotate("text", x = 1.2, y = 1, label = "Break-even", angle = 90, size = 3) +
-  theme(legend.position = "bottom")
-
-# Create investment efficiency comparison
-efficiency_data <- data.frame(
-  Sector = c("Infrastructure", "Education", "Healthcare", "Energy", "Defense", "Subsidies"),
-  Productivity_Gain = c(8.5, 7.2, 6.1, 7.8, 2.1, 0.8),
-  Employment_Impact = c(9.1, 6.8, 7.5, 6.2, 3.4, 1.2),
-  Political_Feasibility = c(6.8, 8.2, 7.9, 5.4, 9.1, 8.8)
-)
-
-p2 <- ggplot(efficiency_data, aes(x = Productivity_Gain, y = Employment_Impact, 
-                                 size = Political_Feasibility)) +
-  geom_point(color = pak_colors[2], alpha = 0.7) +
-  geom_text_repel(aes(label = Sector), size = 3.5, fontface = "bold") +
-  labs(title = "Investment Efficiency Matrix",
-       x = "Productivity Impact (1-10)", 
-       y = "Employment Impact (1-10)",
-       size = "Political\nFeasibility") +
-  scale_size_continuous(range = c(3, 10)) +
-  geom_vline(xintercept = 6, linetype = "dashed", alpha = 0.5) +
-  geom_hline(yintercept = 6, linetype = "dashed", alpha = 0.5) +
-  theme(legend.position = "bottom")
-
-p1 + p2
-```
-
-### **Key Insight: Multipliers Matter More in Recessions** {.fragment}
-When private demand is weak, each rupee of public investment has outsized impact
-
-::: notes
-**Multiplier Economics Explained:**
-- **Short-term multipliers** capture immediate demand effects (construction jobs, materials purchase)
-- **Long-term multipliers** include productivity and capacity effects (better roads improve competitiveness)
-- **Pakistan context**: High unemployment means larger multipliers for employment-intensive sectors
-
-**Policy Implications:**
-1. **Not all cuts are equal**: Cutting infrastructure investment costs more than cutting subsidies
-2. **Timing matters**: Multipliers are larger during downturns when resources are idle
-3. **Composition strategy**: Smart fiscal consolidation focuses on low-multiplier items first
-
-**Research Note**: These multipliers are estimated based on Pakistan-specific studies and IMF research on emerging economies. The key insight is that Pakistan's current budget prioritizes items with low multipliers (debt servicing, defense) over high-multiplier investments (infrastructure, education).
-
-**Question for Reflection**: If public investment multipliers are 2.1 in the long term, what does this say about the opportunity cost of current budget allocations?
-:::
-
----
+--- 
 
 ## International Lessons: When Stabilization Strategies Succeed or Fail {.center}
 
@@ -631,7 +563,76 @@ p2 <- ggplot(comparison_extended, aes(x = Reform_Success, y = reorder(Country, R
 **Critical Question**: Which model is Pakistan following, and is it the right one for its circumstances?
 :::
 
+
+
 ---
+
+## Fiscal Multipliers: The Mathematics of Policy Choice {.center}
+
+```{r fiscal-multipliers, fig.height=6}
+multiplier_long <- multiplier_data %>%
+  pivot_longer(cols = c(Short_Term, Long_Term), names_to = "Period", values_to = "Multiplier") %>%
+  mutate(Period = str_replace(Period, "_", "-"))
+
+p1 <- ggplot(multiplier_long, aes(x = Multiplier, y = reorder(Type, Multiplier), fill = Period)) +
+  geom_col(position = "dodge", width = 0.7, alpha = 0.8) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "gray50", linewidth = 1) +
+  geom_text(aes(label = Multiplier), 
+            position = position_dodge(width = 0.7),
+            hjust = ifelse(multiplier_long$Multiplier > 0, -0.1, 1.1), 
+            size = 3.5, fontface = "bold") +
+  scale_fill_manual(values = pak_colors[c(1,3)]) +
+  labs(title = "Fiscal Multipliers: Not All Spending is Equal",
+       subtitle = "GDP impact per rupee of government expenditure",
+       x = "Multiplier Effect", y = NULL) +
+  annotate("text", x = 1.2, y = 1, label = "Break-even", angle = 90, size = 3) +
+  theme(legend.position = "bottom")
+
+# Create investment efficiency comparison
+efficiency_data <- data.frame(
+  Sector = c("Infrastructure", "Education", "Healthcare", "Energy", "Defense", "Subsidies"),
+  Productivity_Gain = c(8.5, 7.2, 6.1, 7.8, 2.1, 0.8),
+  Employment_Impact = c(9.1, 6.8, 7.5, 6.2, 3.4, 1.2),
+  Political_Feasibility = c(6.8, 8.2, 7.9, 5.4, 9.1, 8.8)
+)
+
+p2 <- ggplot(efficiency_data, aes(x = Productivity_Gain, y = Employment_Impact, 
+                                 size = Political_Feasibility)) +
+  geom_point(color = pak_colors[2], alpha = 0.7) +
+  geom_text_repel(aes(label = Sector), size = 3.5, fontface = "bold") +
+  labs(title = "Investment Efficiency Matrix",
+       x = "Productivity Impact (1-10)", 
+       y = "Employment Impact (1-10)",
+       size = "Political\nFeasibility") +
+  scale_size_continuous(range = c(3, 10)) +
+  geom_vline(xintercept = 6, linetype = "dashed", alpha = 0.5) +
+  geom_hline(yintercept = 6, linetype = "dashed", alpha = 0.5) +
+  theme(legend.position = "bottom")
+
+p1 + p2
+```
+
+### **Key Insight: Multipliers Matter More in Recessions** {.fragment}
+When private demand is weak, each rupee of public investment has outsized impact
+
+::: notes
+**Multiplier Economics Explained:**
+- **Short-term multipliers** capture immediate demand effects (construction jobs, materials purchase)
+- **Long-term multipliers** include productivity and capacity effects (better roads improve competitiveness)
+- **Pakistan context**: High unemployment means larger multipliers for employment-intensive sectors
+
+**Policy Implications:**
+1. **Not all cuts are equal**: Cutting infrastructure investment costs more than cutting subsidies
+2. **Timing matters**: Multipliers are larger during downturns when resources are idle
+3. **Composition strategy**: Smart fiscal consolidation focuses on low-multiplier items first
+
+**Research Note**: These multipliers are estimated based on Pakistan-specific studies and IMF research on emerging economies. The key insight is that Pakistan's current budget prioritizes items with low multipliers (debt servicing, defense) over high-multiplier investments (infrastructure, education).
+
+**Question for Reflection**: If public investment multipliers are 2.1 in the long term, what does this say about the opportunity cost of current budget allocations?
+:::
+
+---
+
 
 ## The Human Cost: Who Bears the Burden of Prolonged Stabilization? {.center}
 
@@ -826,7 +827,7 @@ p2 <- ggplot(sector_priority, aes(x = Total_Investment, y = reorder(Priority_Lev
   labs(title = "Phased Investment Strategy (not real data)",
        subtitle = "Strategic sequencing of public investment",
        x = "Investment (Billion USD)", y = NULL) +
-  scale_x_continuous(limits = c(0, 40))
+  scale_x_continuous(limits = c(0, 15))
 
 p1 / p2
 ```
@@ -852,7 +853,7 @@ p1 / p2
 
 ---
 
-## Policy Recommendations: A Roadmap for Balanced Growth {.center}
+## Policy Recommendations: A Roadmap for Balanced Growth {.scrollable}
 
 ### **Immediate Actions (Next 12 Months)**
 
