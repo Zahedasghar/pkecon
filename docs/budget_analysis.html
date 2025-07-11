@@ -32,6 +32,7 @@
   </style>
   <link rel="stylesheet" href="budget_analysis_files/libs/revealjs/dist/theme/quarto-9d10cb9fac9f727bdd76981c2d287a1f.css">
   <link rel="stylesheet" href="logo-style.css">
+  <link rel="stylesheet" href="mobile-fix.css">
   <link href="budget_analysis_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="budget_analysis_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="budget_analysis_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -123,10 +124,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="budget_analysis_files/libs/kePrint-0.0.1/kePrint.js"></script>
-
-  <link href="budget_analysis_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -149,18 +146,155 @@ Zahid Asghar
 
   <p class="date">2025-07-11</p>
 </section>
+<section class="slide level2">
+
+<style>
+/* Mobile-first responsive design */
+@media screen and (max-width: 768px) {
+  /* Force fragments to be visible on mobile */
+  .reveal .fragment {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+  
+  /* Fix bullet points */
+  .reveal ul {
+    display: block !important;
+    list-style: disc !important;
+    margin: 1em 0 !important;
+    padding-left: 1.5em !important;
+  }
+  
+  .reveal ul li {
+    display: list-item !important;
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    margin: 0.5em 0 !important;
+    padding-left: 0.2em !important;
+    text-align: left !important;
+  }
+  
+  /* Mobile typography */
+  .reveal {
+    font-size: 24px !important;
+  }
+  
+  .reveal h2 {
+    font-size: 1.3em !important;
+    margin-bottom: 0.5em !important;
+  }
+  
+  .reveal h3 {
+    font-size: 1.1em !important;
+  }
+  
+  /* Mobile-friendly bullet list class */
+  .mobile-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+  }
+  
+  .mobile-list li {
+    position: relative !important;
+    padding-left: 1.5em !important;
+    margin: 0.8em 0 !important;
+    line-height: 1.4 !important;
+  }
+  
+  .mobile-list li:before {
+    content: "•" !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: #1f4e79 !important;
+    font-weight: bold !important;
+    font-size: 1.2em !important;
+  }
+  
+  /* Ensure columns stack on mobile */
+  .reveal .columns {
+    display: block !important;
+  }
+  
+  .reveal .column {
+    width: 100% !important;
+    float: none !important;
+    margin-bottom: 1em !important;
+  }
+}
+
+/* Desktop and larger screens */
+@media screen and (min-width: 769px) {
+  .reveal .fragment.visible {
+    opacity: 1 !important;
+  }
+}
+
+/* Global fixes */
+.reveal .slides section ul {
+  list-style: disc !important;
+}
+
+.reveal .slides section ul li {
+  list-style: disc !important;
+  margin-left: 0 !important;
+}
+
+/* Custom mobile bullet class */
+.bullet-point {
+  display: flex;
+  margin: 1em 0;
+  align-items: flex-start;
+}
+
+.bullet {
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  margin-top: 0.1em;
+  color: #1f4e79;
+  min-width: 20px;
+  font-weight: bold;
+}
+
+.bullet-content {
+  flex: 1;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+  .bullet-point {
+    margin: 0.8em 0;
+  }
+  
+  .bullet-content {
+    font-size: 0.9em;
+  }
+}
+</style>
+</section>
 <section id="the-central-question" class="slide level2 center">
 <h2>The Central Question</h2>
+<blockquote>
 <p><em>“Stabilization without growth is treating symptoms while the disease progresses.”</em></p>
+</blockquote>
 <h3 id="three-critical-questions"><strong>Three Critical Questions</strong></h3>
-<div class="fragment">
-<p><strong>What is Pakistan stabilising <em>from</em>?</strong> - Twin deficits, debt stress, inflation spiral</p>
+<div class="bullet-point">
+<span class="bullet">•</span>
+<div class="bullet-content">
+<p><strong>What is Pakistan stabilising from?</strong><br> Twin deficits, debt stress, inflation spiral</p>
 </div>
-<div class="fragment">
-<p><strong>Who bears the cost of prolonged stabilisation?</strong> - Youth, SMEs, informal workers, provinces</p>
 </div>
-<div class="fragment">
-<p><strong>Can we afford to delay growth?</strong> - Lost decade vs.&nbsp;managed transition</p>
+<div class="bullet-point">
+<span class="bullet">•</span>
+<div class="bullet-content">
+<p><strong>Who bears the cost of prolonged stabilisation?</strong><br> Youth, SMEs, informal workers, provinces</p>
+</div>
+</div>
+<div class="bullet-point">
+<span class="bullet">•</span>
+<div class="bullet-content">
+<p><strong>Can we afford to delay growth?</strong><br> Lost decade vs.&nbsp;managed transition</p>
+</div>
 </div>
 <aside class="notes">
 <p><strong>Opening Framework:</strong> - We’re witnessing a classic macroeconomic policy dilemma: the tension between immediate stabilization needs and longer-term growth imperatives - Pakistan has achieved remarkable macroeconomic stabilization in 2025, but the question remains: at what cost and for how long? - Today’s presentation challenges the conventional wisdom that stabilization must precede growth, arguing instead for a more nuanced, sequential approach</p>
@@ -198,13 +332,17 @@ Zahid Asghar
 <section id="budget-2025-stabilization-at-what-cost" class="slide level2">
 <h2>Budget 2025: Stabilization at What Cost?</h2>
 
-<img data-src="budget_analysis_files/figure-revealjs/unnamed-chunk-1-1.png" width="1152" class="r-stretch"></section>
-<section id="the-budgets-message" class="slide level2">
-<h2>The Budget’s Message</h2>
-<ul>
-<li><strong>What it emphasizes</strong>: IMF targets, fiscal discipline, debt management</li>
-<li><strong>What it marginalizes</strong>: Development investment, job creation, productivity enhancement</li>
-<li><strong>What it reveals</strong>: A budget for survival, not transformation</li>
+<img data-src="budget_analysis_files/figure-revealjs/unnamed-chunk-1-1.png" width="1152" class="r-stretch"><h3 id="the-budgets-message">The Budget’s Message</h3>
+<ul class="mobile-list">
+<li>
+<strong>What it emphasizes:</strong> IMF targets, fiscal discipline, debt management
+</li>
+<li>
+<strong>What it marginalizes:</strong> Development investment, job creation, productivity enhancement
+</li>
+<li>
+<strong>What it reveals:</strong> A budget for survival, not transformation
+</li>
 </ul>
 <aside class="notes">
 <p><strong>Budget Analysis Deep Dive:</strong> - <strong>Debt Servicing Dominance</strong>: 45.8% of budget goes to debt servicing - the highest in Pakistan’s history - <strong>Development Squeeze</strong>: PSDP allocation dropped from 8.1% to 6.8% - exactly when Pakistan needs counter-cyclical investment - <strong>Structural Implications</strong>: This allocation pattern locks Pakistan into a low-growth equilibrium</p>
@@ -222,33 +360,62 @@ Zahid Asghar
           display:block!important;
       }</style></aside>
 </section>
-<section id="keneth-rogoff-with-cowen-on-pakistan-debt-crisis" class="slide level2 center">
-<h2>Keneth Rogoff with Cowen on Pakistan Debt Crisis</h2>
+<section id="kenneth-rogoff-on-pakistan-debt-crisis" class="slide level2 center">
+<h2>Kenneth Rogoff on Pakistan Debt Crisis</h2>
 <h3 id="pakistans-unique-imf-relationship">Pakistan’s Unique IMF Relationship</h3>
-<ul>
-<li><strong>Never been out of an IMF program</strong> in 75 years</li>
-<li>Currently on the <strong>25th IMF program</strong> since independence</li>
-<li><strong>Only country</strong> that has never made independent economic policy</li>
+<ul class="mobile-list">
+<li>
+<strong>Never been out of an IMF program</strong> in 75 years
+</li>
+<li>
+Currently on the <strong>25th IMF program</strong> since independence
+</li>
+<li>
+<strong>Only country</strong> that has never made independent economic policy
+</li>
 </ul>
 <h3 id="the-geopolitical-reality">The Geopolitical Reality</h3>
+<blockquote>
 <p><strong>Kenneth Rogoff:</strong> “Pakistan is geopolitically very important… If you don’t sign off on bailout number 25, they’re going to default on bailout number 24”</p>
+</blockquote>
 </section>
 <section id="tax-system-fbr-crisis" class="slide level2">
 <h2>Tax System &amp; FBR Crisis</h2>
 
-<img data-src="albatross.png" class="stretch quarto-figure-center"><p class="caption">FBR</p><ul>
-<li><p>Single-handedly shrunk formal sector over 15-20 years</p></li>
-<li><p>SUPER tax : Dont grow</p></li>
-<li><p>Excessive discretionary powers scaring genuine investors</p></li>
-<li><p>Boosted informal economy which doesn’t contribute to productivity, revenues, or FDI</p></li>
+<img data-src="albatross.png" class="stretch quarto-figure-center"><p class="caption">FBR</p><ul class="mobile-list">
+<li>
+Single-handedly shrunk formal sector over 15-20 years
+</li>
+<li>
+<strong>SUPER tax:</strong> Don’t grow
+</li>
+<li>
+Excessive discretionary powers scaring genuine investors
+</li>
+<li>
+Boosted informal economy which doesn’t contribute to productivity, revenues, or FDI
+</li>
 </ul>
 </section>
 <section id="tax-policy-contradictions" class="slide level2">
 <h2>Tax Policy Contradictions</h2>
-<p>Corporate tax rates too high (should be halved)</p>
-<p>Agriculture, Services, and Real Estate sectors under-taxed while all burden shared by Industrial sector and formal sector</p>
-<p>NFC??</p>
-<p>Last 3 years: collected more taxes than previous 14 years combined</p>
+<ul class="mobile-list">
+<li>
+<strong>Corporate tax rates too high</strong> (should be halved)
+</li>
+<li>
+<strong>Agriculture, Services, and Real Estate sectors under-taxed</strong> while all burden shared by Industrial sector and formal sector
+</li>
+<li>
+<strong>NFC distribution issues</strong>
+</li>
+<li>
+<strong>Last 3 years:</strong> collected more taxes than previous 14 years combined
+</li>
+</ul>
+</section>
+<section class="slide level2">
+
 </section>
 <section>
 <section id="the-primary-surplus-trap-when-math-meets-reality" class="title-slide slide level1 center">
@@ -260,11 +427,19 @@ Zahid Asghar
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="the-numbers-dont-add-up">The Numbers Don’t Add Up</h3>
-<ul>
-<li><strong>Real GDP Growth:</strong> 3%</li>
-<li><strong>Real Interest Rate:</strong> 7%</li>
-<li><strong>Required Primary Surplus:</strong> 2.3% of GDP annually</li>
-<li><strong>Gap to Bridge:</strong> 4% per year through austerity</li>
+<ul class="mobile-list">
+<li>
+<strong>Real GDP Growth:</strong> 3%
+</li>
+<li>
+<strong>Real Interest Rate:</strong> 7%
+</li>
+<li>
+<strong>Required Primary Surplus:</strong> 2.3% of GDP annually
+</li>
+<li>
+<strong>Gap to Bridge:</strong> 4% per year through austerity
+</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="what-is-primary-surplus">What is Primary Surplus?</h3>
@@ -289,44 +464,46 @@ Zahid Asghar
 <section id="the-mathematical-trap" class="slide level2 scrollable">
 <h2>The Mathematical Trap</h2>
 <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin: 20px 0;">
-    <div style="display: flex; justify-content: space-around; width: 100%; margin-bottom: 20px;">
-        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px;">
+    <div style="display: flex; justify-content: space-around; width: 100%; margin-bottom: 20px; flex-wrap: wrap;">
+        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px; margin: 5px; min-width: 120px;">
             <div style="font-size: 1.5em; font-weight: bold; color: #d32f2f;">7%</div>
             <div style="font-size: 0.8em; color: #666;">Real Interest Rate</div>
         </div>
-        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px;">
+        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px; margin: 5px; min-width: 120px;">
             <div style="font-size: 1.5em; font-weight: bold; color: #d32f2f;">3%</div>
             <div style="font-size: 0.8em; color: #666;">Real GDP Growth</div>
         </div>
-        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px;">
+        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px; margin: 5px; min-width: 120px;">
             <div style="font-size: 1.5em; font-weight: bold; color: #d32f2f;">2.3%</div>
             <div style="font-size: 0.8em; color: #666;">Required Primary Surplus</div>
         </div>
     </div>
     
-    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold;">High Debt Burden</div>
+    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold; margin: 10px 0; text-align: center;">High Debt Burden</div>
     <div style="font-size: 20px;">↓</div>
-    <div style="padding: 12px 20px; background: #e8f5e8; border: 2px solid #2e7d32; border-radius: 8px; color: #2e7d32; font-weight: bold;">Austerity Measures</div>
+    <div style="padding: 12px 20px; background: #e8f5e8; border: 2px solid #2e7d32; border-radius: 8px; color: #2e7d32; font-weight: bold; margin: 10px 0; text-align: center;">Austerity Measures</div>
     <div style="font-size: 20px;">↓</div>
-    <div style="padding: 12px 20px; background: #fff3e0; border: 2px solid #f57c00; border-radius: 8px; color: #f57c00; font-weight: bold;">Investment Falls (8% vs 25%)</div>
+    <div style="padding: 12px 20px; background: #fff3e0; border: 2px solid #f57c00; border-radius: 8px; color: #f57c00; font-weight: bold; margin: 10px 0; text-align: center;">Investment Falls (8% vs 25%)</div>
     <div style="font-size: 20px;">↓</div>
-    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold;">Growth Falls Below 3%</div>
+    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold; margin: 10px 0; text-align: center;">Growth Falls Below 3%</div>
     <div style="font-size: 20px;">↓</div>
-    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold;">Cycle Repeats ⟲</div>
+    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold; margin: 10px 0; text-align: center;">Cycle Repeats ⟲</div>
 </div>
-</section>
-<section class="slide level2">
-
-<div class="fragment">
-<p>The Greece Model: Mandated primary surpluses until 2060 - same framework applied to Pakistan</p>
-</div>
-<div class="fragment">
-<p>Policy Contradiction: Using growth-killing measures to solve a growth-dependent problem</p>
-</div>
+<h3 id="key-points">Key Points:</h3>
+<ul class="mobile-list">
+<li>
+<strong>The Greece Model:</strong> Mandated primary surpluses until 2060 - same framework applied to Pakistan
+</li>
+<li>
+<strong>Policy Contradiction:</strong> Using growth-killing measures to solve a growth-dependent problem
+</li>
+</ul>
 </section>
 <section id="the-krugman-insight-when-austerity-becomes-a-trap" class="slide level2 center">
 <h2>The Krugman Insight: When Austerity Becomes a Trap</h2>
+<blockquote>
 <p><em>“Austerity in a depression is a trap — the more you cut, the weaker your economy becomes.”</em> — Paul Krugman</p>
+</blockquote>
 <h3 id="the-austerity-paradox-applied-to-pakistan"><strong>The Austerity Paradox Applied to Pakistan</strong></h3>
 
 <img data-src="budget_analysis_files/figure-revealjs/austerity-trap-1.png" width="960" class="r-stretch"></section>
@@ -335,446 +512,8 @@ Zahid Asghar
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Traditional Logic:</strong></p>
-<ul>
-<li><p>Cut spending → Reduce deficit</p></li>
-<li><p>Lower deficit → Restore confidence</p></li>
-<li><p>Higher confidence → Private investment</p></li>
-<li><p>More investment → Growth returns</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Reality Check:</strong></p>
-<ul>
-<li><p>Cut spending → Reduce demand</p></li>
-<li><p>Lower demand → Business contraction</p></li>
-<li><p>Less business → Lower tax revenue</p></li>
-<li><p>Revenue shortfall → More cuts needed</p></li>
-</ul>
+
 </div></div>
-<aside class="notes">
-<p><strong>Krugman’s Core Argument:</strong> - During economic downturns, government spending cuts worsen recession rather than improve fiscal position - The multiplier effect works in reverse: each dollar cut from spending reduces GDP by more than one dollar - This creates a vicious cycle where austerity undermines the economic base needed for fiscal recovery</p>
-<p><strong>Pakistan-Specific Application:</strong> 1. <strong>Timing Matters</strong>: Pakistan implemented austerity when private sector was already weak 2. <strong>Capacity Constraints</strong>: Limited private sector ability to fill the investment gap left by public sector cuts 3. <strong>Social Costs</strong>: Youth unemployment and informal sector stress create political economy pressures</p>
-<p><strong>Counter-Arguments to Address:</strong> - “But Pakistan had no choice due to debt crisis” → True, but sequencing and composition of cuts matter - “Private sector will fill the gap” → Requires examining Pakistan’s private investment trends and constraints - “Stabilization first, growth later” → Question the sustainability of this sequencing in Pakistan’s context</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-<div class="cell">
-<div id="tbl-external-debt" class="cell quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-tbl">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-external-debt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Share of External Debt in Total Debt
-</figcaption>
-<div aria-describedby="tbl-external-debt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
-<table class="table table-striped table-hover table-condensed do-not-create-environment cell caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
-<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-Table 1
-</div></th>
-</tr>
-<tr class="even">
-<th style="text-align: center;" data-quarto-table-cell-role="th">As of June:</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">Total Government Debt (as percent of GDP)</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">Share of External Debt (percent)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">2009</td>
-<td style="text-align: center;">52.6</td>
-<td style="text-align: center;">51.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2019</td>
-<td style="text-align: center;">68.8</td>
-<td style="text-align: center;">33.8</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">2021</td>
-<td style="text-align: center;">71.4</td>
-<td style="text-align: center;">31.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2022</td>
-<td style="text-align: center;">68.8</td>
-<td style="text-align: center;">34.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">2023</td>
-<td style="text-align: center;">74.9</td>
-<td style="text-align: center;">35.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2024</td>
-<td style="text-align: center;">67.5</td>
-<td style="text-align: center;">30.5</td>
-</tr>
-</tbody><tfoot>
-<tr class="odd">
-<td style="text-align: center; padding: 0;"><sup></sup> Source: SBP</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tfoot>
-
-</table>
-</div>
-</div>
-</figure>
-</div>
-</div>
-</section>
-<section id="international-lessons-when-stabilization-strategies-succeed-or-fail" class="slide level2 center">
-<h2>International Lessons: When Stabilization Strategies Succeed or Fail</h2>
-
-<img data-src="budget_analysis_files/figure-revealjs/international-comparison-1.png" width="960" class="r-stretch"><h3 id="case-study-insights"><strong>Case Study Insights</strong></h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>🇧🇩 Bangladesh: Pragmatic Sequencing</strong> - Kept export incentives during stabilization - Protected social spending (health, education) - Result: 6%+ growth for over a decade</p>
-<p><strong>🇪🇬 Egypt: Austerity Trap</strong> - Deep cuts, rapid currency adjustment - Achieved macro stability but jobless growth - Social unrest forced policy reversal</p>
-</div><div class="column" style="width:50%;">
-<p><strong>🇹🇷 Turkey: Stop-Go Cycles</strong> - Repeatedly chose short-term growth over stability - Result: Chronic inflation, currency crises - Lesson: Discipline matters, but so does sequencing</p>
-<p><strong>🇱🇰 Sri Lanka: Late Adjustment</strong> - Delayed necessary reforms - Crisis became unavoidable - Extreme austerity with severe social costs</p>
-</div></div>
-<aside class="notes">
-<p><strong>Comparative Analysis Framework:</strong> - <strong>Bangladesh’s Success</strong>: Maintained sectoral focus (RMG), gradual liberalization, protected human capital investment - <strong>Egypt’s Mixed Results</strong>: Achieved macroeconomic stabilization but failed to generate inclusive growth - <strong>Turkey’s Volatility</strong>: Shows the dangers of populist macroeconomic policy but also excessive orthodoxy - <strong>Sri Lanka’s Crisis</strong>: Demonstrates the costs of delayed adjustment but also the risks of shock therapy</p>
-<p><strong>Key Lessons for Pakistan:</strong> 1. <strong>Sequencing Matters</strong>: Successful countries protected growth-enhancing expenditures during stabilization 2. <strong>Sectoral Strategy</strong>: Bangladesh’s focus on textiles, Vietnam’s manufacturing - what is Pakistan’s comparative advantage? 3. <strong>Social Contract</strong>: Countries that maintained minimum social provisions had more sustainable reforms 4. <strong>Time Horizon</strong>: Quick stabilization is possible, but structural transformation takes 5-10 years</p>
-<p><strong>Critical Question</strong>: Which model is Pakistan following, and is it the right one for its circumstances?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="fiscal-multipliers-the-mathematics-of-policy-choice" class="slide level2 center">
-<h2>Fiscal Multipliers: The Mathematics of Policy Choice</h2>
-
-<img data-src="budget_analysis_files/figure-revealjs/fiscal-multipliers-1.png" width="960" class="r-stretch"><h3 class="fragment" id="key-insight-multipliers-matter-more-in-recessions"><strong>Key Insight: Multipliers Matter More in Recessions</strong></h3>
-<p>When private demand is weak, each rupee of public investment has outsized impact</p>
-<aside class="notes">
-<p><strong>Multiplier Economics Explained:</strong> - <strong>Short-term multipliers</strong> capture immediate demand effects (construction jobs, materials purchase) - <strong>Long-term multipliers</strong> include productivity and capacity effects (better roads improve competitiveness) - <strong>Pakistan context</strong>: High unemployment means larger multipliers for employment-intensive sectors</p>
-<p><strong>Policy Implications:</strong> 1. <strong>Not all cuts are equal</strong>: Cutting infrastructure investment costs more than cutting subsidies 2. <strong>Timing matters</strong>: Multipliers are larger during downturns when resources are idle 3. <strong>Composition strategy</strong>: Smart fiscal consolidation focuses on low-multiplier items first</p>
-<p><strong>Research Note</strong>: These multipliers are estimated based on Pakistan-specific studies and IMF research on emerging economies. The key insight is that Pakistan’s current budget prioritizes items with low multipliers (debt servicing, defense) over high-multiplier investments (infrastructure, education).</p>
-<p><strong>Question for Reflection</strong>: If public investment multipliers are 2.1 in the long term, what does this say about the opportunity cost of current budget allocations?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="the-human-cost-who-bears-the-burden-of-prolonged-stabilization" class="slide level2 center">
-<h2>The Human Cost: Who Bears the Burden of Prolonged Stabilization?</h2>
-
-<img data-src="budget_analysis_files/figure-revealjs/social-impact-1.png" width="960" class="r-stretch"><h3 class="fragment" id="the-distributional-question"><strong>The Distributional Question</strong></h3>
-<p>Who pays for stabilization, and who benefits from it?</p>
-<aside class="notes">
-<p><strong>Social Impact Analysis:</strong> - <strong>Urban Youth</strong>: Highest impact due to limited job creation, expensive education, delayed economic opportunities - <strong>Rural Poor</strong>: Affected by reduced agricultural support, higher input costs, limited access to credit - <strong>SME Owners</strong>: Credit rationing, high interest rates, reduced demand for goods/services - <strong>Regional Disparities</strong>: Notice how development budget allocation doesn’t correlate with poverty rates</p>
-<p><strong>Ethical Dimensions:</strong> 1. <strong>Intergenerational Equity</strong>: Are we asking today’s youth to pay for past fiscal mistakes? 2. <strong>Regional Justice</strong>: Do stabilization policies worsen existing inequalities? 3. <strong>Class Implications</strong>: Do burden-sharing arrangements reflect ability to pay?</p>
-<p><strong>Policy Questions:</strong> - Can Pakistan design stabilization policies that protect the most vulnerable? - What social protection mechanisms are compatible with fiscal discipline? - How can development spending be targeted to reduce rather than increase inequality?</p>
-<p><strong>International Evidence</strong>: Countries with more equitable stabilization programs tend to have more sustainable reforms and better long-term growth outcomes.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="rethinking-stabilization-a-growth-compatible-framework" class="slide level2 center">
-<h2>Rethinking Stabilization: A Growth-Compatible Framework</h2>
-
-<img data-src="budget_analysis_files/figure-revealjs/alternative-framework-1.png" width="960" class="r-stretch"><h3 class="fragment" id="the-dual-track-approach"><strong>The Dual-Track Approach</strong></h3>
-<ul>
-<li><strong>Track 1</strong>: Maintain macro discipline (fiscal, monetary, debt)<br>
-</li>
-<li><strong>Track 2</strong>: Strategic investments in growth foundations<br>
-</li>
-<li><strong>Key</strong>: Sequenced implementation, not either-or choice</li>
-</ul>
-<aside class="notes">
-<p><strong>Conceptual Framework:</strong> - <strong>False Dichotomy</strong>: The choice between stabilization and growth is often overstated - <strong>Composition Matters</strong>: How you stabilize matters as much as whether you stabilize - <strong>Sequencing Strategy</strong>: Gradual shift from stabilization-heavy to growth-heavy policy mix</p>
-<p><strong>Dual-Track Implementation:</strong> 1. <strong>Stabilization Track</strong> (Years 1-2): Achieve macro targets but protect high-multiplier spending 2. <strong>Transition Phase</strong> (Years 3-4): Gradually increase growth-oriented investments 3. <strong>Growth Track</strong> (Years 5-6): Full focus on structural transformation</p>
-<p><strong>Critical Success Factors:</strong> - <strong>Political Commitment</strong>: Long-term perspective beyond electoral cycles - <strong>Institutional Capacity</strong>: Ability to implement complex, coordinated policies - <strong>Social Buy-in</strong>: Maintaining public support through visible improvements - <strong>External Support</strong>: International partner backing for this approach</p>
-<p><strong>Risk Management</strong>: Each track has built-in safeguards to prevent backsliding on either stabilization or growth objectives.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="smart-public-investment-where-to-focus-resources" class="slide level2 center">
-<h2>Smart Public Investment: Where to Focus Resources</h2>
-
-<img data-src="budget_analysis_files/figure-revealjs/investment-priorities-1.png" width="960" class="r-stretch"><aside class="notes">
-<p><strong>Investment Strategy Rationale:</strong> - <strong>High Impact, Low Cost</strong>: Digital infrastructure and education technology offer quick wins - <strong>Strategic Patience</strong>: Transport and water management require longer timeframes but essential for transformation - <strong>Employment Focus</strong>: Job creation numbers reflect both direct and indirect employment effects</p>
-<p><strong>Financing Strategy:</strong> 1. <strong>Phase 1</strong> (Immediate): Use existing fiscal space, international climate financing 2. <strong>Phase 2</strong> (Medium-term): Blend domestic savings mobilization with FDI 3. <strong>Phase 3</strong> (Long-term): Leverage improved credit rating for infrastructure bonds</p>
-<p><strong>Implementation Considerations:</strong> - <strong>Capacity Building</strong>: Many of these investments require institutional development - <strong>Technology Transfer</strong>: Partnerships with leading countries in each sector - <strong>Regional Integration</strong>: Coordinate investments with CPEC and regional connectivity</p>
-<p><strong>Monitoring and Evaluation</strong>: Each investment category needs clear KPIs and regular assessment to ensure optimal resource utilization.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="policy-recommendations-a-roadmap-for-balanced-growth" class="slide level2 scrollable">
-<h2>Policy Recommendations: A Roadmap for Balanced Growth</h2>
-<h3 id="immediate-actions-next-12-months"><strong>Immediate Actions (Next 12 Months)</strong></h3>
-<div class="fragment">
-<p><strong>🎯 Fiscal Rebalancing</strong></p>
-<ul>
-<li><p>Protect PSDP allocations for high-multiplier projects not for Parliamentarians</p></li>
-<li><p>Rationalize subsidies based on targeting effectiveness</p></li>
-<li><p>Implement progressive taxation measures</p></li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>🎯 Monetary Policy Coordination</strong></p>
-<ul>
-<li><p>Significant policy rate reduction as inflation anchors</p></li>
-<li><p>Develop SME-specific credit guarantee schemes</p></li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>🎯 Structural Enablers</strong></p>
-<ul>
-<li><p>Fast-track energy sector circular debt resolution</p></li>
-<li><p>Streamline business registration and licensing</p></li>
-<li><p>Launch export diversification incentive package (not only export diversification but which really matters)</p></li>
-</ul>
-</div>
-<h3 class="fragment" id="medium-term-transformation-2-3-years"><strong>Medium-term Transformation (2-3 Years)</strong></h3>
-<div class="fragment">
-<p><strong>🎯 Investment Climate</strong></p>
-<ul>
-<li><p>Establish technology parks and innovation hubs</p></li>
-<li><p>Develop skilled workforce through public-private partnerships</p></li>
-<li><p>Create regional trade and investment facilitation centers</p></li>
-</ul>
-</div>
-<aside class="notes">
-<p><strong>Implementation Sequencing:</strong> - <strong>Year 1</strong>: Focus on quick wins that demonstrate government commitment to growth - <strong>Year 2-3</strong>: Begin major structural investments while maintaining macro stability - <strong>Continuous</strong>: Monitor and adjust based on economic performance and social indicators</p>
-<p><strong>Institutional Requirements:</strong> - <strong>Coordination Mechanism</strong>: High-level committee to oversee dual-track implementation - <strong>Capacity Building</strong>: Train government officials in modern economic management - <strong>Stakeholder Engagement</strong>: Regular consultation with private sector, civil society, and international partners</p>
-<p><strong>Risk Mitigation:</strong> - <strong>Fiscal Safeguards</strong>: Automatic stabilizers to prevent fiscal slippage - <strong>Political Insurance</strong>: Broad-based coalition building for sustained reform - <strong>External Support</strong>: Maintain strong relationships with international financial institutions</p>
-<p><strong>Success Metrics:</strong> - GDP growth acceleration to 4%+ by 2027 - Unemployment reduction to &lt;5% by 2028 - Fiscal deficit maintained &lt;3% of GDP - Current account balance sustained</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="risk-assessment-and-mitigation-strategies" class="slide level2 center">
-<h2>Risk Assessment and Mitigation Strategies</h2>
-
-<img data-src="budget_analysis_files/figure-revealjs/risk-assessment-1.png" width="960" class="r-stretch"><aside class="notes">
-<p><strong>Risk Analysis Framework:</strong> - <strong>High Probability, High Impact</strong>: Climate events and external shocks require immediate attention - <strong>High Impact, Lower Probability</strong>: Debt sustainability and political instability need contingency planning - <strong>Current Gaps</strong>: Pakistan’s mitigation capacity is weakest for climate events and political risks</p>
-<p><strong>Specific Risk Mitigation Strategies:</strong></p>
-<ol type="1">
-<li><strong>External Shocks</strong>:
-<ul>
-<li>Diversify trade partners and export products</li>
-<li>Build foreign exchange reserves to 4+ months of imports</li>
-<li>Develop flexible exchange rate mechanisms</li>
-</ul></li>
-<li><strong>Climate Events</strong>:
-<ul>
-<li>Invest in climate-resilient infrastructure</li>
-<li>Develop early warning systems</li>
-<li>Create climate adaptation financing mechanisms</li>
-</ul></li>
-<li><strong>Political Instability</strong>:
-<ul>
-<li>Build broad-based consensus on economic reforms</li>
-<li>Strengthen democratic institutions</li>
-<li>Improve federal-provincial coordination</li>
-</ul></li>
-</ol>
-<p><strong>Cost-Benefit Analysis</strong>: Investment in risk mitigation typically pays for itself within 3-5 years through avoided crisis costs.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="the-path-forward-a-new-economic-social-contract" class="slide level2 center">
-<h2>The Path Forward: A New Economic Social Contract</h2>
-<h3 id="redefining-success"><strong>Redefining Success</strong></h3>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><strong>Beyond Macro Indicators</strong> - GDP growth that creates jobs - Inflation control that preserves purchasing power<br>
-- Fiscal discipline that funds public goods - Trade balance that supports domestic industry</p>
-<p><strong>Toward Inclusive Prosperity</strong> - Regional development that reduces disparities - Education investment that builds human capital - Healthcare access that protects all citizens - Environmental protection that ensures sustainability</p>
-</div><div class="column" style="width:60%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="budget_analysis_files/figure-revealjs/success-metrics-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<aside class="notes">
-<p><strong>Philosophical Shift Required:</strong> - Move from crisis management to strategic planning - Shift from elite-focused to mass-based economic policy - Transform from extractive to productive economic institutions</p>
-<p><strong>Elements of New Social Contract:</strong> 1. <strong>Economic Democracy</strong>: Broader participation in economic opportunities 2. <strong>Social Protection</strong>: Universal basic services while maintaining work incentives 3. <strong>Environmental Justice</strong>: Sustainable development that protects future generations 4. <strong>Regional Equity</strong>: Development strategies that reduce geographical disparities</p>
-<p><strong>Implementation Challenges:</strong> - <strong>Political Economy</strong>: Overcoming vested interests that benefit from current arrangements - <strong>Institutional Capacity</strong>: Building state capacity to deliver on new commitments - <strong>Resource Constraints</strong>: Financing expanded social contract within fiscal discipline</p>
-<p><strong>International Examples</strong>: - South Korea’s developmental state model - Brazil’s conditional cash transfer programs - Rwanda’s vision-based development planning</p>
-<p><strong>Critical Success Factor</strong>: Public buy-in through visible improvements in living standards within first 2-3 years.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="the-new-social-contract-growth-that-works-for-everyone-not-just-the-privileged-few" class="title-slide slide level1 center">
-<h1><em>The New Social Contract</em> : “Growth that works for everyone, not just the privileged few”*</h1>
-
-</section>
-<section id="conclusions-growth-cannot-remain-on-hold-forever" class="slide level2 center">
-<h2>Conclusions: Growth Cannot Remain on Hold Forever</h2>
-<h3 id="key-insights-from-todays-analysis"><strong>Key Insights from Today’s Analysis</strong></h3>
-<div class="fragment">
-<p><strong>✓ Government has failed to come up with a budget which talks beyond survival</strong> - With Inflation controlled, current account balanced, fiscal discipline restored, budget does not talk about growth</p>
-</div>
-<div class="fragment">
-<p><strong>⚠️ Stabilization without growth is unsustainable</strong> - Social costs mount, productivity stagnates, political pressures build</p>
-</div>
-<div class="fragment">
-<p><strong>🎯 Smart sequencing, not either-or choices</strong></p>
-<ul>
-<li>Dual-track approach balancing macro stability with strategic investment is missing altogether</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>💡 Success requires redefining the economic development model</strong> - From crisis management to strategic transformation</p>
-<ul>
-<li>From being <em>COSMOPOLITAN</em> to being <em>PEOPLE-CENTRIC</em></li>
-</ul>
-</div>
-</section>
-<section id="the-bottom-line" class="slide level2 fragment">
-<h2><strong>The Bottom Line</strong></h2>
-<p><em>Pakistan stands at a crossroads. It can continue on the path of perpetual stabilization, achieving fiscal targets while the economy stagnates. Or it can leverage its hard-won stability to launch a new phase of inclusive, sustainable growth. The choice will define the next decade.</em></p>
-<h3 id="number-1-2-3-4-and-5-of-economic-development-is-growth-and-not-stabilization.-for-this-one-has-to-invest-in-people-invest-in-infrastructure-invest-in-education-invest-in-health-invest-in-social-safety-nets.">Number 1, 2, 3, 4 and 5 of economic development is <em>“GROWTH”</em> and not <em>STABILIZATION</em>. For this one has to invest in people, invest in infrastructure, invest in education, invest in health, invest in social safety nets.</h3>
-<aside class="notes">
-<p><strong>Synthesis of Arguments:</strong> 1. <strong>Stabilization Achievement</strong>: Pakistan has successfully navigated immediate crisis - this is not disputed 2. <strong>Cost Analysis</strong>: But prolonged stabilization creates its own risks and costs 3. <strong>Alternative Framework</strong>: Dual-track approach offers a way forward without sacrificing macro stability 4. <strong>Implementation Reality</strong>: Success requires political will, institutional capacity, and social patience</p>
-<p><strong>Call to Action for Policymakers:</strong> - <strong>Short-term</strong>: Begin rebalancing budget priorities within existing fiscal envelope - <strong>Medium-term</strong>: Develop institutional mechanisms for coordinated growth strategy - <strong>Long-term</strong>: Build political consensus for sustained reform program</p>
-<p><strong>For the Academic Community:</strong> - Research priorities: fiscal multipliers in Pakistani context, optimal sequencing of reforms, social impact assessment of stabilization policies - Policy engagement: Bridge gap between academic research and policy implementation - International collaboration: Learn from successful transformation experiences</p>
-<p><strong>Final Reflection</strong>: The title question “Growth on Hold?” should be answered definitively: Yes, growth has been on hold, but it doesn’t have to remain so. Pakistan has the tools, knowledge, and opportunity to move beyond stabilization toward transformation.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="discussion-questions" class="slide level2 center">
-<h2>Discussion Questions</h2>
-<h3 id="for-reflection-and-debate"><strong>For Reflection and Debate</strong></h3>
-<ol type="1">
-<li><p><strong>Political Economy</strong>: What political incentives keep Pakistan in prolonged stabilization mode, and how can they be changed?</p></li>
-<li><p><strong>International Relations</strong>: Can Pakistan negotiate more growth-friendly conditionalities with international financial institutions?</p></li>
-<li><p><strong>Federal Structure</strong>: How can provincial governments become growth engines while maintaining fiscal discipline?</p></li>
-<li><p><strong>Private Sector</strong>: What role should the private sector play in Pakistan’s transformation, and what support does it need?</p></li>
-<li><p><strong>Timeline</strong>: Is a 6-year transformation timeline realistic, or should Pakistan think in terms of decades?</p></li>
-</ol>
-<h3 id="thank-you"><strong>Thank You</strong></h3>
-<p><strong>Contact Information:</strong> - Email: [zasghar@qau.edu.pk] - LinkedIn: [Zahedasghar] - All slides on github : [https://github.com/zahedasghar]</p>
-<p><em>“When a country cuts back on investment in people and progress to meet a short-term fiscal target, it mortgages its future.”</em></p>
-<aside class="notes">
-<p><strong>Facilitating Discussion:</strong> These questions are designed to probe deeper into the practical and political dimensions of the analysis presented. Encourage participants to:</p>
-<ol type="1">
-<li><strong>Challenge Assumptions</strong>: What if the analysis is wrong about multipliers or sequencing?</li>
-<li><strong>Consider Constraints</strong>: What real-world factors make the recommendations difficult to implement?</li>
-<li><strong>Explore Alternatives</strong>: Are there other models Pakistan should consider?</li>
-<li><strong>Think Long-term</strong>: What are the implications of today’s choices for the next generation?</li>
-</ol>
-<p><strong>Potential Follow-up Research:</strong> - Detailed fiscal space analysis for specific investment priorities - Provincial-level impact assessment of different policy scenarios - Comparative study of successful economic transformations in similar contexts - Social impact modeling of alternative stabilization approaches</p>
-<p><strong>Policy Engagement Opportunities:</strong> - Present findings to federal and provincial government officials - Engage with private sector associations and civil society organizations - Collaborate with international development partners on implementation strategies - Contribute to public debate through media and policy forums</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
