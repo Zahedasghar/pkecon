@@ -7,150 +7,22 @@ date: "`r format(Sys.Date(), '%B %d, %Y')`"
 format:
   revealjs:
     theme: [default, custom.scss]
-    css: [logo-style.css, mobile-fix.css]
+    css: logo-style.css
     slide-number: true
+    #scrolling: true
+    #toc: true
     transition: fade
     incremental: false
     logo: qau1.jpg
     footer: "Post-Budget Economic Analysis | School of Economics, QAU, Islamabad"
     code-fold: true
     code-summary: "Show R Code"
-    viewport: 
-      width: device-width
-      initial-scale: 1.0
-      user-scalable: no
 execute:
   freeze: auto
   echo: false
   warning: false
   message: false
 ---
-
-```{=html}
-<style>
-/* Mobile-first responsive design */
-@media screen and (max-width: 768px) {
-  /* Force fragments to be visible on mobile */
-  .reveal .fragment {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-  }
-  
-  /* Fix bullet points */
-  .reveal ul {
-    display: block !important;
-    list-style: disc !important;
-    margin: 1em 0 !important;
-    padding-left: 1.5em !important;
-  }
-  
-  .reveal ul li {
-    display: list-item !important;
-    list-style-type: disc !important;
-    list-style-position: outside !important;
-    margin: 0.5em 0 !important;
-    padding-left: 0.2em !important;
-    text-align: left !important;
-  }
-  
-  /* Mobile typography */
-  .reveal {
-    font-size: 24px !important;
-  }
-  
-  .reveal h2 {
-    font-size: 1.3em !important;
-    margin-bottom: 0.5em !important;
-  }
-  
-  .reveal h3 {
-    font-size: 1.1em !important;
-  }
-  
-  /* Mobile-friendly bullet list class */
-  .mobile-list {
-    list-style: none !important;
-    padding-left: 0 !important;
-  }
-  
-  .mobile-list li {
-    position: relative !important;
-    padding-left: 1.5em !important;
-    margin: 0.8em 0 !important;
-    line-height: 1.4 !important;
-  }
-  
-  .mobile-list li:before {
-    content: "•" !important;
-    position: absolute !important;
-    left: 0 !important;
-    color: #1f4e79 !important;
-    font-weight: bold !important;
-    font-size: 1.2em !important;
-  }
-  
-  /* Ensure columns stack on mobile */
-  .reveal .columns {
-    display: block !important;
-  }
-  
-  .reveal .column {
-    width: 100% !important;
-    float: none !important;
-    margin-bottom: 1em !important;
-  }
-}
-
-/* Desktop and larger screens */
-@media screen and (min-width: 769px) {
-  .reveal .fragment.visible {
-    opacity: 1 !important;
-  }
-}
-
-/* Global fixes */
-.reveal .slides section ul {
-  list-style: disc !important;
-}
-
-.reveal .slides section ul li {
-  list-style: disc !important;
-  margin-left: 0 !important;
-}
-
-/* Custom mobile bullet class */
-.bullet-point {
-  display: flex;
-  margin: 1em 0;
-  align-items: flex-start;
-}
-
-.bullet {
-  font-size: 1.2em;
-  margin-right: 0.5em;
-  margin-top: 0.1em;
-  color: #1f4e79;
-  min-width: 20px;
-  font-weight: bold;
-}
-
-.bullet-content {
-  flex: 1;
-  line-height: 1.4;
-}
-
-@media screen and (max-width: 768px) {
-  .bullet-point {
-    margin: 0.8em 0;
-  }
-  
-  .bullet-content {
-    font-size: 0.9em;
-  }
-}
-</style>
-```
 
 ```{r setup, include=FALSE}
 # Load required libraries
@@ -189,8 +61,8 @@ pakistan_data <- data.frame(
   Inflation = c(6.8, 10.7, 12.3, 21.3, 29.2, 4.7, 5.1),
   Current_Account = c(-4.9, -1.5, -0.6, -4.6, -3.2, 0.7, -1.2),
   Fiscal_Balance = c(-7.9, -7.1, -7.7, -7.9, -7.7, -6.8, -5.6),
-  Debt_to_GDP = c(69, 68.9, 71.5, 73.9, 75.0, 74.6, 65.0),
-  External_Debt_Share = c(32, 31.2, 26.9, 30.5, 32.3, 35.1, 33.6),
+  Debt_to_GDP = c(69, 68.9, 71.5, 73.9, 75.0, 74.6, 65.0),           # percent of GDP
+  External_Debt_Share = c(32, 31.2, 26.9, 30.5, 32.3, 35.1, 33.6) ,      # percent of total debt/GDP
   Unemployment = c(18, 20, 24, 21, 22, 22, 21)
 )
 
@@ -221,33 +93,23 @@ comparison_data <- data.frame(
 
 ## The Central Question {.center}
 
-> *"Stabilization without growth is treating symptoms while the disease progresses."*
+ *"Stabilization without growth is treating symptoms while the disease progresses."*
 
 ### **Three Critical Questions**
+::: {.fragment}
+**What is Pakistan stabilising *from*?**
+- Twin deficits, debt stress, inflation spiral
+:::
 
-<div class="bullet-point">
-<span class="bullet">•</span>
-<div class="bullet-content">
-<strong>What is Pakistan stabilising from?</strong><br>
-Twin deficits, debt stress, inflation spiral
-</div>
-</div>
+::: {.fragment}
+**Who bears the cost of prolonged stabilisation?**
+- Youth, SMEs, informal workers, provinces
+:::
 
-<div class="bullet-point">
-<span class="bullet">•</span>
-<div class="bullet-content">
-<strong>Who bears the cost of prolonged stabilisation?</strong><br>
-Youth, SMEs, informal workers, provinces
-</div>
-</div>
-
-<div class="bullet-point">
-<span class="bullet">•</span>
-<div class="bullet-content">
-<strong>Can we afford to delay growth?</strong><br>
-Lost decade vs. managed transition
-</div>
-</div>
+::: {.fragment}
+**Can we afford to delay growth?**
+- Lost decade vs. managed transition
+:::
 
 ::: notes
 **Opening Framework:**
@@ -322,6 +184,8 @@ p4 <- ggplot(pakistan_data, aes(x = Year, y = Unemployment)) +
 ## Budget 2025: Stabilization at What Cost?
 
 ```{r, echo=FALSE, fig.width=12, fig.height=7, class.output="stretch"}
+
+
 budget_comparison <- budget_data %>%
   mutate(Category = factor(Category, levels = c("Other", "Subsidies", "Development", 
                                                 "Current Operations", "Defense", "Debt Servicing")))
@@ -357,13 +221,10 @@ p2 <- ggplot(allocation_summary, aes(x = Amount_2025, y = reorder(Priority, Amou
 p1 / p2
 ```
 
-### The Budget's Message 
-
-<ul class="mobile-list">
-<li><strong>What it emphasizes:</strong> IMF targets, fiscal discipline, debt management</li>
-<li><strong>What it marginalizes:</strong> Development investment, job creation, productivity enhancement</li>
-<li><strong>What it reveals:</strong> A budget for survival, not transformation</li>
-</ul>
+## The Budget's Message 
+- **What it emphasizes**: IMF targets, fiscal discipline, debt management
+- **What it marginalizes**: Development investment, job creation, productivity enhancement
+- **What it reveals**: A budget for survival, not transformation
 
 ::: notes
 **Budget Analysis Deep Dive:**
@@ -381,47 +242,42 @@ p1 / p2
 - Pakistan's current allocation resembles crisis management rather than growth strategy
 :::
 
----
-
-## Kenneth Rogoff on Pakistan Debt Crisis {.center} 
+## Keneth Rogoff with Cowen on Pakistan Debt Crisis {.center} 
 
 ### Pakistan's Unique IMF Relationship
-
-<ul class="mobile-list">
-<li><strong>Never been out of an IMF program</strong> in 75 years</li>
-<li>Currently on the <strong>25th IMF program</strong> since independence</li>
-<li><strong>Only country</strong> that has never made independent economic policy</li>
-</ul>
+  
+- **Never been out of an IMF program** in 75 years
+- Currently on the **25th IMF program** since independence
+- **Only country** that has never made independent economic policy
 
 ### The Geopolitical Reality
 
-> **Kenneth Rogoff:** "Pakistan is geopolitically very important... If you don't sign off on bailout number 25, they're going to default on bailout number 24"
+ **Kenneth Rogoff:** "Pakistan is geopolitically very important... If you don't sign off on bailout number 25, they're going to default on bailout number 24"
 
 --- 
 
 ## Tax System & FBR Crisis
 
+
 ![FBR](albatross.png){.stretch}
 
-<ul class="mobile-list">
-<li>Single-handedly shrunk formal sector over 15-20 years</li>
-<li><strong>SUPER tax:</strong> Don't grow</li>
-<li>Excessive discretionary powers scaring genuine investors</li>
-<li>Boosted informal economy which doesn't contribute to productivity, revenues, or FDI</li>
-</ul>
+- Single-handedly shrunk formal sector over 15-20 years 
+- SUPER tax : Dont grow 
+
+- Excessive discretionary powers scaring genuine investors 
+- Boosted informal economy which doesn't contribute to productivity, revenues, or FDI
 
 ---
 
 ## Tax Policy Contradictions
 
-<ul class="mobile-list">
-<li><strong>Corporate tax rates too high</strong> (should be halved)</li>
-<li><strong>Agriculture, Services, and Real Estate sectors under-taxed</strong> while all burden shared by Industrial sector and formal sector</li>
-<li><strong>NFC distribution issues</strong></li>
-<li><strong>Last 3 years:</strong> collected more taxes than previous 14 years combined</li>
-</ul>
+Corporate tax rates too high (should be halved) 
 
----
+Agriculture, Services, and Real Estate sectors under-taxed while all burden shared by Industrial sector and formal sector 
+
+NFC?? 
+
+Last 3 years: collected more taxes than previous 14 years combined
 
 # The Primary Surplus Trap: When Math Meets Reality
 
@@ -431,19 +287,15 @@ p1 / p2
 
 ::: {.column width="50%"}
 ### The Numbers Don't Add Up
-
-<ul class="mobile-list">
-<li><strong>Real GDP Growth:</strong> 3%</li>
-<li><strong>Real Interest Rate:</strong> 7%</li>
-<li><strong>Required Primary Surplus:</strong> 2.3% of GDP annually</li>
-<li><strong>Gap to Bridge:</strong> 4% per year through austerity</li>
-</ul>
+- **Real GDP Growth:** 3%
+- **Real Interest Rate:** 7% 
+- **Required Primary Surplus:** 2.3% of GDP annually
+- **Gap to Bridge:** 4% per year through austerity
 
 :::
 
 ::: {.column width="50%"}
 ### What is Primary Surplus?
-
 ::: {.callout-note}
 **Primary Surplus** = Government Revenue - Government Spending  
 *(excluding debt service payments)*
@@ -458,49 +310,56 @@ The money left over before paying interest on existing debt
 
 ---
 
+
 ## The Mathematical Trap {.scrollable}
+
+::: {.content-visible when-format="html"} 
 
 ```{=html}
 <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin: 20px 0;">
-    <div style="display: flex; justify-content: space-around; width: 100%; margin-bottom: 20px; flex-wrap: wrap;">
-        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px; margin: 5px; min-width: 120px;">
+    <div style="display: flex; justify-content: space-around; width: 100%; margin-bottom: 20px;">
+        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px;">
             <div style="font-size: 1.5em; font-weight: bold; color: #d32f2f;">7%</div>
             <div style="font-size: 0.8em; color: #666;">Real Interest Rate</div>
         </div>
-        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px; margin: 5px; min-width: 120px;">
+        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px;">
             <div style="font-size: 1.5em; font-weight: bold; color: #d32f2f;">3%</div>
             <div style="font-size: 0.8em; color: #666;">Real GDP Growth</div>
         </div>
-        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px; margin: 5px; min-width: 120px;">
+        <div style="text-align: center; padding: 10px; background: #f8f9fa; border-radius: 8px;">
             <div style="font-size: 1.5em; font-weight: bold; color: #d32f2f;">2.3%</div>
             <div style="font-size: 0.8em; color: #666;">Required Primary Surplus</div>
         </div>
     </div>
     
-    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold; margin: 10px 0; text-align: center;">High Debt Burden</div>
+    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold;">High Debt Burden</div>
     <div style="font-size: 20px;">↓</div>
-    <div style="padding: 12px 20px; background: #e8f5e8; border: 2px solid #2e7d32; border-radius: 8px; color: #2e7d32; font-weight: bold; margin: 10px 0; text-align: center;">Austerity Measures</div>
+    <div style="padding: 12px 20px; background: #e8f5e8; border: 2px solid #2e7d32; border-radius: 8px; color: #2e7d32; font-weight: bold;">Austerity Measures</div>
     <div style="font-size: 20px;">↓</div>
-    <div style="padding: 12px 20px; background: #fff3e0; border: 2px solid #f57c00; border-radius: 8px; color: #f57c00; font-weight: bold; margin: 10px 0; text-align: center;">Investment Falls (8% vs 25%)</div>
+    <div style="padding: 12px 20px; background: #fff3e0; border: 2px solid #f57c00; border-radius: 8px; color: #f57c00; font-weight: bold;">Investment Falls (8% vs 25%)</div>
     <div style="font-size: 20px;">↓</div>
-    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold; margin: 10px 0; text-align: center;">Growth Falls Below 3%</div>
+    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold;">Growth Falls Below 3%</div>
     <div style="font-size: 20px;">↓</div>
-    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold; margin: 10px 0; text-align: center;">Cycle Repeats ⟲</div>
+    <div style="padding: 12px 20px; background: #ffcdd2; border: 2px solid #d32f2f; border-radius: 8px; color: #d32f2f; font-weight: bold;">Cycle Repeats ⟲</div>
 </div>
-```
+``` 
 
-### Key Points:
+---
 
-<ul class="mobile-list">
-<li><strong>The Greece Model:</strong> Mandated primary surpluses until 2060 - same framework applied to Pakistan</li>
-<li><strong>Policy Contradiction:</strong> Using growth-killing measures to solve a growth-dependent problem</li>
-</ul>
+
+::: {.fragment}
+The Greece Model: Mandated primary surpluses until 2060 - same framework applied to Pakistan
+:::
+::: {.fragment}
+Policy Contradiction: Using growth-killing measures to solve a growth-dependent problem
+::: 
+
 
 ---
 
 ## The Krugman Insight: When Austerity Becomes a Trap {.center}
 
-> *"Austerity in a depression is a trap — the more you cut, the weaker your economy becomes."* — Paul Krugman
+ *"Austerity in a depression is a trap — the more you cut, the weaker your economy becomes."* — Paul Krugman
 
 ### **The Austerity Paradox Applied to Pakistan**
 
@@ -526,9 +385,807 @@ ggplot(spiral_data, aes(x = Step, y = Value, color = Type)) +
   coord_polar()
 ```
 
+
 ---
 
 ::: {.columns} 
 
 ::: {.column width="50%"}
-**Traditional Logic:**
+**Traditional Logic:** 
+
+- Cut spending → Reduce deficit 
+
+- Lower deficit → Restore confidence 
+
+- Higher confidence → Private investment 
+
+- More investment → Growth returns
+
+:::
+
+::: {.column width="50%"}
+
+**Reality Check:** 
+
+- Cut spending → Reduce demand 
+
+- Lower demand → Business contraction 
+
+- Less business → Lower tax revenue 
+
+- Revenue shortfall → More cuts needed
+
+:::
+::: 
+
+
+::: notes
+**Krugman's Core Argument:**
+- During economic downturns, government spending cuts worsen recession rather than improve fiscal position
+- The multiplier effect works in reverse: each dollar cut from spending reduces GDP by more than one dollar
+- This creates a vicious cycle where austerity undermines the economic base needed for fiscal recovery
+
+**Pakistan-Specific Application:**
+1. **Timing Matters**: Pakistan implemented austerity when private sector was already weak
+2. **Capacity Constraints**: Limited private sector ability to fill the investment gap left by public sector cuts
+3. **Social Costs**: Youth unemployment and informal sector stress create political economy pressures
+
+**Counter-Arguments to Address:**
+- "But Pakistan had no choice due to debt crisis" → True, but sequencing and composition of cuts matter
+- "Private sector will fill the gap" → Requires examining Pakistan's private investment trends and constraints
+- "Stabilization first, growth later" → Question the sustainability of this sequencing in Pakistan's context
+:::
+---
+
+
+```{r}
+#| label: tbl-external-debt
+#| tbl-cap: "Share of External Debt in Total Debt"
+#| echo: false
+
+# Load required libraries
+library(knitr)
+library(kableExtra)
+
+# Create the debt data frame
+debt_data <- data.frame(
+  Year = c(2009, 2019, 2021, 2022, 2023, 2024),
+  Total_Debt_GDP = c(52.6, 68.8, 71.4, 68.8, 74.9, 67.5),
+  External_Debt_Share = c(51.2, 33.8, 31.2, 34.0, 35.0, 30.5)
+)
+
+# Create formatted table
+debt_data %>%
+  kable(
+    col.names = c(
+      "As of June:",
+      "Total Government Debt\n(as percent of GDP)",
+      "Share of External Debt\n(percent)"
+    ),
+    align = c("c", "c", "c"),
+    digits = 1,
+    format = "html"
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed"),
+    full_width = FALSE,
+    position = "center"
+  ) %>%
+  add_header_above(c(" " = 1, "Table 1" = 2)) %>%
+  footnote(
+    general = "Source: SBP",
+    general_title = "",
+    footnote_as_chunk = TRUE
+  )
+```
+
+--- 
+
+## International Lessons: When Stabilization Strategies Succeed or Fail {.center}
+
+```{r international-comparison, fig.height=6}
+# Create comprehensive comparison with reform outcomes
+comparison_extended <- comparison_data %>%
+  mutate(
+    Success_Category = case_when(
+      Reform_Success >= 7 ~ "High Success",
+      Reform_Success >= 5 ~ "Moderate Success", 
+      TRUE ~ "Limited Success"
+    )
+  )
+
+p1 <- ggplot(comparison_extended, aes(x = GDP_Growth_2025, y = reorder(Country, GDP_Growth_2025))) +
+  geom_col(aes(fill = Country == "Pakistan"), alpha = 0.8, width = 0.7) +
+  scale_fill_manual(values = c("TRUE" = pak_colors[1], "FALSE" = "gray70")) +
+  geom_text(aes(label = paste0(GDP_Growth_2025, "%")), 
+            hjust = -0.1, size = 3.5, fontface = "bold") +
+  labs(title = "Growth Performance Comparison",
+       x = "GDP Growth 2025 (%)", y = NULL) +
+  theme(legend.position = "none")
+
+p2 <- ggplot(comparison_extended, aes(x = Reform_Success, y = reorder(Country, Reform_Success))) +
+  geom_col(aes(fill = Success_Category), alpha = 0.8, width = 0.7) +
+  scale_fill_manual(values = pak_colors[c(3,2,1)]) +
+  geom_text(aes(label = Reform_Success), 
+            hjust = -0.1, size = 3.5, fontface = "bold") +
+  labs(title = "Reform Success Index",
+       subtitle = "Comprehensive assessment (1-10)",
+       x = "Success Score", y = NULL) +
+  theme(legend.position = "bottom")
+
+(p1 + p2) + plot_annotation(
+  title = "Learning from Regional Experiences",
+  subtitle = "Pakistan in comparative perspective"
+)
+```
+
+### **Case Study Insights**
+
+::: {.columns}
+::: {.column width="50%"}
+**🇧🇩 Bangladesh: Pragmatic Sequencing**
+- Kept export incentives during stabilization
+- Protected social spending (health, education)
+- Result: 6%+ growth for over a decade
+
+**🇪🇬 Egypt: Austerity Trap**
+- Deep cuts, rapid currency adjustment
+- Achieved macro stability but jobless growth
+- Social unrest forced policy reversal
+:::
+
+::: {.column width="50%"}
+**🇹🇷 Turkey: Stop-Go Cycles**
+- Repeatedly chose short-term growth over stability
+- Result: Chronic inflation, currency crises
+- Lesson: Discipline matters, but so does sequencing
+
+**🇱🇰 Sri Lanka: Late Adjustment**
+- Delayed necessary reforms
+- Crisis became unavoidable
+- Extreme austerity with severe social costs
+:::
+:::
+
+::: notes
+**Comparative Analysis Framework:**
+- **Bangladesh's Success**: Maintained sectoral focus (RMG), gradual liberalization, protected human capital investment
+- **Egypt's Mixed Results**: Achieved macroeconomic stabilization but failed to generate inclusive growth
+- **Turkey's Volatility**: Shows the dangers of populist macroeconomic policy but also excessive orthodoxy
+- **Sri Lanka's Crisis**: Demonstrates the costs of delayed adjustment but also the risks of shock therapy
+
+**Key Lessons for Pakistan:**
+1. **Sequencing Matters**: Successful countries protected growth-enhancing expenditures during stabilization
+2. **Sectoral Strategy**: Bangladesh's focus on textiles, Vietnam's manufacturing - what is Pakistan's comparative advantage?
+3. **Social Contract**: Countries that maintained minimum social provisions had more sustainable reforms
+4. **Time Horizon**: Quick stabilization is possible, but structural transformation takes 5-10 years
+
+**Critical Question**: Which model is Pakistan following, and is it the right one for its circumstances?
+:::
+
+
+
+---
+
+## Fiscal Multipliers: The Mathematics of Policy Choice {.center}
+
+```{r fiscal-multipliers, fig.height=6}
+multiplier_long <- multiplier_data %>%
+  pivot_longer(cols = c(Short_Term, Long_Term), names_to = "Period", values_to = "Multiplier") %>%
+  mutate(Period = str_replace(Period, "_", "-"))
+
+p1 <- ggplot(multiplier_long, aes(x = Multiplier, y = reorder(Type, Multiplier), fill = Period)) +
+  geom_col(position = "dodge", width = 0.7, alpha = 0.8) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "gray50", linewidth = 1) +
+  geom_text(aes(label = Multiplier), 
+            position = position_dodge(width = 0.7),
+            hjust = ifelse(multiplier_long$Multiplier > 0, -0.1, 1.1), 
+            size = 3.5, fontface = "bold") +
+  scale_fill_manual(values = pak_colors[c(1,3)]) +
+  labs(title = "Fiscal Multipliers: Not All Spending is Equal",
+       subtitle = "GDP impact per rupee of government expenditure",
+       x = "Multiplier Effect", y = NULL) +
+  annotate("text", x = 1.2, y = 1, label = "Break-even", angle = 90, size = 3) +
+  theme(legend.position = "bottom")
+
+# Create investment efficiency comparison
+efficiency_data <- data.frame(
+  Sector = c("Infrastructure", "Education", "Healthcare", "Energy", "Defense", "Subsidies"),
+  Productivity_Gain = c(8.5, 7.2, 6.1, 7.8, 2.1, 0.8),
+  Employment_Impact = c(9.1, 6.8, 7.5, 6.2, 3.4, 1.2),
+  Political_Feasibility = c(6.8, 8.2, 7.9, 5.4, 9.1, 8.8)
+)
+
+p2 <- ggplot(efficiency_data, aes(x = Productivity_Gain, y = Employment_Impact, 
+                                 size = Political_Feasibility)) +
+  geom_point(color = pak_colors[2], alpha = 0.7) +
+  geom_text_repel(aes(label = Sector), size = 3.5, fontface = "bold") +
+  labs(title = "Investment Efficiency Matrix",
+       x = "Productivity Impact (1-10)", 
+       y = "Employment Impact (1-10)",
+       size = "Political\nFeasibility") +
+  scale_size_continuous(range = c(3, 10)) +
+  geom_vline(xintercept = 6, linetype = "dashed", alpha = 0.5) +
+  geom_hline(yintercept = 6, linetype = "dashed", alpha = 0.5) +
+  theme(legend.position = "bottom")
+
+p1 + p2
+```
+
+### **Key Insight: Multipliers Matter More in Recessions** {.fragment}
+When private demand is weak, each rupee of public investment has outsized impact
+
+::: notes
+**Multiplier Economics Explained:**
+- **Short-term multipliers** capture immediate demand effects (construction jobs, materials purchase)
+- **Long-term multipliers** include productivity and capacity effects (better roads improve competitiveness)
+- **Pakistan context**: High unemployment means larger multipliers for employment-intensive sectors
+
+**Policy Implications:**
+1. **Not all cuts are equal**: Cutting infrastructure investment costs more than cutting subsidies
+2. **Timing matters**: Multipliers are larger during downturns when resources are idle
+3. **Composition strategy**: Smart fiscal consolidation focuses on low-multiplier items first
+
+**Research Note**: These multipliers are estimated based on Pakistan-specific studies and IMF research on emerging economies. The key insight is that Pakistan's current budget prioritizes items with low multipliers (debt servicing, defense) over high-multiplier investments (infrastructure, education).
+
+**Question for Reflection**: If public investment multipliers are 2.1 in the long term, what does this say about the opportunity cost of current budget allocations?
+:::
+
+---
+
+
+## The Human Cost: Who Bears the Burden of Prolonged Stabilization? {.center}
+
+```{r social-impact, fig.height=6}
+# Create social impact visualization
+social_groups <- data.frame(
+  Group = c("Urban Youth", "Rural Poor", "SME Owners", "Formal Workers", "Pensioners", "Middle Class"),
+  Impact_Score = c(-8.2, -7.1, -6.8, -4.2, -6.5, -5.9),
+  Population_Million = c(35.2, 89.4, 12.7, 15.8, 8.3, 28.6),
+  Vulnerability = c("High", "High", "Medium", "Low", "Medium", "Medium")
+)
+
+p1 <- ggplot(social_groups, aes(x = Impact_Score, y = reorder(Group, Impact_Score))) +
+  geom_col(aes(fill = Vulnerability), alpha = 0.8, width = 0.7) +
+  scale_fill_manual(values = c("High" = pak_colors[1], "Medium" = pak_colors[3], "Low" = pak_colors[5])) +
+  geom_text(aes(label = Impact_Score), 
+            hjust = 1.1, size = 3.5, fontface = "bold", color = "white") +
+  labs(title = "Social Impact of Stabilization Policies",
+       subtitle = "Welfare impact score (-10 to +10)",
+       x = "Impact Score", y = NULL) +
+  scale_x_continuous(limits = c(-10, 0)) +
+  theme(legend.position = "bottom")
+
+# Regional disparity analysis
+regional_data <- data.frame(
+  Province = c("Punjab", "Sindh", "KPK", "Balochistan", "GB/AJK"),
+  Poverty_Rate = c(22.1, 28.4, 34.7, 47.2, 31.8),
+  Development_Share = c(48.2, 32.1, 12.4, 4.8, 2.5),
+  Population_Share = c(52.9, 23.7, 17.6, 5.1, 0.7)
+)
+
+p2 <- ggplot(regional_data, aes(x = Development_Share, y = Poverty_Rate, size = Population_Share)) +
+  geom_point(color = pak_colors[2], alpha = 0.7) +
+  geom_text_repel(aes(label = Province), size = 3.5, fontface = "bold") +
+  labs(title = "Regional Development Disparities",
+       x = "Share of Development Budget (%)", 
+       y = "Poverty Rate (%)",
+       size = "Population\nShare (%)") +
+  scale_size_continuous(range = c(3, 12)) +
+  theme(legend.position = "bottom")
+
+p1 + p2
+```
+
+### **The Distributional Question** {.fragment}
+Who pays for stabilization, and who benefits from it?
+
+::: notes
+**Social Impact Analysis:**
+- **Urban Youth**: Highest impact due to limited job creation, expensive education, delayed economic opportunities
+- **Rural Poor**: Affected by reduced agricultural support, higher input costs, limited access to credit
+- **SME Owners**: Credit rationing, high interest rates, reduced demand for goods/services
+- **Regional Disparities**: Notice how development budget allocation doesn't correlate with poverty rates
+
+**Ethical Dimensions:**
+1. **Intergenerational Equity**: Are we asking today's youth to pay for past fiscal mistakes?
+2. **Regional Justice**: Do stabilization policies worsen existing inequalities?
+3. **Class Implications**: Do burden-sharing arrangements reflect ability to pay?
+
+**Policy Questions:**
+- Can Pakistan design stabilization policies that protect the most vulnerable?
+- What social protection mechanisms are compatible with fiscal discipline?
+- How can development spending be targeted to reduce rather than increase inequality?
+
+**International Evidence**: Countries with more equitable stabilization programs tend to have more sustainable reforms and better long-term growth outcomes.
+:::
+
+---
+
+## Rethinking Stabilization: A Growth-Compatible Framework {.center}
+
+```{r alternative-framework, fig.height=6}
+# Create dual-track strategy visualization
+strategy_components <- data.frame(
+  Track = rep(c("Stabilization Track", "Growth Track"), each = 4),
+  Component = c("Fiscal Discipline", "Monetary Control", "Debt Management", "FX Stability",
+                "Public Investment", "Human Capital", "Export Support", "Innovation"),
+  Priority_2025 = c(9, 8, 9, 8, 4, 5, 6, 3),
+  Priority_Optimal = c(8, 7, 8, 7, 8, 7, 8, 6),
+  Feasibility = c(9, 8, 7, 8, 6, 7, 8, 5)
+)
+
+p1 <- strategy_components %>%
+  select(Component, Priority_2025, Priority_Optimal) %>%
+  pivot_longer(cols = c(Priority_2025, Priority_Optimal), names_to = "Scenario", values_to = "Priority") %>%
+  mutate(Scenario = ifelse(Scenario == "Priority_2025", "Current Policy", "Optimal Mix")) %>%
+  ggplot(aes(x = Priority, y = reorder(Component, Priority), fill = Scenario)) +
+  geom_col(position = "dodge", width = 0.7, alpha = 0.8) +
+  scale_fill_manual(values = pak_colors[c(1,3)]) +
+  geom_text(aes(label = Priority), 
+            position = position_dodge(width = 0.7),
+            hjust = -0.1, size = 3, fontface = "bold") +
+  labs(title = "Policy Priority Rebalancing",
+       subtitle = "Current vs optimal resource allocation",
+       x = "Priority Score (1-10)", y = NULL) +
+  theme(legend.position = "bottom")
+
+# Timeline for sequential implementation
+timeline_data <- data.frame(
+  Year = 2025:2030,
+  Stabilization_Weight = c(80, 70, 60, 50, 40, 35),
+  Growth_Weight = c(20, 30, 40, 50, 60, 65),
+  Expected_GDP_Growth = c(2.6, 3.2, 4.1, 4.8, 5.4, 5.8)
+)
+
+p2 <- timeline_data %>%
+  select(Year, Stabilization_Weight, Growth_Weight) %>%
+  pivot_longer(cols = c(Stabilization_Weight, Growth_Weight), names_to = "Focus", values_to = "Weight") %>%
+  mutate(Focus = str_replace(Focus, "_Weight", "")) %>%
+  ggplot(aes(x = Year, y = Weight, fill = Focus)) +
+  geom_area(alpha = 0.8, position = "stack") +
+  scale_fill_manual(values = pak_colors[c(1,3)]) +
+  labs(title = "Sequential Policy Implementation",
+       subtitle = "Gradual shift from stabilization to growth focus",
+       x = "Year", y = "Policy Weight (%)") +
+  scale_y_continuous(labels = function(x) paste0(x, "%")) +
+  theme(legend.position = "bottom")
+
+p1 + p2
+```
+
+### **The Dual-Track Approach** {.fragment}
+- **Track 1**: Maintain macro discipline (fiscal, monetary, debt)  
+- **Track 2**: Strategic investments in growth foundations  
+- **Key**: Sequenced implementation, not either-or choice
+
+::: notes
+**Conceptual Framework:**
+- **False Dichotomy**: The choice between stabilization and growth is often overstated
+- **Composition Matters**: How you stabilize matters as much as whether you stabilize
+- **Sequencing Strategy**: Gradual shift from stabilization-heavy to growth-heavy policy mix
+
+**Dual-Track Implementation:**
+1. **Stabilization Track** (Years 1-2): Achieve macro targets but protect high-multiplier spending
+2. **Transition Phase** (Years 3-4): Gradually increase growth-oriented investments
+3. **Growth Track** (Years 5-6): Full focus on structural transformation
+
+**Critical Success Factors:**
+- **Political Commitment**: Long-term perspective beyond electoral cycles
+- **Institutional Capacity**: Ability to implement complex, coordinated policies
+- **Social Buy-in**: Maintaining public support through visible improvements
+- **External Support**: International partner backing for this approach
+
+**Risk Management**: Each track has built-in safeguards to prevent backsliding on either stabilization or growth objectives.
+:::
+
+---
+
+## Smart Public Investment: Where to Focus Resources {.center}
+
+```{r investment-priorities, fig.height=6}
+# Investment priority matrix
+investment_data <- data.frame(
+  Sector = c("Digital Infrastructure", "Transport Corridors", "Energy Grid", 
+             "Education Technology", "Healthcare Systems", "Industrial Parks",
+             "Water Management", "Urban Planning"),
+  GDP_Impact = c(2.8, 1.9, 2.1, 1.6, 1.4, 2.3, 1.8, 1.5),
+  Job_Creation_Thousands = c(125, 380, 220, 95, 180, 290, 160, 240),
+  Investment_Needed_Billion = c(1.2, 5.8, 3.4, 1.1, 2.7, 3.9, 3.3, 4.1),
+  Implementation_Years = c(3, 7, 5, 2, 4, 5, 6, 8)
+)
+
+p1 <- ggplot(investment_data, aes(x = Investment_Needed_Billion, y = GDP_Impact, 
+                                 size = Job_Creation_Thousands)) +
+  geom_point(color = pak_colors[1], alpha = 0.7) +
+  geom_text_repel(aes(label = Sector), size = 3, fontface = "bold") +
+  labs(title = "Investment Efficiency Matrix(not real data)",
+       x = "Investment Required (Billion USD)", 
+       y = "GDP Multiplier",
+       size = "Jobs Created\n(Thousands)") +
+  scale_size_continuous(range = c(3, 12), labels = comma) +
+  geom_hline(yintercept = 2, linetype = "dashed", alpha = 0.5, color = "darkgreen") +
+  geom_vline(xintercept = 8, linetype = "dashed", alpha = 0.5, color = "darkgreen") +
+  annotate("text", x = 12, y = 2.7, label = "High Impact\nHigh Cost", size = 3, color = "darkgreen") +
+  annotate("text", x = 4, y = 2.5, label = "High Impact\nLow Cost", size = 3, color = "darkgreen") +
+  theme(legend.position = "bottom")
+
+# Create sector-wise implementation timeline
+sector_priority <- data.frame(
+  Priority_Level = c("Immediate (2025-26)", "Medium-term (2027-28)", "Long-term (2029-30)"),
+  Sectors = c("Digital Infrastructure, Education Technology",
+              "Energy Grid, Industrial Parks, Healthcare",
+              "Transport Corridors, Water Management, Urban Planning"),
+  Total_Investment = c(2.3, 5.1, 6.8),
+  Expected_Jobs = c(220, 690, 780)
+)
+
+p2 <- ggplot(sector_priority, aes(x = Total_Investment, y = reorder(Priority_Level, Total_Investment))) +
+  geom_col(fill = pak_colors[2], alpha = 0.8, width = 0.6) +
+  geom_text(aes(label = paste0("$", Total_Investment, "B\n", Expected_Jobs, "k jobs")), 
+            hjust = -0.1, size = 3.5, fontface = "bold") +
+  labs(title = "Phased Investment Strategy (not real data)",
+       subtitle = "Strategic sequencing of public investment",
+       x = "Investment (Billion USD)", y = NULL) +
+  scale_x_continuous(limits = c(0, 15))
+
+p1 / p2
+```
+
+::: notes
+**Investment Strategy Rationale:**
+- **High Impact, Low Cost**: Digital infrastructure and education technology offer quick wins
+- **Strategic Patience**: Transport and water management require longer timeframes but essential for transformation
+- **Employment Focus**: Job creation numbers reflect both direct and indirect employment effects
+
+**Financing Strategy:**
+1. **Phase 1** (Immediate): Use existing fiscal space, international climate financing
+2. **Phase 2** (Medium-term): Blend domestic savings mobilization with FDI
+3. **Phase 3** (Long-term): Leverage improved credit rating for infrastructure bonds
+
+**Implementation Considerations:**
+- **Capacity Building**: Many of these investments require institutional development
+- **Technology Transfer**: Partnerships with leading countries in each sector
+- **Regional Integration**: Coordinate investments with CPEC and regional connectivity
+
+**Monitoring and Evaluation**: Each investment category needs clear KPIs and regular assessment to ensure optimal resource utilization.
+:::
+
+---
+
+## Policy Recommendations: A Roadmap for Balanced Growth {.scrollable}
+
+### **Immediate Actions (Next 12 Months)**
+
+::: {.fragment}
+**🎯 Fiscal Rebalancing** 
+
+- Protect PSDP allocations for high-multiplier projects not for Parliamentarians 
+
+- Rationalize subsidies based on targeting effectiveness 
+
+- Implement progressive taxation measures 
+:::
+
+::: {.fragment}
+**🎯 Monetary Policy Coordination** 
+
+- Significant policy rate reduction as inflation anchors 
+
+- Develop SME-specific credit guarantee schemes 
+
+:::
+
+::: {.fragment}
+**🎯 Structural Enablers** 
+
+- Fast-track energy sector circular debt resolution 
+
+- Streamline business registration and licensing 
+
+- Launch export diversification incentive package (not only export diversification but which really matters)
+:::
+
+### **Medium-term Transformation (2-3 Years)** {.fragment}
+
+::: {.fragment}
+**🎯 Investment Climate** 
+
+- Establish technology parks and innovation hubs 
+
+- Develop skilled workforce through public-private partnerships 
+
+- Create regional trade and investment facilitation centers
+:::
+
+::: notes
+**Implementation Sequencing:**
+- **Year 1**: Focus on quick wins that demonstrate government commitment to growth
+- **Year 2-3**: Begin major structural investments while maintaining macro stability
+- **Continuous**: Monitor and adjust based on economic performance and social indicators
+
+**Institutional Requirements:**
+- **Coordination Mechanism**: High-level committee to oversee dual-track implementation
+- **Capacity Building**: Train government officials in modern economic management
+- **Stakeholder Engagement**: Regular consultation with private sector, civil society, and international partners
+
+**Risk Mitigation:**
+- **Fiscal Safeguards**: Automatic stabilizers to prevent fiscal slippage
+- **Political Insurance**: Broad-based coalition building for sustained reform
+- **External Support**: Maintain strong relationships with international financial institutions
+
+**Success Metrics:**
+- GDP growth acceleration to 4%+ by 2027
+- Unemployment reduction to <5% by 2028
+- Fiscal deficit maintained <3% of GDP
+- Current account balance sustained
+:::
+
+---
+
+## Risk Assessment and Mitigation Strategies {.center}
+
+```{r risk-assessment, fig.height=6}
+# Comprehensive risk analysis
+risk_factors <- data.frame(
+  Risk = c("External Shocks", "Political Instability", "Climate Events", 
+           "Debt Sustainability", "Social Unrest", "Implementation Capacity"),
+  Probability = c(0.7, 0.4, 0.8, 0.3, 0.5, 0.6),
+  Impact = c(8.5, 9.2, 7.8, 9.5, 8.1, 6.8),
+  Current_Mitigation = c(4.2, 3.1, 2.8, 6.7, 4.5, 5.2),
+  Required_Investment = c(3.2, 1.8, 15.4, 5.7, 2.1, 4.6)
+)
+
+# Risk matrix
+p1 <- ggplot(risk_factors, aes(x = Probability, y = Impact, size = Required_Investment)) +
+  geom_point(aes(color = Current_Mitigation), alpha = 0.8) +
+  scale_color_gradient(low = pak_colors[1], high = pak_colors[3], name = "Current\nMitigation") +
+  geom_text_repel(aes(label = Risk), size = 3, fontface = "bold") +
+  labs(title = "Risk Assessment Matrix",
+       x = "Probability of Occurrence", 
+       y = "Economic Impact (1-10 scale)",
+       size = "Mitigation Cost\n(Billion USD)") +
+  scale_x_continuous(limits = c(0, 1), labels = scales::percent) +
+  scale_y_continuous(limits = c(6, 10)) +
+  scale_size_continuous(range = c(3, 12)) +
+  geom_hline(yintercept = 8, linetype = "dashed", color = "red", alpha = 0.5) +
+  geom_vline(xintercept = 0.5, linetype = "dashed", color = "red", alpha = 0.5) +
+  theme(legend.position = "bottom")
+
+# Mitigation timeline
+mitigation_data <- data.frame(
+  Year = rep(2025:2027, each = 3),
+  Risk_Category = rep(c("Economic", "Political", "Environmental"), 3),
+  Investment_Required = c(3.2, 1.1, 2.4, 2.8, 1.0, 3.7, 2.4, 1.3, 5.1),
+  Expected_Reduction = c(30, 15, 25, 25, 20, 35, 20, 25, 45)
+)
+
+p2 <- ggplot(mitigation_data, aes(x = Year, y = Investment_Required, fill = Risk_Category)) +
+  geom_col(position = "stack", alpha = 0.8) +
+  scale_fill_manual(values = pak_colors[c(1,3,5)]) +
+  geom_text(aes(label = paste0(Expected_Reduction, "%")), 
+            position = position_stack(vjust = 0.5), 
+            color = "white", size = 3, fontface = "bold") +
+  labs(title = "Risk Mitigation Investment Plan",
+       subtitle = "Annual investment and expected risk reduction",
+       x = "Year", y = "Investment (Billion USD)") +
+  theme(legend.position = "bottom")
+
+p1 + p2
+```
+
+::: notes
+**Risk Analysis Framework:**
+- **High Probability, High Impact**: Climate events and external shocks require immediate attention
+- **High Impact, Lower Probability**: Debt sustainability and political instability need contingency planning
+- **Current Gaps**: Pakistan's mitigation capacity is weakest for climate events and political risks
+
+**Specific Risk Mitigation Strategies:**
+
+1. **External Shocks**: 
+   - Diversify trade partners and export products
+   - Build foreign exchange reserves to 4+ months of imports
+   - Develop flexible exchange rate mechanisms
+
+2. **Climate Events**: 
+   - Invest in climate-resilient infrastructure
+   - Develop early warning systems
+   - Create climate adaptation financing mechanisms
+
+3. **Political Instability**: 
+   - Build broad-based consensus on economic reforms
+   - Strengthen democratic institutions
+   - Improve federal-provincial coordination
+
+**Cost-Benefit Analysis**: Investment in risk mitigation typically pays for itself within 3-5 years through avoided crisis costs.
+:::
+
+---
+
+## The Path Forward: A New Economic Social Contract {.center}
+
+### **Redefining Success**
+
+::: {.columns}
+::: {.column width="40%"}
+**Beyond Macro Indicators**
+- GDP growth that creates jobs
+- Inflation control that preserves purchasing power  
+- Fiscal discipline that funds public goods
+- Trade balance that supports domestic industry
+
+**Toward Inclusive Prosperity**
+- Regional development that reduces disparities
+- Education investment that builds human capital
+- Healthcare access that protects all citizens
+- Environmental protection that ensures sustainability
+:::
+
+::: {.column width="60%"}
+```{r success-metrics, fig.height=5}
+# Define new success metrics
+success_metrics <- data.frame(
+  Dimension = c("Economic\nGrowth", "Social\nEquity", "Environmental\nSustainability", 
+                "Institutional\nQuality", "Regional\nBalance", "Youth\nEmpowerment"),
+  Current_Score = c(4.2, 3.8, 3.1, 5.2, 3.5, 3.9),
+  Target_2030 = c(7.5, 7.0, 6.5, 8.0, 6.8, 7.8),
+  Priority = c("High", "High", "Medium", "High", "Medium", "High")
+)
+
+ggplot(success_metrics, aes(x = Target_2030, y = reorder(Dimension, Target_2030))) +
+  geom_segment(aes(x = Current_Score, xend = Target_2030, 
+                   y = Dimension, yend = Dimension), 
+               color = "gray70", linewidth = 2, alpha = 0.5) +
+  geom_point(aes(x = Current_Score), color = pak_colors[1], size = 4, alpha = 0.8) +
+  geom_point(aes(x = Target_2030, color = Priority), size = 6, alpha = 0.9) +
+  scale_color_manual(values = c("High" = pak_colors[2], "Medium" = pak_colors[4])) +
+  labs(title = "Pakistan 2030:\nRedefining Success",
+       subtitle = "Current → Target",
+       x = "Performance Score (1-10)", y = NULL) +
+  scale_x_continuous(limits = c(0, 10)) +
+  theme(legend.position = "bottom",
+        axis.text.y = element_text(size = 15))
+```
+:::
+:::
+
+
+::: notes
+**Philosophical Shift Required:**
+- Move from crisis management to strategic planning
+- Shift from elite-focused to mass-based economic policy
+- Transform from extractive to productive economic institutions
+
+**Elements of New Social Contract:**
+1. **Economic Democracy**: Broader participation in economic opportunities
+2. **Social Protection**: Universal basic services while maintaining work incentives
+3. **Environmental Justice**: Sustainable development that protects future generations
+4. **Regional Equity**: Development strategies that reduce geographical disparities
+
+**Implementation Challenges:**
+- **Political Economy**: Overcoming vested interests that benefit from current arrangements
+- **Institutional Capacity**: Building state capacity to deliver on new commitments
+- **Resource Constraints**: Financing expanded social contract within fiscal discipline
+
+**International Examples**: 
+- South Korea's developmental state model
+- Brazil's conditional cash transfer programs
+- Rwanda's vision-based development planning
+
+**Critical Success Factor**: Public buy-in through visible improvements in living standards within first 2-3 years.
+:::
+
+--- 
+
+# *The New Social Contract* : "Growth that works for everyone, not just the privileged few"*
+
+
+---
+
+## Conclusions: Growth Cannot Remain on Hold Forever {.center}
+
+### **Key Insights from Today's Analysis**
+
+::: {.fragment}
+**✓ Government has failed to come up with a budget which talks beyond survival**
+- With Inflation controlled, current account balanced, fiscal discipline restored, budget does not talk about growth 
+
+:::
+
+::: {.fragment}
+**⚠️ Stabilization without growth is unsustainable**
+- Social costs mount, productivity stagnates, political pressures build
+:::
+
+::: {.fragment}
+**🎯 Smart sequencing, not either-or choices** 
+
+- Dual-track approach balancing macro stability with strategic investment is missing altogether
+:::
+
+::: {.fragment}
+**💡 Success requires redefining the economic development model**
+- From crisis management to strategic transformation 
+
+- From being *COSMOPOLITAN* to being *PEOPLE-CENTRIC* 
+
+:::
+
+## **The Bottom Line** {.fragment}
+
+ *Pakistan stands at a crossroads. It can continue on the path of perpetual stabilization, achieving fiscal targets while the economy stagnates. Or it can leverage its hard-won stability to launch a new phase of inclusive, sustainable growth. The choice will define the next decade.* 
+ 
+### Number 1, 2, 3, 4 and 5 of economic development is *"GROWTH"* and not *STABILIZATION*. For this one has to invest in people, invest in infrastructure, invest in education, invest in health, invest in social safety nets. 
+ 
+
+
+::: notes
+**Synthesis of Arguments:**
+1. **Stabilization Achievement**: Pakistan has successfully navigated immediate crisis - this is not disputed
+2. **Cost Analysis**: But prolonged stabilization creates its own risks and costs
+3. **Alternative Framework**: Dual-track approach offers a way forward without sacrificing macro stability
+4. **Implementation Reality**: Success requires political will, institutional capacity, and social patience
+
+**Call to Action for Policymakers:**
+- **Short-term**: Begin rebalancing budget priorities within existing fiscal envelope
+- **Medium-term**: Develop institutional mechanisms for coordinated growth strategy
+- **Long-term**: Build political consensus for sustained reform program
+
+**For the Academic Community:**
+- Research priorities: fiscal multipliers in Pakistani context, optimal sequencing of reforms, social impact assessment of stabilization policies
+- Policy engagement: Bridge gap between academic research and policy implementation
+- International collaboration: Learn from successful transformation experiences
+
+**Final Reflection**: The title question "Growth on Hold?" should be answered definitively: Yes, growth has been on hold, but it doesn't have to remain so. Pakistan has the tools, knowledge, and opportunity to move beyond stabilization toward transformation.
+:::
+
+---
+
+## Discussion Questions {.center}
+
+### **For Reflection and Debate**
+
+1. **Political Economy**: What political incentives keep Pakistan in prolonged stabilization mode, and how can they be changed?
+
+2. **International Relations**: Can Pakistan negotiate more growth-friendly conditionalities with international financial institutions?
+
+3. **Federal Structure**: How can provincial governments become growth engines while maintaining fiscal discipline?
+
+4. **Private Sector**: What role should the private sector play in Pakistan's transformation, and what support does it need?
+
+5. **Timeline**: Is a 6-year transformation timeline realistic, or should Pakistan think in terms of decades?
+
+### **Thank You**
+
+**Contact Information:**
+- Email: [zasghar@qau.edu.pk]
+- LinkedIn: [Zahedasghar]
+- All slides on github : [https://github.com/zahedasghar]
+
+*"When a country cuts back on investment in people and progress to meet a short-term fiscal target, it mortgages its future."*
+
+::: notes
+**Facilitating Discussion:**
+These questions are designed to probe deeper into the practical and political dimensions of the analysis presented. Encourage participants to:
+
+1. **Challenge Assumptions**: What if the analysis is wrong about multipliers or sequencing?
+2. **Consider Constraints**: What real-world factors make the recommendations difficult to implement?
+3. **Explore Alternatives**: Are there other models Pakistan should consider?
+4. **Think Long-term**: What are the implications of today's choices for the next generation?
+
+**Potential Follow-up Research:**
+- Detailed fiscal space analysis for specific investment priorities
+- Provincial-level impact assessment of different policy scenarios
+- Comparative study of successful economic transformations in similar contexts
+- Social impact modeling of alternative stabilization approaches
+
+**Policy Engagement Opportunities:**
+- Present findings to federal and provincial government officials
+- Engage with private sector associations and civil society organizations
+- Collaborate with international development partners on implementation strategies
+- Contribute to public debate through media and policy forums
+:::
+
+
+
+

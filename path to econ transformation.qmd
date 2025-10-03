@@ -2,13 +2,18 @@
 title: "Rethink, Innovate, Export"
 subtitle: "Pakistan's Path to Economic Transformation"
 author: "Based on article by Syed Asad Ali Shah"
-format: 
-  revealjs:
-    theme: default
-    slide-number: true
-    chalkboard: true
-    preview-links: auto
-    css: styles.css
+format:
+  html:
+    respect-user-color-scheme: true
+    theme: 
+      dark: [darkly, styles-dark.scss]
+      light: sandstone
+    header-includes: |
+      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Sans" type="text/css"/>
+      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Code" type="text/css"/>
+    mainfont: "Fira Sans"
+    monofont: "Fira Code"
+highlight-style: Dracula
 ---
 
 ## Executive Summary

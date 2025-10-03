@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Economic Analysis - BR Editorial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .alert-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .metric-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .metric-change {
+            font-size: 0.85em;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-header {
+            background: #f7fafc;
+            padding: 15px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section-header:hover {
+            background: #edf2f7;
+        }
+        
+        .section-title {
+            font-size: 1.3em;
+            color: #2d3748;
+            font-weight: 600;
+        }
+        
+        .arrow {
+            transition: transform 0.3s ease;
+            font-size: 1.5em;
+            color: #667eea;
+        }
+        
+        .arrow.open {
+            transform: rotate(180deg);
+        }
+        
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+        
+        .section-content.open {
+            max-height: 2000px;
+            padding: 20px;
+        }
+        
+        .content-text {
+            line-height: 1.8;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+        
+        .warning-box {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .success-box {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .comparison-table tr:hover {
+            background: #f7fafc;
+        }
+        
+        .bar-chart {
+            margin: 20px 0;
+        }
+        
+        .bar {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .bar-label {
+            width: 150px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .bar-fill {
+            height: 30px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            color: white;
+            font-weight: 600;
+            transition: width 0.5s ease;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: #718096;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab:hover {
+            color: #667eea;
+        }
+        
+        .tab.active {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .key-point {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        
+        button.cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        button.cta:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Pakistan Economic Outlook</h1>
+        <p class="subtitle">Interactive Analysis of Business Recorder Editorial</p>
+        
+        <div class="alert-box">
+            ⚠️ ADB Warning: Policy slippage could weaken business confidence and increase external finance risks
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-card" onclick="showDetails('gdp')">
+                <div class="metric-label">GDP Growth Forecast (FY26)</div>
+                <div class="metric-value">3.0%</div>
+                <div class="metric-change">ADB Estimate vs Gov Target: 4.2%</div>
+            </div>
+            
+            <div class="metric-card" onclick="showDetails('reserves')">
+                <div class="metric-label">SBP Reserves</div>
+                <div class="metric-value">$14.5B</div>
+                <div class="metric-change">Net dollar purchases: $8.3B</div>
+            </div>
+            
+            <div class="metric-card" onclick="showDetails('fdi')">
+                <div class="metric-label">Net FDI (FY25)</div>
+                <div class="metric-value">$2.5B</div>
+                <div class="metric-change">Fresh inflows: <$500M (80% retained earnings)</div>
+            </div>
+            
+            <div class="metric-card" onclick="showDetails('fiscal')">
+                <div class="metric-label">Fiscal Performance</div>
+                <div class="metric-value">Surplus</div>
+                <div class="metric-change">Primary surplus for 3 consecutive years</div>
+            </div>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('reality')">Reality Check</button>
+            <button class="tab" onclick="switchTab('challenges')">Key Challenges</button>
+            <button class="tab" onclick="switchTab('solutions')">Solutions</button>
+        </div>
+        
+        <div id="reality" class="tab-content active">
+            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-title">🎭 Government Claims vs. Ground Reality</div>
+                    <div class="arrow">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="info-box">
+                        <strong>Government Narrative:</strong> Economic stabilization achieved through falling inflation, stable currency, primary fiscal balances, and rising reserves.
+                    </div>
+                    
+                    <div class="warning-box">
+                        <strong>Editorial's Counter-Argument:</strong> More than half of these achievements are cyclical in nature, not structural reforms.
+                    </div>
+                    
+                    <div class="key-point">
+                        <span class="icon">📉</span>
+                        <strong>"Dead Cat Bounce":</strong> After massive inflation and negative growth, some recovery is natural. Inflation declining after demand destruction and end of global commodity supercycle.
+                    </div>
+                    
+                    <div class="key-point">
+                        <span class="icon">💰</span>
+                        <strong>Fiscal Surplus Reality:</strong> Achieved not through efficiency or reform, but by crushing the existing tax base with higher rates.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-title">💸 The Taxation Crisis</div>
+                    <div class="arrow">▼</div>
+                </div>
+                <div class="section-content">
+                    <p class="content-text">The government is "killing the goose laying golden eggs" through excessive taxation on an already thin tax base.</p>
+                    
+                    <div class="bar-chart">
+                        <h4 style="margin-bottom: 15px;">Tax Burden Impact</h4>
+                        <div class="bar">
+                            <div class="bar-label">Corporations</div>
+                            <div class="bar-fill" style="width: 90%;">Super Tax Applied</div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-label">Exporters</div>
+                            <div class="bar-fill" style="width: 85%;">Highest Among Competitors</div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar-label">Salaried Class</div>
+                            <div class="bar-fill" style="width: 95%;">Extreme Burden</div>
+                        </div>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <strong>Consequences:</strong>
+                        <ul style="margin-top: 10px; margin-left: 20px;">
+                            <li>Disincentivized capital formation</li>
+                            <li>No fresh investment from major groups</li>
+                            <li>Exporters moving away from high-value garment businesses</li>
+                            <li>Companies exiting apparel exports due to lower ROI</li>
+                            <li>Brain drain: skilled workers leaving for abroad despite lower positions and compromised salaries</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="challenges" class="tab-content">
+            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-title">🔴 Critical Economic Challenges</div>
+                    <div class="arrow">▼</div>
+                </div>
+                <div class="section-content">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Challenge</th>
+                                <th>Impact</th>
+                                <th>Severity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Import Choking</strong></td>
+                                <td>Suppressed imports to maintain reserves, constraining growth</td>
+                                <td style="color: #f56565;">🔴 High</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Investment Drought</strong></td>
+                                <td>Fresh FDI under $500M; 80% is retained earnings</td>
+                                <td style="color: #f56565;">🔴 Critical</td>
+                            </tr>
+                            <tr>
+                                <td><strong>No Structural Reform</strong></td>
+                                <td>No taxation reform, no government size reduction</td>
+                                <td style="color: #f56565;">🔴 Critical</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Capital Flight</strong></td>
+                                <td>Brain drain and investment moving abroad</td>
+                                <td style="color: #ed8936;">🟠 High</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Low Growth Trap</strong></td>
+                                <td>Stuck in low-growth equilibrium</td>
+                                <td style="color: #f56565;">🔴 High</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-title">🌍 Geopolitical Dependency</div>
+                    <div class="arrow">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="info-box">
+                        <strong>Current Opportunity:</strong> Improved ties with Saudi Arabia and the United States may provide temporary relief and small growth spurts.
+                    </div>
+                    
+                    <div class="warning-box">
+                        <strong>Historical Pattern:</strong> Relationships are transactional, especially with the US. Support comes with geostrategic expectations.
+                    </div>
+                    
+                    <p class="content-text" style="margin-top: 15px;">
+                        <strong>The Trap:</strong> Foreign aid, debt, and investment may create a false impression of transitioning from low-growth to high-growth. However, with growing population and economic size, required injections keep getting larger while impact on growth remains limited.
+                    </p>
+                    
+                    <div class="key-point">
+                        <span class="icon">⚠️</span>
+                        <strong>Editorial Warning:</strong> "There is no escape from economic principles; no one can openly resist them or refuse to obey." Defense pacts may have unintended economic consequences.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="solutions" class="tab-content">
+            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-title">✅ Required Reforms</div>
+                    <div class="arrow">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="success-box">
+                        <strong>Window of Opportunity:</strong> Government should seize the current favorable geopolitical situation to implement tough reforms while sentiment is positive.
+                    </div>
+                    
+                    <h4 style="margin: 20px 0 15px 0; color: #2d3748;">Priority Reforms:</h4>
+                    
+                    <div class="key-point">
+                        <span class="icon">📋</span>
+                        <strong>Tax System Overhaul:</strong>
+                        <ul style="margin-left: 35px; margin-top: 5px;">
+                            <li>Broaden tax base instead of crushing existing taxpayers</li>
+                            <li>Tax the untaxed sectors</li>
+                            <li>Reduce burden on salaried class and exporters</li>
+                            <li>Remove super tax on corporations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="key-point">
+                        <span class="icon">🏛️</span>
+                        <strong>Government Efficiency:</strong>
+                        <ul style="margin-left: 35px; margin-top: 5px;">
+                            <li>Reduce federal and provincial government size</li>
+                            <li>Cut inefficient expenditures</li>
+                            <li>Implement true fiscal austerity</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="key-point">
+                        <span class="icon">🏭</span>
+                        <strong>Investment Climate:</strong>
+                        <ul style="margin-left: 35px; margin-top: 5px;">
+                            <li>Create policies to attract production investment</li>
+                            <li>Support export-oriented industries</li>
+                            <li>Reduce energy costs for businesses</li>
+                            <li>Improve return on investment environment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="key-point">
+                        <span class="icon">💼</span>
+                        <strong>Stop Brain Drain:</strong>
+                        <ul style="margin-left: 35px; margin-top: 5px;">
+                            <li>Create competitive employment opportunities</li>
+                            <li>Fairer taxation system</li>
+                            <li>Better quality of life for skilled workers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-title">⏰ Urgency Assessment</div>
+                    <div class="arrow">▼</div>
+                </div>
+                <div class="section-content">
+                    <div class="warning-box">
+                        <strong style="font-size: 1.2em;">⚠️ CRITICAL TIMING</strong>
+                        <p style="margin-top: 10px;">Editorial concludes: "The next burst is not far away" if reforms aren't implemented now during this favorable geopolitical window.</p>
+                    </div>
+                    
+                    <p class="content-text">
+                        <strong>The Bottom Line:</strong> Pakistan has a brief opportunity to leverage improved geopolitical relations to implement difficult but necessary structural reforms. Without these reforms, the country remains trapped in a cycle of temporary relief followed by recurring crises.
+                    </p>
+                    
+                    <div class="info-box">
+                        <strong>Key Insight:</strong> Cyclical improvements (inflation falling, reserves rising) should not be confused with structural progress. Real reform requires painful changes to taxation, government size, and investment climate.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; padding: 30px; background: #f7fafc; border-radius: 15px;">
+            <h3 style="color: #2d3748; margin-bottom: 15px;">📌 Key Takeaway</h3>
+            <p style="color: #4a5568; font-size: 1.1em; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+                Pakistan's current economic "achievements" are largely cyclical, not structural. The government must use this favorable geopolitical moment to implement genuine reforms—expand the tax base, reduce government size, and attract real investment—before the next crisis arrives.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const arrow = header.querySelector('.arrow');
+            
+            content.classList.toggle('open');
+            arrow.classList.toggle('open');
+        }
+        
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+        
+        function showDetails(metric) {
+            const messages = {
+                gdp: 'GDP Growth: ADB forecasts 3% growth for FY26, significantly lower than the government\'s target of 4.2%. This gap reflects concerns about policy implementation and structural weaknesses.',
+                reserves: 'SBP Reserves: Built up to $14.5B through net purchases of $8.3B from the interbank market. However, this required choking imports and maintaining low growth—not sustainable long-term.',
+                fdi: 'Foreign Direct Investment: Of $2.5B net FDI, over $2B was retained earnings. Fresh inflows are under $500M—a critical shortage indicating lack of investor confidence.',
+                fiscal: 'Fiscal Surplus: Primary surplus achieved for 3 consecutive years, but NOT through efficiency or reform. Instead, achieved by crushing existing taxpayers with higher rates.'
+            };
+            
+            alert(messages[metric]);
+        }
+        
+        // Auto-expand first section in each tab
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.section:first-child .section-header').forEach(header => {
+                toggleSection(header);
+            });
+        });
+    </script>
+</body>
+</html>

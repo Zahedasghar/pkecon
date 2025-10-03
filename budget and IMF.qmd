@@ -1,0 +1,139 @@
+---
+title: "Budget 2025–26 & IMF Negotiations: Key Takeaways"
+author: "[Your Name]"
+format:
+  html:
+    respect-user-color-scheme: true
+    theme: 
+      dark: [darkly, styles-dark.scss]
+      light: sandstone
+    header-includes: |
+      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Sans" type="text/css"/>
+      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Fira+Code" type="text/css"/>
+    mainfont: "Fira Sans"
+    monofont: "Fira Code"
+highlight-style: Dracula
+---
+
+
+## 1. Context & Deadlock
+
+* **Parties:** Ministry of Finance ↔ IMF
+* **Issue:** IMF objections to fiscal development programs & forward commitments
+* **Data Requested:** Details on 500+ ongoing development schemes
+* **Throw-Forward Concern:** Development liabilities exceeded PKR 100 billion
+
+---
+
+## 2. Salaried Class Relief
+
+* **Proposal:** Tax relief & reduced expenditures for salary earners
+* **IMF Stance:** Relief conditional on cuts in government spending or higher revenues
+* **Provincial Demands:** Provinces urged to limit their expenditures, boost own revenues
+
+---
+
+## 3. FBR Shortfall & Enforcement
+
+* **Current Shortfall:** PKR 833 billion (FY25)
+* **Collections (Jul–Apr):** PKR 9,390 billion vs. target PKR 12,970 billion
+* **Response:** Stricter tax enforcement measures activated
+
+---
+
+## 4. Call for Growth-Oriented Budget
+
+* **Business Forum (PBF):** Urged focus on economic revival over revenue targets
+* **Warning:** Additional taxes may stifle fragile recovery
+
+---
+
+## 5. Government’s Narrative
+
+* **Claims of Relief:** Promise to reduce tax burden on salaried class
+* **Economic Performance:** Pakistan’s GDP surpassed USD 400 billion
+* **Global Recognition:** IMF highlights revenue doubling (PKR 9.6 → 18 trillion)
+
+---
+
+## 6. Expert Insights
+
+* **Miftah Ismail:** Stability driven by lower global oil & commodity prices
+* **Critique:** Lack of reforms in NSC Award, pension, devolution, PSDP cuts
+
+---
+
+## 7. Growth vs. Reality
+
+* **Quarterly GDP Growth:**
+
+  * Q1 (Jul–Sep): -1.2% YoY
+  * Q2 (Oct–Dec): -0.5% YoY
+  * Q3 (Jan–Mar): -0.8% YoY
+  * Q4 (Apr–Jun): Claimed +2.3% YoY (driven by construction rebound)
+* **Construction Activity:**
+
+  * Reported negative growth in first three quarters
+  * Government asserts a strong turnaround in Q4, citing positive growth in housing and infrastructure projects
+* **Household Income:** Average Pakistani’s income ↓ over 3 years
+* **Unemployment & Poverty:** Rising joblessness; poverty affecting \~10.5 million
+
+---
+
+## 8. Budget Allocations & Political Spending
+
+* **PSDP Surge:** +65% allocations vs. revenue growth
+* **MP/MLA Projects:** \~PKR 700 billion distributed across provinces
+* **Fiscal Trade-offs:** Increased political spending vs. tax burden on poor
+
+---
+
+## 9. Cost of Utilities & Tax Competitiveness
+
+* **Electricity & Gas Prices:** Higher than regional peers (India, Thailand)
+* **Tax Rates:** Corporate (61%), salaried (38%) vs. regional benchmarks
+
+---
+
+## 10. Key Policy Gaps
+
+* **Missing Reforms:** NSC Award, pension overhaul, devolution commitments
+* **Fiscal Control:** No significant expenditure rationalization
+* **Revenue Mobilization:** Reliance on higher tax rates, limited structural change
+
+---
+
+## 10½. Estimating Economic Activity on Eid al-Adha
+
+**Options & Suggestions:**
+
+* **Livestock Market Volumes**: Track trade volumes & prices at main mandis (Faisalabad, Rahim Yar Khan)
+* **Bank & Mobile Transactions**: Analyze spikes in digital payments and ATM withdrawals
+* **Fuel & Transport Data**: Monitor petrol/diesel sales and inter-city bus/rail passenger counts
+* **Retail & E-commerce Sales**: Compare high-frequency POS and online sales data
+* **Electricity Consumption**: Short-term load variations and demand patterns
+* **Mobility Metrics**: Use telecom or Google mobility reports for travel spikes
+* **Satellite Nighttime Lights**: Estimate activity changes in urban/peri-urban areas
+* **Household Surveys**: Rapid phone-based surveys on spending, gift purchases, and remittances
+
+**Feedback:**
+
+* Combine multiple high-frequency indicators for robust estimates
+* Partner with private sector (telecoms, banks) for real-time data
+* Validate with historical Eid-to-Eid comparisons
+* Consider regional breakdowns to capture local market dynamics
+
+---
+
+## 11. Conclusions & Next Steps
+
+* **Bridging Negotiations:** Finalizing development scheme details for IMF
+* **Balanced Relief:** Align tax relief with expenditure cuts or revenue gains
+* **Structural Reforms:** Urgent need for pension, devolution, and PSDP rationalization
+* **Monitoring:** Close watch on tax enforcement and growth indicators
+
+---
+
+## Thank You
+
+Questions & Discussion
