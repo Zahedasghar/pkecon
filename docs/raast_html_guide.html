@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raast Digital Payments - TV Presenter Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            color: #1f2937;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 1.5em;
+            color: #764ba2;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.85em;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        .timer-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .timer-display {
+            font-size: 3em;
+            font-weight: bold;
+            color: #667eea;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+
+        .timer-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .section-header {
+            padding: 25px;
+            cursor: pointer;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-header:hover {
+            background: #e9ecef;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1f2937;
+        }
+
+        .section-content {
+            padding: 30px;
+            display: none;
+            background: #f9fafb;
+        }
+
+        .section-content.active {
+            display: block;
+        }
+
+        .key-message {
+            background: #ede9fe;
+            border-left: 4px solid #7c3aed;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .info-box h4 {
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .info-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .stats-section {
+            background: #dbeafe;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 10px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #1e40af;
+        }
+
+        .phase-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #10b981;
+        }
+
+        .challenge-card {
+            background: white;
+            padding: 20px;
+            border-left: 4px solid #f59e0b;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .qa-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .qa-item {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .qa-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📱 Digital Transformation: Raast</h1>
+            <h2>State Bank Announces Government Payments Through Raast</h2>
+            <p>Pakistan's Journey to a Cashless Economy by 2030</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">47M</div>
+                    <div class="stat-label">Registered Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1.5B</div>
+                    <div class="stat-label">Total Transactions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">₨34T</div>
+                    <div class="stat-label">Total Value</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2030</div>
+                    <div class="stat-label">Cashless Target</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timer-section">
+            <h3>Presentation Timer</h3>
+            <div class="timer-display" id="timer">0:00</div>
+            <button class="timer-btn" onclick="startTimer()">Start</button>
+            <button class="timer-btn" onclick="resetTimer()">Reset</button>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="section-card">
+            <div class="section-header" onclick="toggle('s1')">
+                <div class="section-title">Section 1: Opening Hook (30 sec)</div>
+                <span id="arrow1">▼</span>
+            </div>
+            <div class="section-content" id="s1">
+                <div class="key-message">
+                    <h3>🎯 Key Message:</h3>
+                    <p>"Pakistan is witnessing a silent revolution in digital payments. The State Bank's Raast system has already processed over <strong>1.5 billion transactions worth Rs 34 trillion</strong>. Now, with government payments through Raast, we're moving from cash queues to instant digital transfers."</p>
+                </div>
+                <div class="info-box">
+                    <h4>💡 Hook:</h4>
+                    <p>"Imagine receiving your salary or pension instantly on your phone—no banks, no queues, just 'Pal Bhar Mein, Mulk Bhar Mein'"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section-card">
+            <div class="section-header" onclick="toggle('s2')">
+                <div class="section-title">Section 2: What is Raast? (1 min)</div>
+                <span id="arrow2">▼</span>
+            </div>
+            <div class="section-content" id="s2">
+                <div class="key-message">
+                    <h3>📱 The Basics:</h3>
+                    <p><strong>RAAST</strong> (Real-time Automated and Secured Transfer) is Pakistan's first instant payment system, launched January 2021.</p>
+                </div>
+                <div class="stats-section">
+                    <h4>📊 Current Scale (October 2025):</h4>
+                    <div class="stat-item">
+                        <div class="stat-value">47 Million</div>
+                        <div>Registered Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1.5 Billion</div>
+                        <div>Total Transactions Since Launch</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">Rs 34 Trillion</div>
+                        <div>Cumulative Value</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">3 Million</div>
+                        <div>Daily Average Transactions</div>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h4>✨ What Makes It Special:</h4>
+                    <ul class="info-list">
+                        <li>Instant transfers - Real-time, 24/7</li>
+                        <li>Mobile phone as ID - No account numbers needed</li>
+                        <li>Low cost - Cost-recovery model</li>
+                        <li>Fully interoperable - Works across all banks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section-card">
+            <div class="section-header" onclick="toggle('s3')">
+                <div class="section-title">Section 3: Government Payments (1.5 min)</div>
+                <span id="arrow3">▼</span>
+            </div>
+            <div class="section-content" id="s3">
+                <div class="phase-card">
+                    <h4>✅ Phase 1: Bulk Payments (LIVE)</h4>
+                    <ul>
+                        <li>Government salaries</li>
+                        <li>Pensions</li>
+                        <li>Ehsaas program payments</li>
+                        <li>Benazir Income Support Programme (BISP)</li>
+                        <li>CDC dividend payments</li>
+                    </ul>
+                </div>
+                <div class="phase-card">
+                    <h4>✅ Phase 2: Person-to-Person (LIVE)</h4>
+                    <ul>
+                        <li>Mobile number-based transfers</li>
+                        <li>Payment requests</li>
+                        <li>Smart addressing using aliases</li>
+                    </ul>
+                </div>
+                <div class="phase-card" style="border-color: #f59e0b;">
+                    <h4>🔄 Phase 3: Merchant Payments (IN PROGRESS)</h4>
+                    <ul>
+                        <li>Person-to-Merchant (P2M) payments</li>
+                        <li>Small business payments</li>
+                        <li>Tax payments integration</li>
+                    </ul>
+                </div>
+                <div class="key-message">
+                    <h3>🚀 Recent Development:</h3>
+                    <p>Government rolled out <strong>3-year program</strong> with <strong>Rs 3.5 billion subsidy</strong> for financial institutions to attract merchants on Raast platform.</p>
+                </div>
+                <div class="info-box">
+                    <h4>📈 Impact:</h4>
+                    <ul class="info-list">
+                        <li>3.4 million adults will receive digital payments</li>
+                        <li>Eliminates long queues for government transactions</li>
+                        <li>Direct delivery removes middlemen</li>
+                        <li>Full transparency and digital trail</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section-card">
+            <div class="section-header" onclick="toggle('s4')">
+                <div class="section-title">Section 4: Economics & Incentives (45 sec)</div>
+                <span id="arrow4">▼</span>
+            </div>
+            <div class="section-content" id="s4">
+                <div class="key-message">
+                    <h3>💳 Pricing Structure (October 2025):</h3>
+                    <p>New report recommends:</p>
+                    <ul>
+                        <li><strong>0.35% Merchant Discount Rate (MDR)</strong></li>
+                        <li><strong>Zero fees for micro-transactions</strong></li>
+                        <li>Cashback or tax relief incentives</li>
+                    </ul>
+                </div>
+                <div class="stats-section">
+                    <h4>🎁 Government Incentives:</h4>
+                    <div class="stat-item">
+                        <div class="stat-value">Rs 3.5 Billion</div>
+                        <div>Subsidy for Financial Institutions (FY 2025)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">ZERO</div>
+                        <div>Transaction Cost for End Users</div>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h4>🎯 The Goal:</h4>
+                    <p><strong>Cashless Pakistan by 2030</strong></p>
+                    <p>SBP: "The ultimate goal is to win the war against cash"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section-card">
+            <div class="section-header" onclick="toggle('s5')">
+                <div class="section-title">Section 5: Why This Matters (1 min)</div>
+                <span id="arrow5">▼</span>
+            </div>
+            <div class="section-content" id="s5">
+                <div class="info-box">
+                    <h4>1. 💳 Financial Inclusion</h4>
+                    <p><strong>Problem:</strong> Low banking penetration</p>
+                    <p><strong>Solution:</strong> Use mobile number as payment ID</p>
+                    <p><strong>Impact:</strong> 3.4 million+ new digital recipients</p>
+                </div>
+                <div class="info-box">
+                    <h4>2. ⚡ Efficiency & Cost Savings</h4>
+                    <p><strong>Old Way:</strong> Cash handling, physical distribution</p>
+                    <p><strong>New Way:</strong> Instant digital transfer</p>
+                    <p><strong>Savings:</strong> Reduced costs, eliminated middlemen</p>
+                </div>
+                <div class="info-box">
+                    <h4>3. 🔒 Transparency & Reduced Corruption</h4>
+                    <p><strong>Problem:</strong> Cash prone to leakages</p>
+                    <p><strong>Solution:</strong> Digital trail, instant delivery</p>
+                    <p><strong>Result:</strong> Less corruption, full accountability</p>
+                </div>
+                <div class="info-box">
+                    <h4>4. 🌐 Economic Digitization</h4>
+                    <p><strong>Vision:</strong> Real-time digital payments for all</p>
+                    <p><strong>Goal:</strong> Cashless economy by 2030</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="section-card">
+            <div class="section-header" onclick="toggle('s6')">
+                <div class="section-title">Section 6: Challenges (45 sec)</div>
+                <span id="arrow6">▼</span>
+            </div>
+            <div class="section-content" id="s6">
+                <div class="challenge-card">
+                    <h4>Challenge 1: Digital Literacy</h4>
+                    <p><strong>Problem:</strong> Many unfamiliar with digital payments</p>
+                    <p><strong>Solution:</strong> Training programs, simple interfaces</p>
+                </div>
+                <div class="challenge-card">
+                    <h4>Challenge 2: Internet Connectivity</h4>
+                    <p><strong>Problem:</strong> Rural areas lack connectivity</p>
+                    <p><strong>Solution:</strong> Alternate options for low-connectivity areas</p>
+                </div>
+                <div class="challenge-card">
+                    <h4>Challenge 3: Trust & Security</h4>
+                    <p><strong>Problem:</strong> Fear of fraud</p>
+                    <p><strong>Solution:</strong> Dispute resolution, enhanced security</p>
+                </div>
+                <div class="challenge-card">
+                    <h4>Challenge 4: Merchant Adoption</h4>
+                    <p><strong>Problem:</strong> Small merchants hesitant</p>
+                    <p><strong>Solution:</strong> Rs 3.5B incentive, zero micro-transaction fees</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="section-card">
+            <div class="section-header" onclick="toggle('s7')">
+                <div class="section-title">Section 7: Closing (30 sec)</div>
+                <span id="arrow7">▼</span>
+            </div>
+            <div class="section-content" id="s7">
+                <div class="key-message">
+                    <h3>🎬 The Bottom Line:</h3>
+                    <p>"Pakistan is building <strong>digital public infrastructure</strong> for the 21st century. With 47 million users on Raast and government payments flowing through the system, we're not just digitizing—we're democratizing financial access."</p>
+                </div>
+                <div class="info-box">
+                    <h4>🚀 What's Next:</h4>
+                    <ul class="info-list">
+                        <li>Full integration of tax payments</li>
+                        <li>Merchant network expansion</li>
+                        <li>Cross-border payment capabilities</li>
+                        <li>Goal: Cashless Pakistan by 2030</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q&A Section -->
+        <div class="qa-section">
+            <h2>❓ Anticipated Questions & Answers</h2>
+            
+            <div class="qa-item">
+                <div class="qa-question">Q1: Is Raast secure? What about fraud?</div>
+                <div class="qa-answer">
+                    <p>"Raast uses state-of-the-art security with real-time fraud detection. Each transaction is authorized by the payer, with enhanced data protection. Plus, there are dispute resolution mechanisms. The system is more secure than cash, which can be lost or stolen with no trace."</p>
+                </div>
+            </div>
+
+            <div class="qa-item">
+                <div class="qa-question">Q2: What if someone doesn't have a smartphone?</div>
+                <div class="qa-answer">
+                    <p>"The system is being designed with multiple access points—agent-assisted transactions, USSD codes for basic phones, and alternate options for low-connectivity areas. The goal is universal access, not just smartphone users."</p>
+                </div>
+            </div>
+
+            <div class="qa-item">
+                <div class="qa-question">Q3: How does this compare to other countries?</div>
+                <div class="qa-answer">
+                    <p>"Raast is built on international best practices—similar to India's UPI, Brazil's PIX, or Kenya's M-Pesa. We're actually ahead of many countries. The key difference is Pakistan has integrated government payments from the start, which accelerates adoption."</p>
+                </div>
+            </div>
+
+            <div class="qa-item">
+                <div class="qa-question">Q4: What about privacy?</div>
+                <div class="qa-answer">
+                    <p>"Raast follows strict data protection standards. While the system maintains transaction records for security—just like any banking system—personal financial data is protected. It's actually more private than cash transactions through government offices."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let seconds = 0;
+        let interval = null;
+
+        function toggle(id) {
+            const content = document.getElementById(id);
+            const num = id.replace('s', '');
+            const arrow = document.getElementById('arrow' + num);
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                arrow.textContent = '▼';
+            } else {
+                content.classList.add('active');
+                arrow.textContent = '▲';
+            }
+        }
+
+        function startTimer() {
+            if (interval) {
+                clearInterval(interval);
+                interval = null;
+                event.target.textContent = 'Start';
+            } else {
+                interval = setInterval(() => {
+                    seconds++;
+                    const mins = Math.floor(seconds / 60);
+                    const secs = seconds % 60;
+                    document.getElementById('timer').textContent = 
+                        mins + ':' + (secs < 10 ? '0' : '') + secs;
+                }, 1000);
+                event.target.textContent = 'Stop';
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(interval);
+            interval = null;
+            seconds = 0;
+            document.getElementById('timer').textContent = '0:00';
+            document.querySelector('.timer-btn').textContent = 'Start';
+        }
+    </script>
+</body>
+</html>
