@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakistan Economic Outlook — Policy Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── Variables ───────────────────────────────────────────── */
+    :root {
+      --green:        #1a6b3c;
+      --green-dark:   #0e2a1a;
+      --green-mid:    #155c33;
+      --green-light:  #2d8f5a;
+      --green-pale:   #e8f3ed;
+      --gold:         #c9a84c;
+      --gold-light:   #f0d98a;
+      --warm-white:   #f6f8f3;
+      --text-dark:    #0e1f13;
+      --text-muted:   #4a6355;
+      --surface:      #ffffff;
+      --border:       #cce0d4;
+      --tinted:       #eef5f0;
+      --red:          #c0392b;
+      --red-pale:     #fdf2f2;
+      --amber:        #d97706;
+      --amber-pale:   #fffbeb;
+      --blue:         #1d5fa8;
+      --blue-pale:    #eff6ff;
+      --radius:       10px;
+      --radius-lg:    14px;
+      --shadow:       0 4px 24px rgba(10,42,26,0.10);
+      --shadow-lg:    0 8px 40px rgba(10,42,26,0.15);
+    }
+
+    /* ── Reset ───────────────────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ── Body ────────────────────────────────────────────────── */
+    body {
+      font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+      font-weight: 300;
+      background: var(--warm-white);
+      color: var(--text-dark);
+      line-height: 1.78;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Page wrapper ────────────────────────────────────────── */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    /* ── Hero / Header ───────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 55%, var(--green-light) 100%);
+      padding: 3.5rem 3rem 3rem;
+      margin: 0 -1.5rem 3rem;
+      border-bottom: 4px solid var(--gold);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "₨";
+      font-family: 'Playfair Display', serif;
+      font-size: 22rem;
+      position: absolute;
+      right: -1rem;
+      top: -3rem;
+      opacity: 0.05;
+      color: #fff;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.78);
+      font-size: 1rem;
+      font-weight: 300;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .hero-pill {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: rgba(255,255,255,0.9);
+      padding: 0.3rem 0.9rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ── Alert Banner ────────────────────────────────────────── */
+    .alert-banner {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+      border: 1px solid var(--gold);
+      border-left: 5px solid var(--gold);
+      color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius);
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    .alert-banner .alert-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
+    .alert-banner strong { color: var(--gold); }
+
+    /* ── Section headings ────────────────────────────────────── */
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--green-dark);
+      display: inline-block;
+      padding: 0.25rem 0.85rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    h2.block-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--green);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.4rem;
+      margin-top: 2.8rem;
+    }
+
+    h2.block-title::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 1em;
+      background: var(--gold);
+      margin-right: 0.55rem;
+      vertical-align: middle;
+      border-radius: 2px;
+    }
+
+    /* ── KPI Grid ────────────────────────────────────────────── */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.4rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .kpi-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+
+    .kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+    }
+
+    .kpi-card.green::before  { background: linear-gradient(90deg, var(--green), var(--gold)); }
+    .kpi-card.amber::before  { background: linear-gradient(90deg, var(--amber), #f59e0b); }
+    .kpi-card.red::before    { background: linear-gradient(90deg, var(--red), #e74c3c); }
+    .kpi-card.blue::before   { background: linear-gradient(90deg, var(--blue), #3b82f6); }
+
+    .kpi-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .kpi-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .kpi-card.amber .kpi-value { color: var(--amber); }
+    .kpi-card.red .kpi-value   { color: var(--red); }
+    .kpi-card.blue .kpi-value  { color: var(--blue); }
+
+    .kpi-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .kpi-tooltip {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--green-dark);
+      color: #fff;
+      font-size: 0.78rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 6px;
+      width: 220px;
+      z-index: 10;
+      line-height: 1.5;
+      border: 1px solid var(--gold);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .kpi-card:hover .kpi-tooltip { display: block; }
+
+    /* ── Tab system ──────────────────────────────────────────── */
+    .tabs-wrap {
+      margin-bottom: 0.5rem;
+    }
+
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 1.5rem;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      padding: 0.7rem 1.4rem;
+      border: none;
+      background: none;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .tab-btn:hover { color: var(--green); }
+    .tab-btn.active { color: var(--green); border-bottom-color: var(--gold); }
+
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+
+    /* ── Accordion ───────────────────────────────────────────── */
+    .accordion { margin-bottom: 1rem; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+
+    .acc-header {
+      background: var(--tinted);
+      padding: 1rem 1.3rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-left: 4px solid var(--green);
+      transition: background 0.2s;
+    }
+
+    .acc-header:hover { background: var(--green-pale); }
+
+    .acc-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--green-dark);
+    }
+
+    .acc-arrow {
+      color: var(--gold);
+      font-size: 1.1rem;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+
+    .acc-arrow.open { transform: rotate(180deg); }
+
+    .acc-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      background: var(--surface);
+    }
+
+    .acc-body.open { max-height: 3000px; }
+    .acc-inner { padding: 1.4rem 1.6rem; }
+
+    /* ── Callout boxes ───────────────────────────────────────── */
+    .callout {
+      padding: 1rem 1.4rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .callout-warning {
+      background: var(--red-pale);
+      border-left: 4px solid var(--red);
+    }
+
+    .callout-success {
+      background: var(--green-pale);
+      border-left: 4px solid var(--green);
+    }
+
+    .callout-info {
+      background: var(--blue-pale);
+      border-left: 4px solid var(--blue);
+    }
+
+    .callout-gold {
+      background: var(--amber-pale);
+      border-left: 4px solid var(--gold);
+    }
+
+    .callout strong { display: block; margin-bottom: 0.3rem; font-weight: 700; }
+    .callout-warning strong { color: var(--red); }
+    .callout-success strong { color: var(--green); }
+    .callout-info strong    { color: var(--blue); }
+    .callout-gold strong    { color: var(--amber); }
+
+    /* ── Key point row ───────────────────────────────────────── */
+    .key-point {
+      background: var(--tinted);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem 1.2rem;
+      margin: 0.7rem 0;
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+    }
+
+    .key-point .kp-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .key-point p { margin: 0; font-size: 0.94rem; }
+    .key-point strong { color: var(--green); }
+
+    /* ── Data table ──────────────────────────────────────────── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 1rem 0 1.5rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .data-table thead th {
+      background: var(--green);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .data-table tbody td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .data-table tbody tr:last-child td { border-bottom: none; }
+    .data-table tbody tr:nth-child(even) td { background: var(--tinted); }
+    .data-table tbody tr:hover td { background: var(--green-pale); transition: background 0.15s; }
+
+    .badge-red    { color: #fff; background: var(--red);   padding: 0.18rem 0.6rem; border-radius: 4px; font-size: 0.78rem; font-weight: 700; white-space: nowrap; }
+    .badge-amber  { color: #fff; background: var(--amber); padding: 0.18rem 0.6rem; border-radius: 4px; font-size: 0.78rem; font-weight: 700; white-space: nowrap; }
+    .badge-green  { color: #fff; background: var(--green); padding: 0.18rem 0.6rem; border-radius: 4px; font-size: 0.78rem; font-weight: 700; white-space: nowrap; }
+
+    /* ── Horizontal bar chart ────────────────────────────────── */
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 0.6rem 0;
+    }
+
+    .bar-name {
+      width: 160px;
+      flex-shrink: 0;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .bar-track {
+      flex: 1;
+      background: var(--border);
+      border-radius: 100px;
+      height: 26px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      padding-left: 0.7rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      background: linear-gradient(90deg, var(--green-dark), var(--green-light));
+      transition: width 0.7s cubic-bezier(.4,0,.2,1);
+    }
+
+    .bar-fill.gold-bar { background: linear-gradient(90deg, #a07830, var(--gold)); }
+    .bar-fill.red-bar  { background: linear-gradient(90deg, #8b1a1a, var(--red)); }
+
+    /* ── Comparison cards (regional peers) ───────────────────── */
+    .peer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.9rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .peer-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .peer-card.pak { border-color: var(--gold); border-width: 2px; }
+
+    .peer-flag  { font-size: 1.8rem; line-height: 1; margin-bottom: 0.4rem; }
+    .peer-name  { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: 'JetBrains Mono', monospace; }
+    .peer-val   { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--green); margin: 0.2rem 0; }
+    .peer-card.pak .peer-val { color: var(--amber); }
+    .peer-sub   { font-size: 0.75rem; color: var(--text-muted); }
+
+    /* ── Reform checklist ────────────────────────────────────── */
+    .reform-list { list-style: none; padding: 0; margin: 0.5rem 0 1rem; }
+
+    .reform-list li {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed var(--border);
+      font-size: 0.94rem;
+    }
+
+    .reform-list li:last-child { border-bottom: none; }
+
+    .reform-list .r-icon {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .r-icon.urgent  { background: #fde8e8; }
+    .r-icon.medium  { background: var(--amber-pale); }
+    .r-icon.long    { background: var(--blue-pale); }
+
+    /* ── Takeaway box ────────────────────────────────────────── */
+    .takeaway {
+      background: var(--green-dark);
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: var(--radius-lg);
+      padding: 2rem 2.5rem;
+      margin-top: 3rem;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .takeaway::before {
+      content: '❝';
+      font-family: 'Playfair Display', serif;
+      font-size: 8rem;
+      position: absolute;
+      top: -1.5rem; left: 1rem;
+      opacity: 0.08;
+      line-height: 1;
+      color: var(--gold);
+    }
+
+    .takeaway h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .takeaway p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.88);
+      max-width: 820px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .takeaway .author-tag {
+      margin-top: 1.2rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── HR ──────────────────────────────────────────────────── */
+    hr.fancy {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 2.5rem 0;
+      opacity: 0.5;
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .hero { padding: 2rem 1.2rem 1.8rem; margin: 0 -1rem 2rem; }
+      .hero::before { display: none; }
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .peer-grid { grid-template-columns: repeat(3, 1fr); }
+      .bar-name { width: 110px; font-size: 0.8rem; }
+    }
+
+    p { margin-bottom: 0.8rem; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { padding-left: 1.3rem; margin-bottom: 0.8rem; }
+    li { margin-bottom: 0.25rem; }
+    strong { color: var(--green-dark); font-weight: 700; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <div class="hero-badge">📊 Policy Brief · February 2026</div>
+    <h1>Pakistan Economic Outlook</h1>
+    <p class="hero-sub">A critical analysis of stabilisation, structural gaps, and the reform imperative — based on Business Recorder editorial and independent assessment</p>
+    <div class="hero-meta">
+      <span class="hero-pill">Prof. Dr. Zahid Asghar</span>
+      <span class="hero-pill">School of Economics, QAU</span>
+      <span class="hero-pill">FY 2025–26</span>
+      <span class="hero-pill">ADB · IMF · World Bank Data</span>
+    </div>
+  </div>
+
+  <!-- ── ALERT ── -->
+  <div class="alert-banner">
+    <span class="alert-icon">⚠️</span>
+    <span><strong>ADB Warning (Feb 2026):</strong> Policy slippage could weaken business confidence and increase external finance risks. GDP growth forecast at <strong>3.0%</strong> for FY26 — well below the government's 4.2% target and the ~6% needed to absorb annual new labour market entrants.</span>
+  </div>
+
+  <!-- ── KPI GRID ── -->
+  <div class="section-label">Key Indicators</div>
+  <div class="kpi-grid">
+    <div class="kpi-card green">
+      <div class="kpi-tooltip">ADB forecasts 3.0% growth for FY26 vs. government target of 4.2%. Pakistan needs at least 6–7% sustained growth to make a dent in poverty and unemployment. Cyclical recovery, not structural transformation.</div>
+      <div class="kpi-label">GDP Growth FY26</div>
+      <div class="kpi-value">3.0%</div>
+      <div class="kpi-note">ADB est. · Gov target: 4.2%</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-tooltip">SBP reserves rebuilt to $14.5B through net purchases of $8.3B from the interbank market — achieved by suppressing imports and maintaining tight controls, not organic export growth.</div>
+      <div class="kpi-label">SBP Reserves</div>
+      <div class="kpi-value">$14.5B</div>
+      <div class="kpi-note">Net purchases: $8.3B · IMF target: $13.9B by Jun 2025</div>
+    </div>
+    <div class="kpi-card red">
+      <div class="kpi-tooltip">Of $2.5B net FDI, over $2B is retained earnings by existing firms. Genuine fresh inflows are under $500M — one of the lowest in the region and a signal of deep investor confidence deficit.</div>
+      <div class="kpi-label">Net FDI (FY25)</div>
+      <div class="kpi-value">$2.5B</div>
+      <div class="kpi-note">&lt;$500M fresh · 80% retained earnings</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="kpi-tooltip">Policy rate cut 1,100bps since June 2025 as inflation fell from 38% peak to near single digits. But this reflects demand destruction, import compression, and the end of the global commodity supercycle — not supply-side reform.</div>
+      <div class="kpi-label">SBP Policy Rate</div>
+      <div class="kpi-value">12%</div>
+      <div class="kpi-note">Cut 1,100 bps since Jun 2025</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-tooltip">Primary surplus for 3 consecutive years. But achieved through crushing the existing tax base with higher rates — super tax, higher income tax on salaried workers — not by broadening the base or cutting inefficient expenditure.</div>
+      <div class="kpi-label">Fiscal Position</div>
+      <div class="kpi-value">Surplus</div>
+      <div class="kpi-note">3 consecutive years · Primary balance</div>
+    </div>
+    <div class="kpi-card red">
+      <div class="kpi-tooltip">World Bank's June 2025 revised estimate using updated poverty lines and 2018–19 survey data. Sharp rise in extreme poverty from 4.9% to 16.5%. Over 10 million additional Pakistanis face risk of falling below the poverty line.</div>
+      <div class="kpi-label">Poverty Rate</div>
+      <div class="kpi-value">29%</div>
+      <div class="kpi-note">PC est. (2025)</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="kpi-tooltip">72.1% of non-agricultural workers are in informal employment (PBS, 2024–25). The informal economy (~$457B) exceeds the formal documented economy (~$340B), representing a massive tax and productivity gap.</div>
+      <div class="kpi-label">Informal Employment</div>
+      <div class="kpi-value">72%</div>
+      <div class="kpi-note">Non-agri sector · PBS 2024–25</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-tooltip">Remittances remain a structural crutch — 9.4% of GDP in 2024 vs. India's 3.5%. This reflects not a healthy diaspora dividend but the failure to create competitive domestic opportunities, driving illegal migration and brain drain.</div>
+      <div class="kpi-label">Remittances / GDP</div>
+      <div class="kpi-value">9.4%</div>
+      <div class="kpi-note">2024 · India: 3.5% for context</div>
+    </div>
+  </div>
+
+  <hr class="fancy">
+
+  <!-- ── TABS ── -->
+  <div class="tabs-wrap">
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="reality">Reality Check</button>
+      <button class="tab-btn" data-tab="structural">Structural Gaps</button>
+      <button class="tab-btn" data-tab="regional">Regional Lens</button>
+      <button class="tab-btn" data-tab="reforms">Reform Agenda</button>
+    </div>
+
+    <!-- TAB 1: REALITY CHECK -->
+    <div class="tab-pane active" id="tab-reality">
+
+      <h2 class="block-title">Government Claims vs. Ground Reality</h2>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span class="acc-title">🎭 "Stabilisation Achieved" — What the Data Actually Shows</span>
+          <span class="acc-arrow">▼</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <div class="callout callout-info">
+              <strong>Government Narrative</strong>
+              Falling inflation, a stable rupee, primary fiscal surplus for three years, and rising reserves together constitute evidence of economic stabilisation.
+            </div>
+            <div class="callout callout-warning">
+              <strong>Counter-Argument</strong>
+              More than half of these achievements are cyclical, not structural. A "dead cat bounce" after the 2022–23 crisis — when inflation hit 38%, the PKR lost nearly 50% of its value, and GDP growth turned negative — was inevitable once the acute emergency passed.
+            </div>
+            <div class="key-point">
+              <span class="kp-icon">📉</span>
+              <p><strong>Inflation Decline:</strong> Driven by demand destruction from IMF-mandated austerity, import compression, and the global reversal of the commodity supercycle — not productivity gains or supply-side reform. Core inflation remains elevated at ~9%.</p>
+            </div>
+            <div class="key-point">
+              <span class="kp-icon">💰</span>
+              <p><strong>Fiscal Surplus Illusion:</strong> Achieved by raising rates on an already-thin, already-burdened tax base. Super tax on corporations, punitive income tax on salaried workers, and higher taxes on exporters have disincentivised investment — killing the goose laying the golden eggs.</p>
+            </div>
+            <div class="key-point">
+              <span class="kp-icon">📦</span>
+              <p><strong>Reserve Build-up:</strong> The SBP purchased $8.3B from the interbank market to rebuild reserves — effectively suppressing import demand rather than earning reserves through export growth or genuine FDI. This is not a sustainable model.</p>
+            </div>
+            <div class="key-point">
+              <span class="kp-icon">🔄</span>
+              <p><strong>The Boom-Bust Cycle:</strong> Pakistan has engaged with the IMF 25 times since 1950. Each stabilisation program restores short-run macroeconomic metrics without addressing the structural drivers — low exports, extractive institutions, energy circular debt, and fiscal dominance. The cycle is almost certain to repeat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span class="acc-title">💸 The Taxation Crisis — Crushing the Formal Economy</span>
+          <span class="acc-arrow">▼</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <p style="margin-bottom:1.2rem; color:var(--text-muted);">Pakistan's tax-to-GDP ratio (~9–10%) is among the lowest in comparable economies. Rather than broadening the base, successive governments have intensified the burden on those already in the net.</p>
+
+            <h4 style="color:var(--green-dark); margin-bottom:0.8rem; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.06em;">Tax Burden by Sector</h4>
+            <div class="bar-row">
+              <div class="bar-name">Salaried Workers</div>
+              <div class="bar-track"><div class="bar-fill red-bar" style="width:95%;">Highest marginal rate — 35%+</div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-name">Corporations</div>
+              <div class="bar-track"><div class="bar-fill red-bar" style="width:88%;">29% + super tax = 39%+</div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-name">Exporters</div>
+              <div class="bar-track"><div class="bar-fill gold-bar" style="width:80%;">Highest effective rate in region</div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-name">Real Estate / AGR</div>
+              <div class="bar-track"><div class="bar-fill" style="width:18%; background:var(--green);">Near-zero taxation</div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-name">Retail / Informal</div>
+              <div class="bar-track"><div class="bar-fill" style="width:12%; background:var(--green);">Effectively untaxed</div></div>
+            </div>
+
+            <div class="callout callout-warning" style="margin-top:1.2rem;">
+              <strong>Consequences of This Approach</strong>
+              <ul>
+                <li>No fresh capital investment from major business groups</li>
+                <li>Exporters exiting high-value garment sub-sectors due to collapsing ROI</li>
+                <li>Accelerating brain drain: skilled professionals accepting lower-status roles abroad rather than pay 35–40% income tax at home</li>
+                <li>Documented economy contracting as businesses migrate to informality</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span class="acc-title">🌍 Geopolitical Windfall — Transactional and Temporary</span>
+          <span class="acc-arrow">▼</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <div class="callout callout-info">
+              <strong>Current Opportunity</strong>
+              Improved ties with Saudi Arabia and the United States, combined with the 37-month IMF EFF (approved 2024), provide a rare window of external stability and diplomatic goodwill.
+            </div>
+            <div class="callout callout-warning">
+              <strong>Historical Caution</strong>
+              US–Pakistan relations have historically been transactional: 1960s Cold War alliance, 1980s Afghan Jihad, 2001 War on Terror. Each produced short-term fiscal relief followed by strategic abandonment and economic relapse.
+            </div>
+            <div class="key-point">
+              <span class="kp-icon">⚠️</span>
+              <p><strong>The Dependency Trap:</strong> As Pakistan's economy grows in nominal size, the magnitude of external injections required for stabilisation increases — while their per-capita growth impact diminishes. Foreign aid and debt cannot substitute for domestic productivity growth.</p>
+            </div>
+            <div class="key-point">
+              <span class="kp-icon">🛡️</span>
+              <p><strong>Defence Pacts and Economic Costs:</strong> Alignment with great powers has historically redirected domestic fiscal priorities toward security spending, crowding out investment in human capital, infrastructure, and technology. The editorial warns: <em>"There is no escape from economic principles — no one can openly resist them or refuse to obey."</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: STRUCTURAL GAPS -->
+    <div class="tab-pane" id="tab-structural">
+
+      <h2 class="block-title">Critical Structural Challenges</h2>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Challenge</th>
+            <th>Core Issue</th>
+            <th>Severity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Investment Drought</strong></td>
+            <td>Net FDI under $500M in fresh inflows; private investment at ~13% of GDP vs. 25%+ in peer countries. No major domestic group investing at scale.</td>
+            <td><span class="badge-red">Critical</span></td>
+          </tr>
+          <tr>
+            <td><strong>Export Stagnation</strong></td>
+            <td>Merchandise exports stuck at $25–30B for over a decade. Textile concentration &gt;60% with minimal value-addition. Exporters face highest effective tax rates in the region.</td>
+            <td><span class="badge-red">Critical</span></td>
+          </tr>
+          <tr>
+            <td><strong>Energy Circular Debt</strong></td>
+            <td>CD stock at PKR 2,842B (2.7% of GDP) as of Dec 2024. High electricity tariffs (raised ~PKR 5/kWh in FY25) are making manufacturing uncompetitive and accelerating deindustrialisation.</td>
+            <td><span class="badge-red">Critical</span></td>
+          </tr>
+          <tr>
+            <td><strong>No Tax Base Broadening</strong></td>
+            <td>Agriculture (nearly 25% of GDP), large retail, and real estate contribute negligibly to tax revenue. Non-filer regime institutionalises avoidance. Tax-to-GDP ratio remains ~10%.</td>
+            <td><span class="badge-red">Critical</span></td>
+          </tr>
+          <tr>
+            <td><strong>Brain Drain</strong></td>
+            <td>Over 800,000 skilled Pakistanis emigrated in 2023 alone. Engineers, doctors, IT professionals choosing lower-ranked positions abroad over punitive domestic taxation and governance failure.</td>
+            <td><span class="badge-red">High</span></td>
+          </tr>
+          <tr>
+            <td><strong>PSE Fiscal Burden</strong></td>
+            <td>SOEs (PIA, Railways, WAPDA, Steel Mill) collectively cost the exchequer trillions annually. The FY2025 Annual SOE Report shows no substantive improvement in performance or governance.</td>
+            <td><span class="badge-amber">High</span></td>
+          </tr>
+          <tr>
+            <td><strong>Human Capital Deficit</strong></td>
+            <td>Learning poverty rate among highest in Asia. Pakistan Human Capital Index ranks among bottom quartile globally. Mismatch between skills produced and labour market needs.</td>
+            <td><span class="badge-amber">High</span></td>
+          </tr>
+          <tr>
+            <td><strong>Climate Vulnerability</strong></td>
+            <td>2022 floods cost $30B and temporarily wiped out 2 years of GDP gains. Pakistan among world's top emitters yet among the most climate-vulnerable. Agriculture and energy sectors most exposed.</td>
+            <td><span class="badge-amber">Medium</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span class="acc-title">🏭 Deindustrialisation — The Silent Crisis</span>
+          <span class="acc-arrow">▼</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <p>Pakistan's industrial share of GDP has <strong>declined</strong> from ~24% in 2005 to ~19% in 2024 — the opposite of the structural transformation that drove East Asian growth. This reflects a combination of:</p>
+            <ul style="margin: 0.8rem 0 0.8rem 1.2rem; color: var(--text-muted);">
+              <li>Excessively high energy costs making manufacturing uncompetitive globally</li>
+              <li>Heavy import tariffs on intermediate goods that raise input costs</li>
+              <li>Anti-export bias in the incentive structure (domestic sales more profitable than exporting)</li>
+              <li>Lack of technology transfer, R&D investment, or industrial upgrading policy</li>
+              <li>Diversion of investible surplus toward real estate (speculative) rather than productive capital</li>
+            </ul>
+            <div class="callout callout-warning">
+              <strong>Why This Matters</strong>
+              Manufacturing-led growth is the only historically validated pathway for middle-income transition at Pakistan's stage of development. Services-only growth deepens inequality and fails to absorb the 3–4 million young labour market entrants each year.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span class="acc-title">🏛️ Institutional Failure — Extractive Over Inclusive</span>
+          <span class="acc-arrow">▼</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <div class="key-point">
+              <span class="kp-icon">⚖️</span>
+              <p><strong>Acemoglu & Robinson Framework:</strong> Pakistan's institutions systematically extract rents for elites (landed, military, commercial) rather than creating inclusive incentives for broad-based investment, competition, and innovation.</p>
+            </div>
+            <div class="key-point">
+              <span class="kp-icon">🏠</span>
+              <p><strong>Property Rights and Contracts:</strong> Weak enforcement raises the cost of doing business, deters long-horizon investment, and pushes capital into non-productive assets (real estate, gold, foreign currency).</p>
+            </div>
+            <div class="key-point">
+              <span class="kp-icon">💼</span>
+              <p><strong>Military's Economic Footprint:</strong> Military assets grew from $30B to $39.8B (2016–2023) even as state reserves fell to $5.2B. Military-run businesses span real estate, agriculture, manufacturing, and retail — crowding out private sector competition in key markets.</p>
+            </div>
+            <div class="key-point">
+              <span class="kp-icon">📋</span>
+              <p><strong>Policy Discontinuity:</strong> Average tenure of Finance Minister is under 18 months. No economic reform in Pakistan's history has survived a change of government. Long-run investor horizon requires institutional stability that Pakistan's political economy structurally cannot provide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: REGIONAL LENS -->
+    <div class="tab-pane" id="tab-regional">
+
+      <h2 class="block-title">Regional Peer Comparison</h2>
+      <p style="color:var(--text-muted); margin-bottom:1.5rem;">Pakistan's economic trajectory compared with economies that started from similar or worse baselines in 1970–1980 and have since undergone structural transformation.</p>
+
+      <div class="section-label">Exports of Goods &amp; Services (% GDP, 2024)</div>
+      <div class="peer-grid" style="margin-bottom:2rem;">
+        <div class="peer-card">
+          <div class="peer-flag">🇻🇳</div>
+          <div class="peer-name">Vietnam</div>
+          <div class="peer-val">87%</div>
+          <div class="peer-sub">Export-led model</div>
+        </div>
+        <div class="peer-card">
+          <div class="peer-flag">🇲🇾</div>
+          <div class="peer-name">Malaysia</div>
+          <div class="peer-val">70%</div>
+          <div class="peer-sub">Diversified</div>
+        </div>
+        <div class="peer-card">
+          <div class="peer-flag">🇧🇩</div>
+          <div class="peer-name">Bangladesh</div>
+          <div class="peer-val">15%</div>
+          <div class="peer-sub">RMG-led growth</div>
+        </div>
+        <div class="peer-card">
+          <div class="peer-flag">🇮🇳</div>
+          <div class="peer-name">India</div>
+          <div class="peer-val">22%</div>
+          <div class="peer-sub">Services + MFG</div>
+        </div>
+        <div class="peer-card pak">
+          <div class="peer-flag">🇵🇰</div>
+          <div class="peer-name">Pakistan</div>
+          <div class="peer-val">10%</div>
+          <div class="peer-sub">⚠ Lowest in region</div>
+        </div>
+      </div>
+
+      <div class="section-label">Tax Revenue (% GDP, 2024)</div>
+      <div class="peer-grid" style="margin-bottom:2rem;">
+        <div class="peer-card">
+          <div class="peer-flag">🇻🇳</div>
+          <div class="peer-name">Vietnam</div>
+          <div class="peer-val">22%</div>
+          <div class="peer-sub">Broad-based</div>
+        </div>
+        <div class="peer-card">
+          <div class="peer-flag">🇲🇾</div>
+          <div class="peer-name">Malaysia</div>
+          <div class="peer-val">20%</div>
+          <div class="peer-sub">GST-anchored</div>
+        </div>
+        <div class="peer-card">
+          <div class="peer-flag">🇧🇩</div>
+          <div class="peer-name">Bangladesh</div>
+          <div class="peer-val">9%</div>
+          <div class="peer-sub">VAT-dependent</div>
+        </div>
+        <div class="peer-card">
+          <div class="peer-flag">🇮🇳</div>
+          <div class="peer-name">India</div>
+          <div class="peer-val">18%</div>
+          <div class="peer-sub">GST reform</div>
+        </div>
+        <div class="peer-card pak">
+          <div class="peer-flag">🇵🇰</div>
+          <div class="peer-name">Pakistan</div>
+          <div class="peer-val">10%</div>
+          <div class="peer-sub">⚠ Narrow base</div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span class="acc-title">🇧🇩 The Bangladesh Paradox — What Pakistan Must Learn</span>
+          <span class="acc-arrow">▼</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <p>Bangladesh, once considered a basket case and part of Pakistan, now has a higher per-capita income than Pakistan (PPP-adjusted). Between 2000 and 2024, Bangladesh's merchandise exports grew from $6B to $55B. Pakistan's grew from $9B to $30B over the same period.</p>
+            <div class="callout callout-gold">
+              <strong>Key Differences</strong>
+              <ul style="margin-top:0.3rem; margin-left:1.1rem;">
+                <li>Bangladesh kept garment export tax rates low and competitive; Pakistan raised them</li>
+                <li>Bangladesh built a large, trained female workforce for manufacturing; Pakistan's female LFPR is ~24%</li>
+                <li>Bangladesh's garment sector upgraded from basic to mid-value products; Pakistan's is stagnating</li>
+                <li>Bangladesh maintained macroeconomic stability without IMF dependence for over a decade</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span class="acc-title">🇻🇳 The Vietnam Model — Can Pakistan Replicate It?</span>
+          <span class="acc-arrow">▼</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <p>Vietnam's exports-to-GDP ratio of 87% reflects a deliberate strategy of integrating into global value chains through aggressive FDI attraction (Samsung, Intel, Nike), low effective corporate tax rates for exporters, and investment in workforce skills.</p>
+            <div class="callout callout-info">
+              <strong>Preconditions Pakistan Currently Lacks</strong>
+              <ul style="margin-top:0.3rem; margin-left:1.1rem;">
+                <li>Political stability and policy continuity: Vietnam's single-party system (debatable model, but stable)</li>
+                <li>Competitive energy costs for manufacturing</li>
+                <li>Reliable infrastructure (power, logistics, ports)</li>
+                <li>Rule of law and contract enforcement for foreign investors</li>
+                <li>Low effective tax burden for export-oriented FDI</li>
+              </ul>
+            </div>
+            <div class="callout callout-success">
+              <strong>What Pakistan Could Borrow</strong>
+              Focus SEZs on genuinely export-oriented FDI with tax holidays, fast-track approvals, and dedicated infrastructure — not the current model of giving land to domestic real estate developers with an "SEZ" label.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: REFORMS -->
+    <div class="tab-pane" id="tab-reforms">
+
+      <h2 class="block-title">The Reform Agenda — A Prioritised Framework</h2>
+
+      <div class="callout callout-gold" style="margin-bottom:1.5rem;">
+        <strong>The Window of Opportunity</strong>
+        The current convergence of a functioning IMF program, improved relations with the Gulf and the US, falling inflation, and rebuilt reserves creates a rare window to implement painful but necessary structural reforms. As the editorial warns: the next crisis burst is not far if this window is wasted.
+      </div>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span class="acc-title">🚨 Immediate (0–12 Months) — Stabilise and Signal</span>
+          <span class="acc-arrow">▼</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul class="reform-list">
+              <li>
+                <div class="r-icon urgent">🔴</div>
+                <div><strong>Abolish super tax on corporations</strong> — currently making Pakistan's effective corporate rate one of the highest in the region. Replace with a credible medium-term revenue plan that does not further deter investment.</div>
+              </li>
+              <li>
+                <div class="r-icon urgent">🔴</div>
+                <div><strong>Tax the untaxed sectors</strong> — agriculture on large landholdings (>25 acres), large retail, and real estate capital gains. Pass the non-filer elimination bill in Parliament (submitted Jan 2025, pending).</div>
+              </li>
+              <li>
+                <div class="r-icon urgent">🔴</div>
+                <div><strong>Reduce income tax on salaried workers and exporters</strong> — current rates are driving brain drain and incentivising underreporting. A lower rate on a broader base will generate more revenue long-term.</div>
+              </li>
+              <li>
+                <div class="r-icon urgent">🔴</div>
+                <div><strong>Implement the National Fiscal Pact (Sept 2024)</strong> — provinces must take on their share of the development budget and social spending as agreed, freeing federal fiscal space for capital investment.</div>
+              </li>
+              <li>
+                <div class="r-icon urgent">🔴</div>
+                <div><strong>Credible roadmap for PIA privatisation</strong> — the process has been initiated; follow through is essential for market signalling.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span class="acc-title">🟠 Medium-Term (1–3 Years) — Structural Transformation</span>
+          <span class="acc-arrow">▼</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul class="reform-list">
+              <li>
+                <div class="r-icon medium">🟠</div>
+                <div><strong>Energy sector overhaul</strong> — resolve circular debt through a combination of tariff reform, distribution company privatisation, and renegotiation of IPP contracts. Bring industrial electricity tariffs in line with regional competitors.</div>
+              </li>
+              <li>
+                <div class="r-icon medium">🟠</div>
+                <div><strong>Export diversification strategy</strong> — move beyond textile dependence. Identify 3–5 sectors with revealed comparative advantage (surgical instruments, IT/ITeS, pharmaceuticals, halal food) and build targeted support ecosystems.</div>
+              </li>
+              <li>
+                <div class="r-icon medium">🟠</div>
+                <div><strong>Industrial policy reform</strong> — replace blanket import protection with time-bound, performance-conditional support for infant industries. Adopt a neutral incentive structure between domestic and export markets.</div>
+              </li>
+              <li>
+                <div class="r-icon medium">🟠</div>
+                <div><strong>Female labour force participation</strong> — at 24%, Pakistan leaves enormous productive capacity untapped. Targeted interventions: childcare, transport safety, skills training, and equal inheritance enforcement can shift this.</div>
+              </li>
+              <li>
+                <div class="r-icon medium">🟠</div>
+                <div><strong>Reduce government size</strong> — consolidate federal ministries, eliminate ghost employees, digitise service delivery (URAAN Pakistan's E-Pakistan pillar), and reduce the federal wage bill as a share of revenue.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="acc-header">
+          <span class="acc-title">🔵 Long-Term (3–10 Years) — Institutional & Human Capital</span>
+          <span class="acc-arrow">▼</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <ul class="reform-list">
+              <li>
+                <div class="r-icon long">🔵</div>
+                <div><strong>Human capital investment</strong> — Pakistan's learning poverty rate is among the highest in Asia. A decade-long push to reduce out-of-school children, improve learning outcomes, and align higher education with labour market demand is the only path to sustained productivity growth.</div>
+              </li>
+              <li>
+                <div class="r-icon long">🔵</div>
+                <div><strong>Build an independent civil service and judiciary</strong> — policy continuity and investor protection require institutions that outlast individual governments. Civil service reform and judicial efficiency are preconditions for long-run investment climate improvement.</div>
+              </li>
+              <li>
+                <div class="r-icon long">🔵</div>
+                <div><strong>Climate resilience infrastructure</strong> — the IMF Resilience and Sustainability Facility (2025) provides financing for flood defences, water pricing, and clean energy transition. Climate adaptation is not a luxury but an economic imperative.</div>
+              </li>
+              <li>
+                <div class="r-icon long">🔵</div>
+                <div><strong>Digital public infrastructure (DPI)</strong> — the URAAN Pakistan Digital Pillar and World Bank support for DPI offer a path to formalising the economy, broadening the tax base, and improving service delivery efficiency.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end tab-reforms -->
+  </div><!-- end tabs-wrap -->
+
+  <!-- ── TAKEAWAY ── -->
+  <div class="takeaway">
+    <h3>The Bottom Line</h3>
+    <p>
+      Pakistan's current macroeconomic "achievements" — falling inflation, a primary surplus, rebuilt reserves — are largely <strong style="color:var(--gold);">cyclical, not structural</strong>. They reflect demand destruction, import compression, and the passing of the global commodity shock — not a genuine transformation of productive capacity or governance quality.
+    </p>
+    <p style="margin-top:0.8rem;">
+      The country stands at a rare inflection point: a functioning IMF programme, improved geopolitical ties, and a brief window of financial calm. <strong style="color:var(--gold);">This window must be used to implement painful but necessary reforms</strong> — broadening the tax base, removing punitive burdens on the formal economy, resolving the energy crisis, and investing seriously in human capital. Without these, the next bust is a question of <em>when</em>, not <em>whether</em>.
+    </p>
+    <div class="author-tag">— Prof. Dr. Zahid Asghar · School of Economics, QAU · February 2026</div>
+  </div>
+
+</div><!-- end page -->
+
+<script>
+  // ── Tabs ──────────────────────────────────────────────────────
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + target).classList.add('active');
+    });
+  });
+
+  // ── Accordions ────────────────────────────────────────────────
+  document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const body  = header.nextElementSibling;
+      const arrow = header.querySelector('.acc-arrow');
+      const isOpen = body.classList.contains('open');
+      body.classList.toggle('open', !isOpen);
+      arrow.classList.toggle('open', !isOpen);
+    });
+  });
+
+  // ── Auto-open first accordion in active tab ───────────────────
+  document.addEventListener('DOMContentLoaded', () => {
+    const firstTab = document.querySelector('.tab-pane.active');
+    if (firstTab) {
+      const firstAcc = firstTab.querySelector('.acc-header');
+      if (firstAcc) firstAcc.click();
+    }
+  });
+
+  // ── Animate bars on scroll ────────────────────────────────────
+  const bars = document.querySelectorAll('.bar-fill');
+  bars.forEach(bar => {
+    const finalWidth = bar.style.width;
+    bar.style.width = '0%';
+    const obs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        bar.style.width = finalWidth;
+        obs.disconnect();
+      }
+    }, { threshold: 0.3 });
+    obs.observe(bar);
+  });
+</script>
+</body>
+</html>

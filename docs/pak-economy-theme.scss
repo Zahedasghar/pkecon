@@ -1,0 +1,324 @@
+/*-- scss:defaults --*/
+
+// ── Google Fonts ──────────────────────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+// ── Colour Palette ────────────────────────────────────────────────────────────
+$green:            #1a6b3c;
+$green-dark:       #0e2a1a;
+$green-mid:        #155c33;
+$green-light:      #2d8f5a;
+$green-pale:       #e8f3ed;
+$gold:             #c9a84c;
+$gold-light:       #f0d98a;
+$white-warm:       #f6f8f3;
+$text-dark:        #0e1f13;
+$text-muted:       #4a6355;
+$surface:          #ffffff;
+$border-col:       #cce0d4;
+$tinted:           #eef5f0;
+
+// ── Bootstrap / Quarto Overrides ──────────────────────────────────────────────
+$body-bg:                   $white-warm;
+$body-color:                $text-dark;
+$link-color:                $green;
+$link-hover-color:          $green-dark;
+$link-decoration:           none;
+
+$font-family-sans-serif:    'Source Sans 3', 'Segoe UI', Tahoma, sans-serif;
+$font-family-monospace:     'JetBrains Mono', 'Fira Mono', Consolas, monospace;
+$font-size-root:            17px;
+$line-height-base:          1.8;
+$font-weight-normal:        300;
+
+$headings-font-family:      'Playfair Display', Georgia, 'Times New Roman', serif;
+$headings-font-weight:      700;
+$headings-color:            $green;
+$headings-line-height:      1.2;
+
+$border-radius:             8px;
+$border-radius-lg:          12px;
+
+$table-border-color:        $border-col;
+$table-striped-bg:          $tinted;
+$table-hover-bg:            $green-pale;
+
+$code-color:                $gold;
+$code-bg:                   rgba(14, 42, 26, 0.06);
+
+$blockquote-font-size:      1rem;
+
+/*-- scss:rules --*/
+
+// ── Global ────────────────────────────────────────────────────────────────────
+html { scroll-behavior: smooth; }
+
+body {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+// ── Links ─────────────────────────────────────────────────────────────────────
+a {
+  color: $green;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+  &:hover { color: $green-dark; text-decoration: underline; }
+}
+
+// ── Headings ──────────────────────────────────────────────────────────────────
+h1.title {
+  font-size: 2.8rem;
+  color: $green-dark;
+  border-bottom: 3px solid $gold;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+p.author {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: $text-muted;
+  font-family: $font-family-sans-serif;
+}
+
+p.date {
+  font-family: $font-family-monospace;
+  font-size: 0.82rem;
+  color: $gold;
+  letter-spacing: 0.06em;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: $green;
+  border-bottom: 2px solid $border-col;
+  padding-bottom: 0.35rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 1.1em;
+    background: $gold;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: $green-dark;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  padding-left: 0.8rem;
+  border-left: 3px solid $green-light;
+}
+
+h4 {
+  font-family: $font-family-sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: $text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+// ── Paragraphs ────────────────────────────────────────────────────────────────
+p { margin-bottom: 1rem; }
+
+// ── Lists ─────────────────────────────────────────────────────────────────────
+ul, ol {
+  padding-left: 1.4rem;
+  margin-bottom: 0.8rem;
+
+  li {
+    margin-bottom: 0.3rem;
+    line-height: 1.7;
+  }
+}
+
+ul li::marker { color: $gold; }
+ol li::marker { color: $green; font-weight: 600; }
+
+// Nested lists
+ul ul, ol ul { margin-top: 0.2rem; margin-bottom: 0.2rem; }
+ul ul li::marker { color: $green-light; }
+
+// ── Horizontal Rule ───────────────────────────────────────────────────────────
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, $gold 30%, $green 70%, transparent 100%);
+  margin: 2.5rem 0;
+  opacity: 0.6;
+}
+
+// ── Blockquote ────────────────────────────────────────────────────────────────
+blockquote {
+  border-left: 4px solid $gold;
+  background: $tinted;
+  padding: 1rem 1.5rem;
+  border-radius: 0 $border-radius $border-radius 0;
+  font-style: italic;
+  color: $text-muted;
+  margin: 1.5rem 0;
+
+  p { margin-bottom: 0; }
+}
+
+// ── Tables ────────────────────────────────────────────────────────────────────
+table {
+  width: 100%;
+  font-size: 0.93rem;
+  border-collapse: collapse;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(14, 42, 26, 0.08);
+  margin: 1.2rem 0 1.8rem;
+}
+
+thead tr {
+  background: $green;
+}
+
+thead th {
+  color: #fff;
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.1rem;
+  border: none;
+}
+
+tbody td {
+  padding: 0.6rem 1.1rem;
+  border-bottom: 1px solid $border-col;
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even) td { background: $tinted; }
+tbody tr:hover td { background: $green-pale; transition: background 0.15s; }
+tbody tr:last-child td { border-bottom: none; }
+
+// ── Inline Code ───────────────────────────────────────────────────────────────
+code:not(pre > code) {
+  color: darken($gold, 10%);
+  background: rgba(14, 42, 26, 0.07);
+  padding: 0.12em 0.45em;
+  border-radius: 4px;
+  font-size: 0.87em;
+}
+
+// ── Code Blocks ───────────────────────────────────────────────────────────────
+pre.sourceCode {
+  background: $green-dark;
+  border-radius: $border-radius-lg;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 4px 20px rgba(14, 42, 26, 0.2);
+
+  code { color: #b9e4c9; background: transparent; }
+}
+
+// ── Callout Blocks (Quarto native) ────────────────────────────────────────────
+.callout {
+  border-radius: $border-radius-lg;
+  border-left-width: 5px;
+  font-size: 0.95rem;
+}
+
+.callout-note    { border-left-color: $green !important; }
+.callout-tip     { border-left-color: $gold  !important; }
+.callout-warning { border-left-color: #d97706 !important; }
+
+// ── TOC ───────────────────────────────────────────────────────────────────────
+#TOC {
+  font-size: 0.83rem;
+  font-family: $font-family-sans-serif;
+  border-right: 1px solid $border-col;
+  padding-right: 1rem;
+
+  .toc-title { 
+    font-weight: 700; 
+    color: $green;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    margin-bottom: 0.6rem;
+  }
+
+  a { color: $text-muted; line-height: 1.5; }
+  a:hover { color: $green; text-decoration: none; }
+
+  li.active > a {
+    color: $green;
+    font-weight: 600;
+    padding-left: 4px;
+    border-left: 2px solid $gold;
+  }
+}
+
+// ── Section numbers ───────────────────────────────────────────────────────────
+.header-section-number {
+  color: $gold;
+  font-family: $font-family-monospace;
+  font-size: 0.85em;
+  margin-right: 0.4em;
+}
+
+// ── Title block ───────────────────────────────────────────────────────────────
+#title-block-header {
+  border-bottom: none;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  background: linear-gradient(135deg, $green-dark 0%, $green-mid 60%, $green-light 100%);
+  padding: 3rem 2.5rem 2rem;
+  margin: -1rem -1rem 2.5rem;
+  border-bottom: 4px solid $gold;
+  border-radius: 0 0 $border-radius-lg $border-radius-lg;
+
+  .title {
+    color: #fff !important;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    border: none !important;
+    padding: 0;
+    margin-bottom: 0.4rem;
+
+    &::before { display: none; }
+  }
+
+  .author, .date {
+    color: rgba(255,255,255,0.85) !important;
+  }
+
+  .date {
+    font-family: $font-family-monospace;
+    font-size: 0.82rem;
+    color: $gold-light !important;
+    letter-spacing: 0.06em;
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+@media (max-width: 640px) {
+  #title-block-header { padding: 2rem 1.2rem 1.5rem; }
+  h2 { font-size: 1.35rem; }
+  h3 { font-size: 1.1rem; }
+  table { font-size: 0.82rem; }
+}
+
+// ── Print ─────────────────────────────────────────────────────────────────────
+@media print {
+  #title-block-header {
+    background: $green-dark !important;
+    -webkit-print-color-adjust: exact;
+  }
+  h2::before { background: $gold !important; }
+}

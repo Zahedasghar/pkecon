@@ -1,11 +1,5 @@
 ---
 title: "Economy of Pakistan"
-
-subtitle: "Course Syllabus | Spring 2026"
-author: "Zahid Asghar, School of Economics"
-date: "2026-02-16"
-affiliation: "School of Economics, Quaid-i-Azam University, Islamabad"
-
 format:
   html:
     toc: true
@@ -36,6 +30,7 @@ format:
     link-external-icon: true
     link-external-newwindow: true
     html-math-method: katex
+    include-before-body: title-block.html
 
 execute:
   echo: false

@@ -1,0 +1,143 @@
+/* ============================================================
+   pak-economy-components.css
+   Extra polish for standard Quarto/markdown-rendered elements.
+   No custom HTML classes required — works with pure .qmd markdown.
+   Pair with: pak-economy-theme.scss
+   ============================================================ */
+
+/* ── Body max-width & spacing ───────────────────────────────── */
+.page-columns.page-full {
+  max-width: 960px;
+}
+
+/* ── Strong / Bold ──────────────────────────────────────────── */
+strong {
+  color: #1a6b3c;
+  font-weight: 700;
+}
+
+/* ── Module heading separators (h3 under h2 "Course Outline") ── */
+.content h3 {
+  background: linear-gradient(to right, #eef5f0, transparent);
+  padding: 0.5rem 0.8rem 0.5rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-top: 1.8rem;
+}
+
+/* ── Nested bullet second level ─────────────────────────────── */
+ul ul {
+  margin-top: 0.25rem;
+  font-size: 0.93em;
+  color: #4a6355;
+}
+
+ul ul li::before {
+  color: #c9a84c;
+}
+
+/* ── Assessment list items ──────────────────────────────────── */
+section#assessment ul li,
+section#assessment ol li {
+  font-size: 1rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed #cce0d4;
+}
+
+section#assessment ul li:last-child,
+section#assessment ol li:last-child {
+  border-bottom: none;
+}
+
+/* ── Reference section list items ───────────────────────────── */
+section#text-reference-books ul li,
+section#references ul li {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #d4e6da;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+section#text-reference-books ul li:last-child,
+section#references ul li:last-child {
+  border-bottom: none;
+}
+
+section#text-reference-books h3,
+section#references h3 {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #c9a84c;
+  background: #0e2a1a;
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 100px;
+  margin-bottom: 0.6rem;
+  margin-top: 1.6rem;
+  border-left: none;
+}
+
+/* ── Course objectives / learning outcomes sections ─────────── */
+section#course-objectives ol li,
+section#learning-outcomes ul li {
+  padding: 0.35rem 0;
+  font-size: 1rem;
+  border-left: 2px solid #c9a84c;
+  padding-left: 0.9rem;
+  margin-bottom: 0.5rem;
+  background: #f6f8f3;
+  border-radius: 0 6px 6px 0;
+}
+
+/* ── Horizontal rule extra flair ────────────────────────────── */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #c9a84c 35%, #1a6b3c 65%, transparent 100%);
+  margin: 2.5rem 0;
+  opacity: 0.5;
+}
+
+/* ── Footer / last element ──────────────────────────────────── */
+.page-footer,
+footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #4a6355;
+  letter-spacing: 0.05em;
+  border-top: 1px solid #cce0d4;
+  padding-top: 0.8rem;
+  margin-top: 3rem;
+}
+
+/* ── Inline links in reference lists ────────────────────────── */
+section#text-reference-books a,
+section#references a {
+  font-size: 0.82rem;
+  color: #1a6b3c;
+  border-bottom: 1px dashed #c9a84c;
+  text-decoration: none;
+}
+
+section#text-reference-books a:hover,
+section#references a:hover {
+  color: #0e2a1a;
+  border-bottom-style: solid;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  section#course-objectives ol li,
+  section#learning-outcomes ul li {
+    font-size: 0.95rem;
+  }
+}
+
+/* ── Print ───────────────────────────────────────────────────── */
+@media print {
+  section#text-reference-books h3 {
+    background: #0e2a1a !important;
+    color: #c9a84c !important;
+    -webkit-print-color-adjust: exact;
+  }
+}
