@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GDP & GNP Learning App</title>
+  <style>
+    :root{
+      --bg:#f6f8f3;
+      --card:#ffffff;
+      --text:#0e1f13;
+      --muted:#2b3f34;
+      --green:#1a6b3c;
+      --greenDark:#0e2a1a;
+      --gold:#c9a84c;
+      --blue:#1d5fa8;
+      --red:#c0392b;
+      --border:#cce0d4;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    header{
+      background:linear-gradient(135deg, var(--greenDark), #163a25);
+      color:#fff;
+      padding:18px 16px;
+      border-bottom:4px solid var(--gold);
+    }
+    header .wrap{max-width:1100px;margin:0 auto;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+    header h1{margin:0;font-size:20px;letter-spacing:.2px}
+    header p{margin:0;color:rgba(255,255,255,.8);font-size:13px}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:8px 10px;border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;color:rgba(255,255,255,.9);font-size:12px
+    }
+    main{max-width:1100px;margin:18px auto;padding:0 16px 28px;}
+    nav{
+      display:flex;gap:8px;flex-wrap:wrap;
+      margin:12px 0 16px;
+    }
+    .tab{
+      border:1px solid var(--border);
+      background:var(--card);
+      padding:10px 12px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:650;
+      color:var(--muted);
+      transition:.15s;
+    }
+    .tab.active{
+      background:rgba(26,107,60,.08);
+      border-color:rgba(26,107,60,.35);
+      color:var(--greenDark);
+    }
+    .grid{
+      display:grid;
+      gap:14px;
+      grid-template-columns: 1.2fr .8fr;
+    }
+    @media (max-width:900px){ .grid{grid-template-columns:1fr;} }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px;
+      box-shadow:0 8px 18px rgba(14,31,19,.06);
+    }
+    .card h2{margin:0 0 10px;font-size:18px}
+    .muted{color:var(--muted)}
+    .note{
+      background:rgba(201,168,76,.12);
+      border:1px solid rgba(201,168,76,.35);
+      border-radius:12px;
+      padding:10px 12px;
+      margin-top:10px;
+    }
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    label{font-size:12px;color:var(--muted);font-weight:650}
+    input[type="number"], select{
+      width: 170px;
+      padding:10px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      font-size:14px;
+      outline:none;
+      background:#fff;
+    }
+    input[type="number"]:focus, select:focus{border-color:rgba(26,107,60,.5)}
+    .btn{
+      border:none;
+      padding:10px 12px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:750;
+      background:var(--green);
+      color:#fff;
+      transition:.15s;
+    }
+    .btn.secondary{background:#eef6ff;color:var(--blue);border:1px solid rgba(29,95,168,.25)}
+    .btn.danger{background:#fff;border:1px solid rgba(192,57,43,.35);color:var(--red)}
+    .btn:active{transform:translateY(1px)}
+    .kpi{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top:10px;
+    }
+    .kpi .box{
+      border-radius:12px;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      background:rgba(26,107,60,.06);
+    }
+    .kpi .box strong{display:block;font-size:12px;color:var(--muted)}
+    .kpi .box span{display:block;font-size:18px;font-weight:800;color:var(--greenDark);margin-top:4px}
+    .eq{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "JetBrains Mono", monospace;
+      background:#0e2a1a;
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      display:inline-block;
+      margin:6px 0 4px;
+    }
+    .badge{
+      display:inline-block;
+      padding:4px 8px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+    }
+    .badge.ok{background:rgba(26,107,60,.12);color:var(--greenDark);border:1px solid rgba(26,107,60,.25)}
+    .badge.no{background:rgba(192,57,43,.10);color:var(--red);border:1px solid rgba(192,57,43,.25)}
+    .badge.mid{background:rgba(29,95,168,.10);color:var(--blue);border:1px solid rgba(29,95,168,.25)}
+    .divider{height:1px;background:var(--border);margin:12px 0}
+    .qa{border:1px solid var(--border);border-radius:12px;padding:10px 12px;margin:10px 0;background:#fff}
+    .qa h3{margin:0 0 8px;font-size:15px}
+    .opt{display:flex;gap:10px;align-items:flex-start;margin:8px 0;cursor:pointer}
+    .opt input{margin-top:3px}
+    .feedback{margin-top:8px;font-weight:700}
+    .feedback.good{color:var(--greenDark)}
+    .feedback.bad{color:var(--red)}
+    .mini{
+      font-size:12px;color:var(--muted)
+    }
+    .list{
+      padding-left:18px;margin:8px 0;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div>
+      <h1>GDP & GNP/GNI Learning App</h1>
+      <p>Understand the difference, calculate with real numbers, practice scenarios, and take a quiz.</p>
+    </div>
+    <div class="pill" id="statusPill">Mode: <strong id="modeText">Student</strong> • <span id="scoreText">Quiz score: 0</span></div>
+  </div>
+</header>
+
+<main>
+  <nav>
+    <button class="tab active" data-tab="learn">📘 Learn</button>
+    <button class="tab" data-tab="calc">🧮 Calculator</button>
+    <button class="tab" data-tab="scenarios">🎭 Scenarios</button>
+    <button class="tab" data-tab="quiz">✅ Quiz</button>
+    <button class="tab" data-tab="teacher">🧑‍🏫 Teacher Mode</button>
+  </nav>
+
+  <!-- LEARN -->
+  <section id="learn" class="tabpane">
+    <div class="grid">
+      <div class="card">
+        <h2>GDP (Like you’re a child)</h2>
+        <p><strong>GDP</strong> is like counting everything the country <strong>makes</strong> inside its borders in a year.</p>
+        <div class="eq">GDP = “Total value of things made inside the country”</div>
+        <ul class="list">
+          <li>Car made in Lahore ✅ counts in Pakistan’s GDP</li>
+          <li>Pakistani worker makes a car in Dubai ❌ not in Pakistan’s GDP</li>
+        </ul>
+        <div class="note">
+          <strong>Domestic = inside the country.</strong> GDP cares about <em>where</em> production happens.
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>GNP / GNI (Simple idea)</h2>
+        <p><strong>GNP (or GNI)</strong> counts income earned by a country’s <strong>residents</strong>, even if they earn it abroad.</p>
+        <div class="eq">GNP = GDP + (income residents earn abroad − income foreigners earn here)</div>
+        <ul class="list">
+          <li>Pakistani doctor in the UK ✅ adds to Pakistan’s GNP/GNI</li>
+          <li>Foreign company profits sent abroad ❌ reduces Pakistan’s GNP/GNI</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2>Key Difference</h2>
+        <div class="row">
+          <span class="badge ok">GDP: Where?</span>
+          <span class="muted">Inside borders (territory)</span>
+        </div>
+        <div class="row" style="margin-top:8px;">
+          <span class="badge mid">GNP/GNI: Who?</span>
+          <span class="muted">Residents’ income (nationality/residency)</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Two Equations to Remember</h2>
+        <p class="mini">These are the ones your slides use.</p>
+        <div class="eq">GDP = C + I + G + (X − M)</div>
+        <p class="muted mini">
+          C=Consumption, I=Investment, G=Government spending, X=Exports, M=Imports.
+        </p>
+        <div class="eq">GNP/GNI = GDP + NFIA</div>
+        <p class="muted mini">
+          NFIA = Net Factor Income from Abroad = (earned abroad) − (paid to foreigners).
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Why GDP can “lie”</h2>
+        <ul class="list">
+          <li>GDP can rise but poverty may still rise (distribution).</li>
+          <li>Home work (cooking/childcare) not counted.</li>
+          <li>Pollution damage not subtracted.</li>
+          <li>Informal economy may be missed.</li>
+        </ul>
+
+        <div class="note">
+          <strong>Tip for class:</strong> Use GDP to measure <em>production</em>, not happiness.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calc" class="tabpane" style="display:none;">
+    <div class="grid">
+      <div class="card">
+        <h2>GDP Calculator (Expenditure Approach)</h2>
+        <p class="muted mini">Enter values in billions (PKR or USD — just be consistent).</p>
+
+        <div class="row">
+          <div>
+            <label>C (Consumption)</label><br/>
+            <input type="number" id="C" value="0" step="0.1" />
+          </div>
+          <div>
+            <label>I (Investment)</label><br/>
+            <input type="number" id="I" value="0" step="0.1" />
+          </div>
+          <div>
+            <label>G (Government)</label><br/>
+            <input type="number" id="G" value="0" step="0.1" />
+          </div>
+          <div>
+            <label>X (Exports)</label><br/>
+            <input type="number" id="X" value="0" step="0.1" />
+          </div>
+          <div>
+            <label>M (Imports)</label><br/>
+            <input type="number" id="M" value="0" step="0.1" />
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:12px;">
+          <button class="btn" id="calcGDP">Calculate GDP</button>
+          <button class="btn secondary" id="loadExampleGDP">Load Example</button>
+          <button class="btn danger" id="resetGDP">Reset</button>
+        </div>
+
+        <div class="kpi">
+          <div class="box">
+            <strong>Net Exports (X − M)</strong>
+            <span id="NX">0</span>
+          </div>
+          <div class="box">
+            <strong>GDP</strong>
+            <span id="GDPout">0</span>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Interpretation:</strong> If (X − M) is negative, imports exceed exports → external gap.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>GNP / GNI Calculator</h2>
+        <p class="muted mini">Start from GDP and add NFIA (Net Factor Income from Abroad).</p>
+
+        <div class="row">
+          <div>
+            <label>GDP (from above)</label><br/>
+            <input type="number" id="GDPin" value="0" step="0.1" />
+          </div>
+          <div>
+            <label>Income earned abroad by residents</label><br/>
+            <input type="number" id="EarnAbroad" value="0" step="0.1" />
+          </div>
+          <div>
+            <label>Income paid to foreigners inside country</label><br/>
+            <input type="number" id="PaidForeign" value="0" step="0.1" />
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:12px;">
+          <button class="btn" id="calcGNP">Calculate GNP/GNI</button>
+          <button class="btn secondary" id="copyGDP">Copy GDP → GNP input</button>
+          <button class="btn danger" id="resetGNP">Reset</button>
+        </div>
+
+        <div class="kpi">
+          <div class="box">
+            <strong>NFIA = (EarnAbroad − PaidForeign)</strong>
+            <span id="NFIA">0</span>
+          </div>
+          <div class="box">
+            <strong>GNP / GNI</strong>
+            <span id="GNPout">0</span>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Common Pakistan intuition:</strong> remittances & overseas income often make GNI higher than GDP.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENARIOS -->
+  <section id="scenarios" class="tabpane" style="display:none;">
+    <div class="grid">
+      <div class="card">
+        <h2>Scenario Game: GDP or GNP?</h2>
+        <p class="muted mini">Pick whether each item counts in GDP, GNP, both, or neither.</p>
+        <div id="scenarioBox"></div>
+        <div class="row" style="margin-top:10px;">
+          <button class="btn" id="checkScenario">Check</button>
+          <button class="btn secondary" id="nextScenario">Next</button>
+          <button class="btn danger" id="resetScenario">Reset</button>
+        </div>
+        <div id="scenarioFeedback" class="feedback"></div>
+      </div>
+
+      <div class="card">
+        <h2>Quick Rule</h2>
+        <div class="qa">
+          <h3>Ask two questions:</h3>
+          <ul class="list">
+            <li><strong>Where</strong> was it produced? → GDP</li>
+            <li><strong>Who</strong> earned the income (resident)? → GNP/GNI</li>
+          </ul>
+        </div>
+        <div class="note">
+          <strong>Teacher tip:</strong> Use your CPEC engineer vs UK doctor example here — it’s perfect.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="tabpane" style="display:none;">
+    <div class="grid">
+      <div class="card">
+        <h2>Quiz</h2>
+        <p class="muted mini">Select one option for each question and submit.</p>
+        <div id="quizBox"></div>
+        <div class="row" style="margin-top:10px;">
+          <button class="btn" id="submitQuiz">Submit</button>
+          <button class="btn secondary" id="newQuiz">New Questions</button>
+          <button class="btn danger" id="resetQuiz">Reset Score</button>
+        </div>
+        <div id="quizResult" class="note" style="display:none;"></div>
+      </div>
+
+      <div class="card">
+        <h2>Why your answer is right</h2>
+        <p class="muted mini">After submitting, explanations appear under each question.</p>
+        <div class="note">
+          <strong>Goal:</strong> Students should be able to explain GDP vs GNP in one minute with examples.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHER MODE -->
+  <section id="teacher" class="tabpane" style="display:none;">
+    <div class="grid">
+      <div class="card">
+        <h2>Teacher Mode</h2>
+        <p class="muted mini">Change tone, add Pakistan examples, and export a printable worksheet.</p>
+
+        <div class="row">
+          <div>
+            <label>App Mode</label><br/>
+            <select id="modeSelect">
+              <option value="Student" selected>Student (simple)</option>
+              <option value="Teacher">Teacher (more detail)</option>
+            </select>
+          </div>
+          <div>
+            <label>Currency label (display only)</label><br/>
+            <select id="currencySelect">
+              <option value="PKR">PKR</option>
+              <option value="USD" selected>USD</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Printable Worksheet (1 page)</h2>
+        <p class="muted mini">Click to generate a worksheet students can fill in (opens print dialog).</p>
+        <div class="row">
+          <button class="btn" id="printWorksheet">Print Worksheet</button>
+          <button class="btn secondary" id="loadPakistanPreset">Load Pakistan-like Preset</button>
+        </div>
+
+        <div class="note">
+          <strong>Pakistan preset:</strong> High C share, low I share, negative NX, positive NFIA.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>What to emphasize in class</h2>
+        <ul class="list">
+          <li><strong>GDP</strong> is about production inside borders.</li>
+          <li><strong>GNP/GNI</strong> is about residents’ income (includes abroad).</li>
+          <li><strong>Nominal vs Real GDP</strong> matters for welfare.</li>
+          <li><strong>Informal economy</strong> and <strong>distribution</strong> are why GDP can mislead.</li>
+        </ul>
+        <div class="note">
+          <strong>Mini activity:</strong> Ask students: “If a Pakistani earns abroad, does GDP change?” → No. GNI does.
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  // ------------------------
+  // Tabs
+  // ------------------------
+  const tabs = document.querySelectorAll(".tab");
+  const panes = document.querySelectorAll(".tabpane");
+  tabs.forEach(t => t.addEventListener("click", () => {
+    tabs.forEach(x => x.classList.remove("active"));
+    t.classList.add("active");
+    const id = t.dataset.tab;
+    panes.forEach(p => p.style.display = (p.id === id ? "" : "none"));
+  }));
+
+  // ------------------------
+  // Global state
+  // ------------------------
+  let appMode = "Student";
+  let currency = "USD";
+  let quizScore = Number(localStorage.getItem("quizScore") || "0");
+  const scoreText = document.getElementById("scoreText");
+  const modeText = document.getElementById("modeText");
+  function refreshHeader(){
+    modeText.textContent = appMode;
+    scoreText.textContent = `Quiz score: ${quizScore}`;
+  }
+  refreshHeader();
+
+  // ------------------------
+  // GDP Calculator
+  // ------------------------
+  const fmt = (n) => {
+    const num = Number(n || 0);
+    return `${num.toLocaleString(undefined, {maximumFractionDigits: 2})} ${currency}`;
+  };
+
+  const el = (id) => document.getElementById(id);
+  const calcGDPBtn = el("calcGDP");
+  const loadExampleGDP = el("loadExampleGDP");
+  const resetGDP = el("resetGDP");
+  const NX = el("NX");
+  const GDPout = el("GDPout");
+
+  function computeGDP(){
+    const C = Number(el("C").value || 0);
+    const I = Number(el("I").value || 0);
+    const G = Number(el("G").value || 0);
+    const X = Number(el("X").value || 0);
+    const M = Number(el("M").value || 0);
+    const nx = X - M;
+    const gdp = C + I + G + nx;
+
+    NX.textContent = fmt(nx);
+    GDPout.textContent = fmt(gdp);
+
+    // keep GDPin synced (nice UX)
+    el("GDPin").value = gdp.toFixed(2);
+  }
+
+  calcGDPBtn.addEventListener("click", computeGDP);
+  loadExampleGDP.addEventListener("click", () => {
+    // Example resembling Pakistan shares (illustrative):
+    el("C").value = 290;
+    el("I").value = 50;
+    el("G").value = 70;
+    el("X").value = 35;
+    el("M").value = 65;
+    computeGDP();
+  });
+  resetGDP.addEventListener("click", () => {
+    ["C","I","G","X","M"].forEach(id => el(id).value = 0);
+    computeGDP();
+  });
+
+  // ------------------------
+  // GNP Calculator
+  // ------------------------
+  const calcGNPBtn = el("calcGNP");
+  const copyGDPBtn = el("copyGDP");
+  const resetGNPBtn = el("resetGNP");
+  const NFIA = el("NFIA");
+  const GNPout = el("GNPout");
+
+  function computeGNP(){
+    const GDP = Number(el("GDPin").value || 0);
+    const EarnAbroad = Number(el("EarnAbroad").value || 0);
+    const PaidForeign = Number(el("PaidForeign").value || 0);
+    const nfia = EarnAbroad - PaidForeign;
+    const gnp = GDP + nfia;
+
+    NFIA.textContent = fmt(nfia);
+    GNPout.textContent = fmt(gnp);
+  }
+
+  calcGNPBtn.addEventListener("click", computeGNP);
+  copyGDPBtn.addEventListener("click", () => {
+    const gdpText = GDPout.textContent;
+    // get numeric from GDPout might include currency; safer: use GDPin already synced
+    // still, copy just uses GDPin
+    el("GDPin").value = Number(el("GDPin").value || 0).toFixed(2);
+  });
+  resetGNPBtn.addEventListener("click", () => {
+    ["GDPin","EarnAbroad","PaidForeign"].forEach(id => el(id).value = 0);
+    computeGNP();
+  });
+
+  // ------------------------
+  // Scenario Game
+  // ------------------------
+  const scenarios = [
+    {
+      text: "A Chinese engineer works on a project inside Pakistan and is paid for work done in Pakistan.",
+      correct: "GDP only",
+      explain: "Production happened inside Pakistan → GDP. If income is sent abroad and the worker is not a resident, it doesn’t add to Pakistan’s GNP/GNI."
+    },
+    {
+      text: "A Pakistani doctor works in the UK and earns income there, then sends money home.",
+      correct: "GNP only",
+      explain: "Production is outside Pakistan → not GDP. Income belongs to resident → counts in GNP/GNI."
+    },
+    {
+      text: "A textile factory in Faisalabad produces cloth and sells it in Karachi.",
+      correct: "Both",
+      explain: "Produced inside Pakistan → GDP, and income to residents (typically) → also in GNP/GNI."
+    },
+    {
+      text: "You buy an old used car (second-hand).",
+      correct: "Neither",
+      explain: "Used assets resale is not new production → not GDP. (Only dealer services/fees are part of GDP.)"
+    },
+    {
+      text: "A foreign-owned company in Pakistan earns profit and repatriates it abroad.",
+      correct: "GDP only",
+      explain: "Production in Pakistan → GDP. But profits going to foreigners reduce NFIA → lowers GNP/GNI."
+    }
+  ];
+
+  let scenarioIndex = 0;
+  const scenarioBox = document.getElementById("scenarioBox");
+  const scenarioFeedback = document.getElementById("scenarioFeedback");
+
+  function renderScenario(){
+    const s = scenarios[scenarioIndex];
+    scenarioFeedback.textContent = "";
+    scenarioFeedback.className = "feedback";
+    scenarioBox.innerHTML = `
+      <div class="qa">
+        <h3>Scenario ${scenarioIndex+1} / ${scenarios.length}</h3>
+        <p>${s.text}</p>
+        <div class="divider"></div>
+        <div>
+          <label><strong>Does it count in…</strong></label>
+          <div class="opt"><input type="radio" name="sc" value="GDP only" /> GDP only</div>
+          <div class="opt"><input type="radio" name="sc" value="GNP only" /> GNP/GNI only</div>
+          <div class="opt"><input type="radio" name="sc" value="Both" /> Both</div>
+          <div class="opt"><input type="radio" name="sc" value="Neither" /> Neither</div>
+        </div>
+        <div class="mini">Tip: GDP asks “Where?” GNP asks “Who earned the income?”</div>
+      </div>
+    `;
+  }
+  renderScenario();
+
+  document.getElementById("checkScenario").addEventListener("click", () => {
+    const picked = document.querySelector('input[name="sc"]:checked');
+    if(!picked){
+      scenarioFeedback.textContent = "Pick an option first.";
+      scenarioFeedback.className = "feedback bad";
+      return;
+    }
+    const s = scenarios[scenarioIndex];
+    if(picked.value === s.correct){
+      scenarioFeedback.textContent = `✅ Correct. ${s.explain}`;
+      scenarioFeedback.className = "feedback good";
+    }else{
+      scenarioFeedback.textContent = `❌ Not quite. Correct: ${s.correct}. ${s.explain}`;
+      scenarioFeedback.className = "feedback bad";
+    }
+  });
+
+  document.getElementById("nextScenario").addEventListener("click", () => {
+    scenarioIndex = (scenarioIndex + 1) % scenarios.length;
+    renderScenario();
+  });
+
+  document.getElementById("resetScenario").addEventListener("click", () => {
+    scenarioIndex = 0;
+    renderScenario();
+  });
+
+  // ------------------------
+  // Quiz
+  // ------------------------
+  const questionBank = [
+    {
+      q: "GDP mainly measures…",
+      options: ["Residents' income anywhere", "Production inside the country", "Happiness and welfare", "Only government spending"],
+      a: 1,
+      why: "GDP is territorial: value of final goods/services produced within borders."
+    },
+    {
+      q: "A Pakistani earning income in Saudi Arabia affects Pakistan’s…",
+      options: ["GDP only", "GNP/GNI only", "Both GDP and GNP", "Neither"],
+      a: 1,
+      why: "Income earned abroad by residents is included in GNP/GNI, not GDP."
+    },
+    {
+      q: "Which is the expenditure formula for GDP?",
+      options: ["GDP = Wages + Rents + Profits", "GDP = C + I + G + (X − M)", "GDP = GDP − Inflation", "GDP = Exports − Imports only"],
+      a: 1,
+      why: "That’s the standard expenditure identity."
+    },
+    {
+      q: "Selling a used car counts in GDP as…",
+      options: ["Full car value", "Only the dealer/service margin (if any)", "Not at all in any form", "Only in GNP"],
+      a: 1,
+      why: "Resale is not new production; only services/fees are new output."
+    },
+    {
+      q: "If foreign profits are sent abroad, it tends to…",
+      options: ["Increase NFIA", "Decrease NFIA", "Increase exports", "Increase CPI"],
+      a: 1,
+      why: "Income paid to foreigners increases outflow → NFIA falls."
+    }
+  ];
+
+  function pickRandom(arr, n){
+    const copy = [...arr];
+    const out = [];
+    while(out.length < n && copy.length){
+      const i = Math.floor(Math.random() * copy.length);
+      out.push(copy.splice(i,1)[0]);
+    }
+    return out;
+  }
+
+  let quizSet = pickRandom(questionBank, 4);
+  const quizBox = document.getElementById("quizBox");
+  const quizResult = document.getElementById("quizResult");
+
+  function renderQuiz(){
+    quizResult.style.display = "none";
+    quizResult.innerHTML = "";
+    quizBox.innerHTML = quizSet.map((item, idx) => {
+      const opts = item.options.map((o, j) => `
+        <label class="opt">
+          <input type="radio" name="q${idx}" value="${j}"/>
+          <span>${o}</span>
+        </label>
+      `).join("");
+      return `
+        <div class="qa" id="qa${idx}">
+          <h3>Q${idx+1}. ${item.q}</h3>
+          ${opts}
+          <div class="mini" id="why${idx}" style="display:none;"></div>
+        </div>
+      `;
+    }).join("");
+  }
+  renderQuiz();
+
+  document.getElementById("submitQuiz").addEventListener("click", () => {
+    let correct = 0;
+    quizSet.forEach((item, idx) => {
+      const picked = document.querySelector(`input[name="q${idx}"]:checked`);
+      const qa = document.getElementById(`qa${idx}`);
+      const why = document.getElementById(`why${idx}`);
+      why.style.display = "";
+      if(!picked){
+        qa.style.borderColor = "rgba(192,57,43,.35)";
+        why.innerHTML = `<span class="badge no">No answer</span> ${item.why}`;
+        return;
+      }
+      const val = Number(picked.value);
+      if(val === item.a){
+        correct++;
+        qa.style.borderColor = "rgba(26,107,60,.35)";
+        why.innerHTML = `<span class="badge ok">Correct</span> ${item.why}`;
+      }else{
+        qa.style.borderColor = "rgba(192,57,43,.35)";
+        why.innerHTML = `<span class="badge no">Incorrect</span> Correct option: <strong>${item.options[item.a]}</strong>. ${item.why}`;
+      }
+    });
+
+    quizScore += correct;
+    localStorage.setItem("quizScore", String(quizScore));
+    refreshHeader();
+
+    quizResult.style.display = "";
+    quizResult.innerHTML = `<strong>Result:</strong> You got <strong>${correct}</strong> out of <strong>${quizSet.length}</strong> correct. Your total score is now <strong>${quizScore}</strong>.`;
+  });
+
+  document.getElementById("newQuiz").addEventListener("click", () => {
+    quizSet = pickRandom(questionBank, 4);
+    renderQuiz();
+  });
+
+  document.getElementById("resetQuiz").addEventListener("click", () => {
+    quizScore = 0;
+    localStorage.setItem("quizScore", "0");
+    refreshHeader();
+    quizResult.style.display = "none";
+    quizResult.innerHTML = "";
+  });
+
+  // ------------------------
+  // Teacher Mode
+  // ------------------------
+  const modeSelect = document.getElementById("modeSelect");
+  const currencySelect = document.getElementById("currencySelect");
+
+  modeSelect.addEventListener("change", () => {
+    appMode = modeSelect.value;
+    refreshHeader();
+  });
+  currencySelect.addEventListener("change", () => {
+    currency = currencySelect.value;
+    // recompute displayed outputs
+    computeGDP();
+    computeGNP();
+  });
+
+  document.getElementById("loadPakistanPreset").addEventListener("click", () => {
+    // Illustrative: high consumption, low investment, negative NX, positive NFIA
+    // Use in USD bn style, but user may change currency label.
+    el("C").value = 300;
+    el("I").value = 55;
+    el("G").value = 75;
+    el("X").value = 32;
+    el("M").value = 62;
+    computeGDP();
+    el("EarnAbroad").value = 30;
+    el("PaidForeign").value = 7;
+    computeGNP();
+    // Jump to calculator tab
+    document.querySelector('.tab[data-tab="calc"]').click();
+  });
+
+  document.getElementById("printWorksheet").addEventListener("click", () => {
+    const w = window.open("", "_blank");
+    const html = `
+      <html>
+      <head>
+        <title>GDP & GNP Worksheet</title>
+        <style>
+          body{font-family:Arial, sans-serif; padding:24px; line-height:1.5;}
+          h1{margin:0 0 10px;}
+          .box{border:1px solid #999; padding:10px 12px; border-radius:10px; margin:10px 0;}
+          .eq{font-family:Consolas, monospace; background:#111; color:#fff; padding:8px 10px; border-radius:8px; display:inline-block;}
+          .line{border-bottom:1px dotted #555; height:18px; margin:6px 0;}
+          .small{color:#444; font-size:12px;}
+        </style>
+      </head>
+      <body>
+        <h1>Worksheet: GDP vs GNP/GNI</h1>
+        <div class="small">Name: ____________________  Date: ____________</div>
+
+        <div class="box">
+          <h3>1) Write the meanings (in one sentence each)</h3>
+          <strong>GDP:</strong> <div class="line"></div>
+          <strong>GNP/GNI:</strong> <div class="line"></div>
+        </div>
+
+        <div class="box">
+          <h3>2) Use the expenditure formula</h3>
+          <div class="eq">GDP = C + I + G + (X − M)</div>
+          <p>Fill values (${currency} bn):</p>
+          C: ____  I: ____  G: ____  X: ____  M: ____  → GDP: ________
+        </div>
+
+        <div class="box">
+          <h3>3) Convert GDP to GNP/GNI</h3>
+          <div class="eq">GNP/GNI = GDP + (EarnAbroad − PaidForeign)</div>
+          EarnAbroad: ____  PaidForeign: ____  → NFIA: ____  → GNP/GNI: ________
+        </div>
+
+        <div class="box">
+          <h3>4) Scenarios (Circle)</h3>
+          <ol>
+            <li>Pakistani works in UK: GDP / GNP / Both / Neither</li>
+            <li>Foreign company profits repatriated: GDP / GNP / Both / Neither</li>
+            <li>Used car resale: GDP / GNP / Both / Neither</li>
+          </ol>
+        </div>
+
+        <div class="small">
+          Reminder: GDP asks “Where?” (inside borders). GNP/GNI asks “Who?” (residents’ income).
+        </div>
+
+        <script>window.print();<\/script>
+      </body>
+      </html>
+    `;
+    w.document.open();
+    w.document.write(html);
+    w.document.close();
+  });
+
+  // Initial computations
+  computeGDP();
+  computeGNP();
+</script>
+</body>
+</html>
