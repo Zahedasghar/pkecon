@@ -1,0 +1,1188 @@
+---
+title: "Economy of Pakistan"
+subtitle: "Measuring National Output: GDP, GNP & What the Numbers Hide"
+author: "Zahid Asghar"
+institute: "School of Economics, Quaid-i-Azam University, Islamabad"
+date: "Spring 2026"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    width: 1280
+    height: 720
+    margin: 0.07
+    transition: slide
+    background-transition: fade
+    footer: "Economy of Pakistan · GDP & GNP · Zahid Asghar · QAU"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{=html}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  --green:       #1a6b3c;
+  --green-dark:  #0e2a1a;
+  --green-light: #2d8f5a;
+  --green-pale:  #e8f3ed;
+  --gold:        #c9a84c;
+  --gold-lt:     #f0d98a;
+  --off-white:   #f6f8f3;
+  --text-dark:   #0e1f13;
+
+  /* was #3a5244 (too faint on projectors) */
+  --text-muted:  #2b3f34;
+
+  --red:         #c0392b;
+  --amber:       #b45309;
+  --amber-bg:    #fffbeb;
+  --blue:        #1d5fa8;
+  --blue-bg:     #eff6ff;
+  --border:      #cce0d4;
+}
+
+.reveal {
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  font-size: 26px;
+  color: var(--text-dark);
+}
+.reveal .slides { text-align: left; }
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.reveal h2 {
+  font-size: 1.45em;
+  color: var(--green);
+  border-left: 5px solid var(--gold);
+  padding-left: 0.5em;
+  margin-bottom: 0.55em;
+}
+.reveal h3 { font-size: 1.05em; color: var(--green-dark); margin-bottom: 0.3em; }
+.reveal p  { margin: 0.35em 0; line-height: 1.7; }
+.reveal ul, .reveal ol { margin-left: 1.2em; line-height: 1.8; }
+.reveal li { margin-bottom: 0.3em; }
+.reveal strong { color: var(--green-dark); font-weight: 700; }
+
+/* Default slide background */
+.reveal .slide-background-content { background: var(--off-white); }
+
+/* Dark slides */
+.reveal .slides section[data-background-color="#0e2a1a"] h1,
+.reveal .slides section[data-background-color="#0e2a1a"] h2,
+.reveal .slides section[data-background-color="#0e2a1a"] h3,
+.reveal .slides section[data-background-color="#0e2a1a"] p,
+.reveal .slides section[data-background-color="#0e2a1a"] li { color: #fff !important; }
+.reveal .slides section[data-background-color="#0e2a1a"] h2 {
+  border-left-color: var(--gold) !important;
+}
+.reveal .slides section[data-background-color="#0e2a1a"] strong { color: var(--gold-lt) !important; }
+
+.reveal .slides section[data-background-color="#1a2744"] h2,
+.reveal .slides section[data-background-color="#1a2744"] h3,
+.reveal .slides section[data-background-color="#1a2744"] p,
+.reveal .slides section[data-background-color="#1a2744"] li { color: #fff !important; }
+.reveal .slides section[data-background-color="#1a2744"] strong { color: var(--gold-lt) !important; }
+
+/* Part-title slides */
+.part-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 68vh;
+  padding: 0;
+}
+.part-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5em;
+}
+.part-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.4em;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 0.4em;
+}
+.part-sub { font-size: 1.0em; color: rgba(255,255,255,0.7); }
+
+/* Boxes */
+.box {
+  padding: 0.9em 1.1em;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.93em;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+.box.green   { background: var(--green-pale); border-left: 4px solid var(--green); }
+.box.warning { background: #fdf2f2;           border-left: 4px solid var(--red); }
+.box.info    { background: var(--blue-bg);    border-left: 4px solid var(--blue); }
+.box.gold    { background: var(--amber-bg);   border-left: 4px solid #d97706; }
+.box.dark    { background: var(--green-dark); border-left: 4px solid var(--gold);
+               color: rgba(255,255,255,0.92); }
+.box strong  { display: block; margin-bottom: 0.2em; }
+.box.green strong  { color: var(--green); }
+.box.warning strong { color: #991b1b; }
+.box.info strong   { color: var(--blue); }
+.box.gold strong   { color: #92400e; }
+.box.dark strong   { color: var(--gold-lt); }
+
+/* Eq box */
+.eq-box {
+  background: var(--green-dark);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.65em 1.4em;
+  text-align: center;
+  font-size: 1.0em;
+  margin: 0.4em 0 0.8em;
+}
+
+/* Def box */
+.def-box {
+  background: var(--green-pale);
+  border-left: 5px solid var(--green);
+  border-radius: 0 10px 10px 0;
+  padding: 0.85em 1.2em;
+  font-size: 1.0em;
+  line-height: 1.7;
+  margin-bottom: 0.9em;
+}
+.def-box strong { color: var(--green); }
+
+/* Highlight banner */
+.highlight-box {
+  background: var(--green);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.65em 1.2em;
+  text-align: center;
+  font-size: 0.95em;
+  font-weight: 600;
+  margin-top: 0.75em;
+}
+.highlight-box strong { color: var(--gold-lt) !important; font-weight: 700; }
+
+/* Cycle */
+.cycle-step {
+  border-radius: 0 0 10px 10px;
+  padding: 0.9em 0.7em;
+  font-size: 0.86em;
+  text-align: center;
+  color: #fff;
+  line-height: 1.7;
+}
+.cycle-step strong { color: #fff !important; display: block; margin-bottom: 0.25em; }
+.step-red   { background: rgba(192,57,43,.28);  border-top: 3px solid var(--red); }
+.step-amber { background: rgba(180,83,9,.28);   border-top: 3px solid #d97706; }
+.step-green { background: rgba(45,143,90,.28);  border-top: 3px solid var(--green-light); }
+.step-blue  { background: rgba(29,95,168,.28);  border-top: 3px solid var(--blue); }
+
+.cycle-note {
+  background: rgba(201,168,76,0.13);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 8px;
+  padding: 0.6em 1.1em;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.88em;
+  text-align: center;
+  margin-top: 0.7em;
+}
+.cycle-note strong { color: var(--gold-lt) !important; }
+
+/* Chart notes */
+.chart-note       { font-size: 0.85em; text-align: center; color: var(--text-muted); margin-top: 0.3em; }
+.chart-note-red   { font-size: 0.88em; text-align: center; color: var(--red); font-weight: 700; margin-top: 0.3em; }
+.chart-note-white { font-size: 0.88em; text-align: center; color: rgba(255,255,255,0.88); margin-top: 0.3em; }
+
+/* Tables */
+.reveal table { font-size: 0.88em; border-collapse: collapse; width: 100%; }
+.reveal table thead th {
+  background: var(--green); color: #fff;
+  padding: 0.5em 0.85em; text-align: left; font-size: 0.9em;
+}
+.reveal table tbody td { padding: 0.45em 0.85em; border-bottom: 1px solid var(--border); }
+.reveal table tbody tr:nth-child(even) td { background: var(--green-pale); }
+
+/* Footer & slide number */
+.reveal .footer       { color: var(--text-muted) !important; font-size: 0.5em !important; opacity: 1 !important; }
+.reveal .slide-number { background: transparent; color: var(--text-muted); font-size: 0.55em; opacity: 1 !important; }
+
+/* =========================================================
+   CONTRAST FIXES (KEEP AT END so these override everything)
+   ========================================================= */
+
+/* Ensure text never gets accidentally washed out */
+.reveal p, .reveal li, .reveal td, .reveal th { opacity: 1 !important; }
+
+/* Make footer + slide number readable on DARK slides */
+.reveal .slides section[data-background-color="#0e2a1a"] .footer,
+.reveal .slides section[data-background-color="#0e2a1a"] .slide-number,
+.reveal .slides section[data-background-color="#1a2744"] .footer,
+.reveal .slides section[data-background-color="#1a2744"] .slide-number {
+  color: rgba(255,255,255,0.75) !important;
+  opacity: 1 !important;
+}
+
+/* Chart note on light slides: slightly darker */
+.chart-note { color: #1f3329 !important; opacity: 1 !important; }
+
+/* Optional: disable “dim fragments before reveal” */
+.reveal .slides section .fragment { opacity: 1 !important; }
+.reveal .slides section .fragment.visible { opacity: 1 !important; }
+
+/* Links: avoid washed out look */
+.reveal a { color: var(--blue); text-decoration: underline; }
+</style>
+```
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(knitr)
+library(patchwork)
+library(ggrepel)
+```
+
+---
+
+## Economy of Pakistan {background-color="#0e2a1a"}
+
+::: {style="font-family:'Playfair Display',Georgia,serif; font-size:1.2em; color:rgba(255,255,255,0.82); margin-top:0.3em; font-style:italic;"}
+Measuring National Output: GDP, GNP & What the Numbers Hide
+:::
+
+::: {style="color:var(--gold-lt); font-size:0.88em; margin-top:1.4em; line-height:2.2;"}
+Zahid Asghar  
+School of Economics, QAU · Spring 2026
+:::
+
+---
+
+## Learning Objectives {background-color="#0e2a1a"}
+
+::: columns
+::: {.column width="50%"}
+- **Define** GDP and GNP — the exact conceptual difference
+- **Apply** $GDP = C + I + G + (X-M)$ to Pakistan's real numbers
+- **Explain** why Pakistan's GNP **exceeds** its GDP
+:::
+::: {.column width="50%"}
+- **Evaluate** GDP as a welfare measure with Pakistan evidence
+- **Compare** Pakistan with India, Bangladesh, Vietnam
+- **Connect** measurement choices to policy decisions
+:::
+:::
+
+---
+
+## Part I — Gross Domestic Product {background-color="#0e2a1a"}
+
+::: part-slide
+::: part-label
+Foundations
+:::
+::: part-title
+Gross Domestic Product
+:::
+::: part-sub
+Definition · Components · Pakistan's Numbers
+:::
+:::
+
+---
+
+## What is GDP? {background-color="#f6f8f3"}
+
+::: def-box
+**GDP** measures the monetary value of all **final** goods and services **produced within a country's geographical borders** during a specific time period.
+:::
+
+::: columns
+::: {.column width="33%"}
+::: {.box .green}
+**① Final**
+
+Count only the end product — the bread, not the wheat, flour, or dough. Each intermediate step would be counted twice otherwise.
+:::
+:::
+::: {.column width="33%"}
+::: {.box .gold}
+**② Produced**
+
+New output only. Not resale of existing assets, second-hand goods, or financial transactions.
+:::
+:::
+::: {.column width="33%"}
+::: {.box .info}
+**③ Within Borders**
+
+Territorial, not nationality-based. *Where* it is produced counts — not *who* produces it.
+:::
+:::
+:::
+
+---
+
+## The Pakistan Illustration {background-color="#f6f8f3"}
+
+::: columns
+::: {.column width="50%"}
+::: {.box .gold}
+**🇨🇳 Chinese Engineer on CPEC (KP)**
+
+Earns USD 8,000/month **inside Pakistan**
+
+✅ **Adds to Pakistan's GDP**  
+Production *within* Pakistan's borders
+
+❌ **Does NOT add to Pakistan's GNP**  
+Not a Pakistani resident
+:::
+:::
+::: {.column width="50%"}
+::: {.box .info}
+**🇵🇰 Pakistani Doctor in the UK**
+
+Earns £12,000/month **outside Pakistan**
+
+❌ **Not in Pakistan's GDP**  
+Production is outside Pakistan's borders
+
+✅ **Adds to Pakistan's GNP**  
+A Pakistani resident earning abroad
+:::
+:::
+:::
+
+::: {.box .green style="margin-top:0.8em;"}
+This single contrast explains why **GNP > GDP** in Pakistan — and why that gap grows as emigration accelerates.
+:::
+
+---
+
+## The Expenditure Approach {background-color="#f6f8f3"}
+
+::: eq-box
+$$GDP = C + I + G + (X - M)$$
+:::
+
+::: columns
+::: {.column width="25%"}
+::: {.box .warning}
+**C — Consumption**
+**~80% of GDP**
+
+Highest in Asia. Saving rate only ~5%, leaving almost nothing for domestic investment.
+:::
+:::
+::: {.column width="25%"}
+::: {.box .warning}
+**I — Investment**
+**~13% of GDP**
+
+A structural crisis. Bangladesh 32%, India 29%, Vietnam 27%. Pakistan cannot sustain 6%+ growth on this.
+:::
+:::
+::: {.column width="25%"}
+::: {.box .gold}
+**G — Government**
+**~20% of GDP**
+
+Constrained by tax revenue of only ~10% of GDP. Over half goes to debt servicing.
+:::
+:::
+::: {.column width="25%"}
+::: {.box .warning}
+**NX — Net Exports**
+**Negative**
+
+Imports persistently exceed exports. Pakistan runs a structural current-account deficit.
+:::
+:::
+:::
+
+---
+
+## Pakistan's Investment Crisis {background-color="#1a2744"}
+
+**Investment as % of GDP — Pakistan vs. Regional Peers (2024)**
+
+```{r, fig.height=3.9, fig.width=11}
+invest <- data.frame(
+  country = c("Bangladesh","India","Vietnam","Malaysia","Pakistan"),
+  inv     = c(32, 29, 27, 24, 13),
+  type    = c("peer","peer","peer","peer","pak")
+)
+invest$country <- factor(invest$country, levels = invest$country)
+
+ggplot(invest, aes(x = inv, y = country, fill = type)) +
+  geom_col(width = 0.62) +
+  geom_text(aes(label = paste0(inv, "%")),
+            hjust = -0.2, color = "white", fontface = "bold", size = 6.5) +
+  geom_vline(xintercept = 13, color = "#e8c547",
+             linetype = "dashed", linewidth = 1.2) +
+  annotate("text", x = 14, y = 5.45, label = "Pakistan 13%",
+           color = "#e8c547", size = 5.5, hjust = 0, fontface = "bold") +
+  scale_fill_manual(values = c("pak"="#c0392b","peer"="#2d8f5a"), guide="none") +
+  scale_x_continuous(limits = c(0, 42)) +
+  labs(x = NULL, y = NULL,
+       caption = "Source: World Bank, ADB (2024). Pakistan: FY25 estimate.") +
+  theme_void(base_size = 16) +
+  theme(
+    plot.background  = element_rect(fill = "#0e2a1a", colour = NA),
+    panel.background = element_rect(fill = "#0e2a1a", colour = NA),
+    axis.text.y = element_text(color = "white", size = 16, hjust = 1,
+                               margin = margin(r = 10), face = "bold"),
+    plot.caption = element_text(color = "#FFFFFF60", size = 10, hjust = 1,
+                                margin = margin(t = 8))
+  )
+```
+
+::: chart-note-white
+Pakistan needs **25–30% investment/GDP** to sustain the **6–7% growth** needed to absorb 3–4 million new labour entrants each year.
+:::
+
+---
+
+## Three Ways to Measure GDP {background-color="#f6f8f3"}
+
+::: columns
+::: {.column width="33%"}
+::: {.box .green}
+**📦 Expenditure** — *What was spent?*
+
+$$C + I + G + NX$$
+
+Counts final purchases across all agents. Most commonly reported by PBS, IMF, and ADB for Pakistan.
+:::
+:::
+::: {.column width="33%"}
+::: {.box .gold}
+**🏭 Production** — *What was produced?*
+
+Value added by sector:
+
+- Agriculture **24%**
+- Industry **19%**
+- Services **57%**
+
+Used for sectoral growth analysis.
+:::
+:::
+::: {.column width="33%"}
+::: {.box .info}
+**💰 Income** — *What was earned?*
+
+Wages + Profits + Rents + Interest
+
+**Pakistan's problem:** 72% of non-agri workers are informal → wages unrecorded → output is systematically understated.
+:::
+:::
+:::
+
+::: {.box .green style="font-size:0.88em; margin-top:0.6em;"}
+All three approaches yield the **same GDP** in theory. Large discrepancies reveal measurement failure — serious given Pakistan's ~$457B informal economy.
+:::
+
+---
+
+## Pakistan's Sectoral Structure {background-color="#f6f8f3"}
+
+```{r, fig.height=4.4, fig.width=11}
+sectors <- data.frame(
+  sector = c("Agriculture","Industry","Services"),
+  share  = c(24.2, 19.1, 56.7),
+  employ = c(38.5, 24.0, 37.5)
+)
+long_s <- sectors |>
+  pivot_longer(c(share, employ), names_to = "type", values_to = "pct") |>
+  mutate(
+    type   = ifelse(type == "share", "GDP Share (%)","Employment Share (%)"),
+    sector = factor(sector, levels = c("Agriculture","Industry","Services"))
+  )
+ggplot(long_s, aes(x = sector, y = pct, fill = type)) +
+  geom_col(position = "dodge", width = 0.6) +
+  geom_text(aes(label = paste0(pct, "%")),
+            position = position_dodge(0.6), vjust = -0.4,
+            fontface = "bold", size = 6.2) +
+  scale_fill_manual(values = c("GDP Share (%)"="#1a6b3c",
+                               "Employment Share (%)"="#c9a84c")) +
+  scale_y_continuous(limits = c(0, 68),
+                     labels = function(x) paste0(x, "%")) +
+  labs(x = NULL, y = NULL, fill = NULL,
+       title = "GDP Share vs. Employment Share — Pakistan FY2024–25",
+       caption = "Source: Pakistan Bureau of Statistics (PBS)") +
+  theme_minimal(base_size = 16) +
+  theme(
+    legend.position = "top",
+    legend.text = element_text(size = 14),
+    panel.grid.major.x = element_blank(),
+    plot.title = element_text(face = "bold", color = "#0e2a1a", size = 16),
+    plot.caption = element_text(color = "grey55", size = 10)
+  )
+```
+
+::: chart-note-red
+Agriculture employs **38.5%** of workers but generates only **24.2%** of GDP. Industry fell from ~24% (2005) → 19% today: **premature deindustrialisation**.
+:::
+
+---
+
+## Real vs. Nominal GDP {background-color="#f6f8f3"}
+
+::: eq-box
+$$\text{Real GDP} = \frac{\text{Nominal GDP}}{\text{GDP Deflator}} \times 100$$
+:::
+
+::: columns
+::: {.column width="48%"}
+
+| Year | Inflation | Real Growth |
+|:----:|:---------:|:-----------:|
+| FY21 | 8.9% | 5.7% |
+| FY22 | 12.2% | 6.1% |
+| **FY23** | **29.2%** | **0.3%** |
+| FY24 | 23.4% | 2.4% |
+| FY25e | ~8.5% | ~3.0% |
+
+:::
+::: {.column width="52%"}
+::: {.box .warning}
+**⚠️ The FY23 Nominal Illusion**
+
+Nominal GDP *appeared* to grow. With 29% inflation, real output grew just **0.3%** — essentially zero. Citizens reading nominal headlines were misled while poverty soared.
+:::
+
+::: {.box .gold style="margin-top:0.6em;"}
+**FY25 "Recovery"**
+
+Inflation fell from demand destruction and the global commodity supercycle reversing — not genuine supply-side improvement.
+:::
+:::
+:::
+
+---
+
+## Part II — Gross National Product {background-color="#0e2a1a"}
+
+::: part-slide
+::: part-label
+From Territory to Nationality
+:::
+::: part-title
+Gross National Product
+:::
+::: part-sub
+Why GNP > GDP in Pakistan — and what it reveals
+:::
+:::
+
+---
+
+## What is GNP? {background-color="#f6f8f3"}
+
+::: def-box
+**GNP / GNI** measures the **total income earned by a country's residents**, regardless of *where* that income is generated.
+:::
+
+::: eq-box
+$$\text{GNP} = \text{GDP} + (\text{Factor Income Earned Abroad} - \text{Factor Income Paid to Foreigners})$$
+:::
+
+::: columns
+::: {.column width="50%"}
+::: {.box .green}
+**➕ Adds to Pakistan's NFIA**
+
+- Remittances from ~9M overseas Pakistanis
+- Dividends from Pakistani investments abroad
+- Salaries of Pakistanis in Gulf, UK, US
+:::
+:::
+::: {.column width="50%"}
+::: {.box .warning}
+**➖ Reduces Pakistan's NFIA**
+
+- Profits repatriated by MNCs in Pakistan
+- Salaries of CPEC engineers sent to China
+- Debt interest paid to foreign creditors (~$5B/yr)
+:::
+:::
+:::
+
+---
+
+## Pakistan's Remittance Lifeline {background-color="#1a2744"}
+
+**Remittance Inflows — USD Billion and % of GDP (FY20–FY25)**
+
+```{r, fig.height=3.9, fig.width=11}
+remit <- data.frame(
+  year = c("FY20","FY21","FY22","FY23","FY24","FY25e"),
+  usd  = c(23.1, 29.4, 31.2, 27.0, 30.3, 33.5),
+  pct  = c(7.9, 9.8, 9.5, 8.8, 9.4, 9.8)
+)
+ggplot(remit, aes(x = year)) +
+  geom_col(aes(y = usd), fill = "#2d8f5a", alpha = 0.9, width = 0.55) +
+  geom_line(aes(y = pct * 3.4, group = 1),
+            color = "#e8c547", linewidth = 2.0) +
+  geom_point(aes(y = pct * 3.4), color = "#e8c547", size = 5) +
+  geom_text(aes(y = usd + 1.5, label = paste0("$", usd, "B")),
+            color = "white", fontface = "bold", size = 5.5) +
+  geom_text(aes(y = pct * 3.4 + 1.8, label = paste0(pct, "%")),
+            color = "#e8c547", fontface = "bold", size = 4.8) +
+  scale_y_continuous(
+    name = "USD Billion",
+    sec.axis = sec_axis(~ . / 3.4, name = "% of GDP",
+                        labels = function(x) paste0(x, "%"))
+  ) +
+  scale_x_discrete(expand = c(0.1, 0.1)) +
+  labs(x = NULL,
+       caption = "Source: State Bank of Pakistan (SBP); World Bank. FY25 = estimate.") +
+  theme_minimal(base_size = 15) +
+  theme(
+    plot.background  = element_rect(fill = "#0e2a1a", colour = NA),
+    panel.background = element_rect(fill = "#0e2a1a", colour = NA),
+    axis.text   = element_text(color = "#FFFFFFD9", size = 13),
+    axis.title  = element_text(color = "#c9a84c", size = 12),
+    panel.grid  = element_line(color = "#FFFFFF14"),
+    plot.caption = element_text(color = "#FFFFFF55", size = 10, hjust = 1)
+  )
+```
+
+::: chart-note-white
+**~9.4% of GDP** — one of the highest ratios globally. India: 3.5%. A **structural crutch**: reflects failure to create competitive domestic employment.
+:::
+
+---
+
+## GDP vs. GNP: Key Differences {background-color="#f6f8f3"}
+
+| | GDP | GNP / GNI |
+|:--|:--|:--|
+| **Core concept** | Territorial — *where* production occurs | Nationality — *who* earns the income |
+| Chinese CPEC engineer in KP | ✅ In Pakistan's GDP | ❌ Not in Pakistan's GNP |
+| Pakistani doctor in UK | ❌ Not in Pakistan's GDP | ✅ In Pakistan's GNP |
+| Remittances | ❌ Not included | ✅ Core component |
+| IMF programme targets | ✅ GDP-based | — |
+| World Bank poverty measure | — | ✅ GNI per capita used |
+
+::: highlight-box
+Pakistan's GNP exceeds GDP by **~USD 25–30 billion** annually — remittances ($30B) far exceed profit repatriation by foreign firms (~$4B).
+:::
+
+---
+
+## GNP Reconciliation — Pakistan FY24 {background-color="#f6f8f3"}
+
+::: columns
+::: {.column width="52%"}
+
+| Item | USD Billion |
+|:-----|------------:|
+| GDP at market prices (FY24) | 374 |
+| ＋ Remittances & factor income | +30.3 |
+| ＋ Investment income abroad | +1.2 |
+| － Profits repatriated by MNCs | −4.1 |
+| － Debt interest paid abroad | −2.8 |
+| **≈ GNP / GNI** | **≈ 399** |
+
+:::
+::: {.column width="48%"}
+::: {.box .gold}
+**⚠️ The Remittance Paradox**
+
+High remittances make per-capita GNP > per-capita GDP — citizens appear *better off* than domestic production implies.
+
+But every skilled Pakistani abroad is a **productivity loss** to the domestic economy. The premium compensates for structural failure — not genuine prosperity.
+:::
+:::
+:::
+
+---
+
+## Part III — Regional Comparison {background-color="#0e2a1a"}
+
+::: part-slide
+::: part-label
+Pakistan in Perspective
+:::
+::: part-title
+Regional Comparison
+:::
+::: part-sub
+What the numbers look like next to our neighbours
+:::
+:::
+
+---
+
+## Pakistan vs. Regional Peers {background-color="#f6f8f3"}
+
+```{r, fig.height=4.5, fig.width=11}
+peers <- data.frame(
+  country   = c("Malaysia","Vietnam","India","Bangladesh","Pakistan"),
+  gdp_pc    = c(13500, 4300, 2730, 2700, 1600),
+  exports   = c(70, 87, 22, 15, 10),
+  highlight = c("peer","peer","peer","peer","pak")
+)
+p1 <- ggplot(peers,
+             aes(y = reorder(country, gdp_pc), x = gdp_pc, fill = highlight)) +
+  geom_col(width = 0.65) +
+  geom_text(aes(label = paste0("$", format(gdp_pc, big.mark=","))),
+            hjust = -0.12, size = 5.5, fontface = "bold", color = "#0e2a1a") +
+  scale_fill_manual(values = c("pak"="#c0392b","peer"="#2d8f5a"), guide="none") +
+  scale_x_continuous(limits = c(0, 19000),
+                     labels = function(x) paste0("$",x/1000,"k")) +
+  labs(title = "GDP Per Capita (USD, 2024)", x = NULL, y = NULL) +
+  theme_minimal(base_size = 14) +
+  theme(panel.grid.major.y = element_blank(),
+        axis.text = element_text(size = 13),
+        plot.title = element_text(face = "bold", size = 14, color = "#0e2a1a"))
+
+p2 <- ggplot(peers,
+             aes(y = reorder(country, exports), x = exports, fill = highlight)) +
+  geom_col(width = 0.65) +
+  geom_text(aes(label = paste0(exports, "%")),
+            hjust = -0.12, size = 5.5, fontface = "bold", color = "#0e2a1a") +
+  scale_fill_manual(values = c("pak"="#c0392b","peer"="#2d8f5a"), guide="none") +
+  scale_x_continuous(limits = c(0, 105),
+                     labels = function(x) paste0(x, "%")) +
+  labs(title = "Exports / GDP (2024)", x = NULL, y = NULL) +
+  theme_minimal(base_size = 14) +
+  theme(panel.grid.major.y = element_blank(),
+        axis.text = element_text(size = 13),
+        plot.title = element_text(face = "bold", size = 14, color = "#0e2a1a"))
+
+p1 + p2
+```
+
+::: chart-note-red
+Pakistan: **lowest exports/GDP (10%)** in the region · GDP per capita well below every peer
+:::
+
+---
+
+## The Bangladesh Inflection Point {background-color="#1a2744"}
+
+```{r, fig.height=4.5, fig.width=11}
+diverge <- data.frame(
+  year    = rep(c(2000,2005,2010,2015,2019,2022,2024), 2),
+  country = rep(c("Bangladesh","Pakistan"), each = 7),
+  gdp_pc  = c(420, 560, 750, 1080, 1830, 2460, 2700,
+              610, 870, 1100, 1430, 1530, 1580, 1600)
+)
+ggplot(diverge, aes(x = year, y = gdp_pc, color = country, group = country)) +
+  geom_line(linewidth = 2.2) +
+  geom_point(size = 4.5) +
+  geom_vline(xintercept = 2019, color = "#e8c547",
+             linetype = "dashed", linewidth = 1.1) +
+  annotate("text", x = 2019.5, y = 2400, label = "Crossover ~2019",
+           color = "#e8c547", size = 5.5, hjust = 0, fontface = "bold") +
+  scale_color_manual(values = c("Bangladesh"="#2d8f5a","Pakistan"="#c0392b")) +
+  scale_y_continuous(labels = function(x) paste0("$", x),
+                     breaks = seq(0, 3000, 500)) +
+  scale_x_continuous(breaks = c(2000,2005,2010,2015,2019,2022,2024)) +
+  labs(x = NULL, y = "GDP Per Capita (USD)", color = NULL,
+       title = "GDP Per Capita: Pakistan vs. Bangladesh, 2000–2024",
+       caption = "Source: World Bank WDI") +
+  theme_minimal(base_size = 15) +
+  theme(
+    plot.background  = element_rect(fill = "#0e2a1a", colour = NA),
+    panel.background = element_rect(fill = "#0e2a1a", colour = NA),
+    plot.title   = element_text(color = "white", face = "bold", size = 15),
+    axis.text    = element_text(color = "#FFFFFFD9", size = 13),
+    axis.title   = element_text(color = "#c9a84c", size = 13),
+    legend.text  = element_text(color = "white", size = 13),
+    panel.grid   = element_line(color = "#FFFFFF14"),
+    plot.caption = element_text(color = "#FFFFFF55", size = 10)
+  )
+```
+
+::: chart-note-white
+Bangladesh exports: **$6B → $55B** (2000–2024) · Pakistan: $9B → $30B · Female LFPR: **43% vs. 24%**
+:::
+
+---
+
+## Part IV — What GDP Misses {background-color="#0e2a1a"}
+
+::: part-slide
+::: part-label
+Critical Perspective
+:::
+::: part-title
+What GDP Misses
+:::
+::: part-sub
+Limitations · Pakistan Evidence · Alternative Measures
+:::
+:::
+
+---
+
+## GDP Limitations 1 & 2 {background-color="#f6f8f3"}
+
+::: columns
+::: {.column width="50%"}
+::: {.box .warning}
+**1. Ignores Income Distribution**
+
+FY22: GDP grew **6.1%** — yet poverty *rose*.
+
+GDP measures the size of the pie, not who gets a slice. Pakistan's growth has bypassed the bottom 40%.
+
+World Bank (2025): poverty **45%**, extreme poverty up from 4.9% → **16.5%** despite positive GDP growth.
+:::
+:::
+::: {.column width="50%"}
+::: {.box .warning}
+**2. Misses the Informal Economy**
+
+**72%** of non-agricultural workers are informal.
+
+The informal economy (~**$457B**) is *larger* than the formal economy (~$340B).
+
+GDP understates actual output and inflates the apparent tax-to-GDP ratio.
+:::
+:::
+:::
+
+---
+
+## GDP Limitations 3 & 4 {background-color="#f6f8f3"}
+
+::: columns
+::: {.column width="50%"}
+::: {.box .gold}
+**3. Excludes Non-Market Work**
+
+Pakistan's female LFPR is just **~24%** — lowest in South Asia.
+
+Millions of hours of domestic labour, childcare, and subsistence farming go entirely **uncounted** in GDP — a massive share of total welfare-generating activity.
+:::
+:::
+::: {.column width="50%"}
+::: {.box .gold}
+**4. Ignores Environmental Costs**
+
+The 2022 floods cost Pakistan an estimated **USD 30 billion** — roughly two years of GDP gains.
+
+The destruction was **not subtracted** from GDP. Reconstruction spending actually *added* to it. True welfare progress is far slower than headlines suggest.
+:::
+:::
+:::
+
+---
+
+## GDP Limitations 5 & 6 {background-color="#f6f8f3"}
+
+::: columns
+::: {.column width="50%"}
+::: {.box .info}
+**5. Ignores Quality of Life**
+
+Pakistan ranks **164th / 193** on the UN Human Development Index (2024).
+
+Life expectancy: **66 years** · Learning poverty among highest in Asia.
+
+GDP growth has not translated into health or education gains — output and welfare have **decoupled**.
+:::
+:::
+::: {.column width="50%"}
+::: {.box .info}
+**6. Quantity Not Quality of Growth**
+
+A construction boom and a manufacturing productivity surge look **identical** in GDP figures.
+
+Pakistan's recent growth: low-productivity services, remittance-fuelled consumption, and construction — **not** high-value manufacturing or technology.
+:::
+:::
+:::
+
+---
+
+## Pakistan's GDP vs. HDI {background-color="#f6f8f3"}
+
+```{r, fig.height=4.5, fig.width=11}
+hdi_data <- data.frame(
+  country   = c("Malaysia","Vietnam","India","Bangladesh","Pakistan","Nepal"),
+  gdp_pc    = c(13500, 4300, 2730, 2700, 1600, 1340),
+  hdi       = c(0.807, 0.726, 0.644, 0.661, 0.544, 0.601),
+  highlight = c("peer","peer","peer","peer","pak","peer")
+)
+ggplot(hdi_data,
+       aes(x = gdp_pc, y = hdi, color = highlight, label = country)) +
+  geom_smooth(method = "lm", se = FALSE, color = "grey80",
+              linetype = "dashed", linewidth = 1.1) +
+  geom_point(aes(size = highlight), alpha = 0.92) +
+  geom_text_repel(size = 5.8, fontface = "bold",
+                  box.padding = 0.7, color = "#0e2a1a") +
+  scale_color_manual(values = c("pak"="#c0392b","peer"="#1a6b3c"), guide="none") +
+  scale_size_manual(values = c("pak"=9,"peer"=6), guide="none") +
+  scale_x_continuous(
+    labels = function(x) paste0("$", format(x, big.mark=",")),
+    limits = c(1000, 16000)
+  ) +
+  scale_y_continuous(limits = c(0.50, 0.86)) +
+  labs(x = "GDP Per Capita (USD, 2024)", y = "Human Development Index (2024)",
+       title = "GDP Per Capita vs. HDI — Pakistan Punches Well Below Its Weight",
+       caption = "Source: World Bank WDI; UNDP HDR 2024") +
+  theme_minimal(base_size = 16) +
+  theme(
+    plot.title   = element_text(face = "bold", size = 16, color = "#0e2a1a"),
+    axis.text    = element_text(size = 14),
+    axis.title   = element_text(size = 13),
+    plot.caption = element_text(color = "grey55", size = 11)
+  )
+```
+
+::: chart-note-red
+**Nepal** has a lower GDP per capita yet a **higher HDI (0.601 vs. 0.544)**. GDP is not converting into welfare.
+:::
+
+---
+
+## Alternative Welfare Measures {background-color="#f6f8f3"}
+
+::: columns
+::: {.column width="50%"}
+::: {.box .green}
+**📊 HDI (UNDP)**  
+Life expectancy + Education + GNI per capita  
+Pakistan: **0.544 · Rank 164/193** (2024)
+:::
+
+::: {.box .green style="margin-top:0.75em;"}
+**🔢 MPI (OPHI)**  
+Poverty across health, education & living standards  
+Pakistan: **38.4% multidimensionally poor** (2023)
+:::
+:::
+::: {.column width="50%"}
+::: {.box .green}
+**💸 World Bank Poverty Rate**  
+Updated poverty lines (HIES 2018–19 data)  
+Pakistan: **45% poor · 16.5% extreme poverty** (2025)
+:::
+
+::: {.box .green style="margin-top:0.75em;"}
+**🌿 Genuine Progress Indicator (GPI)**  
+GDP adjusted for inequality, environment & household work  
+No official GPI for Pakistan — but would be **far below** its GDP given flood losses and high inequality
+:::
+:::
+:::
+
+---
+
+## Part V — Pakistan's Growth Problem {background-color="#0e2a1a"}
+
+::: part-slide
+::: part-label
+Macro Diagnosis
+:::
+::: part-title
+Pakistan's Growth Problem
+:::
+::: part-sub
+The boom-bust cycle · What 6–7% growth actually requires
+:::
+:::
+
+---
+
+## How Much Growth Does Pakistan Need? {background-color="#f6f8f3"}
+
+::: columns
+::: {.column width="48%"}
+**The arithmetic:**
+
+- Population growth: **~1.9% per year**
+- New labour entrants: **3–4 million per year**
+- To hold unemployment steady → need **6–7% GDP growth**
+- To reduce poverty meaningfully → sustained growth above 7%
+
+**ADB FY26 forecast: 3.0%**  
+**Government target: 4.2%**
+
+::: {.box .warning style="margin-top:0.7em;"}
+Both figures are **below the minimum** needed to prevent unemployment rising. Pakistan is falling further behind — not catching up.
+:::
+:::
+::: {.column width="52%"}
+::: {.box .dark}
+**What 6–7% growth requires:**
+
+🏭 Investment → **25–30% of GDP** *(currently 13%)*
+
+📦 Exports diversified beyond textiles *(stuck at ~$30B)*
+
+⚡ Energy → competitive industrial tariffs *(region's highest)*
+
+📋 Tax base → **15–16% of GDP** *(currently ~10%)*
+
+👩‍🎓 Human capital → reverse learning poverty *(generational commitment)*
+:::
+:::
+:::
+
+---
+
+## Pakistan's 25-Programme IMF Cycle {background-color="#1a2744"}
+
+Pakistan has engaged with the IMF **25 times since 1950** — roughly every 2–3 years on average.
+
+::: columns
+::: {.column width="20%"}
+::: {.cycle-step .step-red}
+**① Crisis**  
+BOP collapse  
+Reserves depleted  
+Rupee crash  
+Inflation spikes
+:::
+:::
+::: {.column width="20%"}
+::: {.cycle-step .step-amber}
+**② IMF Entry**  
+Austerity  
+Rate hikes  
+Devaluation  
+Import squeeze
+:::
+:::
+::: {.column width="20%"}
+::: {.cycle-step .step-green}
+**③ Stabilisation**  
+Inflation falls  
+Reserves rebuild  
+Surplus achieved  
+GDP recovers
+:::
+:::
+::: {.column width="20%"}
+::: {.cycle-step .step-blue}
+**④ Premature Boom**  
+Fiscal slippage  
+Import surge  
+Reform fatigue  
+Programme exits
+:::
+:::
+::: {.column width="20%"}
+::: {.cycle-step .step-red}
+**⑤ Next Crisis**  
+Structural drivers  
+unchanged  
+↺ Return to ①
+:::
+:::
+:::
+
+::: cycle-note
+Each stabilisation restores macro indicators — but never addresses the structural causes: **low exports · narrow tax base · energy circular debt · institutional fragility**
+:::
+
+---
+
+## Cyclical or Structural? FY25 {background-color="#f6f8f3"}
+
+::: columns
+::: {.column width="50%"}
+::: {.box .green}
+**Government's FY25 Narrative ✅**
+
+Inflation: 38% peak → **~8.5%**  
+Primary fiscal surplus: **3 consecutive years**  
+SBP reserves: rebuilt to **$14.5B**  
+Policy rate: cut **1,100 bps** to 12%  
+ADB growth forecast: **3.0%**
+:::
+:::
+::: {.column width="50%"}
+::: {.box .warning}
+**What the Data Shows ⚠️**
+
+Inflation fell from **demand destruction** — not supply reform  
+Fiscal surplus via **crushing thin tax base** — not broadening it  
+Reserves rebuilt by **suppressing imports** — not earning through exports  
+Net FDI: **>80% retained earnings** — not fresh capital  
+3.0% growth is a **"dead cat bounce"** — far below 6%
+:::
+:::
+:::
+
+::: highlight-box
+The improvements are **cyclical, not structural**. The next crisis is a question of *when*, not *whether*.
+:::
+
+---
+
+## Key Takeaways {background-color="#0e2a1a"}
+
+::: columns
+::: {.column width="50%"}
+**On Measurement**
+
+- GDP = **territorial** output; GNP = **resident** income
+- Pakistan's **GNP > GDP** by ~$25–30B — remittances dwarf profit repatriation
+- Use **real GDP** for welfare comparisons — nominal misled catastrophically in FY23
+- Official GDP **understates** true activity — informal sector exceeds the formal
+:::
+::: {.column width="50%"}
+**On Pakistan's Economy**
+
+- Investment at **13% of GDP** is a structural crisis, not a cyclical dip
+- Exports at **10% of GDP** — lowest in the region
+- HDI rank **164/193** — far below what income level predicts
+- **25 IMF programmes** since 1950 = stabilisation without structural transformation
+:::
+:::
+
+---
+
+## Conclusion {background-color="#0e2a1a"}
+
+::: {style="font-family:'Playfair Display',Georgia,serif; font-size:1.2em; color:#f0d98a; margin-bottom:0.7em; font-style:italic;"}
+"GDP is the most powerful single number we have — and among the most dangerous if used alone."
+:::
+
+GDP captures market-based economic activity consistently and comparably. For Pakistan it tracks the business cycle, validates IMF targets, and anchors budget planning.
+
+But taken alone it **hides** 72% informal employment, **misses** USD 457B of uncounted activity, **ignores** the distribution that left 45% in poverty, and **fails** to subtract the $30B cost of the 2022 floods.
+
+Pakistan's challenge is not just to grow GDP — it is to ensure growth is **investment-led, export-driven, and human-capital-intensive** enough to break the 25-programme IMF cycle and lift nearly half the population out of poverty.
+
+---
+
+## {background-color="#0e2a1a"}
+
+::: {style="text-align:center; padding-top:1.5em;"}
+
+::: {style="font-family:'Playfair Display',Georgia,serif; font-size:2.5em; color:#c9a84c; margin-bottom:0.7em;"}
+Questions?
+:::
+
+::: {style="color:rgba(255,255,255,0.75); font-size:0.9em; line-height:2.4;"}
+Zahid Asghar  
+School of Economics, Quaid-i-Azam University  
+zahid.asghar@qau.edu.pk
+:::
+
+::: {style="color:rgba(255,255,255,0.48); font-size:0.82em; margin-top:1em;"}
+**Next Lecture:** National Income Accounting — The Circular Flow and Pakistan's Leakages
+:::
+
+:::

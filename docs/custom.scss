@@ -1,173 +1,628 @@
 /*-- scss:defaults --*/
-// Save this as custom.scss in the same directory as your .qmd file
 
-// Color variables
-$primary-color: #1e3c72;
-$secondary-color: #2a5298;
-$accent-color: #FFD700;
-$accent-secondary: #FFA500;
-$text-light: #F0F8FF;
-$text-accent: #87CEEB;
-$text-muted: #E6E6FA;
+// Typography
+$font-family-sans-serif: 'Source Sans 3', 'Segoe UI', sans-serif !default;
+$font-size-root: 28px !default;        // Base font — RevealJS scales this
+$presentation-font-size-root: 34px !default;
 
-// Font variables
-$font-family-sans-serif: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-$presentation-font-size-root: 32px;
-$presentation-h1-font-size: 2.8rem;
-$presentation-h2-font-size: 2.2rem;
-$presentation-h3-font-size: 1.8rem;
-
-// Theme colors for reveal.js
-$theme: (
-  "primary": $accent-color,
-  "secondary": $accent-secondary,
-  "success": #28a745,
-  "info": $text-accent,
-  "warning": $accent-secondary,
-  "danger": #dc3545,
-  "light": $text-light,
-  "dark": $primary-color
-);
+// Colours
+$body-bg: #ffffff !default;
+$body-color: #0e1f13 !default;
+$link-color: #c9a84c !default;
 
 /*-- scss:rules --*/
 
-// Main background
+// ── Font import ────────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+// ── Colour tokens ──────────────────────────────────────────────
+$navy:        #0e2a1a;
+$green:       #1a6b3c;
+$green-light: #2d8f5a;
+$green-pale:  #e8f3ed;
+$gold:        #c9a84c;
+$off-white:   #f0f4f8;
+$text-dark:   #0e1f13;
+$text-light:  #ffffff;
+$red:         #c0392b;
+$amber:       #d97706;
+$blue:        #1d5fa8;
+
+// ── Global reveal overrides ────────────────────────────────────
 .reveal {
-  background: linear-gradient(135deg, #{$primary-color} 0%, #{$secondary-color} 100%);
-  font-family: $font-family-sans-serif;
-  color: $text-light;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  color: $text-dark;
 }
 
-// Slide backgrounds
 .reveal .slides section {
-  color: $text-light;
+  font-size: 1rem;           // relative to presentation-font-size-root
+  line-height: 1.6;
 }
 
-// Headings
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  font-family: $font-family-sans-serif;
-  font-weight: 600;
-  text-transform: none;
-  line-height: 1.2;
-}
-
-.reveal h1 {
-  font-size: $presentation-h1-font-size;
-  color: $accent-color;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
 }
 
 .reveal h2 {
-  font-size: $presentation-h2-font-size;
-  color: $text-accent;
+  font-size: 1.45em;
+  border-bottom: 3px solid $gold;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.55em;
+  color: $text-dark;
 }
 
 .reveal h3 {
-  font-size: $presentation-h3-font-size;
-  color: $text-accent;
+  font-size: 1.05em;
+  color: $green;
+  margin-bottom: 0.4em;
 }
 
-// Links
-.reveal a {
-  color: $accent-color;
-  text-decoration: underline;
-  
-  &:hover {
-    color: $accent-secondary;
-    text-decoration: underline;
-  }
-}
+.reveal p { margin-bottom: 0.6em; }
 
-// Code
-.reveal pre {
-  background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+.reveal strong { color: darken($green, 5%); font-weight: 700; }
 
 .reveal code {
-  background: rgba(0,0,0,0.2);
-  color: $accent-color;
-  font-family: 'Courier New', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(0,0,0,0.06);
+  border-radius: 3px;
+  padding: 0.05em 0.35em;
+  font-size: 0.88em;
 }
 
-// Tables
-.reveal table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  background: rgba(255,255,255,0.05);
-  border-radius: 8px;
-  overflow: hidden;
-}
+// ── KaTeX ──────────────────────────────────────────────────────
+.reveal .katex { font-size: 1.1em; }
+.reveal .katex-display { margin: 0.6em 0; }
 
-.reveal table th {
-  background: rgba(255,215,0,0.2);
-  color: $accent-color;
-  font-weight: bold;
-  padding: 12px;
-  border: none;
-}
-
-.reveal table td {
-  padding: 12px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+// ── Dark slide: force all text white ──────────────────────────
+.reveal .slides section[data-background-color="#0e2a1a"],
+.reveal .slides section[data-background-color="#1a2744"],
+.reveal .slides section[data-background-color="#1a3a6b"] {
   color: $text-light;
-}
 
-.reveal table tr:last-child td {
-  border-bottom: none;
-}
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-light;
+    border-bottom-color: rgba(201,168,76,0.35);
+  }
+  p, li, td, th, blockquote { color: $text-light; }
+  strong { color: $gold; }
 
-// Lists
-.reveal ul, .reveal ol {
-  color: $text-light;
-}
-
-.reveal ul li::marker,
-.reveal ol li::marker {
-  color: $accent-color;
-}
-
-// Blockquotes
-.reveal blockquote {
-  background: rgba(255,255,255,0.1);
-  border-left: 4px solid $accent-color;
-  padding: 1rem 2rem;
-  margin: 1rem 0;
-  font-style: italic;
-  backdrop-filter: blur(5px);
-}
-
-// Controls
-.reveal .controls {
-  color: $accent-color;
-  bottom: 20px;
-  right: 20px;
-}
-
-.reveal .controls button {
-  color: $accent-color;
-  
-  &:hover {
-    color: $accent-secondary;
+  table {
+    color: $text-light;
+    thead th {
+      background: rgba(255,255,255,0.12);
+      color: $gold;
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+    }
+    tbody td {
+      color: $text-light;
+      border-color: rgba(255,255,255,0.12);
+    }
+    tbody tr:nth-child(even) td { background: rgba(255,255,255,0.05); }
   }
 }
 
-// Progress bar
-.reveal .progress {
-  height: 4px;
-  background: rgba(255,255,255,0.2);
+// ── Light bg slides ────────────────────────────────────────────
+.reveal .slides section[data-background-color="#f0f4f8"] {
+  color: $text-dark;
+  h1, h2, h3, h4, h5, h6 { color: $text-dark; }
+  p, li, td, th { color: $text-dark; }
+  h2 { border-bottom-color: $gold; }
 }
 
-.reveal .progress span {
-  background: $accent-color;
+// ── Tables ─────────────────────────────────────────────────────
+.reveal table {
+  font-size: 0.9em;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5em 0;
+
+  thead th {
+    background: $green;
+    color: $text-light;
+    padding: 0.55rem 0.9rem;
+    text-align: left;
+    font-size: 0.92em;
+  }
+  tbody td {
+    padding: 0.5rem 0.9rem;
+    border-bottom: 1px solid darken($green-pale, 4%);
+  }
+  tbody tr:nth-child(even) td { background: $green-pale; }
+  tbody tr:hover td { background: darken($green-pale, 5%); }
 }
 
-// Slide numbers
+// ── Blockquote ─────────────────────────────────────────────────
+.reveal blockquote {
+  border-left: 4px solid $gold;
+  padding: 0.5em 1em;
+  font-style: italic;
+  background: rgba(0,0,0,0.035);
+  border-radius: 0 6px 6px 0;
+  color: inherit;
+  width: 92%;
+  margin: 0.6em auto;
+}
+
+// ── Progress / slide number / footer ──────────────────────────
+.reveal .progress { background: rgba(255,255,255,0.15); color: $gold; }
+
 .reveal .slide-number {
-  background: rgba(0,0,0,0.3);
-  color: $accent-color;
-  border-radius: 4px;
-  padding: 4px 8px;
-  font-size: 14px;
+  background: transparent;
+  color: rgba(255,255,255,0.5);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65em;
+}
+
+.reveal .footer {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.52em;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+.reveal a { color: $gold; text-underline-offset: 3px; }
+.reveal a:hover { color: lighten($gold, 12%); }
+
+// ══════════════════════════════════════════════════════════════
+//  LAYOUT COMPONENTS
+// ══════════════════════════════════════════════════════════════
+
+// ── Title / part / end cards ───────────────────────────────────
+.title-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  padding: 1rem 3rem;
+}
+.tc-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: $gold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.tc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.0rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+.tc-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: $gold;
+  margin-bottom: 1.4rem;
+}
+.tc-author { font-size: 1.0rem; color: rgba(255,255,255,0.72); }
+
+.part-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 78vh;
+  text-align: center;
+}
+.part-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: $gold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+.part-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.part-sub { font-size: 1.05rem; color: rgba(255,255,255,0.68); }
+
+.end-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 78vh;
+  text-align: center;
+  gap: 1rem;
+}
+.end-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: $gold;
+}
+.end-author {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 2;
+}
+.end-next {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+}
+.end-footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  color: rgba(201,168,76,0.4);
+  letter-spacing: 0.18em;
+  margin-top: 1rem;
+}
+
+// ── Learning objectives grid ───────────────────────────────────
+.obj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-top: 0.6rem;
+}
+.obj-item {
+  background: rgba(255,255,255,0.1);
+  border-left: 4px solid $gold;
+  border-radius: 0 8px 8px 0;
+  padding: 0.85rem 1.1rem;
+  font-size: 1.0rem;
+  color: #fff;
+  line-height: 1.5;
+}
+.obj-item strong { color: $gold !important; }
+
+// ── Equation banner ────────────────────────────────────────────
+.eq-banner {
+  background: $navy;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  text-align: center;
+  margin: 0.6rem 0 1rem;
+  font-size: 1.1em;
+}
+.eq-banner .katex, .eq-banner .katex * { color: #fff !important; }
+
+// ── Definition box ─────────────────────────────────────────────
+.def-box {
+  background: $green-pale;
+  border-left: 5px solid $green;
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  color: $text-dark;
+}
+.def-box strong { color: $green; }
+
+// ── Three-column layout ────────────────────────────────────────
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.col-card {
+  border-radius: 10px;
+  padding: 1.1rem 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.col-card h3 {
+  font-size: 1.05rem !important;
+  margin-bottom: 0.5rem;
+}
+.col-green { background: $green-pale; border-top: 4px solid $green; }
+.col-green h3 { color: $green !important; }
+.col-amber { background: #fffbeb; border-top: 4px solid $amber; }
+.col-amber h3 { color: $amber !important; }
+.col-blue  { background: #eff6ff; border-top: 4px solid $blue; }
+.col-blue h3  { color: $blue !important; }
+
+// ── Two-example layout ─────────────────────────────────────────
+.two-example {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.ex-box {
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+.ex-box h3 {
+  font-size: 1.05rem !important;
+  margin-bottom: 0.6rem;
+}
+.ex-green { background: $green-pale; border-left: 5px solid $green; }
+.ex-green h3 { color: $green !important; }
+.ex-amber { background: #fffbeb; border-left: 5px solid $amber; }
+.ex-amber h3 { color: darken($amber, 5%) !important; }
+.ex-red   { background: #fdf2f2; border-left: 5px solid $red; }
+.ex-red h3   { color: $red !important; }
+.ex-blue  { background: #eff6ff; border-left: 5px solid $blue; }
+.ex-blue h3  { color: $blue !important; }
+
+// ── Expenditure component grid ─────────────────────────────────
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.9rem;
+  margin-top: 0.4rem;
+}
+.exp-item {
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.exp-item h3 {
+  font-size: 0.95rem !important;
+  margin-bottom: 0.4rem;
+}
+.exp-red  { background: #fdf2f2; border-top: 4px solid $red; }
+.exp-red h3  { color: $red !important; }
+.exp-amber { background: #fffbeb; border-top: 4px solid $amber; }
+.exp-amber h3 { color: darken($amber, 5%) !important; }
+
+// ── Limitation boxes ───────────────────────────────────────────
+.two-limit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3rem;
+  margin-top: 0.3rem;
+}
+.limit-box {
+  border-radius: 10px;
+  padding: 1.3rem 1.5rem;
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+.limit-box h3 {
+  font-size: 1.05rem !important;
+  margin-bottom: 0.6rem;
+}
+.limit-red  { background: #fdf2f2; border-left: 5px solid $red; }
+.limit-red h3  { color: $red !important; }
+.limit-amber { background: #fffbeb; border-left: 5px solid $amber; }
+.limit-amber h3 { color: darken($amber,5%) !important; }
+.limit-blue { background: #eff6ff; border-left: 5px solid $blue; }
+.limit-blue h3 { color: $blue !important; }
+
+// ── Alternative measures grid ──────────────────────────────────
+.alt-measures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+  margin-top: 0.4rem;
+}
+.alt-item {
+  background: $green-pale;
+  border-left: 4px solid $green;
+  border-radius: 0 10px 10px 0;
+  padding: 1.1rem 1.3rem;
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+.alt-item h3 {
+  font-size: 1.0rem !important;
+  color: $green !important;
+  margin-bottom: 0.4rem;
+}
+
+// ── Growth needs grid ──────────────────────────────────────────
+.need-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.need-stat {
+  background: $green-pale;
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: $green;
+  line-height: 1.5;
+}
+.need-red {
+  background: #fdf2f2;
+  color: $red;
+}
+.growth-req {
+  background: $navy;
+  color: rgba(255,255,255,0.85);
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.88rem;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+// ── IMF Cycle ──────────────────────────────────────────────────
+.cycle-title {
+  color: #fff;
+  text-align: center;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+.imf-cycle {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 0.5rem;
+}
+.cycle-step {
+  border-radius: 0 0 10px 10px;
+  padding: 1rem 0.6rem;
+  font-size: 0.88rem;
+  text-align: center;
+  color: #fff;
+  line-height: 1.65;
+}
+.cycle-step strong { color: #fff !important; }
+.step-red   { background: rgba(192,57,43,0.22); border-top: 3px solid $red; }
+.step-amber { background: rgba(217,119,6,0.22); border-top: 3px solid $amber; }
+.step-green { background: rgba(45,143,90,0.22); border-top: 3px solid $green-light; }
+.step-blue  { background: rgba(29,95,168,0.22); border-top: 3px solid $blue; }
+.cycle-note {
+  background: rgba(201,168,76,0.14);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 8px;
+  padding: 0.75rem 1.2rem;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+// ── Key takeaways grid ─────────────────────────────────────────
+.takeaway-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+.takeaway-col > h3 {
+  color: $gold !important;
+  font-size: 1.1rem !important;
+  border-bottom: 1px solid rgba(201,168,76,0.3);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+.takeaway-item {
+  background: rgba(255,255,255,0.08);
+  border-left: 3px solid $gold;
+  border-radius: 0 6px 6px 0;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+  color: #fff;
+  margin-bottom: 0.55rem;
+  line-height: 1.55;
+}
+.takeaway-item strong { color: $gold !important; }
+
+// ── Conclusion ─────────────────────────────────────────────────
+.conclusion-card {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+.conclusion-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: $gold;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+.conclusion-body {
+  font-size: 0.97rem;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.85;
+  text-align: left;
+}
+.conclusion-body strong { color: $gold !important; }
+
+// ── Callout box ────────────────────────────────────────────────
+.callout-box {
+  border-radius: 8px;
+  padding: 0.85rem 1.2rem;
+  font-size: 0.96rem;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+}
+.callout-red   { background: #fdf2f2; border-left: 5px solid $red; color: $text-dark; }
+.callout-amber { background: #fffbeb; border-left: 5px solid $amber; color: $text-dark; }
+.callout-box strong { font-weight: 700; }
+
+// ── Highlight banner ───────────────────────────────────────────
+.highlight-banner {
+  background: $green;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.8rem 1.4rem;
+  text-align: center;
+  font-size: 1.0rem;
+  font-weight: 600;
+  margin-top: 0.9rem;
+}
+.highlight-banner strong { color: $gold !important; }
+
+// ── Big comparison table ────────────────────────────────────────
+.big-table table {
+  font-size: 0.95em !important;
+}
+.big-table table td, .big-table table th {
+  padding: 0.55rem 1rem !important;
+}
+
+// ── GNP reconciliation table ───────────────────────────────────
+.recon-table {
+  max-width: 580px;
+}
+.recon-table table {
+  font-size: 1.0em !important;
+}
+.recon-table table td, .recon-table table th {
+  padding: 0.55rem 1.1rem !important;
+}
+
+// ── Chart labels ───────────────────────────────────────────────
+.chart-title-dark {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.chart-note-dark {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.92rem;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+.chart-note-light {
+  color: $text-dark;
+  font-size: 0.92rem;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+.chart-note-red {
+  color: $red;
+  font-size: 0.95rem;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+
+// ── Bottom note ────────────────────────────────────────────────
+.bottom-note {
+  background: $green-pale;
+  border-left: 4px solid $green;
+  border-radius: 0 6px 6px 0;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.92rem;
+  color: $text-dark;
+  margin-top: 0.8rem;
+}
+.bottom-note strong { color: $green; }
+
+// ── Reconciliation table layout ────────────────────────────────
+.recon-layout {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 1.5rem;
+  align-items: start;
 }
