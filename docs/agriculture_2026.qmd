@@ -8,10 +8,7 @@ format:
     slide-number: true
     progress: true
     transition: slide
-execute: 
-  echo: false
-  freeze: auto
-  
+editor: visual
 
 ---
 
@@ -79,7 +76,7 @@ ggplot(df, aes(x = year, y = Agriculture_pct_GDP)) +
 
 
 ::: notes
-Structural transformation: as economies grow, agriculture's share shrinks. This is not failure — unless productivity stagnates. Pakistan's issuecdd is exactly that.
+Structural transformation: as economies grow, agriculture's share shrinks. This is not failure — unless productivity stagnates. Pakistan's issue is exactly that.
 :::
 
 ---
