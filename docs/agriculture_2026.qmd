@@ -9,12 +9,11 @@ format:
     progress: true
     transition: slide
 editor: visual
-
 ---
 
 # 1. Why Agriculture Matters {.section}
 
----
+------------------------------------------------------------------------
 
 ## The Big Picture
 
@@ -22,216 +21,125 @@ editor: visual
 
 **Three core roles:**
 
-- **Income** → 22–24% of GDP (direct + indirect)
-- **Employment** → ~37% of the labor force
-- **Exports** → Rice, cotton, fruits: ~18% of total exports
+-   **Income** → 22–24% of GDP (direct + indirect)
+-   **Employment** → \~37% of the labor force
+-   **Exports** → Rice, cotton, fruits: \~18% of total exports
 
 ::: notes
 Start here to anchor the sector's relevance before diving into data. Students often underestimate agriculture because it is seen as "low-tech." Reframe it as structurally central.
 :::
 
----
+------------------------------------------------------------------------
 
-## Agriculture GDP Share Over Time
+## Visual Placeholder 1: GDP Share Over Time
 
-
-
-```{r}
-library(tidyverse)
-library(WDI)
-
-# Download data from World Bank
-df <- WDI(
-  country = "PK", 
-  indicator = "NV.AGR.TOTL.ZS", 
-  start = 1970, 
-  end   = 2024)
-
-# Rename columns
-df <- df[order(df$year), ]
-names(df)[names(df) == "NV.AGR.TOTL.ZS"] <- "Agriculture_pct_GDP"
-
-# Plot
-ggplot(df, aes(x = year, y = Agriculture_pct_GDP)) +
-  geom_line(color = "steelblue", linewidth = 1.2) +
-  geom_point(color = "steelblue", size = 2) +
-  labs(
-    title = "Pakistan: Agriculture Value-Added (% of GDP)",
-    subtitle = "World Bank WDI (NV.AGR.TOTL.ZS)",
-    x = "Year",
-    y = "Agriculture (% of GDP)"
-  ) +
-  theme_minimal()
-
-```
-
---- 
-
+::: callout-note
+**\[Insert Chart\]** Agriculture value-added as % of GDP, 1970–2023\
+Source: PBS / World Bank WDI
+:::
 
 **What the trend tells us:**
 
-- Declining GDP share — but this is *normal* in growing economies
-- Absolute value of output keeps rising
-- Problem: the sector is growing *slower* than industry and services
-
+-   Declining GDP share — but this is *normal* in growing economies
+-   Absolute value of output keeps rising
+-   Problem: the sector is growing *slower* than industry and services
 
 ::: notes
 Structural transformation: as economies grow, agriculture's share shrinks. This is not failure — unless productivity stagnates. Pakistan's issue is exactly that.
 :::
 
----
+------------------------------------------------------------------------
 
-##  Agriculture Employment Share
+## Visual Placeholder 2: Employment Share
 
-```{r}
-# Fetch data from World Bank WDI
-df <- WDI(
-  country = "PK",
-  indicator = c(
-    GDP_ag = "NV.AGR.TOTL.ZS",     # Agriculture % of GDP
-    Emp_ag = "SL.AGR.EMPL.ZS"      # Agriculture employment % of total
-  ),
-  start = 2000,
-  end   = 2023
-)
-
-# Clean & rename
-# Clean
-df <- df[order(df$year), ]
-df <- df[!is.na(df$year), ]
-
-# Plot
-ggplot(df, aes(x = year)) +
-  geom_line(aes(y = GDP_ag, color = "GDP share"), linewidth = 1.2) +
-  geom_line(aes(y = Emp_ag, color = "Employment share"), linewidth = 1.2) +
-  geom_point(aes(y = GDP_ag, color = "GDP share")) +
-  geom_point(aes(y = Emp_ag, color = "Employment share")) +
-  scale_color_manual(
-    name = "",
-    values = c("GDP share" = "steelblue", "Employment share" = "darkorange")
-  ) +
-  labs(
-    title = "Pakistan: Agriculture Employment vs GDP Share (2000–2023)",
-    subtitle = "World Bank WDI",
-    x = "Year",
-    y = "Percent (%)"
-  ) +
-  theme_minimal()
-```
-
----
+::: callout-note
+**\[Insert Chart\]** Agriculture employment share vs. GDP share, 2000–2023\
+Source: PBS Labour Force Survey
+:::
 
 **The productivity gap:**
 
-- ~37% of workers → produce only ~22% of GDP
-- Implies agriculture is a **low-productivity sector**
-- Workers in industry produce far more per person
-- This gap drives rural poverty
+-   \~37% of workers → produce only \~22% of GDP
+-   Implies agriculture is a **low-productivity sector**
+-   Workers in industry produce far more per person
+-   This gap drives rural poverty
 
 ::: notes
 Lewis dual-sector model intuition: labor is in surplus in agriculture. Moving labor to industry raises overall productivity — but only if industry can absorb it.
 :::
 
----
+------------------------------------------------------------------------
 
 # 2. Structure of the Sector {.section}
 
----
+------------------------------------------------------------------------
 
 ## What Does "Agriculture" Include?
 
 | Sub-sector | Share of Agri GDP |
-|---|---|
-| Crops | ~38% |
-| Livestock | ~61% |
-| Forestry | ~1% |
-| Fisheries | ~2% |
+|------------|-------------------|
+| Crops      | \~38%             |
+| Livestock  | \~61%             |
+| Forestry   | \~1%              |
+| Fisheries  | \~2%              |
 
 **Key insight:** Livestock is the single largest component — yet policy focus remains on crops.
 
 ::: notes
-Students are often surprised that livestock > crops. This shapes the policy discussion: support prices for wheat and cotton dominate the agenda, while livestock — which affects more households — gets less attention.
+Students are often surprised that livestock \> crops. This shapes the policy discussion: support prices for wheat and cotton dominate the agenda, while livestock — which affects more households — gets less attention.
 :::
 
----
+------------------------------------------------------------------------
 
-##  Crop Composition
+## Visual Placeholder 3: Crop Composition
 
-
-```{r}
-# Create dataset
-major_crop <- data.frame(
-  Sector = c("Important Crops", "Cotton", "Wheat", "Sugarcane",
-             "Maize", "Rice", "Other Crops",
-             "Livestock", "Forestry", "Fisheries"),
-  Growth = c(-13.49, -30.7, -8.9, -3.9,
-             -15.4, -1.4, 4.78,
-             4.72, 3.03, 1.42)
-)
-
-# Order by growth rate
-major_crop <- major_crop %>%
-  arrange(Growth) %>%
-  mutate(Sector = factor(Sector, levels = Sector))
-
-# Plot
-ggplot(major_crop, aes(x = Sector, y = Growth, fill = Growth > 0)) +
-  geom_bar(stat = "identity", width = 0.7) +
-  coord_flip() +
-  scale_fill_manual(values = c("TRUE" = "darkgreen", "FALSE" = "firebrick")) +
-  labs(
-    title = "Pakistan Agriculture Sector Growth – FY2025",
-    subtitle = "Major Components",
-    x = "",
-    y = "Growth Rate (%)"
-  ) +
-  theme_minimal() +
-  theme(legend.position = "none")
-```
-
----
+::: callout-note
+**\[Insert Pie/Bar Chart\]** Share of major crops in cropped area\
+Wheat, Cotton, Rice, Sugarcane, Maize, Others\
+Source: PBS Agricultural Statistics
+:::
 
 **Five crops dominate:**
 
-- **Wheat** → food security crop, heavily politicized
-- **Cotton** → textile backbone, in structural decline
-- **Rice** → export earner, climate-sensitive
-- **Sugarcane** → politically entrenched, water-intensive
-- **Maize** → rising fast, driven by poultry demand
+-   **Wheat** → food security crop, heavily politicized
+-   **Cotton** → textile backbone, in structural decline
+-   **Rice** → export earner, climate-sensitive
+-   **Sugarcane** → politically entrenched, water-intensive
+-   **Maize** → rising fast, driven by poultry demand
 
----
+------------------------------------------------------------------------
 
 ## The Livestock Reality
 
-- Livestock = **~60% of agricultural GDP** and ~11% of total GDP
-- Pakistan: one of world's largest buffalo and goat populations
-- Primary source of income for **smallholder rural households**
-- Milk production growing, but value chains remain weak
+-   Livestock = **\~60% of agricultural GDP** and \~11% of total GDP
+-   Pakistan: one of world's largest buffalo and goat populations
+-   Primary source of income for **smallholder rural households**
+-   Milk production growing, but value chains remain weak
 
 **Under-discussed challenges:**
 
-- Animal disease burden (FMD, LSD, PPR)
-- Feed cost inflation
-- No cold chain → post-farm losses
+-   Animal disease burden (FMD, LSD, PPR)
+-   Feed cost inflation
+-   No cold chain → post-farm losses
 
 ::: notes
 Livestock is the silent majority of the sector. It is more resilient to weather than crops but heavily affected by feed costs and disease outbreaks. The 2022 floods wiped out significant livestock capital in Sindh.
 :::
 
----
+------------------------------------------------------------------------
 
 # 3. The Productivity Problem {.section}
 
----
+------------------------------------------------------------------------
 
 ## Pakistan Yields vs. Regional Peers
 
-| Crop | Pakistan | India | China | Bangladesh |
-|---|---|---|---|---|
-| Wheat (MT/ha) | 2.85 | 3.37 | 5.42 | 3.13 |
-| Rice (MT/ha) | 2.52 | 3.88 | 7.03 | 4.74 |
-| Sugarcane (MT/ha) | 61 | 80 | 77 | 40 |
-| Tomato (MT/ha) | 9.4 | 24.6 | 59.4 | 13.7 |
+| Crop              | Pakistan | India | China | Bangladesh |
+|-------------------|----------|-------|-------|------------|
+| Wheat (MT/ha)     | 2.85     | 3.37  | 5.42  | 3.13       |
+| Rice (MT/ha)      | 2.52     | 3.88  | 7.03  | 4.74       |
+| Sugarcane (MT/ha) | 61       | 80    | 77    | 40         |
+| Tomato (MT/ha)    | 9.4      | 24.6  | 59.4  | 13.7       |
 
 **Key takeaway:** Pakistan consistently underperforms China and often India — countries with comparable or harder conditions.
 
@@ -239,60 +147,60 @@ Livestock is the silent majority of the sector. It is more resilient to weather 
 This is not a resource endowment problem. It is largely an institutional and input-quality problem. China's tomato yield is 6x Pakistan's. The gap is technology, extension, and input quality.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Why Are Yields Low?
 
 **Supply-side constraints:**
 
-- Poor seed quality — certified seed use remains low
-- Over/under-fertilization (no soil testing)
-- Water stress + inefficient flood irrigation
-- Pest/disease burden, weak extension
+-   Poor seed quality — certified seed use remains low
+-   Over/under-fertilization (no soil testing)
+-   Water stress + inefficient flood irrigation
+-   Pest/disease burden, weak extension
 
 **Structural constraints:**
 
-- Fragmented landholdings (avg. 6.4 acres nationally)
-- KP avg. = 3.6 acres → impossible to mechanize
-- Absentee landlordism in Sindh/Punjab → low investment
+-   Fragmented landholdings (avg. 6.4 acres nationally)
+-   KP avg. = 3.6 acres → impossible to mechanize
+-   Absentee landlordism in Sindh/Punjab → low investment
 
 ::: notes
 Small farm size is not inherently bad — Taiwan and South Korea developed with small farms. The issue is lack of cooperative organization, credit access, and extension services.
 :::
 
----
+------------------------------------------------------------------------
 
 ## The Lewis Intuition (Simply)
 
-```
+```         
 Agriculture          →    Industry/Services
 (surplus labor,           (higher productivity,
  low wages)               higher wages)
 ```
 
-- As labor moves out of agriculture → agricultural wages rise → farmers invest more
-- This *can* happen *naturally* if industry grows
-- In Pakistan: industry has not absorbed labor fast enough
-- Result: agriculture remains overcrowded and low-productivity
+-   As labor moves out of agriculture → agricultural wages rise → farmers invest more
+-   This *can* happen *naturally* if industry grows
+-   In Pakistan: industry has not absorbed labor fast enough
+-   Result: agriculture remains overcrowded and low-productivity
 
 ::: notes
 Do not get too theoretical. The intuition is enough: too many workers chasing too little output. Transformation is stalled. This is structurally different from East Asian success stories.
 :::
 
----
+------------------------------------------------------------------------
 
 # 4. Water: The Binding Constraint {.section}
 
----
+------------------------------------------------------------------------
 
 ## Pakistan's Water Dependency
 
-| Region | Agricultural Water Use |
-|---|---|
-| Pakistan | **94%** of freshwater |
-| South Asia avg. | 91% |
-| MENA | 85% |
-| Europe & Central Asia | 36% |
+| Region                | Agricultural Water Use |
+|-----------------------|------------------------|
+| Pakistan              | **94%** of freshwater  |
+| South Asia avg.       | 91%                    |
+| MENA                  | 85%                    |
+| Europe & Central Asia | 36%                    |
 
 **Pakistan is one of the most water-stressed agricultural systems on Earth.**
 
@@ -300,32 +208,32 @@ Do not get too theoretical. The intuition is enough: too many workers chasing to
 This is a structural vulnerability, not just a climate risk. The entire agricultural model is built on irrigation from the Indus system — which faces upstream pressure from India and internal mismanagement.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Visual Placeholder 4: Water Use
 
-::: {.callout-note}
-**[Insert Chart]** Indus Basin water availability trend + groundwater depletion rates  
+::: callout-note
+**\[Insert Chart\]** Indus Basin water availability trend + groundwater depletion rates\
 Source: IRSA / Pakistan Water Apportionment Accord data
 :::
 
 **The Indus System under stress:**
 
-- Indus Waters Treaty (1960) → Pakistan gets western rivers
-- But: glacial melt accelerating → short-term surplus, long-term crisis
-- Groundwater over-extraction: Punjab water table falling 1–3 m/year
-- Canal system efficiency: only ~40% — rest lost to seepage
+-   Indus Waters Treaty (1960) → Pakistan gets western rivers
+-   But: glacial melt accelerating → short-term surplus, long-term crisis
+-   Groundwater over-extraction: Punjab water table falling 1–3 m/year
+-   Canal system efficiency: only \~40% — rest lost to seepage
 
----
+------------------------------------------------------------------------
 
 ## Water-Intensive Crops: A Policy Paradox
 
-| Crop | Water Requirement | Notes |
-|---|---|---|
-| Sugarcane | Very High | Most water-intensive crop grown |
-| Rice (Kharif) | High | Punjab bans delayed to protect farmers |
-| Wheat | Moderate | Winter crop, less pressure |
-| Cotton | Moderate | Declining area → less demand |
+| Crop          | Water Requirement | Notes                                  |
+|---------------|-------------------|----------------------------------------|
+| Sugarcane     | Very High         | Most water-intensive crop grown        |
+| Rice (Kharif) | High              | Punjab bans delayed to protect farmers |
+| Wheat         | Moderate          | Winter crop, less pressure             |
+| Cotton        | Moderate          | Declining area → less demand           |
 
 **Policy trap:** Water-intensive crops are politically protected despite water scarcity.
 
@@ -333,84 +241,76 @@ Source: IRSA / Pakistan Water Apportionment Accord data
 Sugarcane is the clearest example: extremely water-intensive, processed in inefficient mills, yet farmers lobby hard to maintain support prices. This is a political economy problem, not just agronomic.
 :::
 
----
+------------------------------------------------------------------------
 
 # 5. Crop-Specific Political Economy {.section}
 
----
+------------------------------------------------------------------------
 
 ## Wheat: The Political Staple
 
 **Why it dominates:**
 
-- 65% of caloric intake in Pakistan
-- Government sets **procurement price** annually
-- PASSCO buys wheat → stocks wheat → sells at subsidy
-- Storage capacity: only 15% of annual production
+-   65% of caloric intake in Pakistan
+-   Government sets **procurement price** annually
+-   PASSCO buys wheat → stocks wheat → sells at subsidy
+-   Storage capacity: only 15% of annual production
 
 **Policy tensions:**
 
-- High procurement price → expensive bread → urban inflation
-- Low procurement price → farmer distress → rural protest
-- Procurement delays → farmers sell to middlemen at loss
+-   High procurement price → expensive bread → urban inflation
+-   Low procurement price → farmer distress → rural protest
+-   Procurement delays → farmers sell to middlemen at loss
 
 ::: notes
 Wheat is the single most politically sensitive agricultural commodity. Any government that lets wheat prices rise or fails to procure faces immediate backlash. This creates fiscal pressure and market distortion simultaneously.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Sugar: The Most Politicized Crop
 
 **The sugar economy:**
 
-- ~1 million farmers grow cane
-- ~90 sugar mills — mostly owned by political families
-- Mill owners delay payments to farmers (crushing arrears)
-- Government sets cane support price, but mills resist
+-   \~1 million farmers grow cane
+-   \~90 sugar mills — mostly owned by political families
+-   Mill owners delay payments to farmers (crushing arrears)
+-   Government sets cane support price, but mills resist
 
 **The cycle:**
 
-1. High cane price set → mills resist → arrears pile up
-2. Sugar export allowed → domestic shortage → price spike
-3. Import permitted → oversupply → next year's cane price politics
+1.  High cane price set → mills resist → arrears pile up
+2.  Sugar export allowed → domestic shortage → price spike
+3.  Import permitted → oversupply → next year's cane price politics
 
 ::: notes
 Sugar is a textbook example of rent-seeking. The mills capture policy, delay farmer payments, lobby for export quotas, and manipulate domestic supply. Students should know this is documented — not conspiracy.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Cotton: The Decline Problem
 
-**Historical role:**
-- Cotton → textile exports → largest export category
-- "White Gold" drove Punjab's growth in the 1960s–80s
+**Historical role:** - Cotton → textile exports → largest export category - "White Gold" drove Punjab's growth in the 1960s–80s
 
-**Current reality:**
-- Cotton area: declined from ~3 million ha (peak) to ~2.2 million ha
-- Yield gap: Pakistan cotton yield below India and competing countries
-- Competition from polyester + pest resistance (Pink Bollworm)
+**Current reality:** - Cotton area: declined from \~3 million ha (peak) to \~2.2 million ha - Yield gap: Pakistan cotton yield below India and competing countries - Competition from polyester + pest resistance (Pink Bollworm)
 
-**Policy failure:**
-- Seed quality not upgraded in decades
-- Extension services collapsed
-- No R&D investment to replace old varieties
+**Policy failure:** - Seed quality not upgraded in decades - Extension services collapsed - No R&D investment to replace old varieties
 
 ::: notes
 Cotton decline is an industrial crisis disguised as an agricultural one. The textile industry depends on cotton. As domestic supply fell, Pakistan increasingly imports cotton — a country that used to export it.
 :::
 
----
+------------------------------------------------------------------------
 
 # 6. Provincial Differences Matter {.section}
 
----
+------------------------------------------------------------------------
 
 ## Not One Agriculture — Four Realities
 
 | Province | Key Characteristics |
-|---|---|
+|----|----|
 | **Punjab** | Breadbasket. Wheat, cotton, rice, maize. Avg farm: 5.6 acres. Irrigation-dependent. |
 | **Sindh** | Feudal structures. Rice, cotton, sugarcane. Large farms (8.8 acres avg). Flood-prone. |
 | **KP** | Small farms (3.6 acres). Tobacco, maize, fruits. Rainfed and terraced. Mountains limit scale. |
@@ -420,163 +320,160 @@ Cotton decline is an industrial crisis disguised as an agricultural one. The tex
 This table is essential for students to understand that federal agricultural policy often fits Punjab and is a poor match for KP or Balochistan. Provincial autonomy under the 18th Amendment means agriculture is now a provincial subject — but capacity gaps remain.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Post-Harvest Losses: The Hidden Problem
 
 **Scale of the problem:**
 
-- Fruits & vegetables: **up to 40%** post-harvest loss
-- Grains: **up to 20%** loss
-- Estimated value lost: **US$ 4–5 billion annually**
+-   Fruits & vegetables: **up to 40%** post-harvest loss
+-   Grains: **up to 20%** loss
+-   Estimated value lost: **US\$ 4–5 billion annually**
 
 **Why it happens:**
 
-- No cold chain infrastructure outside major cities
-- Poor drying → aflatoxin contamination
-- PASSCO can store only 15% of wheat production
-- Road access to markets in KP and Balochistan weak
+-   No cold chain infrastructure outside major cities
+-   Poor drying → aflatoxin contamination
+-   PASSCO can store only 15% of wheat production
+-   Road access to markets in KP and Balochistan weak
 
 ::: notes
 Post-harvest losses are more solvable than yield gaps — they require logistics and infrastructure investment rather than changing farmer behavior. But the political payoff is less visible than procurement price announcements.
 :::
 
----
+------------------------------------------------------------------------
 
 # 7. Climate Vulnerability {.section}
 
----
+------------------------------------------------------------------------
 
 ## Agriculture on the Front Line
 
 **Pakistan's climate exposure:**
 
-- 2022 floods: **9 million acres** of crops damaged, $3.7 billion agricultural losses
-- Increasing frequency of heat waves → wheat losses at critical grain-fill stage
-- Glacier melt: Indus flow volatile — too much water then too little
-- Locust invasions (2019–20): $3 billion in losses
+-   2022 floods: **9 million acres** of crops damaged, \$3.7 billion agricultural losses
+-   Increasing frequency of heat waves → wheat losses at critical grain-fill stage
+-   Glacier melt: Indus flow volatile — too much water then too little
+-   Locust invasions (2019–20): \$3 billion in losses
 
-**Most vulnerable groups:**
-- Small farmers with no insurance
-- Landless laborers with no fallback
-- Livestock-dependent households in arid zones
+**Most vulnerable groups:** - Small farmers with no insurance - Landless laborers with no fallback - Livestock-dependent households in arid zones
 
 ::: notes
 Climate is not a future problem for Pakistan agriculture — it is a present crisis. The 2022 floods are the starkest example. Students should connect this to both adaptation (new varieties, drainage) and mitigation (reduced agriculture emissions).
 :::
 
----
+------------------------------------------------------------------------
 
 ## Climate Adaptation Gaps
 
 **What's needed:**
 
-- Heat-tolerant, drought-resistant crop varieties
-- Efficient irrigation (drip, sprinkler vs. flood)
-- Crop insurance — especially parametric insurance
-- Early warning systems for weather and pest outbreaks
+-   Heat-tolerant, drought-resistant crop varieties
+-   Efficient irrigation (drip, sprinkler vs. flood)
+-   Crop insurance — especially parametric insurance
+-   Early warning systems for weather and pest outbreaks
 
 **What exists:**
 
-- Limited variety development (PARC under-resourced)
-- Parametric insurance pilots — promising but not scaled
-- Climate Smart Agriculture (CSA) programs — fragmented
+-   Limited variety development (PARC under-resourced)
+-   Parametric insurance pilots — promising but not scaled
+-   Climate Smart Agriculture (CSA) programs — fragmented
 
 ::: notes
 Parametric insurance pays out based on a measurable trigger (rainfall below threshold, temperature above X) rather than requiring farm-level claims assessment. It is faster and cheaper to administer — pilots in Pakistan show promise.
 :::
 
----
+------------------------------------------------------------------------
 
 # 8. Input Distortions {.section}
 
----
+------------------------------------------------------------------------
 
 ## The Subsidy Trap
 
 **Pakistan's input subsidies:**
 
-- Fertilizer subsidies: fiscally costly, often captured by larger farmers
-- Electricity subsidy for tubewells (agricultural connections): promotes groundwater overuse
-- Support prices for wheat and sugarcane: create crop bias
+-   Fertilizer subsidies: fiscally costly, often captured by larger farmers
+-   Electricity subsidy for tubewells (agricultural connections): promotes groundwater overuse
+-   Support prices for wheat and sugarcane: create crop bias
 
 **Who benefits?**
 
-- Larger farmers with access to formal channels
-- Middle-men who arbitrage procurement systems
-- Mill owners who benefit from cane price politics
+-   Larger farmers with access to formal channels
+-   Middle-men who arbitrage procurement systems
+-   Mill owners who benefit from cane price politics
 
 **Who is left out?**
 
-- Smallholders (<12.5 acres) who can't access formal credit
-- Tenant farmers without collateral
-- Women farmers without land titles
+-   Smallholders (\<12.5 acres) who can't access formal credit
+-   Tenant farmers without collateral
+-   Women farmers without land titles
 
 ::: notes
 Subsidies in Pakistan are regressive — they tend to benefit those who need them least. The political economy of subsidy reform is difficult: beneficiaries are organized, losers are diffuse.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Credit: The 80% Problem
 
 **Formal credit access:**
 
-- SBP agricultural lending target (FY2023): Rs. 1.8 trillion
-- Only ~67% disbursed
-- Commercial banks: generally do not lend below 12.5 acres
-- **Result: 80–90% of farmers rely on informal credit**
-- Informal interest rates: approaching 50% in distress periods
+-   SBP agricultural lending target (FY2023): Rs. 1.8 trillion
+-   Only \~67% disbursed
+-   Commercial banks: generally do not lend below 12.5 acres
+-   **Result: 80–90% of farmers rely on informal credit**
+-   Informal interest rates: approaching 50% in distress periods
 
 **The collateral trap:**
 
-- No land title → no formal loan
-- Many smallholders lack updated Fard (land records)
-- Land record digitization incomplete across provinces
+-   No land title → no formal loan
+-   Many smallholders lack updated Fard (land records)
+-   Land record digitization incomplete across provinces
 
 ::: notes
 This is one of the most binding constraints on farm productivity. A farmer who cannot finance a seed purchase at the start of the season is forced into input-credit arrangements with middlemen — who then capture the harvest at below-market prices.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Mechanization: Progress and Limits
 
 **What has improved:**
 
-- Tractor density has increased significantly
-- Thresher adoption is high in Punjab
+-   Tractor density has increased significantly
+-   Thresher adoption is high in Punjab
 
 **What hasn't:**
 
-- Precision agriculture (soil sensors, drones) — minimal
-- Small farm size limits mechanization economics
-- KP terraced fields: mechanization not viable at all
+-   Precision agriculture (soil sensors, drones) — minimal
+-   Small farm size limits mechanization economics
+-   KP terraced fields: mechanization not viable at all
 
 **Fintech opportunity:**
 
-- AgriTech startups (e.g., Farmdar, Ricult) connecting farmers to markets and credit
-- Satellite-based crop monitoring growing
-- Drone-based spraying pilots
+-   AgriTech startups (e.g., Farmdar, Ricult) connecting farmers to markets and credit
+-   Satellite-based crop monitoring growing
+-   Drone-based spraying pilots
 
 ::: notes
 Mechanization is not just about tractors. The next wave is precision agriculture — using data to optimize inputs. Pakistan has early movers here but scale-up faces connectivity and literacy constraints.
 :::
 
----
+------------------------------------------------------------------------
 
 # 9. Policy Trade-offs {.section}
 
----
+------------------------------------------------------------------------
 
 ## Trade-off 1: Price Support vs. Fiscal Cost
 
-| If support prices are HIGH | If support prices are LOW |
-|---|---|
-| Farmer income protected | Farmers distressed |
-| Fiscal burden rises | Government savings |
-| Consumers pay more (urban inflation) | Market prices may stabilize |
-| Crop choice distorted toward supported crops | Farmers diversify |
+| If support prices are HIGH                   | If support prices are LOW   |
+|----------------------------------------------|-----------------------------|
+| Farmer income protected                      | Farmers distressed          |
+| Fiscal burden rises                          | Government savings          |
+| Consumers pay more (urban inflation)         | Market prices may stabilize |
+| Crop choice distorted toward supported crops | Farmers diversify           |
 
 **Pakistan's experience:** Wheat support prices have created a near-monoculture in irrigated Punjab.
 
@@ -584,16 +481,16 @@ Mechanization is not just about tractors. The next wave is precision agriculture
 The fundamental tension: support prices help farmers in the short run but create long-run traps. Pakistan cannot easily remove wheat support prices because urban bread prices would spike — but keeping them distorts land use and water allocation.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Trade-off 2: Food Security vs. Market Efficiency
 
-| State-managed food system | Market-led food system |
-|---|---|
-| Predictable supply | Efficient allocation |
-| Prone to corruption (PASSCO leakages) | Vulnerable to price spikes |
-| Insulates poor from price shocks | Requires strong safety nets |
-| Fiscal cost of procurement + storage | Lower fiscal burden |
+| State-managed food system             | Market-led food system      |
+|---------------------------------------|-----------------------------|
+| Predictable supply                    | Efficient allocation        |
+| Prone to corruption (PASSCO leakages) | Vulnerable to price spikes  |
+| Insulates poor from price shocks      | Requires strong safety nets |
+| Fiscal cost of procurement + storage  | Lower fiscal burden         |
 
 **Key question:** Can Pakistan build social protection (cash transfers) strong enough to move away from commodity price controls?
 
@@ -601,16 +498,16 @@ The fundamental tension: support prices help farmers in the short run but create
 BISP is Pakistan's social protection anchor. A credible shift from wheat procurement to cash transfers for the poor is theoretically possible — but requires administrative capacity, targeting, and political will.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Trade-off 3: Subsidy Reform vs. Productivity Investment
 
-| Maintain subsidies | Reform subsidies |
-|---|---|
-| Politically safe | Politically costly |
+| Maintain subsidies         | Reform subsidies                  |
+|----------------------------|-----------------------------------|
+| Politically safe           | Politically costly                |
 | Supports current input use | Redirects funds to R&D, extension |
-| Rewards inefficiency | Rewards productivity |
-| Fiscal drain | Fiscal space for investment |
+| Rewards inefficiency       | Rewards productivity              |
+| Fiscal drain               | Fiscal space for investment       |
 
 **International lesson:** India's fertilizer subsidy bill exceeds its agricultural R&D budget by a large multiple. Pakistan risks the same trap.
 
@@ -618,16 +515,16 @@ BISP is Pakistan's social protection anchor. A credible shift from wheat procure
 Countries that subsidize inputs heavily tend to crowd out public investment in research and extension — which would have higher long-run returns. The political economy strongly favors visible subsidies over invisible research budgets.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Trade-off 4: Small Farmers vs. Commercial Agriculture
 
-| Smallholder-first policy | Commercial farming promotion |
-|---|---|
-| Equity and poverty reduction | Productivity and scale |
-| Politically popular | Politically sensitive |
-| Hard to mechanize | Can adopt technology faster |
-| Needs strong cooperative framework | Needs land market reform |
+| Smallholder-first policy           | Commercial farming promotion |
+|------------------------------------|------------------------------|
+| Equity and poverty reduction       | Productivity and scale       |
+| Politically popular                | Politically sensitive        |
+| Hard to mechanize                  | Can adopt technology faster  |
+| Needs strong cooperative framework | Needs land market reform     |
 
 **Pakistan's reality:** 80% of farms are below 12.5 acres. Any transformation must work with — not against — smallholders.
 
@@ -635,54 +532,54 @@ Countries that subsidize inputs heavily tend to crowd out public investment in r
 Land consolidation (as in Eastern Europe post-transition) is not realistic in Pakistan's political context. The practical path is cooperative organization, shared services, and cluster-based extension — models that work at small scale.
 :::
 
----
+------------------------------------------------------------------------
 
 # 10. The Path Forward {.section}
 
----
+------------------------------------------------------------------------
 
 ## What Needs to Change
 
 **Five priority shifts:**
 
-1. **From input subsidies → productivity investment** (R&D, extension, seed systems)
-2. **From flood irrigation → efficient water use** (drip/sprinkler, demand pricing)
-3. **From support prices → safety nets** (BISP expansion, price stabilization funds)
-4. **From fragmented policy → provincial agricultural strategies** (18th Amendment implementation)
-5. **From trader capture → farmer connectivity** (agritech, cooperative marketing)
+1.  **From input subsidies → productivity investment** (R&D, extension, seed systems)
+2.  **From flood irrigation → efficient water use** (drip/sprinkler, demand pricing)
+3.  **From support prices → safety nets** (BISP expansion, price stabilization funds)
+4.  **From fragmented policy → provincial agricultural strategies** (18th Amendment implementation)
+5.  **From trader capture → farmer connectivity** (agritech, cooperative marketing)
 
 ::: notes
 These are not radical reforms — each is supported by global evidence and has precedent in Pakistan's own pilot programs. The binding constraint is political economy, not technical knowledge.
 :::
 
----
+------------------------------------------------------------------------
 
 ## The Technology Opportunity
 
 **Precision agriculture tools:**
 
-- Satellite imagery → crop health monitoring at scale
-- Mobile-based soil testing (MIT-developed low-cost kits in pilot)
-- Drone-based spraying → reduced pesticide use
-- Digital land records → unlock formal credit
+-   Satellite imagery → crop health monitoring at scale
+-   Mobile-based soil testing (MIT-developed low-cost kits in pilot)
+-   Drone-based spraying → reduced pesticide use
+-   Digital land records → unlock formal credit
 
 **AgriFintech:**
 
-- Value chain financing — lenders finance inputs, recover at harvest
-- Parametric crop insurance — fast payout, no claim adjuster needed
-- Farmer apps → market price transparency
+-   Value chain financing — lenders finance inputs, recover at harvest
+-   Parametric crop insurance — fast payout, no claim adjuster needed
+-   Farmer apps → market price transparency
 
 ::: notes
 Technology does not solve political economy problems. But it can reduce information asymmetries — between farmers and markets, farmers and credit, governments and agricultural statistics.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Summary: Key Takeaways
 
 | Theme | Core Insight |
-|---|---|
-| **Structure** | Livestock > crops; sector is large but low-productivity |
+|----|----|
+| **Structure** | Livestock \> crops; sector is large but low-productivity |
 | **Water** | 94% water use; Indus system under existential stress |
 | **Yields** | Pakistan underperforms regional peers across all major crops |
 | **Policy** | Support prices protect incomes but distort incentives |
@@ -693,14 +590,14 @@ Technology does not solve political economy problems. But it can reduce informat
 Close with this slide to reinforce that agriculture is not a simple sector. It connects food security, fiscal policy, water resources, climate adaptation, and rural poverty. Policy must navigate real trade-offs.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Discussion Questions
 
-1. Should Pakistan remove wheat support prices? Who wins, who loses?
-2. Is Pakistan's small farm structure a curse or can it be turned into an advantage?
-3. What would a credible water pricing reform look like politically?
-4. How has the 2022 flood changed the calculus on climate adaptation investment?
+1.  Should Pakistan remove wheat support prices? Who wins, who loses?
+2.  Is Pakistan's small farm structure a curse or can it be turned into an advantage?
+3.  What would a credible water pricing reform look like politically?
+4.  How has the 2022 flood changed the calculus on climate adaptation investment?
 
 ::: notes
 These can be used for seminar discussion or assignments. Each maps to one of the policy trade-off slides.

@@ -1,0 +1,227 @@
+---
+title: "Structural Transformation, Water Constraints, and Pakistan's Agricultural Challenge"
+author: "Zahid Asghar"
+format:
+  revealjs:
+    theme: [default, custom.css, styles.scss]
+    chalkboard: true
+    slide-number: true
+    progress: true
+    transition: slide
+execute: 
+  echo: false
+  freeze: auto
+---
+
+## The Lewis Intuition (Simple Explanation)
+
+The development economist **W. Arthur Lewis** proposed a powerful idea about how economies grow.
+
+Early-stage economies usually have two sectors:
+
+| Traditional Sector | Modern Sector |
+|---|---|
+| Agriculture | Industry / Services |
+| Low productivity | High productivity |
+| Surplus labour | Higher wages |
+
+The key mechanism:
+
+**Workers move from agriculture to industry.**
+
+---
+
+## The Lewis Mechanism
+
+Agriculture → Industry/Services  
+
+- Agriculture has **surplus labour**
+- Industry offers **higher productivity jobs**
+
+As labour moves:
+
+1. Agricultural labour falls
+2. Agricultural wages increase
+3. Farmers invest in technology
+4. Productivity rises
+
+This process is called **structural transformation**.
+
+---
+
+## What Happens in Successful Development
+
+In countries that industrialized successfully:
+
+Examples include:
+
+- Japan
+- South Korea
+- China
+
+The pattern was:
+
+Agriculture employment ↓  
+Industry employment ↑  
+Agricultural productivity ↑  
+
+Fewer workers produced **more food**.
+
+---
+
+## The Lewis Turning Point
+
+The **Lewis Turning Point** occurs when:
+
+> Surplus labour in agriculture disappears.
+
+At this stage:
+
+- Labour becomes scarce
+- Agricultural wages rise quickly
+- Farmers invest in machinery and technology
+
+China reached this stage around the **mid-2000s**.
+
+---
+
+## Why Pakistan Has Not Reached the Lewis Turning Point
+
+Pakistan’s structural transformation is incomplete.
+
+Key issue:
+
+**Industry has not absorbed labour fast enough.**
+
+Problems include:
+
+- Slow industrial growth
+- Weak manufacturing expansion
+- Informal urban employment
+- Limited high-productivity jobs
+
+---
+
+## Result: Agricultural Overcrowding
+
+Because labour cannot leave agriculture:
+
+Too many workers remain on farms.
+
+Consequences:
+
+- small landholdings
+- low productivity
+- low rural incomes
+
+Pakistan therefore faces **structural agricultural stagnation**.
+
+---
+
+## Water: The Binding Constraint
+
+Pakistan agriculture is extremely water dependent.
+
+| Region | Agricultural Water Use |
+|---|---|
+| Pakistan | 94% |
+| South Asia average | 91% |
+| MENA | 85% |
+| Europe & Central Asia | 36% |
+
+Almost **all freshwater in Pakistan goes to agriculture**.
+
+---
+
+## The Indus Irrigation System
+
+Pakistan relies heavily on the **Indus Basin irrigation system**, one of the largest irrigation networks in the world.
+
+However several problems exist:
+
+- water scarcity
+- inefficient irrigation
+- groundwater depletion
+- climate variability
+
+Water therefore becomes a **binding constraint**.
+
+---
+
+## What is a Binding Constraint?
+
+A binding constraint means:
+
+> The factor that most strongly limits growth.
+
+Even if farmers improve:
+
+- seeds  
+- fertilizer  
+- technology  
+
+Without sufficient water:
+
+**yields cannot increase.**
+
+---
+
+## Crop-Specific Political Economy
+
+Agricultural policy is shaped by **political interests**.
+
+Different crops have different power groups.
+
+| Crop | Political Drivers |
+|---|---|
+| Wheat | Food security politics |
+| Sugarcane | Powerful sugar mills |
+| Rice | Export interests |
+| Cotton | Textile industry |
+
+Policies often reflect **political incentives**, not economic efficiency.
+
+---
+
+## Example: Sugarcane
+
+Sugarcane is:
+
+- highly water intensive
+- relatively low value per unit of water
+
+Yet it remains widely grown because of:
+
+- strong sugar mill lobby
+- guaranteed procurement prices
+- political influence
+
+---
+
+## Pakistan's Agricultural Challenge
+
+Pakistan faces **three structural constraints**:
+
+1. Incomplete structural transformation  
+2. Severe water dependency  
+3. Political economy distortions  
+
+Together they produce:
+
+Low productivity agriculture.
+
+---
+
+## Big Development Insight
+
+Pakistan's agriculture problem is **not only a farming issue**.
+
+It is a **structural development challenge**:
+
+Slow industrialization  
++  
+Water scarcity  
++  
+Political incentives  
+
+= Persistent agricultural productivity gap
