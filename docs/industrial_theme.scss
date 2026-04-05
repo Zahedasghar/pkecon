@@ -1,0 +1,345 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: 'Source Sans 3', 'Segoe UI', sans-serif;
+$presentation-heading-font: 'Playfair Display', Georgia, serif;
+$presentation-font-size-root: 36px;
+$presentation-line-height: 1.5;
+$code-block-font-size: 0.7em;
+
+// Pakistan palette
+$body-bg: #0e2a1a;
+$body-color: #e8f3ed;
+$link-color: #c9a84c;
+$selection-bg: rgba(201, 168, 76, 0.35);
+$presentation-heading-color: #ffffff;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  --pk-green: #1a6b3c;
+  --pk-green-dark: #0e2a1a;
+  --pk-green-mid: #155c33;
+  --pk-green-light: #2d8f5a;
+  --pk-green-pale: rgba(45, 143, 90, 0.12);
+  --pk-gold: #c9a84c;
+  --pk-gold-light: #f0d98a;
+  --pk-gold-dim: rgba(201, 168, 76, 0.25);
+  --pk-brown: #5c4a2a;
+  --pk-brown-light: #8b7355;
+  --pk-warm-white: #f6f8f3;
+  --pk-surface: rgba(255, 255, 255, 0.06);
+  --pk-surface-strong: rgba(255, 255, 255, 0.10);
+  --pk-border: rgba(201, 168, 76, 0.2);
+  --pk-red: #e74c3c;
+  --pk-amber: #f0a500;
+  --pk-blue: #5dade2;
+  --pk-text-muted: rgba(232, 243, 237, 0.6);
+}
+
+/* ── Slide backgrounds ── */
+.reveal .slides section {
+  text-align: left;
+}
+
+.reveal .slide-background {
+  background: linear-gradient(160deg, #0e2a1a 0%, #112e1e 40%, #0d2517 100%);
+}
+
+/* Subtle grid pattern overlay */
+.reveal .slides section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: 
+    linear-gradient(rgba(201, 168, 76, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 168, 76, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.reveal .slides section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Typography ── */
+.reveal h1, .reveal h2 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  border-bottom: 2px solid var(--pk-gold-dim);
+  padding-bottom: 0.3em;
+  margin-bottom: 0.6em;
+}
+
+.reveal h2 {
+  font-size: 1.5em;
+}
+
+.reveal h2::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 0.85em;
+  background: var(--pk-gold);
+  margin-right: 0.4em;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+.reveal h3 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  color: var(--pk-gold);
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4em;
+}
+
+.reveal p, .reveal li {
+  font-weight: 300;
+  color: rgba(232, 243, 237, 0.88);
+}
+
+.reveal strong {
+  color: var(--pk-gold);
+  font-weight: 700;
+}
+
+.reveal em {
+  color: var(--pk-green-light);
+  font-style: italic;
+}
+
+.reveal .text-muted {
+  color: var(--pk-text-muted) !important;
+  font-size: 0.75em;
+}
+
+/* ── Section title slides ── */
+.reveal section.title-slide h1,
+.reveal .title-slide h1 {
+  font-size: 2.2em;
+  color: #fff;
+  border-bottom: 3px solid var(--pk-gold);
+}
+
+/* ── Callout boxes ── */
+.reveal .callout {
+  border-radius: 8px;
+  border-left-width: 4px;
+  margin: 0.6em 0;
+}
+
+.reveal .callout-warning {
+  background: rgba(231, 76, 60, 0.1);
+  border-left-color: var(--pk-red);
+}
+
+.reveal .callout-important {
+  background: rgba(201, 168, 76, 0.1);
+  border-left-color: var(--pk-gold);
+}
+
+.reveal .callout-tip {
+  background: rgba(45, 143, 90, 0.12);
+  border-left-color: var(--pk-green-light);
+}
+
+.reveal .callout-note {
+  background: rgba(93, 173, 226, 0.1);
+  border-left-color: var(--pk-blue);
+}
+
+/* ── Custom classes ── */
+.gold { color: var(--pk-gold) !important; }
+.green { color: var(--pk-green-light) !important; }
+.red { color: var(--pk-red) !important; }
+.amber { color: var(--pk-amber) !important; }
+.blue { color: var(--pk-blue) !important; }
+.dim { color: var(--pk-text-muted) !important; }
+.small { font-size: 0.7em !important; }
+.smaller { font-size: 0.6em !important; }
+.large { font-size: 1.3em !important; }
+.center { text-align: center !important; }
+
+.highlight-box {
+  background: var(--pk-surface-strong);
+  border: 1px solid var(--pk-border);
+  border-left: 4px solid var(--pk-gold);
+  border-radius: 6px;
+  padding: 0.6em 0.9em;
+  margin: 0.5em 0;
+}
+
+.stat-box {
+  background: linear-gradient(135deg, rgba(26, 107, 60, 0.2), rgba(201, 168, 76, 0.1));
+  border: 1px solid var(--pk-border);
+  border-radius: 8px;
+  padding: 0.5em 0.8em;
+  text-align: center;
+  margin: 0.3em;
+}
+
+.stat-box .stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--pk-gold);
+  line-height: 1.1;
+}
+
+.stat-box .stat-label {
+  font-size: 0.6em;
+  color: var(--pk-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.kpi-row {
+  display: flex;
+  gap: 0.6em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.kpi-row .stat-box {
+  flex: 1 1 160px;
+  max-width: 220px;
+}
+
+/* ── Tables ── */
+.reveal table {
+  font-size: 0.7em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.reveal table thead th {
+  background: var(--pk-green);
+  color: #fff;
+  padding: 0.5em 0.7em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.85em;
+  border: none;
+}
+
+.reveal table tbody td {
+  padding: 0.4em 0.7em;
+  border-bottom: 1px solid var(--pk-border);
+  color: rgba(232, 243, 237, 0.85);
+}
+
+.reveal table tbody tr:nth-child(even) td {
+  background: var(--pk-surface);
+}
+
+.reveal table tbody tr:hover td {
+  background: var(--pk-green-pale);
+}
+
+/* ── Blockquotes ── */
+.reveal blockquote {
+  background: var(--pk-surface);
+  border-left: 4px solid var(--pk-gold);
+  padding: 0.6em 1em;
+  margin: 0.5em 0;
+  font-style: italic;
+  color: rgba(232, 243, 237, 0.8);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.85em;
+}
+
+.reveal blockquote p {
+  margin: 0;
+}
+
+/* ── Lists ── */
+.reveal ul, .reveal ol {
+  margin-left: 0.3em;
+}
+
+.reveal ul li::marker {
+  color: var(--pk-gold);
+}
+
+.reveal ol li::marker {
+  color: var(--pk-gold);
+  font-weight: 700;
+}
+
+.reveal li {
+  margin-bottom: 0.3em;
+  padding-left: 0.2em;
+}
+
+/* ── Fragments ── */
+.reveal .fragment.highlight-current-green.visible {
+  color: var(--pk-green-light);
+}
+
+/* ── Footer ── */
+.reveal .slide-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.5em;
+  color: var(--pk-text-muted);
+}
+
+/* ── Two-column helper ── */
+.columns-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2em;
+  align-items: start;
+}
+
+.columns-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8em;
+  align-items: start;
+}
+
+/* ── Badge classes ── */
+.badge {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  border-radius: 4px;
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-red { background: var(--pk-red); color: #fff; }
+.badge-amber { background: var(--pk-amber); color: #1a1a1a; }
+.badge-green { background: var(--pk-green); color: #fff; }
+.badge-gold { background: var(--pk-gold); color: #1a1a1a; }
+
+/* ── Incremental styling ── */
+.reveal .slides section .fragment {
+  transition: all 0.3s ease;
+}
+
+/* ── Progress bar ── */
+.reveal .progress {
+  background: rgba(201, 168, 76, 0.15);
+  height: 4px;
+}
+
+.reveal .progress span {
+  background: var(--pk-gold);
+}
+
+/* ── R output tables ── */
+.reveal .cell-output-display table {
+  font-size: 0.65em;
+}
