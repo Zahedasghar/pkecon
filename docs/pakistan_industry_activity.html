@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pakistan Industry Activity — Prof. Dr. Zahid Asghar</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Source Sans 3',sans-serif;font-weight:400;background:#f4f6f2;color:#0e1f13;line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+#app{max-width:720px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+.sc{display:none}.sc.on{display:block}
+.ph-bar{display:flex;border-radius:8px;overflow:hidden;border:1px solid #cce0d4;margin-bottom:1.5rem}
+.ph-seg{flex:1;padding:9px 0;text-align:center;font-size:12px;font-weight:600;color:#4a6355;background:#eef5f0;border-right:1px solid #cce0d4;transition:all 0.3s}
+.ph-seg:last-child{border-right:none}
+.ph-seg.act{background:#0F6E56;color:#9FE1CB}
+.ph-seg.done{background:#EAF3DE;color:#27500A}
+.ph-num{font-family:'JetBrains Mono',monospace;font-size:10px;display:block;margin-bottom:1px}
+.prog-bar{height:4px;background:#cce0d4;border-radius:2px;margin-bottom:1.5rem}
+.prog-fill{height:4px;background:#1D9E75;border-radius:2px;transition:width 0.5s}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:3px 11px;border-radius:20px;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;margin-bottom:.8rem;border:1px solid}
+.badge.p1{background:#EAF3DE;color:#085041;border-color:#5DCAA5}
+.badge.p2{background:#E6F1FB;color:#0C447C;border-color:#85B7EB}
+.badge.nt{background:#eef5f0;color:#4a6355;border-color:#cce0d4}
+.htitle{font-family:'Playfair Display',serif;font-size:26px;color:#0e1f13;margin-bottom:.4rem}
+.hsub{font-size:15px;color:#4a6355;line-height:1.7;margin-bottom:1.25rem}
+.gcard{background:#fff;border:1px solid #cce0d4;border-radius:12px;padding:1.4rem;margin-bottom:.9rem;box-shadow:0 2px 12px rgba(10,42,26,0.06)}
+.gcard.dim{background:#eef5f0;box-shadow:none}
+.ilist{list-style:none;padding:0;margin:0 0 1.25rem}
+.ilist li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;font-size:14px;color:#4a6355;border-bottom:1px dashed #cce0d4}
+.ilist li:last-child{border:none}
+.inum{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:#0F6E56;background:#EAF3DE;width:22px;height:22px;min-width:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.tinput{width:100%;border:1px solid #cce0d4;border-radius:8px;padding:10px 13px;font-size:16px;font-family:'Source Sans 3',sans-serif;background:#fff;color:#0e1f13;margin-bottom:1rem}
+.tinput:focus{outline:none;border-color:#1D9E75;box-shadow:0 0 0 3px rgba(29,158,117,0.1)}
+.btnp{background:#1D9E75;color:#E1F5EE;border:none;border-radius:8px;padding:11px 24px;font-size:15px;font-family:'Source Sans 3',sans-serif;font-weight:600;cursor:pointer;transition:background 0.2s}
+.btnp:hover{background:#0F6E56}
+.btnp:disabled{opacity:.4;cursor:default}
+.btns{background:#eef5f0;color:#0e1f13;border:1px solid #cce0d4;border-radius:8px;padding:11px 24px;font-size:15px;font-family:'Source Sans 3',sans-serif;cursor:pointer}
+.btns:hover{background:#cce0d4}
+.arow{display:flex;justify-content:flex-end;gap:8px;margin-top:1.25rem}
+.ev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-bottom:1rem}
+@media(max-width:540px){.ev-grid{grid-template-columns:1fr}}
+.ev-card{background:#fff;border:1px solid #cce0d4;border-radius:12px;padding:1rem;display:flex;flex-direction:column;transition:border-color 0.2s,background 0.2s;box-shadow:0 1px 6px rgba(10,42,26,0.05)}
+.ev-card.tagged-rc{border-color:#1D9E75;background:#EAF3DE}
+.ev-card.tagged-ks{border-color:#185FA5;background:#E6F1FB}
+.ev-card.tagged-fl{border-color:#BA7517;background:#FAEEDA}
+.ev-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:#4a6355;margin-bottom:.4rem;letter-spacing:.06em}
+.ev-title{font-size:14px;font-weight:600;color:#0e1f13;margin-bottom:.3rem;line-height:1.3}
+.ev-stat{font-family:'JetBrains Mono',monospace;font-size:11px;color:#0F6E56;margin-bottom:.4rem}
+.ev-card.tagged-ks .ev-stat{color:#185FA5}
+.ev-card.tagged-fl .ev-stat{color:#BA7517}
+.ev-body{font-size:12px;color:#4a6355;line-height:1.55;margin-bottom:.75rem;flex:1}
+.cl-row{display:flex;gap:4px;margin-top:auto}
+.cl-btn{flex:1;padding:5px 3px;font-size:11px;font-family:'Source Sans 3',sans-serif;border-radius:6px;cursor:pointer;border:1px solid;font-weight:600;transition:all 0.15s;text-align:center}
+.cl-btn.rc{background:#eef5f0;border-color:#5DCAA5;color:#085041}
+.cl-btn.ks{background:#eef5f0;border-color:#85B7EB;color:#0C447C}
+.cl-btn.fl{background:#eef5f0;border-color:#FAC775;color:#633806}
+.cl-btn.rc.sel{background:#EAF3DE;border-color:#0F6E56;color:#085041}
+.cl-btn.ks.sel{background:#E6F1FB;border-color:#185FA5;color:#0C447C}
+.cl-btn.fl.sel{background:#FAEEDA;border-color:#BA7517;color:#633806}
+.pr-grid{display:grid;gap:8px;margin-bottom:1rem}
+.pr-opt{background:#eef5f0;border:1px solid #cce0d4;border-radius:8px;padding:11px 13px;cursor:pointer;display:flex;align-items:center;gap:10px;font-size:14px;color:#0e1f13;transition:all 0.15s}
+.pr-opt:hover{border-color:#1D9E75}
+.pr-opt.sel{border-color:#1D9E75;background:#EAF3DE;color:#173404}
+.pr-opt.sel .pr-dot{background:#1D9E75}
+.pr-dot{width:14px;height:14px;min-width:14px;border-radius:50%;border:1px solid #4a6355;background:transparent;transition:background 0.15s}
+.prog-row{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#4a6355;margin-bottom:.75rem}
+.tx-area{width:100%;border:1px solid #cce0d4;border-radius:8px;padding:10px 13px;font-size:14px;font-family:'Source Sans 3',sans-serif;background:#fff;color:#0e1f13;resize:vertical;min-height:80px}
+.tx-area:focus{outline:none;border-color:#1D9E75;box-shadow:0 0 0 3px rgba(29,158,117,0.1)}
+.diag-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:1rem 0}
+.ds-cell{background:#eef5f0;border-radius:8px;padding:.75rem;text-align:center}
+.ds-n{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:600;color:#0e1f13}
+.ds-l{font-size:11px;color:#4a6355;margin-top:2px}
+.ds-cell.rc-c .ds-n{color:#0F6E56}
+.ds-cell.ks-c .ds-n{color:#185FA5}
+.ds-cell.fl-c .ds-n{color:#BA7517}
+.pol-card{background:#fff;border:1px solid #cce0d4;border-radius:12px;padding:1.3rem;margin-bottom:.85rem;box-shadow:0 1px 6px rgba(10,42,26,0.05)}
+.pol-num{font-family:'JetBrains Mono',monospace;font-size:10px;color:#4a6355;letter-spacing:.06em;margin-bottom:.35rem}
+.pol-title{font-size:15px;font-weight:600;color:#0e1f13;margin-bottom:.5rem;line-height:1.4}
+.pol-desc{font-size:13px;color:#4a6355;line-height:1.65;margin-bottom:.6rem}
+.disc-note{font-size:12px;color:#4a6355;border-left:3px solid #cce0d4;padding-left:10px;margin-bottom:.9rem;line-height:1.5;font-style:italic}
+.vd-row{display:flex;gap:6px;margin-bottom:.75rem}
+.vd-btn{flex:1;padding:9px 6px;font-size:12px;font-family:'Source Sans 3',sans-serif;border-radius:8px;cursor:pointer;border:1px solid;font-weight:600;text-align:center;transition:all 0.15s}
+.vd-btn.w{border-color:#5DCAA5;color:#085041;background:#eef5f0}
+.vd-btn.p{border-color:#FAC775;color:#633806;background:#eef5f0}
+.vd-btn.n{border-color:#F09595;color:#791F1F;background:#eef5f0}
+.vd-btn.w.sel{background:#EAF3DE;border-color:#0F6E56}
+.vd-btn.p.sel{background:#FAEEDA;border-color:#BA7517}
+.vd-btn.n.sel{background:#FCEBEB;border-color:#A32D2D}
+.fb-box{border-radius:0 8px 8px 0;padding:11px 14px;font-size:13px;line-height:1.65;border:1px solid;border-left-width:4px;margin-top:.5rem}
+.fb-box.cor{background:#EAF3DE;border-color:#3B6D11;color:#27500A}
+.fb-box.par{background:#FAEEDA;border-color:#BA7517;color:#633806}
+.fb-box.wrg{background:#FCEBEB;border-color:#A32D2D;color:#791F1F}
+.scard-row{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:1.25rem 0}
+.scard{background:#eef5f0;border-radius:8px;padding:1rem;text-align:center}
+.scard.hi{border:2px solid #1D9E75;background:#EAF3DE}
+.sn{font-family:'JetBrains Mono',monospace;font-size:26px;font-weight:600;color:#0e1f13}
+.sl{font-size:12px;color:#4a6355;margin-top:2px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:#4a6355;margin-bottom:.9rem}
+.legend-item{display:flex;align-items:center;gap:5px}
+.ld{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.sub-box{background:#eef5f0;border:1px solid #cce0d4;border-radius:12px;padding:1.3rem;margin-top:1rem}
+.sub-status{font-size:13px;padding:10px 13px;border-radius:8px;margin-top:.75rem;display:none;line-height:1.5}
+.sub-status.ok{background:#EAF3DE;color:#27500A;border:1px solid #3B6D11}
+.sub-status.err{background:#FCEBEB;color:#791F1F;border:1px solid #A32D2D}
+.sub-status.sending{background:#eef5f0;color:#4a6355;border:1px solid #cce0d4}
+.hero-strip{background:linear-gradient(135deg,#0e2a1a,#1a6b3c);border-radius:12px;padding:1.4rem 1.6rem;margin-bottom:1.5rem;border-bottom:3px solid #c9a84c}
+.hero-strip h1{font-family:'Playfair Display',serif;font-size:22px;color:#fff;margin-bottom:.2rem}
+.hero-strip p{font-size:13px;color:rgba(255,255,255,0.7)}
+.hero-strip .meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.hero-pill{background:rgba(255,255,255,0.1);border:1px solid rgba(201,168,76,0.4);color:rgba(255,255,255,0.85);padding:2px 10px;border-radius:20px;font-size:12px}
+</style>
+</head>
+<body>
+<div id="app">
+
+<div class="hero-strip">
+  <h1>Pakistan Industry — Group Activity</h1>
+  <p>School of Economics, Quaid-i-Azam University · Economy of Pakistan</p>
+  <div class="meta">
+    <span class="hero-pill">Prof. Dr. Zahid Asghar</span>
+    <span class="hero-pill">Spring 2026</span>
+    <span class="hero-pill">Groups of 2–3</span>
+  </div>
+</div>
+
+<div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
+<div class="ph-bar">
+  <div class="ph-seg act" id="ph1"><span class="ph-num">Phase 1</span>Analysis</div>
+  <div class="ph-seg" id="ph2"><span class="ph-num">Phase 2</span>Policy Test</div>
+</div>
+
+<!-- S0: WELCOME -->
+<div class="sc on" id="s0">
+  <div class="badge nt">GROUP ACTIVITY — 2 OR 3 STUDENTS</div>
+  <div class="htitle">Pakistan Industry Challenge</div>
+  <div class="hsub">This activity has two phases. Phase 1 builds your diagnosis of Pakistan's industrial sector. Phase 2 stress-tests it with real policy proposals. Your results are submitted to your instructor automatically at the end.</div>
+  <div class="gcard">
+    <ul class="ilist">
+      <li><span class="inum">1</span><span><strong>Phase 1 — Economic Autopsy (~12 min, unscored):</strong> Classify 6 evidence cards, identify 2 binding constraints, write your group diagnosis.</span></li>
+      <li><span class="inum">2</span><span><strong>Phase 2 — Policy Tribunal (~10 min, scored out of 8):</strong> Evaluate 4 reform proposals. Your score and diagnosis are submitted to your instructor automatically.</span></li>
+    </ul>
+    <div style="background:#EAF3DE;border-radius:8px;padding:10px 13px;font-size:13px;color:#27500A;margin-bottom:1rem">Phase 1 has no score. Its purpose is to ensure your group understands the evidence before being tested on it in Phase 2.</div>
+    <label style="font-size:14px;color:#4a6355;display:block;margin-bottom:6px">Your group name:</label>
+    <input type="text" class="tinput" id="gname" placeholder="e.g. Group 2, Team Alpha ...">
+    <button class="btnp" onclick="goToS1()" style="width:100%">Begin Phase 1</button>
+  </div>
+</div>
+
+<!-- S1: EVIDENCE CLASSIFICATION -->
+<div class="sc" id="s1">
+  <div class="badge p1">PHASE 1 — STEP 1 OF 3</div>
+  <div class="htitle">Classify the evidence</div>
+  <div class="hsub">Read each card carefully as a group and classify it using the buttons. All 6 must be classified before you can continue.</div>
+  <div class="legend">
+    <div class="legend-item"><div class="ld" style="background:#1D9E75"></div>Root cause — a fundamental structural driver</div>
+    <div class="legend-item"><div class="ld" style="background:#378ADD"></div>Key symptom — an observable outcome of deeper problems</div>
+    <div class="legend-item"><div class="ld" style="background:#BA7517"></div>Feedback loop — makes other problems significantly worse</div>
+  </div>
+  <div class="prog-row"><span id="cl-prog">0 of 6 classified</span><span style="font-size:12px;color:#4a6355">Discuss each card before clicking</span></div>
+  <div class="ev-grid" id="evgrid"></div>
+  <div class="arow"><button class="btnp" id="cl-next" onclick="goConstraints()" disabled>Continue to priorities</button></div>
+</div>
+
+<!-- S2: BINDING CONSTRAINTS -->
+<div class="sc" id="s2">
+  <div class="badge p1">PHASE 1 — STEP 2 OF 3</div>
+  <div class="htitle">Identify the binding constraints</div>
+  <div class="hsub">Select the <strong>2 constraints</strong> your group believes are most fundamental — the ones whose removal would unlock the most growth.</div>
+  <div class="pr-grid" id="prgrid"></div>
+  <div style="font-size:13px;color:#4a6355;margin-bottom:.5rem">Discuss: if you could only fix 2, which would have the largest downstream effect on Pakistan's industrial sector?</div>
+  <div class="arow">
+    <button class="btns" onclick="go('s1')">Back</button>
+    <button class="btnp" id="pr-next" onclick="goReflect()" disabled>Continue to reflection</button>
+  </div>
+</div>
+
+<!-- S3: REFLECTION -->
+<div class="sc" id="s3">
+  <div class="badge p1">PHASE 1 — STEP 3 OF 3</div>
+  <div class="htitle">Your group's diagnosis</div>
+  <div class="hsub">Write 1–2 sentences capturing your core argument. This will be submitted to your instructor alongside your Phase 2 score.</div>
+  <div class="gcard">
+    <div style="font-size:14px;font-weight:600;color:#0e1f13;margin-bottom:.5rem">Classification summary</div>
+    <div class="diag-summary">
+      <div class="ds-cell rc-c"><div class="ds-n" id="rc-count">0</div><div class="ds-l">Root causes</div></div>
+      <div class="ds-cell ks-c"><div class="ds-n" id="ks-count">0</div><div class="ds-l">Key symptoms</div></div>
+      <div class="ds-cell fl-c"><div class="ds-n" id="fl-count">0</div><div class="ds-l">Feedback loops</div></div>
+    </div>
+    <div style="font-size:13px;color:#4a6355;margin-bottom:.4rem">Your binding constraints:</div>
+    <div id="sel-constraints" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1rem"></div>
+    <label style="font-size:14px;font-weight:600;color:#0e1f13;display:block;margin-bottom:6px">Written diagnosis:</label>
+    <textarea class="tx-area" id="diag-text" placeholder="e.g. Pakistan's industrial decline is fundamentally driven by ... which causes ... making it impossible to ..."></textarea>
+  </div>
+  <div class="arow">
+    <button class="btns" onclick="go('s2')">Back</button>
+    <button class="btnp" onclick="goTransition()">Finish Phase 1 — Enter Policy Tribunal</button>
+  </div>
+</div>
+
+<!-- S4: TRANSITION -->
+<div class="sc" id="s4">
+  <div class="badge nt">PHASE 1 COMPLETE</div>
+  <div class="htitle">Your diagnosis is on record</div>
+  <div class="gcard dim"><div style="font-size:14px;color:#4a6355;line-height:1.7" id="trans-summary"></div></div>
+  <div class="gcard">
+    <div style="font-size:14px;font-weight:600;color:#0e1f13;margin-bottom:.35rem">Now entering: Policy Tribunal</div>
+    <div style="font-size:14px;color:#4a6355;line-height:1.6">Four reform proposals are put to your group. Discuss briefly, then deliver a verdict: <strong>Will work</strong>, <strong>Partially effective</strong>, or <strong>Won't work</strong>. The economic consensus is revealed after each answer.</div>
+    <div style="margin-top:.75rem;font-size:13px;color:#4a6355;background:#eef5f0;border-radius:6px;padding:8px 12px">Scoring: 2 pts for matching consensus &middot; 1 pt if one step away &middot; 0 pts for opposite verdict.</div>
+  </div>
+  <div class="arow"><button class="btnp" onclick="startP2()">Begin Phase 2</button></div>
+</div>
+
+<!-- S5: POLICY TRIBUNAL -->
+<div class="sc" id="s5">
+  <div class="badge p2">PHASE 2 — POLICY TRIBUNAL</div>
+  <div class="htitle">Evaluate the reform proposals</div>
+  <div class="hsub">Discuss each proposal briefly as a group, then deliver your verdict. The economic consensus reveals after each answer.</div>
+  <div id="polgrid"></div>
+  <div class="arow" style="display:none" id="p2-next">
+    <button class="btnp" onclick="goResults()">See final results</button>
+  </div>
+</div>
+
+<!-- S6: RESULTS + SUBMISSION -->
+<div class="sc" id="s6">
+  <div class="badge nt">ACTIVITY COMPLETE</div>
+  <div class="htitle" id="res-title">Results</div>
+  <div class="hsub" id="res-msg"></div>
+  <div class="scard-row">
+    <div class="scard"><div class="sn">Done</div><div class="sl">Phase 1 (unscored)</div></div>
+    <div class="scard"><div class="sn" id="r-p2">0</div><div class="sl">Phase 2 score</div></div>
+    <div class="scard"><div class="sn" id="r-cor">0</div><div class="sl">Correct verdicts</div></div>
+    <div class="scard hi"><div class="sn" id="r-tot">0 / 8</div><div class="sl">Total score</div></div>
+  </div>
+
+  <!-- SUBMISSION -->
+  <div class="sub-box">
+    <div style="font-size:14px;font-weight:600;color:#0e1f13;margin-bottom:.35rem">Submit to instructor</div>
+    <div style="font-size:13px;color:#4a6355;margin-bottom:.75rem">This sends your group name, binding constraints, written diagnosis, and score directly to your instructor's Google Sheet.</div>
+    <button class="btnp" id="sub-btn" onclick="submitResults()" style="width:100%">Submit results to instructor</button>
+    <div class="sub-status" id="sub-status"></div>
+  </div>
+
+  <div class="gcard dim" style="margin-top:.75rem">
+    <div style="font-size:14px;font-weight:600;color:#0e1f13;margin-bottom:.4rem">Debrief question for class discussion</div>
+    <div style="font-size:14px;color:#4a6355;line-height:1.7">Did the constraints you identified in Phase 1 predict which policies would work? If your Phase 2 score is low, what did your diagnosis miss?</div>
+  </div>
+  <div class="arow"><button class="btns" onclick="resetAll()">Start over</button></div>
+</div>
+
+</div><!-- end app -->
+
+<script>
+const SHEET_URL="https://script.google.com/macros/s/AKfycbye1G8EEtryoVr5XjC5qFGNKrL4qBM5ziaA4A4Zh-4N5rrgqYBBiaczjeRhlozeRRSX/exec";
+
+const EV=[
+  {num:"Evidence A",title:"Tax base concentration",stat:"Tax-to-GDP ratio: ~10%",body:"Agriculture (~25% of GDP) pays near-zero tax. Large retail and real estate are effectively untaxed. Salaried workers and corporations bear almost the entire formal tax burden — at marginal rates of 35%+ and 39%+ respectively."},
+  {num:"Evidence B",title:"Energy circular debt",stat:"PKR 2,842 billion circular debt (Dec 2024)",body:"Industrial electricity tariffs are among the highest in South Asia. The power sector loses money at every stage: generation, transmission, and distribution. Subsidies, theft, and legacy IPP contracts all contribute."},
+  {num:"Evidence C",title:"Export stagnation",stat:"Exports stuck at $25–30B for over a decade",body:"Textiles account for over 60% of exports with minimal value-addition. Vietnam exports 87% of GDP. Pakistan exports just 10% — the lowest in South Asia by a wide margin."},
+  {num:"Evidence D",title:"Investment drought",stat:"Private investment: ~13% of GDP (peers: 25%+)",body:"Fresh FDI inflows are under $500M per year — mostly retained earnings. No major domestic business group is investing in productive capacity at scale. Capital is flowing to real estate instead."},
+  {num:"Evidence E",title:"Brain drain",stat:"800,000+ skilled workers emigrated in 2023",body:"Engineers, doctors, and IT professionals are leaving at record rates — choosing lower-status positions abroad over punitive domestic taxation and governance failure at home."},
+  {num:"Evidence F",title:"Deindustrialisation",stat:"Industrial GDP share: 24% (2005) → 19% (2024)",body:"Pakistan's manufacturing base is shrinking in relative terms — the opposite of the structural transformation that drove East Asian growth. Capital has moved toward real estate and speculation."}
+];
+
+const CONSTRAINTS=[
+  "Narrow tax base — sectors with most wealth pay least tax",
+  "Energy costs and circular debt — manufacturing globally uncompetitive",
+  "Anti-export bias — domestic sales more profitable than exporting",
+  "Weak rule of law and policy continuity — deterring long-horizon investment",
+  "Low human capital — skills mismatch and accelerating brain drain",
+  "Female labour exclusion — only 24% LFPR, largest untapped productive resource"
+];
+
+const POLICIES=[
+  {num:"Proposal 1 of 4",title:"Restructure the tax system: reduce rates on formal sector, broaden base to agriculture, real estate, and large retail",desc:"Eliminate the super tax and reduce income tax on salaried workers and exporters to regional-competitive levels. Revenue is recovered by imposing a graduated land tax on agricultural holdings above 25 acres and a capital gains tax on real estate transactions.",disc:"Does this address what your group identified as a root cause? What economic incentives does it change?",ans:"w",exp:"This matches the economic consensus. Lower rates on the formal sector reduce brain drain and improve competitiveness. Broadening the base to agriculture and real estate is fiscally sound and reduces the rent-seeking that sustains the current system."},
+  {num:"Proposal 2 of 4",title:"Declare 10 new special economic zones with 15-year tax holidays for all registered businesses",desc:"Ten new SEZs with blanket 15-year tax exemptions, land grants, and fast-track business registration. No performance or export conditionality is attached.",disc:"Who actually benefits? Is there any incentive to export? Compare with Vietnam's SEZ approach.",ans:"p",exp:"Partially effective at best. SEZs only attract genuine export-oriented FDI when paired with reliable energy, logistics, and rule of law. Without export conditionality, Pakistan's SEZs historically become real estate vehicles. The Vietnam model worked because of fundamentals, not tax holidays alone."},
+  {num:"Proposal 3 of 4",title:"Raise import tariffs on all finished and capital goods to 40% to protect domestic manufacturers",desc:"A uniform 40% import tariff on all finished consumer and capital goods. Infant industry protection is the stated rationale.",disc:"What happens to producers who use imported inputs? What does Pakistan's own history say about blanket tariff protection?",ans:"n",exp:"This won't work. Blanket tariffs on capital and intermediate goods raise input costs for all manufacturers — making exports less competitive, not more. Pakistan already has high effective protection with no productivity dividend. Infant industry support must be time-bound, conditional, and export-linked."},
+  {num:"Proposal 4 of 4",title:"Privatise PIA, electricity distribution companies (DISCOs), and Pakistan Steel Mill within 18 months",desc:"Full privatisation of major loss-making SOEs within 18 months to eliminate the fiscal drain and improve operational efficiency.",disc:"Does privatisation automatically fix the problem? What conditions must hold for it to succeed?",ans:"p",exp:"Partially correct. Privatisation eliminates the fiscal burden and can improve efficiency — but only if competitive markets and strong regulation exist. Privatising DISCOs into monopoly positions without regulatory reform transfers rent extraction from state to private owners. Sequencing matters enormously."}
+];
+
+let gname="Your Group",clState={},prSel=[],p2Score=0,p2Cor=0,p2Done=0,diagText="";
+
+function go(id){document.querySelectorAll('.sc').forEach(s=>s.classList.remove('on'));document.getElementById(id).classList.add('on');window.scrollTo(0,0)}
+function setP(p){document.getElementById('pf').style.width=p+'%'}
+function setPh(ph){
+  document.getElementById('ph1').className='ph-seg'+(ph===1?' act':' done');
+  document.getElementById('ph2').className='ph-seg'+(ph===2?' act':'');
+}
+
+function goToS1(){
+  const v=document.getElementById('gname').value.trim();
+  if(!v){document.getElementById('gname').focus();return;}
+  gname=v;buildEvidenceCards();go('s1');setP(8);
+}
+
+function buildEvidenceCards(){
+  const g=document.getElementById('evgrid');g.innerHTML='';
+  EV.forEach((e,i)=>{
+    clState[i]=null;
+    const d=document.createElement('div');
+    d.className='ev-card';d.id='ec'+i;
+    d.innerHTML=`<div class="ev-num">${e.num}</div><div class="ev-title">${e.title}</div><div class="ev-stat">${e.stat}</div><div class="ev-body">${e.body}</div>
+    <div class="cl-row">
+      <button type="button" class="cl-btn rc" onclick="classify(${i},'rc')">Root cause</button>
+      <button type="button" class="cl-btn ks" onclick="classify(${i},'ks')">Key symptom</button>
+      <button type="button" class="cl-btn fl" onclick="classify(${i},'fl')">Feedback loop</button>
+    </div>`;
+    g.appendChild(d);
+  });
+}
+
+function classify(idx,type){
+  clState[idx]=type;
+  const card=document.getElementById('ec'+idx);
+  card.className='ev-card tagged-'+type;
+  card.querySelectorAll('.cl-btn').forEach(b=>b.classList.remove('sel'));
+  card.querySelector('.cl-btn.'+type).classList.add('sel');
+  const done=Object.values(clState).filter(v=>v!==null).length;
+  document.getElementById('cl-prog').textContent=done+' of 6 classified';
+  document.getElementById('cl-next').disabled=done<6;
+}
+
+function goConstraints(){
+  const g=document.getElementById('prgrid');g.innerHTML='';prSel=[];
+  CONSTRAINTS.forEach((c,i)=>{
+    const d=document.createElement('div');
+    d.className='pr-opt';d.id='pr'+i;
+    d.innerHTML=`<div class="pr-dot" id="pd${i}"></div><span>${c}</span>`;
+    d.onclick=()=>togglePr(i);
+    g.appendChild(d);
+  });
+  go('s2');setP(30);
+}
+
+function togglePr(idx){
+  if(prSel.includes(idx)){
+    prSel=prSel.filter(x=>x!==idx);
+    document.getElementById('pr'+idx).classList.remove('sel');
+    document.getElementById('pd'+idx).style.background='transparent';
+  } else {
+    if(prSel.length>=2)return;
+    prSel.push(idx);
+    document.getElementById('pr'+idx).classList.add('sel');
+    document.getElementById('pd'+idx).style.background='#1D9E75';
+  }
+  document.getElementById('pr-next').disabled=prSel.length<2;
+}
+
+function goReflect(){
+  const counts={rc:0,ks:0,fl:0};
+  Object.values(clState).forEach(v=>{if(v)counts[v]++});
+  document.getElementById('rc-count').textContent=counts.rc;
+  document.getElementById('ks-count').textContent=counts.ks;
+  document.getElementById('fl-count').textContent=counts.fl;
+  const sc=document.getElementById('sel-constraints');sc.innerHTML='';
+  prSel.forEach(i=>{
+    const sp=document.createElement('span');
+    sp.style.cssText='font-size:12px;background:#EAF3DE;color:#085041;border:1px solid #5DCAA5;border-radius:4px;padding:3px 9px;display:inline-block';
+    sp.textContent=CONSTRAINTS[i];sc.appendChild(sp);
+  });
+  go('s3');setP(50);
+}
+
+function goTransition(){
+  diagText=document.getElementById('diag-text').value.trim()||'(no written diagnosis)';
+  const names=prSel.map(i=>CONSTRAINTS[i]).join(' and ');
+  document.getElementById('trans-summary').innerHTML=
+    'Your group identified <strong>'+names+'</strong> as the binding constraints. '+
+    (diagText!=='(no written diagnosis)'?'Written diagnosis: "'+diagText.slice(0,160)+(diagText.length>160?'…':'')+'"':'No written diagnosis recorded.');
+  go('s4');setP(60);setPh(2);
+}
+
+function startP2(){
+  p2Score=0;p2Cor=0;p2Done=0;
+  const g=document.getElementById('polgrid');g.innerHTML='';
+  POLICIES.forEach((p,i)=>{
+    const d=document.createElement('div');d.className='pol-card';
+    d.innerHTML=`<div class="pol-num">${p.num}</div><div class="pol-title">${p.title}</div><div class="pol-desc">${p.desc}</div><div class="disc-note">${p.disc}</div>
+    <div class="vd-row">
+      <button type="button" class="vd-btn w" id="vw${i}" onclick="verdict(${i},'w')">Will work</button>
+      <button type="button" class="vd-btn p" id="vp${i}" onclick="verdict(${i},'p')">Partially effective</button>
+      <button type="button" class="vd-btn n" id="vn${i}" onclick="verdict(${i},'n')">Won't work</button>
+    </div>
+    <div id="vfb${i}" style="display:none"></div>`;
+    g.appendChild(d);
+  });
+  go('s5');setP(68);
+}
+
+function verdict(idx,v){
+  ['vw','vp','vn'].forEach(p=>document.getElementById(p+idx).disabled=true);
+  const map={w:0,p:1,n:2};
+  document.getElementById(['vw','vp','vn'][map[v]]+idx).classList.add('sel');
+  const p=POLICIES[idx];
+  const dist=Math.abs(map[v]-map[p.ans]);
+  const sc=dist===0?2:dist===1?1:0;
+  p2Score+=sc;if(sc===2)p2Cor++;
+  const fb=document.getElementById('vfb'+idx);
+  fb.style.display='block';
+  fb.className='fb-box '+(dist===0?'cor':dist===1?'par':'wrg');
+  fb.textContent=(dist===0?'Matches consensus. ':dist===1?'Close — consensus differs slightly. ':'Consensus disagrees. ')+p.exp;
+  p2Done++;setP(68+p2Done*7);
+  if(p2Done===4)document.getElementById('p2-next').style.display='flex';
+}
+
+function goResults(){
+  document.getElementById('r-p2').textContent=p2Score;
+  document.getElementById('r-cor').textContent=p2Cor;
+  document.getElementById('r-tot').textContent=p2Score+' / 8';
+  document.getElementById('res-title').textContent=gname+' — Results';
+  const pct=Math.round(p2Score/8*100);
+  document.getElementById('res-msg').textContent=(
+    pct<40?'Review the policy feedback carefully — the consensus reasoning is explained above each answer.':
+    pct<65?'Solid attempt. Some verdicts diverged from consensus — the explanations show the key reasoning.':
+    pct<90?'Strong economic reasoning. Your Phase 1 analysis clearly informed your Phase 2 verdicts.':
+    'Outstanding — closely aligned with mainstream economic analysis.'
+  )+' ('+pct+'% accuracy)';
+  go('s6');setP(100);
+}
+
+function submitResults(){
+  const btn=document.getElementById('sub-btn');
+  const status=document.getElementById('sub-status');
+  btn.disabled=true;btn.textContent='Submitting...';
+  status.style.display='block';status.className='sub-status sending';
+  status.textContent='Sending to Google Sheet...';
+  const payload={
+    group:gname,
+    constraint1:prSel[0]!==undefined?CONSTRAINTS[prSel[0]]:'—',
+    constraint2:prSel[1]!==undefined?CONSTRAINTS[prSel[1]]:'—',
+    diagnosis:diagText,
+    score:p2Score,
+    correct:p2Cor
+  };
+  fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:JSON.stringify(payload)})
+    .then(()=>{
+      status.className='sub-status ok';
+      status.textContent='Submitted successfully. Your instructor can now see your results in the Google Sheet.';
+      btn.textContent='Submitted';
+    })
+    .catch(()=>{
+      status.className='sub-status err';
+      status.textContent='Submission failed. Please screenshot your results and share with your instructor.';
+      btn.disabled=false;btn.textContent='Try again';
+    });
+}
+
+function resetAll(){
+  gname='Your Group';diagText='';prSel=[];clState={};p2Score=0;p2Cor=0;p2Done=0;
+  document.getElementById('gname').value='';
+  document.getElementById('diag-text').value='';
+  setPh(1);setP(0);go('s0');
+}
+</script>
+</body>
+</html>

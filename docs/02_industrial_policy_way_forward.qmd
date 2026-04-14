@@ -3,10 +3,10 @@ title: "Industrial Policy & The Way Forward"
 subtitle: "Breaking the Boom-Bust Cycle — Lessons, Comparisons & Reform Agenda"
 author: "Prof. Dr. Zahid Asghar"
 institute: "School of Economics, Quaid-i-Azam University, Islamabad"
-date: "Spring 2026"
+date: "2026-04-06"
 format:
   revealjs:
-    theme: [default, industrial_theme.scss]
+    theme: [default, pak-economy-theme.scss]
     slide-number: true
     transition: fade
     transition-speed: fast
@@ -25,7 +25,7 @@ editor: visual
 
 # Part I: The Boom-Bust Trap {background-color="#0a1f12"}
 
-## Atlas of Economic Complexity
+Atlas of Economic Complexity
 
 :::::: columns-2
 <div>

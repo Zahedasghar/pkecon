@@ -1,11 +1,10 @@
 /*-- scss:defaults --*/
 $font-family-sans-serif: 'Source Sans 3', 'Segoe UI', sans-serif;
 $presentation-heading-font: 'Playfair Display', Georgia, serif;
-$presentation-font-size-root: 36px;
-$presentation-line-height: 1.5;
+$presentation-font-size-root: 32px;
+$presentation-line-height: 1.45;
 $code-block-font-size: 0.7em;
 
-// Pakistan palette
 $body-bg: #0e2a1a;
 $body-color: #e8f3ed;
 $link-color: #c9a84c;
@@ -25,12 +24,10 @@ $presentation-heading-color: #ffffff;
   --pk-gold: #c9a84c;
   --pk-gold-light: #f0d98a;
   --pk-gold-dim: rgba(201, 168, 76, 0.25);
-  --pk-brown: #5c4a2a;
-  --pk-brown-light: #8b7355;
   --pk-warm-white: #f6f8f3;
-  --pk-surface: rgba(255, 255, 255, 0.06);
-  --pk-surface-strong: rgba(255, 255, 255, 0.10);
-  --pk-border: rgba(201, 168, 76, 0.2);
+  --pk-surface: rgba(255, 255, 255, 0.05);
+  --pk-surface-strong: rgba(255, 255, 255, 0.09);
+  --pk-border: rgba(201, 168, 76, 0.22);
   --pk-red: #e74c3c;
   --pk-amber: #f0a500;
   --pk-blue: #5dade2;
@@ -46,16 +43,15 @@ $presentation-heading-color: #ffffff;
   background: linear-gradient(160deg, #0e2a1a 0%, #112e1e 40%, #0d2517 100%);
 }
 
-/* Subtle grid pattern overlay */
 .reveal .slides section::before {
   content: '';
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-image: 
-    linear-gradient(rgba(201, 168, 76, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 168, 76, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
+  background-image:
+    linear-gradient(rgba(201, 168, 76, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 168, 76, 0.025) 1px, transparent 1px);
+  background-size: 70px 70px;
   pointer-events: none;
   z-index: 0;
 }
@@ -66,25 +62,33 @@ $presentation-heading-color: #ffffff;
 }
 
 /* ── Typography ── */
-.reveal h1, .reveal h2 {
+.reveal h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 0.4em;
+}
+
+.reveal h2 {
   font-family: 'Playfair Display', Georgia, serif !important;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.15;
+  color: #fff;
+  font-size: 1.4em;
   border-bottom: 2px solid var(--pk-gold-dim);
-  padding-bottom: 0.3em;
-  margin-bottom: 0.6em;
-}
-
-.reveal h2 {
-  font-size: 1.5em;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.5em;
 }
 
 .reveal h2::before {
   content: '';
   display: inline-block;
   width: 5px;
-  height: 0.85em;
+  height: 0.8em;
   background: var(--pk-gold);
   margin-right: 0.4em;
   vertical-align: middle;
@@ -95,15 +99,26 @@ $presentation-heading-color: #ffffff;
   font-family: 'Source Sans 3', sans-serif;
   font-weight: 700;
   color: var(--pk-gold);
-  font-size: 1.1em;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 0.2em;
+  margin-bottom: 0.4em;
+}
+
+.reveal h4 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  color: var(--pk-green-light);
+  font-size: 0.85em;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.3em;
 }
 
 .reveal p, .reveal li {
   font-weight: 300;
-  color: rgba(232, 243, 237, 0.88);
+  color: rgba(232, 243, 237, 0.9);
 }
 
 .reveal strong {
@@ -116,102 +131,161 @@ $presentation-heading-color: #ffffff;
   font-style: italic;
 }
 
-.reveal .text-muted {
-  color: var(--pk-text-muted) !important;
-  font-size: 0.75em;
+.reveal a {
+  color: var(--pk-gold);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--pk-gold-dim);
 }
 
-/* ── Section title slides ── */
-.reveal section.title-slide h1,
+.reveal a:hover {
+  color: var(--pk-gold-light);
+}
+
+.reveal .text-muted, .reveal .dim {
+  color: var(--pk-text-muted) !important;
+  font-size: 0.7em;
+}
+
+/* ── Title slide ── */
 .reveal .title-slide h1 {
-  font-size: 2.2em;
+  font-size: 2.4em;
   color: #fff;
   border-bottom: 3px solid var(--pk-gold);
+  padding-bottom: 0.3em;
+  margin-bottom: 0.4em;
 }
 
-/* ── Callout boxes ── */
-.reveal .callout {
-  border-radius: 8px;
-  border-left-width: 4px;
-  margin: 0.6em 0;
+.reveal .title-slide .subtitle {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.78);
+  font-style: italic;
+  margin-bottom: 1em;
 }
 
-.reveal .callout-warning {
-  background: rgba(231, 76, 60, 0.1);
-  border-left-color: var(--pk-red);
+.reveal .title-slide .author,
+.reveal .title-slide .institute,
+.reveal .title-slide .date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55em;
+  color: var(--pk-gold);
+  letter-spacing: 0.06em;
 }
 
-.reveal .callout-important {
-  background: rgba(201, 168, 76, 0.1);
-  border-left-color: var(--pk-gold);
+/* ── Section divider slides ── */
+.reveal section[data-background-color="#0a1f12"] h1,
+.reveal section.section-divider h1 {
+  font-size: 2em;
+  color: var(--pk-gold);
+  border-bottom: 3px solid var(--pk-gold);
+  padding-bottom: 0.3em;
+  text-align: center;
 }
 
-.reveal .callout-tip {
-  background: rgba(45, 143, 90, 0.12);
-  border-left-color: var(--pk-green-light);
+/* ── Quarto Columns ── */
+.reveal .columns {
+  display: flex;
+  gap: 1.2em;
+  align-items: flex-start;
 }
 
-.reveal .callout-note {
-  background: rgba(93, 173, 226, 0.1);
-  border-left-color: var(--pk-blue);
+.reveal .column {
+  flex: 1;
 }
 
-/* ── Custom classes ── */
+/* ── Color utility classes ── */
 .gold { color: var(--pk-gold) !important; }
 .green { color: var(--pk-green-light) !important; }
 .red { color: var(--pk-red) !important; }
 .amber { color: var(--pk-amber) !important; }
 .blue { color: var(--pk-blue) !important; }
 .dim { color: var(--pk-text-muted) !important; }
-.small { font-size: 0.7em !important; }
+.small { font-size: 0.75em !important; }
 .smaller { font-size: 0.6em !important; }
 .large { font-size: 1.3em !important; }
 .center { text-align: center !important; }
 
+/* ── Highlight box ── */
 .highlight-box {
   background: var(--pk-surface-strong);
   border: 1px solid var(--pk-border);
   border-left: 4px solid var(--pk-gold);
   border-radius: 6px;
-  padding: 0.6em 0.9em;
-  margin: 0.5em 0;
+  padding: 0.55em 0.9em;
+  margin: 0.4em 0;
 }
 
+.highlight-box p:last-child { margin-bottom: 0; }
+
+/* ── Stat boxes ── */
 .stat-box {
-  background: linear-gradient(135deg, rgba(26, 107, 60, 0.2), rgba(201, 168, 76, 0.1));
+  background: linear-gradient(135deg, rgba(26, 107, 60, 0.22), rgba(201, 168, 76, 0.10));
   border: 1px solid var(--pk-border);
   border-radius: 8px;
-  padding: 0.5em 0.8em;
+  padding: 0.7em 0.8em;
   text-align: center;
-  margin: 0.3em;
+  margin: 0.3em 0;
 }
 
 .stat-box .stat-value {
+  display: block;
   font-family: 'Playfair Display', serif;
-  font-size: 2em;
+  font-size: 1.9em;
   font-weight: 700;
   color: var(--pk-gold);
-  line-height: 1.1;
+  line-height: 1.05;
+  margin-bottom: 0.15em;
 }
 
 .stat-box .stat-label {
-  font-size: 0.6em;
+  display: block;
+  font-size: 0.55em;
   color: var(--pk-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-family: 'JetBrains Mono', monospace;
+  line-height: 1.3;
 }
 
+/* KPI grid */
 .kpi-row {
   display: flex;
-  gap: 0.6em;
+  gap: 0.7em;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0.5em 0;
 }
 
 .kpi-row .stat-box {
-  flex: 1 1 160px;
+  flex: 1 1 150px;
   max-width: 220px;
+  margin: 0;
+}
+
+/* ── Big stat for dramatic single-stat slides ── */
+.big-stat {
+  text-align: center;
+  margin: 0.3em 0;
+}
+
+.big-stat .value {
+  font-family: 'Playfair Display', serif;
+  font-size: 4em;
+  font-weight: 700;
+  color: var(--pk-gold);
+  line-height: 1;
+  display: block;
+}
+
+.big-stat .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55em;
+  color: var(--pk-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.4em;
+  display: block;
 }
 
 /* ── Tables ── */
@@ -219,6 +293,7 @@ $presentation-heading-color: #ffffff;
   font-size: 0.7em;
   border-collapse: collapse;
   width: 100%;
+  margin: 0.4em 0;
 }
 
 .reveal table thead th {
@@ -242,10 +317,6 @@ $presentation-heading-color: #ffffff;
   background: var(--pk-surface);
 }
 
-.reveal table tbody tr:hover td {
-  background: var(--pk-green-pale);
-}
-
 /* ── Blockquotes ── */
 .reveal blockquote {
   background: var(--pk-surface);
@@ -253,23 +324,22 @@ $presentation-heading-color: #ffffff;
   padding: 0.6em 1em;
   margin: 0.5em 0;
   font-style: italic;
-  color: rgba(232, 243, 237, 0.8);
+  color: rgba(232, 243, 237, 0.85);
   border-radius: 0 6px 6px 0;
   font-size: 0.85em;
+  width: 100%;
+  box-shadow: none;
 }
 
-.reveal blockquote p {
-  margin: 0;
-}
+.reveal blockquote p { margin: 0; }
 
 /* ── Lists ── */
 .reveal ul, .reveal ol {
   margin-left: 0.3em;
+  display: block;
 }
 
-.reveal ul li::marker {
-  color: var(--pk-gold);
-}
+.reveal ul li::marker { color: var(--pk-gold); }
 
 .reveal ol li::marker {
   color: var(--pk-gold);
@@ -277,61 +347,59 @@ $presentation-heading-color: #ffffff;
 }
 
 .reveal li {
-  margin-bottom: 0.3em;
-  padding-left: 0.2em;
+  margin-bottom: 0.25em;
+  padding-left: 0.15em;
+  line-height: 1.4;
 }
 
-/* ── Fragments ── */
-.reveal .fragment.highlight-current-green.visible {
-  color: var(--pk-green-light);
+/* ── Quarto callouts ── */
+.reveal div.callout {
+  background: var(--pk-surface-strong);
+  border: 1px solid var(--pk-border);
+  border-left-width: 4px;
+  border-radius: 6px;
+  margin: 0.5em 0;
+  font-size: 0.85em;
 }
 
-/* ── Footer ── */
+.reveal div.callout-warning { border-left-color: var(--pk-red); background: rgba(231, 76, 60, 0.10); }
+.reveal div.callout-important { border-left-color: var(--pk-gold); background: rgba(201, 168, 76, 0.10); }
+.reveal div.callout-tip { border-left-color: var(--pk-green-light); background: rgba(45, 143, 90, 0.12); }
+.reveal div.callout-note { border-left-color: var(--pk-blue); background: rgba(93, 173, 226, 0.10); }
+.reveal div.callout-caution { border-left-color: var(--pk-amber); background: rgba(240, 165, 0, 0.10); }
+
+.reveal div.callout .callout-header {
+  background: transparent !important;
+  color: var(--pk-gold) !important;
+  font-weight: 700;
+  padding: 0.4em 0.8em 0.2em !important;
+}
+
+.reveal div.callout .callout-body {
+  padding: 0.2em 0.8em 0.5em !important;
+  color: rgba(232, 243, 237, 0.9);
+}
+
+.reveal div.callout .callout-body p { margin: 0; }
+
+/* ── Footer & slide number ── */
+.reveal .footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.4em;
+  color: var(--pk-text-muted);
+  letter-spacing: 0.04em;
+}
+
 .reveal .slide-number {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.5em;
   color: var(--pk-text-muted);
-}
-
-/* ── Two-column helper ── */
-.columns-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2em;
-  align-items: start;
-}
-
-.columns-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.8em;
-  align-items: start;
-}
-
-/* ── Badge classes ── */
-.badge {
-  display: inline-block;
-  padding: 0.15em 0.6em;
-  border-radius: 4px;
-  font-size: 0.7em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.badge-red { background: var(--pk-red); color: #fff; }
-.badge-amber { background: var(--pk-amber); color: #1a1a1a; }
-.badge-green { background: var(--pk-green); color: #fff; }
-.badge-gold { background: var(--pk-gold); color: #1a1a1a; }
-
-/* ── Incremental styling ── */
-.reveal .slides section .fragment {
-  transition: all 0.3s ease;
+  background: transparent;
 }
 
 /* ── Progress bar ── */
 .reveal .progress {
-  background: rgba(201, 168, 76, 0.15);
+  background: rgba(201, 168, 76, 0.12);
   height: 4px;
 }
 
@@ -339,7 +407,49 @@ $presentation-heading-color: #ffffff;
   background: var(--pk-gold);
 }
 
-/* ── R output tables ── */
-.reveal .cell-output-display table {
+/* ── Badges ── */
+.badge {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  border-radius: 4px;
   font-size: 0.65em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
 }
+
+.badge-red { background: var(--pk-red); color: #fff; }
+.badge-amber { background: var(--pk-amber); color: #1a1a1a; }
+.badge-green { background: var(--pk-green); color: #fff; }
+.badge-gold { background: var(--pk-gold); color: #1a1a1a; }
+
+/* ── Image styling ── */
+.reveal section img {
+  border: none;
+  background: transparent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.reveal section img.no-shadow { box-shadow: none; }
+
+.reveal figure figcaption {
+  font-size: 0.5em;
+  color: var(--pk-text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  margin-top: 0.4em;
+}
+
+/* ── r-fit-text adjustment ── */
+.reveal .r-fit-text {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ── Smaller slide variant ── */
+.reveal section.smaller h2 { font-size: 1.25em; }
+.reveal section.smaller p,
+.reveal section.smaller li,
+.reveal section.smaller td { font-size: 0.85em; }
