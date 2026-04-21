@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Economics Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #2C5F2D 0%, #1e4620 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .screen {
+            display: none;
+        }
+        .screen.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #2C5F2D;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #2C5F2D;
+            box-shadow: 0 0 0 3px rgba(44, 95, 45, 0.1);
+        }
+        .progress {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #2C5F2D;
+            transition: width 0.3s ease;
+        }
+        .question-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        .options-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+        .option {
+            display: flex;
+            align-items: flex-start;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+        .option:hover {
+            border-color: #2C5F2D;
+            background: #f9fef9;
+        }
+        .option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: #2C5F2D;
+            flex-shrink: 0;
+        }
+        .option label {
+            flex: 1;
+            font-size: 15px;
+            color: #333;
+            cursor: pointer;
+            margin: 0;
+        }
+        .option input[type="radio"]:checked + label {
+            font-weight: 600;
+            color: #2C5F2D;
+        }
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 2rem;
+        }
+        button {
+            flex: 1;
+            padding: 0.75rem 1.5rem;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid #2C5F2D;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+            color: #2C5F2D;
+        }
+        button:hover:not(:disabled) {
+            background: #2C5F2D;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 95, 45, 0.3);
+        }
+        button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+        button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        button.submit {
+            background: #2C5F2D;
+            color: white;
+            border-color: #2C5F2D;
+        }
+        button.submit:hover {
+            background: #1e4620;
+            border-color: #1e4620;
+        }
+        .success-message {
+            text-align: center;
+            padding: 2rem;
+        }
+        .success-icon {
+            font-size: 48px;
+            margin-bottom: 1rem;
+        }
+        .success-message h2 {
+            font-size: 24px;
+            color: #2C5F2D;
+            margin-bottom: 0.5rem;
+        }
+        .success-message p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .info-box {
+            background: #f0f7f0;
+            border-left: 4px solid #2C5F2D;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .download-btn {
+            width: 100%;
+            background: #2C5F2D;
+            color: white;
+            border-color: #2C5F2D;
+            margin-top: 1rem;
+        }
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pakistan Economics Quiz</h1>
+            <p>5 Questions • Random Order • One Submission</p>
+        </div>
+        
+        <div class="content">
+            <!-- Start Screen -->
+            <div class="screen active" id="startScreen">
+                <div class="info-box">
+                    <strong>Instructions:</strong> Answer 5 questions about Pakistan's economy. Questions appear in random order. You can only submit once.
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentId">Student ID (Required) *</label>
+                    <input type="text" id="studentId" placeholder="Enter your ID (e.g., 001, 002...)" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentName">Full Name (Optional)</label>
+                    <input type="text" id="studentName" placeholder="Your name (leave blank if preferred)">
+                </div>
+                
+                <button class="submit" onclick="startQuiz()">Start Quiz</button>
+            </div>
+            
+            <!-- Quiz Screen -->
+            <div class="screen" id="quizScreen">
+                <div class="progress">
+                    Question <span id="qNum">1</span> of 5
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 20%"></div>
+                </div>
+                
+                <div class="question-text" id="questionText"></div>
+                
+                <div class="options-group" id="optionsContainer"></div>
+                
+                <div class="buttons">
+                    <button id="prevBtn" onclick="previousQuestion()" disabled>← Back</button>
+                    <button id="nextBtn" class="submit" onclick="nextQuestion()">Next →</button>
+                </div>
+            </div>
+            
+            <!-- Result Screen -->
+            <div class="screen" id="resultScreen">
+                <div class="success-message">
+                    <div class="success-icon">✓</div>
+                    <h2>Quiz Submitted Successfully!</h2>
+                    <p>Thank you for completing the Pakistan Economics Quiz. Your responses have been recorded with your Student ID and timestamp.</p>
+                    
+                    <div style="text-align: left; background: #f9fef9; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem; font-size: 14px;">
+                        <p><strong>Submission Details:</strong></p>
+                        <p>ID: <span id="resultId"></span></p>
+                        <p>Name: <span id="resultName"></span></p>
+                        <p>Time: <span id="resultTime"></span></p>
+                    </div>
+                    
+                    <button class="download-btn" onclick="downloadResults()">Download Your Responses (CSV)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                q: "What percentage of Pakistan's GDP is spent on Defense?",
+                opts: ["A) 2%", "B) 5%", "C) 7%", "D) 15%", "E) 19%"],
+                correct: "A) 2%"
+            },
+            {
+                q: "What percentage of global income (Global GDP) comes from the Agriculture sector?",
+                opts: ["A) 5%", "B) 20%", "C) 30%", "D) 35%"],
+                correct: "A) 5%"
+            },
+            {
+                q: "Of all the milk produced and consumed in Pakistan, what percentage is processed and packaged (UHT)?",
+                opts: ["A) Less than 10%", "B) 25%", "C) 45%", "D) 60%"],
+                correct: "A) Less than 10%"
+            },
+            {
+                q: "In 2019, only 17% of Pakistanis (aged 10+) used the internet. What is the percentage today (2025/26)?",
+                opts: ["A) 25%", "B) 38%", "C) 57%", "D) 82%"],
+                correct: "C) 57%"
+            },
+            {
+                q: "What percentage of Pakistan's total electricity generation mix now comes from clean/renewable energy (including Hydropower)?",
+                opts: ["A) 12%", "B) 24%", "C) 46%", "D) 65%"],
+                correct: "C) 46%"
+            }
+        ];
+
+        let shuffledQuestions = [];
+        let currentIndex = 0;
+        let answers = {};
+        let studentData = {};
+
+        function shuffleArray(arr) {
+            const newArr = [...arr];
+            for (let i = newArr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+            }
+            return newArr;
+        }
+
+        function startQuiz() {
+            const id = document.getElementById("studentId").value.trim();
+            const name = document.getElementById("studentName").value.trim();
+            
+            if (!id) {
+                alert("Student ID is required to start the quiz.");
+                return;
+            }
+            
+            studentData = {
+                id: id,
+                name: name || "Anonymous",
+                timestamp: new Date().toLocaleString()
+            };
+            
+            shuffledQuestions = shuffleArray([...questions]);
+            currentIndex = 0;
+            answers = {};
+            
+            showScreen("quizScreen");
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            const q = shuffledQuestions[currentIndex];
+            document.getElementById("qNum").textContent = currentIndex + 1;
+            document.getElementById("questionText").textContent = q.q;
+            
+            const progressPercent = ((currentIndex + 1) / 5) * 100;
+            document.getElementById("progressFill").style.width = progressPercent + "%";
+            
+            const html = q.opts.map((opt, i) => {
+                const isChecked = answers[currentIndex] === opt ? "checked" : "";
+                return `
+                    <div class="option">
+                        <input type="radio" id="opt${i}" name="answer" value="${opt}" ${isChecked} onchange="updateAnswer()">
+                        <label for="opt${i}">${opt}</label>
+                    </div>
+                `;
+            }).join("");
+            
+            document.getElementById("optionsContainer").innerHTML = html;
+            
+            document.getElementById("prevBtn").disabled = currentIndex === 0;
+            document.getElementById("nextBtn").textContent = currentIndex === 4 ? "Submit Quiz →" : "Next →";
+            document.getElementById("nextBtn").className = currentIndex === 4 ? "submit" : "";
+        }
+
+        function updateAnswer() {
+            const selected = document.querySelector('input[name="answer"]:checked');
+            if (selected) {
+                answers[currentIndex] = selected.value;
+            }
+        }
+
+        function nextQuestion() {
+            if (!answers[currentIndex]) {
+                alert("Please select an answer before continuing.");
+                return;
+            }
+            
+            if (currentIndex < 4) {
+                currentIndex++;
+                displayQuestion();
+            } else {
+                submitQuiz();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                displayQuestion();
+            }
+        }
+
+        function submitQuiz() {
+            document.getElementById("resultId").textContent = studentData.id;
+            document.getElementById("resultName").textContent = studentData.name;
+            document.getElementById("resultTime").textContent = studentData.timestamp;
+            showScreen("resultScreen");
+        }
+
+        function showScreen(id) {
+            document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+
+        function downloadResults() {
+            let csv = "Student ID,Student Name,Submission Time,Question Number,Question Text,Your Answer,Correct Answer,Is Correct\n";
+            
+            shuffledQuestions.forEach((q, i) => {
+                const yourAns = answers[i] || "Not answered";
+                const isCorrect = yourAns === q.correct ? "Yes" : "No";
+                const qNum = i + 1;
+                
+                csv += `"${studentData.id.replace(/"/g, '""')}","${studentData.name.replace(/"/g, '""')}","${studentData.timestamp}","${qNum}","${q.q.replace(/"/g, '""')}","${yourAns.replace(/"/g, '""')}","${q.correct.replace(/"/g, '""')}","${isCorrect}"\n`;
+            });
+            
+            const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = `Quiz_Results_${studentData.id}_${Date.now()}.csv`;
+            link.style.display = "none";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
