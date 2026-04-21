@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Economics Quiz</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f0f4f0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: #2C5F2D;
+            color: white;
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+        .header h1 { font-size: 24px; font-weight: 600; margin-bottom: 4px; }
+        .header p { font-size: 13px; opacity: 0.85; }
+        .content { padding: 2rem; }
+        .screen { display: none; }
+        .screen.active { display: block; animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .info-box {
+            background: #f0f7f0;
+            border-left: 4px solid #2C5F2D;
+            padding: 1rem;
+            border-radius: 0 6px 6px 0;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; font-size: 13px; font-weight: 600; color: #2C5F2D; margin-bottom: 6px; }
+        .form-group input {
+            width: 100%;
+            padding: 0.7rem 0.9rem;
+            border: 1.5px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus { outline: none; border-color: #2C5F2D; box-shadow: 0 0 0 3px rgba(44,95,45,0.1); }
+        .progress-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .progress-label { font-size: 13px; color: #666; font-weight: 600; }
+        .order-badge {
+            font-size: 11px;
+            background: #e8f5e9;
+            color: #2C5F2D;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        .progress-bar { width: 100%; height: 5px; background: #e0e0e0; border-radius: 3px; margin-bottom: 1.5rem; overflow: hidden; }
+        .progress-fill { height: 100%; background: #2C5F2D; transition: width 0.4s ease; }
+        .question-text { font-size: 17px; font-weight: 600; color: #1a1a1a; margin-bottom: 1.25rem; line-height: 1.5; }
+        .options-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.5rem; }
+        .option {
+            display: flex;
+            align-items: flex-start;
+            padding: 0.9rem 1rem;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.15s;
+            user-select: none;
+        }
+        .option:hover { border-color: #2C5F2D; background: #f9fef9; }
+        .option.selected { border-color: #2C5F2D; background: #f0f7f0; }
+        .option input[type="radio"] {
+            width: 18px; height: 18px;
+            margin-right: 12px; margin-top: 2px;
+            accent-color: #2C5F2D;
+            flex-shrink: 0; cursor: pointer;
+        }
+        .option label { flex: 1; font-size: 15px; color: #333; cursor: pointer; line-height: 1.4; }
+        .option.selected label { font-weight: 600; color: #2C5F2D; }
+        .buttons { display: flex; gap: 12px; margin-top: 1.5rem; }
+        button {
+            flex: 1; padding: 0.75rem 1rem;
+            font-size: 15px; font-weight: 600;
+            border-radius: 6px; cursor: pointer;
+            transition: all 0.2s;
+            border: 1.5px solid #2C5F2D;
+            background: white; color: #2C5F2D;
+        }
+        button:hover:not(:disabled) { background: #2C5F2D; color: white; }
+        button:active:not(:disabled) { transform: scale(0.98); }
+        button:disabled { opacity: 0.35; cursor: not-allowed; }
+        button.primary { background: #2C5F2D; color: white; }
+        button.primary:hover:not(:disabled) { background: #1e4620; border-color: #1e4620; }
+        .submitting-box { text-align: center; padding: 3rem 0; }
+        .spinner {
+            display: inline-block;
+            width: 22px; height: 22px;
+            border: 3px solid #2C5F2D33;
+            border-top-color: #2C5F2D;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .success-box { text-align: center; padding: 0.5rem 0 1rem; }
+        .success-icon { font-size: 52px; color: #2C5F2D; margin-bottom: 0.75rem; }
+        .success-box h2 { font-size: 22px; color: #2C5F2D; margin-bottom: 0.5rem; }
+        .success-box > p { font-size: 15px; color: #555; line-height: 1.6; margin-bottom: 1rem; }
+        .detail-box {
+            background: #f9fef9;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            text-align: left;
+            font-size: 14px;
+            color: #333;
+            margin: 1rem 0;
+            line-height: 2;
+        }
+        .error-msg {
+            background: #fff3f3;
+            border: 1px solid #ffcdd2;
+            color: #c62828;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-top: 1rem;
+            display: none;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Pakistan Economics Quiz</h1>
+        <p>5 Questions &bull; Unique Random Order &bull; One Submission Only</p>
+    </div>
+    <div class="content">
+
+        <!-- START SCREEN -->
+        <div class="screen active" id="startScreen">
+            <div class="info-box">
+                <strong>Instructions:</strong> You will see 5 questions <strong>one at a time</strong> in a unique random order. Every student sees a different sequence. You cannot retake the quiz. Your answers go directly to your professor.
+            </div>
+            <div class="form-group">
+                <label for="studentId">Student ID (Required) *</label>
+                <input type="text" id="studentId" placeholder="e.g. 2023-001" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="studentName">Full Name (Optional)</label>
+                <input type="text" id="studentName" placeholder="Your full name" autocomplete="off">
+            </div>
+            <button class="primary" onclick="startQuiz()">Start Quiz &rarr;</button>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+        <div class="screen" id="quizScreen">
+            <div class="progress-row">
+                <span class="progress-label">Question <span id="qNum">1</span> of 5</span>
+                <span class="order-badge" id="orderBadge"></span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width:20%"></div>
+            </div>
+            <div class="question-text" id="questionText"></div>
+            <div class="options-group" id="optionsContainer"></div>
+            <div class="buttons">
+                <button id="prevBtn" onclick="prev()" disabled>&larr; Back</button>
+                <button class="primary" id="nextBtn" onclick="next()">Next &rarr;</button>
+            </div>
+        </div>
+
+        <!-- SUBMITTING SCREEN -->
+        <div class="screen" id="submittingScreen">
+            <div class="submitting-box">
+                <div style="font-size:18px;font-weight:600;color:#2C5F2D;">
+                    <span class="spinner"></span>Submitting your answers...
+                </div>
+                <p style="color:#888;font-size:14px;margin-top:0.75rem;">Please wait. Do not close this page.</p>
+            </div>
+        </div>
+
+        <!-- RESULT SCREEN -->
+        <div class="screen" id="resultScreen">
+            <div class="success-box">
+                <div class="success-icon">&#10003;</div>
+                <h2>Submitted Successfully!</h2>
+                <p>Your answers have been sent to your professor automatically.</p>
+                <div class="detail-box" id="detailBox"></div>
+                <p style="font-size:12px;color:#aaa;">You may now close this page.</p>
+            </div>
+            <div class="error-msg" id="errorMsg">
+                &#9888; There was a connection issue. Please screenshot this page and send it to your professor, or note down your Student ID and answers manually.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // ── CONFIGURATION ──────────────────────────────────────────────
+    const WEBHOOK = "https://script.google.com/macros/s/AKfycbwmRzsfnV_X3Y5Jejixfjdf1duSii8tcVpxb1WE7mkl5RNO25Txv-uS8C2iijJkRso/exec";
+
+    const QUESTIONS = [
+        {
+            id: "q1", label: "Defense Spending",
+            q: "What percentage of Pakistan's GDP is spent on Defense?",
+            opts: ["A) 2%", "B) 5%", "C) 7%", "D) 15%", "E) 19%"],
+            correct: "A) 2%"
+        },
+        {
+            id: "q2", label: "Agriculture GDP",
+            q: "What percentage of global income (Global GDP) comes from the Agriculture sector?",
+            opts: ["A) 5%", "B) 20%", "C) 30%", "D) 35%"],
+            correct: "A) 5%"
+        },
+        {
+            id: "q3", label: "Milk Processing",
+            q: "Of all the milk produced and consumed in Pakistan, what percentage is processed and packaged (UHT)?",
+            opts: ["A) Less than 10%", "B) 25%", "C) 45%", "D) 60%"],
+            correct: "A) Less than 10%"
+        },
+        {
+            id: "q4", label: "Internet Penetration",
+            q: "In 2019, only 17% of Pakistanis (aged 10+) used the internet. What is the percentage today (2025/26)?",
+            opts: ["A) 25%", "B) 38%", "C) 57%", "D) 82%"],
+            correct: "C) 57%"
+        },
+        {
+            id: "q5", label: "Renewable Energy",
+            q: "What percentage of Pakistan's total electricity generation mix now comes from clean/renewable energy (including Hydropower)?",
+            opts: ["A) 12%", "B) 24%", "C) 46%", "D) 65%"],
+            correct: "C) 46%"
+        }
+    ];
+
+    // ── BULLETPROOF FISHER-YATES SHUFFLE ───────────────────────────
+    // Runs 3 passes to guarantee randomness
+    function shuffle(arr) {
+        let a = [...arr];
+        for (let pass = 0; pass < 3; pass++) {
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+        }
+        return a;
+    }
+
+    // ── STATE ───────────────────────────────────────────────────────
+    let shuffled = [];
+    let idx = 0;
+    let answers = {};
+    let student = {};
+    let orderCode = "";  // Unique order identifier per student
+
+    // ── SCREENS ─────────────────────────────────────────────────────
+    function show(id) {
+        document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+    }
+
+    // ── START ───────────────────────────────────────────────────────
+    function startQuiz() {
+        const sid = document.getElementById("studentId").value.trim();
+        if (!sid) { alert("Please enter your Student ID to begin."); return; }
+
+        student = {
+            id: sid,
+            name: document.getElementById("studentName").value.trim() || "Anonymous",
+            time: new Date().toLocaleString("en-GB")
+        };
+
+        // Shuffle with timestamp seed for extra randomness
+        shuffled = shuffle(QUESTIONS);
+        orderCode = shuffled.map(q => q.id.replace("q","")).join("-");
+
+        idx = 0;
+        answers = {};
+        show("quizScreen");
+        render();
+    }
+
+    // ── RENDER QUESTION ─────────────────────────────────────────────
+    function render() {
+        const q = shuffled[idx];
+        document.getElementById("qNum").textContent = idx + 1;
+        document.getElementById("orderBadge").textContent = "Order: " + orderCode;
+        document.getElementById("progressFill").style.width = ((idx + 1) / 5 * 100) + "%";
+        document.getElementById("questionText").textContent = q.q;
+
+        const saved = answers[idx];
+        document.getElementById("optionsContainer").innerHTML = q.opts.map((opt, i) => `
+            <div class="option ${saved === opt ? 'selected' : ''}" id="wrap${i}" onclick="pick(${i})">
+                <input type="radio" id="r${i}" name="ans" value="${opt}" ${saved === opt ? "checked" : ""} onclick="pick(${i})">
+                <label for="r${i}">${opt}</label>
+            </div>
+        `).join("");
+
+        document.getElementById("prevBtn").disabled = idx === 0;
+        document.getElementById("nextBtn").textContent = idx === 4 ? "Submit Quiz" : "Next \u2192";
+    }
+
+    // ── SELECT OPTION ───────────────────────────────────────────────
+    function pick(i) {
+        answers[idx] = shuffled[idx].opts[i];
+        document.querySelectorAll(".option").forEach((el, n) => {
+            const sel = n === i;
+            el.classList.toggle("selected", sel);
+            el.querySelector("input").checked = sel;
+            const lbl = el.querySelector("label");
+            lbl.style.fontWeight = sel ? "600" : "400";
+            lbl.style.color = sel ? "#2C5F2D" : "#333";
+        });
+    }
+
+    // ── NAVIGATION ──────────────────────────────────────────────────
+    function next() {
+        if (!answers[idx]) { alert("Please select an answer before continuing."); return; }
+        if (idx < 4) { idx++; render(); }
+        else submit();
+    }
+
+    function prev() {
+        if (idx > 0) { idx--; render(); }
+    }
+
+    // ── SUBMIT ───────────────────────────────────────────────────────
+    function submit() {
+        show("submittingScreen");
+
+        // Map each shuffled answer back to its original question ID
+        const map = {};
+        shuffled.forEach((q, i) => { map[q.id] = answers[i] || "No answer"; });
+
+        const payload = {
+            studentId:      student.id,
+            studentName:    student.name,
+            submissionTime: student.time,
+            questionOrder:  orderCode,       // e.g. "3-1-5-2-4" — shows professor what order student saw
+            q1: map["q1"],
+            q2: map["q2"],
+            q3: map["q3"],
+            q4: map["q4"],
+            q5: map["q5"]
+        };
+
+        fetch(WEBHOOK, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        })
+        .then(() => showResult(true))
+        .catch(() => showResult(false));
+    }
+
+    // ── RESULT ───────────────────────────────────────────────────────
+    function showResult(ok) {
+        show("resultScreen");
+        const map = {};
+        shuffled.forEach((q, i) => { map[q.id] = answers[i] || "—"; });
+
+        document.getElementById("detailBox").innerHTML = `
+            <strong>Student ID:</strong> ${student.id}<br>
+            <strong>Name:</strong> ${student.name}<br>
+            <strong>Submitted:</strong> ${student.time}<br>
+            <strong>Your question order:</strong> ${orderCode}<br><br>
+            <strong>Q1 – Defense Spending:</strong> ${map["q1"]}<br>
+            <strong>Q2 – Agriculture GDP:</strong> ${map["q2"]}<br>
+            <strong>Q3 – Milk Processing:</strong> ${map["q3"]}<br>
+            <strong>Q4 – Internet Penetration:</strong> ${map["q4"]}<br>
+            <strong>Q5 – Renewable Energy:</strong> ${map["q5"]}
+        `;
+        if (!ok) document.getElementById("errorMsg").style.display = "block";
+    }
+</script>
+</body>
+</html>
