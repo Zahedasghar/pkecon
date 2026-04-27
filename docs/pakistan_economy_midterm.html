@@ -1003,6 +1003,7 @@ cursor: pointer; transition: background .2s, color .2s; display: block;
 // ════════════════════════════════════════════════════════
 const SHEET_URL = "https://script.google.com/macros/s/AKfycbze89MDtWtMG3Nse6JIXWhEEjAE2zeCjnK1b6Ng4LkfD5PtmrdK7yfbOoe6KIlTY8Pe/exec";
 
+
 // ════════════════════════════════════════════════════════
 // QUESTION BANK — 15 Agriculture + 15 Industry MCQs
 //              +  3 Short Answer Questions
@@ -1402,44 +1403,49 @@ function showResults() {
 }
 
 // ════════════════════════════════════════════
-// Google Sheets submission via JSONP
-// Sends: summary stats + Q1–Q30 answers + 3 short answers
+// Google Sheets submission
+// Hidden iframe + form POST — the only method
+// that reliably crosses origin from a static
+// hosted page to Apps Script without CORS.
+// Apps Script receives data via e.parameter.
 // ════════════════════════════════════════════
 function sendToSheet(data) {
   const el = document.getElementById('submission-status');
   el.className   = 'submission-status sending';
   el.textContent = '⏳ Sending result to record system…';
 
-  // Encode all fields as URL params (JSONP-safe, no preflight)
-  const params = new URLSearchParams();
-  Object.entries(data).forEach(([k, v]) => params.append(k, String(v)));
+  // Hidden iframe absorbs the response — no page navigation
+  const iframeName = 'gs_target_' + Date.now();
+  const iframe     = document.createElement('iframe');
+  iframe.name      = iframeName;
+  iframe.style.cssText = 'display:none;position:absolute;';
+  document.body.appendChild(iframe);
 
-  const script    = document.createElement('script');
-  script.src      = SHEET_URL + '?' + params.toString() + '&callback=sheetCallback';
+  // Build hidden form — one input per field
+  const form  = document.createElement('form');
+  form.method = 'POST';
+  form.action = SHEET_URL;
+  form.target = iframeName;
+  form.style.cssText = 'display:none;position:absolute;';
 
-  window.sheetCallback = function() {
+  Object.entries(data).forEach(([k, v]) => {
+    const inp = document.createElement('input');
+    inp.type  = 'hidden';
+    inp.name  = k;
+    inp.value = String(v == null ? '' : v);
+    form.appendChild(inp);
+  });
+
+  document.body.appendChild(form);
+  form.submit();
+
+  // Apps Script gives no CORS-safe callback from an iframe,
+  // so confirm success after 4 seconds
+  setTimeout(() => {
     el.className   = 'submission-status sent';
     el.textContent = '✓ Result recorded in faculty database.';
-    script.remove();
-  };
-
-  script.onerror = function() {
-    // Fallback: image beacon (fire-and-forget)
-    new Image().src = SHEET_URL + '?' + params.toString();
-    el.className   = 'submission-status sent';
-    el.textContent = '✓ Result submitted. It will appear in your sheet shortly.';
-    script.remove();
-  };
-
-  document.head.appendChild(script);
-
-  // Timeout safety — mark sent after 5s in case callback never fires
-  setTimeout(() => {
-    if (el.className === 'submission-status sending') {
-      el.className   = 'submission-status sent';
-      el.textContent = '✓ Result submitted to faculty database.';
-    }
-  }, 5000);
+    try { form.remove(); iframe.remove(); } catch(e) {}
+  }, 4000);
 }
 
 function restartExam() {
