@@ -1383,7 +1383,31 @@ function showResults() {
       : L[a] + ') ' + q.opts[a];
   });
 
-  function sendToSheet(data) {
+  sendToSheet({
+    timestamp:  new Date().toISOString(),
+    rollNo,
+    name:       studentName,
+    programme,
+    score,
+    agriScore,
+    indScore,
+    pct,
+    verdict,
+    attempted,
+    timeTaken,
+    short1:     shortResponses[0] || '',
+    short2:     shortResponses[1] || '',
+    short3:     shortResponses[2] || '',
+    ...qAnswers
+  });
+}
+
+// ════════════════════════════════════════════
+// Google Sheets submission
+// fetch + no-cors — works reliably from any
+// static hosted page to Apps Script doPost.
+// ════════════════════════════════════════════
+function sendToSheet(data) {
   const el = document.getElementById('submission-status');
   el.className   = 'submission-status sending';
   el.textContent = '⏳ Sending result to record system…';
@@ -1405,52 +1429,6 @@ function showResults() {
     el.className   = 'submission-status failed';
     el.textContent = '✗ Submission failed. Please inform the invigilator.';
   });
-}
-
-// ════════════════════════════════════════════
-// Google Sheets submission
-// Hidden iframe + form POST — the only method
-// that reliably crosses origin from a static
-// hosted page to Apps Script without CORS.
-// Apps Script receives data via e.parameter.
-// ════════════════════════════════════════════
-function sendToSheet(data) {
-  const el = document.getElementById('submission-status');
-  el.className   = 'submission-status sending';
-  el.textContent = '⏳ Sending result to record system…';
-
-  // Hidden iframe absorbs the response — no page navigation
-  const iframeName = 'gs_target_' + Date.now();
-  const iframe     = document.createElement('iframe');
-  iframe.name      = iframeName;
-  iframe.style.cssText = 'display:none;position:absolute;';
-  document.body.appendChild(iframe);
-
-  // Build hidden form — one input per field
-  const form  = document.createElement('form');
-  form.method = 'POST';
-  form.action = SHEET_URL;
-  form.target = iframeName;
-  form.style.cssText = 'display:none;position:absolute;';
-
-  Object.entries(data).forEach(([k, v]) => {
-    const inp = document.createElement('input');
-    inp.type  = 'hidden';
-    inp.name  = k;
-    inp.value = String(v == null ? '' : v);
-    form.appendChild(inp);
-  });
-
-  document.body.appendChild(form);
-  form.submit();
-
-  // Apps Script gives no CORS-safe callback from an iframe,
-  // so confirm success after 4 seconds
-  setTimeout(() => {
-    el.className   = 'submission-status sent';
-    el.textContent = '✓ Result recorded in faculty database.';
-    try { form.remove(); iframe.remove(); } catch(e) {}
-  }, 4000);
 }
 
 function restartExam() {
