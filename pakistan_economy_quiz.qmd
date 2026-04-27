@@ -1,0 +1,606 @@
+---
+title: "Pakistan Economy — Assessment Quiz"
+subtitle: "Agriculture & Industrial Sector | Economy of Pakistan | QAU Spring 2026"
+author: "Prof. Dr. Zahid Asghar · School of Economics, QAU Islamabad"
+date: today
+format:
+  html:
+    theme: none
+    toc: false
+    page-layout: custom
+    embed-resources: true
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+execute:
+  echo: false
+  warning: false
+---
+
+```{=html}
+<style>
+  /* ── suppress all default Quarto chrome ── */
+  #quarto-content, .page-columns, #quarto-margin-sidebar,
+  #quarto-sidebar, nav, .navbar, .quarto-title-block,
+  h1.title, p.subtitle, p.author, p.date,
+  #title-block-header { display: none !important; }
+  body { margin: 0 !important; padding: 0 !important; }
+
+  :root {
+    --green:       #1a6b3c;
+    --green-dark:  #0e2a1a;
+    --green-mid:   #155c33;
+    --green-light: #2d8f5a;
+    --green-pale:  #eaf3ed;
+    --gold:        #c9a84c;
+    --surface:     #ffffff;
+    --bg:          #f5f7f3;
+    --border:      #d0ddd6;
+    --text:        #0e1f13;
+    --muted:       #4a6355;
+    --red:         #b83232;
+    --red-pale:    #fdf0f0;
+    --radius:      10px;
+    --radius-lg:   16px;
+    --shadow:      0 2px 16px rgba(14,42,26,.09);
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 300 !important;
+    background: var(--bg) !important;
+    color: var(--text) !important;
+    min-height: 100vh;
+    line-height: 1.75;
+    font-size: 15px;
+  }
+
+  /* LOGIN */
+  #login-screen {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(145deg, var(--green-dark) 0%, #0e3320 50%, #1a4a2a 100%);
+    position: relative; overflow: hidden;
+  }
+  #login-screen::before {
+    content: "QAU";
+    font-family: 'Playfair Display', serif;
+    font-size: 28rem;
+    position: absolute; left: -4rem; bottom: -6rem;
+    opacity: .03; color: #fff; line-height: 1;
+    pointer-events: none; user-select: none;
+  }
+  .login-card {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(201,168,76,.25);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2.8rem;
+    width: 100%; max-width: 440px;
+    backdrop-filter: blur(8px);
+    position: relative; z-index: 1;
+  }
+  .login-logo { text-align: center; margin-bottom: 2rem; }
+  .login-logo .seal {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .68rem; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--gold); display: block; margin-bottom: .5rem;
+  }
+  .login-logo h1 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: #fff; line-height: 1.15; }
+  .login-logo p  { font-size: .85rem; color: rgba(255,255,255,.55); margin-top: .35rem; }
+  .form-row { margin-bottom: 1.2rem; }
+  .form-row label {
+    display: block; font-size: .78rem; font-weight: 500;
+    letter-spacing: .05em; text-transform: uppercase;
+    color: rgba(255,255,255,.55); margin-bottom: .45rem;
+  }
+  .form-row input, .form-row select {
+    width: 100%; background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius);
+    padding: .75rem 1rem; color: #fff;
+    font-family: 'DM Sans', sans-serif; font-size: .95rem;
+    outline: none; transition: border-color .2s;
+  }
+  .form-row input::placeholder { color: rgba(255,255,255,.3); }
+  .form-row input:focus, .form-row select:focus { border-color: var(--gold); }
+  .form-row select option { background: #0e2a1a; color: #fff; }
+  .login-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    border: none; border-radius: var(--radius); padding: .85rem; color: #fff;
+    font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600;
+    cursor: pointer; transition: opacity .2s, transform .15s;
+    margin-top: .5rem; border-bottom: 3px solid rgba(0,0,0,.2);
+  }
+  .login-btn:hover { opacity: .92; transform: translateY(-1px); }
+  .login-note {
+    text-align: center; font-size: .75rem;
+    color: rgba(255,255,255,.35); margin-top: 1.2rem; line-height: 1.5;
+  }
+  #login-error {
+    background: rgba(184,50,50,.18); border: 1px solid rgba(184,50,50,.4);
+    color: #ffb3b3; border-radius: var(--radius);
+    padding: .6rem 1rem; font-size: .85rem; margin-bottom: 1rem; display: none;
+  }
+
+  /* QUIZ HEADER */
+  #quiz-screen { display: none; }
+  .quiz-header {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    border-bottom: 3px solid var(--gold);
+    padding: 1.2rem 2rem;
+    display: flex; align-items: center;
+    justify-content: space-between; flex-wrap: wrap; gap: .6rem;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .qh-left .course-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
+  }
+  .qh-left .student-name { font-size: 1rem; font-weight: 600; color: #fff; margin-top: .1rem; }
+  .qh-right { display: flex; align-items: center; gap: 1rem; }
+  .progress-pill { font-family: 'JetBrains Mono', monospace; font-size: .78rem; color: rgba(255,255,255,.7); }
+  .timer-badge {
+    background: rgba(201,168,76,.15); border: 1px solid rgba(201,168,76,.35);
+    color: var(--gold); font-family: 'JetBrains Mono', monospace;
+    font-size: .9rem; padding: .3rem .9rem; border-radius: 100px;
+    min-width: 70px; text-align: center;
+  }
+  .timer-badge.urgent { background: rgba(184,50,50,.2); border-color: rgba(184,50,50,.5); color: #ffaaaa; }
+  .progress-track { height: 3px; background: rgba(255,255,255,.1); }
+  .progress-fill  { height: 3px; background: linear-gradient(90deg, var(--gold), var(--green-light)); transition: width .4s ease; }
+
+  /* QUIZ BODY */
+  .quiz-body { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .q-meta { display: flex; align-items: center; gap: .7rem; margin-bottom: 1rem; }
+  .q-badge {
+    font-family: 'JetBrains Mono', monospace; font-size: .65rem;
+    letter-spacing: .12em; text-transform: uppercase;
+    padding: .25rem .8rem; border-radius: 100px; font-weight: 500;
+  }
+  .badge-moderate { background: #dff0e6; color: #1a6b3c; }
+  .badge-hard     { background: #fbe9e9; color: #9b2424; }
+  .q-category-tag { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
+  .q-number {
+    font-family: 'Playfair Display', serif; font-size: 2.8rem;
+    font-weight: 700; color: var(--border); line-height: 1; margin-bottom: -.3rem;
+  }
+  .q-text {
+    font-size: 1.1rem; font-weight: 500; color: var(--text);
+    line-height: 1.65; margin-bottom: 1.5rem;
+    padding-left: .5rem; border-left: 3px solid var(--gold);
+  }
+
+  /* OPTIONS — selection only, no right/wrong during quiz */
+  .options { display: flex; flex-direction: column; gap: .7rem; margin-bottom: 1.5rem; }
+  .opt {
+    background: var(--surface); border: 1.5px solid var(--border);
+    border-radius: var(--radius); padding: .85rem 1.2rem;
+    cursor: pointer; display: flex; align-items: flex-start; gap: .9rem;
+    transition: border-color .15s, background .15s, transform .1s;
+    text-align: left; width: 100%;
+    font-family: 'DM Sans', sans-serif; font-size: .95rem; color: var(--text);
+    box-shadow: var(--shadow);
+  }
+  .opt:hover:not(:disabled) { border-color: var(--green-light); background: var(--green-pale); transform: translateX(3px); }
+  .opt.selected { border-color: var(--green); background: var(--green-pale); }
+  .opt.selected .opt-letter { background: var(--green); border-color: var(--green); color: #fff; }
+  .opt:disabled { cursor: default; transform: none; }
+  .opt-letter {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--bg); border: 1.5px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'JetBrains Mono', monospace; font-size: .75rem; font-weight: 500;
+    color: var(--muted); flex-shrink: 0;
+    transition: background .15s, border-color .15s, color .15s;
+  }
+  .opt-text { line-height: 1.5; padding-top: 3px; }
+
+  .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
+  .q-counter { font-family: 'JetBrains Mono', monospace; font-size: .82rem; color: var(--muted); }
+  .next-btn {
+    background: var(--green); color: #fff; border: none;
+    border-radius: var(--radius); padding: .65rem 1.6rem;
+    font-family: 'DM Sans', sans-serif; font-size: .95rem; font-weight: 600;
+    cursor: pointer; transition: background .2s, transform .1s;
+    border-bottom: 3px solid rgba(0,0,0,.2);
+  }
+  .next-btn:hover { background: var(--green-mid); transform: translateY(-1px); }
+  .next-btn:disabled { opacity: .4; cursor: default; transform: none; }
+
+  /* SHORT ANSWER */
+  #short-screen { display: none; }
+  .short-header {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    border-bottom: 3px solid var(--gold); padding: 1.2rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .short-header .course-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
+  }
+  .short-header .student-name { font-size: 1rem; font-weight: 600; color: #fff; }
+  .short-header .section-tag  { font-family: 'JetBrains Mono', monospace; font-size: .78rem; color: rgba(255,255,255,.7); }
+  .short-body { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .short-body h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--green); margin-bottom: .4rem; }
+  .short-intro { font-size: .9rem; color: var(--muted); margin-bottom: 1.8rem; line-height: 1.6; }
+  .short-q-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.3rem 1.5rem;
+    margin-bottom: 1.2rem; box-shadow: var(--shadow);
+  }
+  .sq-num {
+    font-family: 'JetBrains Mono', monospace; font-size: .68rem;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: .4rem;
+  }
+  .sq-text {
+    font-size: .98rem; font-weight: 500; color: var(--text);
+    margin-bottom: .9rem; border-left: 3px solid var(--gold);
+    padding-left: .65rem; line-height: 1.65;
+  }
+  .sq-textarea {
+    width: 100%; min-height: 90px;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: .7rem 1rem;
+    font-family: 'DM Sans', sans-serif; font-size: .9rem; color: var(--text);
+    resize: vertical; outline: none; transition: border-color .2s; line-height: 1.6;
+  }
+  .sq-textarea:focus { border-color: var(--green); }
+  .sq-textarea::placeholder { color: var(--muted); }
+  .submit-row { display: flex; justify-content: flex-end; margin-top: 1.8rem; }
+  .submit-btn {
+    background: var(--green); color: #fff; border: none;
+    border-radius: var(--radius); padding: .7rem 2rem;
+    font-family: 'DM Sans', sans-serif; font-size: .95rem; font-weight: 600;
+    cursor: pointer; border-bottom: 3px solid rgba(0,0,0,.2);
+    transition: background .2s, transform .1s;
+  }
+  .submit-btn:hover { background: var(--green-mid); transform: translateY(-1px); }
+
+  /* RESULTS */
+  #results-screen { display: none; max-width: 820px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+  .results-hero { text-align: center; padding: 2.5rem 0 2rem; }
+  .results-ring {
+    width: 130px; height: 130px; border-radius: 50%;
+    border: 6px solid var(--border);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    margin: 0 auto 1.2rem;
+  }
+  .ring-score { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; line-height: 1; }
+  .ring-denom { font-size: .8rem; color: var(--muted); }
+  .results-verdict { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--green); margin-bottom: .4rem; }
+  .results-sub { font-size: .9rem; color: var(--muted); margin-bottom: 1.5rem; }
+  .results-msg {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.2rem 1.5rem;
+    font-size: .92rem; line-height: 1.75; margin-bottom: 2rem;
+    text-align: left; box-shadow: var(--shadow);
+  }
+  .section-label {
+    font-family: 'JetBrains Mono', monospace; font-size: .68rem;
+    letter-spacing: .16em; text-transform: uppercase;
+    color: var(--muted); margin: 2rem 0 .8rem;
+  }
+  .breakdown-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1rem 1.2rem;
+    margin-bottom: .75rem; box-shadow: var(--shadow);
+  }
+  .bc-top { display: flex; gap: .75rem; margin-bottom: .5rem; }
+  .bc-icon { font-size: 1.1rem; min-width: 20px; margin-top: 2px; flex-shrink: 0; }
+  .bc-right { flex: 1; }
+  .bc-cat {
+    font-family: 'JetBrains Mono', monospace; font-size: .65rem;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .25rem;
+  }
+  .bc-question { font-size: .9rem; font-weight: 500; color: var(--text); line-height: 1.5; margin-bottom: .45rem; }
+  .bc-answers { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .bc-pill { padding: .18rem .65rem; border-radius: 4px; font-size: .8rem; font-weight: 500; line-height: 1.4; }
+  .pill-your-correct { background: var(--green-pale); color: var(--green-dark); border: 1px solid var(--green); }
+  .pill-your-wrong   { background: var(--red-pale);   color: var(--red);        border: 1px solid var(--red); }
+  .pill-correct-ans  { background: var(--green-pale); color: var(--green-dark); border: 1px dashed var(--green); }
+  .pill-skipped      { background: #f3f4f6; color: var(--muted); border: 1px solid var(--border); }
+  .bc-exp {
+    font-size: .83rem; color: var(--muted); line-height: 1.6;
+    padding-top: .45rem; border-top: 1px solid var(--border); margin-top: .45rem;
+  }
+  .sr-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem; box-shadow: var(--shadow);
+  }
+  .sr-q { font-size: .95rem; font-weight: 500; color: var(--text); border-left: 3px solid var(--gold); padding-left: .6rem; margin-bottom: .8rem; line-height: 1.6; }
+  .sr-label { font-family: 'JetBrains Mono', monospace; font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .3rem; }
+  .sr-label.yours { color: var(--muted); }
+  .sr-label.model { color: var(--green); margin-top: .6rem; }
+  .sr-student { font-size: .85rem; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: .6rem .9rem; line-height: 1.6; }
+  .sr-model   { font-size: .85rem; color: var(--green-dark); background: var(--green-pale); border-left: 3px solid var(--green); border-radius: 0 var(--radius) var(--radius) 0; padding: .6rem .9rem; line-height: 1.65; }
+  .restart-btn {
+    margin: 2.5rem auto 0; background: var(--green); color: #fff; border: none;
+    border-radius: var(--radius); padding: .75rem 2.2rem;
+    font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600;
+    cursor: pointer; transition: background .2s; display: block;
+    border-bottom: 3px solid rgba(0,0,0,.2);
+  }
+  .restart-btn:hover { background: var(--green-mid); }
+  @media (max-width: 580px) {
+    .quiz-header, .short-header { padding: 1rem 1.2rem; }
+    .quiz-body, .short-body     { padding: 1.5rem 1rem 3rem; }
+    .q-number { font-size: 2rem; }
+    .q-text   { font-size: 1rem; }
+  }
+</style>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">
+      <span class="seal">School of Economics · QAU Islamabad</span>
+      <h1>Pakistan Economy<br>Assessment Quiz</h1>
+      <p>Agriculture &amp; Industrial Sector · Spring 2026</p>
+    </div>
+    <div id="login-error"></div>
+    <div class="form-row">
+      <label>Student Roll Number</label>
+      <input type="text" id="roll-input" placeholder="e.g. 2023-MECO-042" autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label>Full Name</label>
+      <input type="text" id="name-input" placeholder="Your full name">
+    </div>
+    <div class="form-row">
+      <label>Topic Focus</label>
+      <select id="topic-select">
+        <option value="both">Both Sectors (Agriculture + Industry)</option>
+        <option value="agri">Agriculture Only</option>
+        <option value="industry">Industrial Sector Only</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label>Assessment Mode</label>
+      <select id="count-select">
+        <option value="10">10 MCQs (~15 min)</option>
+        <option value="15" selected>15 MCQs (~22 min)</option>
+        <option value="short">15 MCQs + 3 Short Answer Questions</option>
+      </select>
+    </div>
+    <button class="login-btn" onclick="startQuiz()">Begin Assessment →</button>
+    <p class="login-note">Your roll number seeds the randomisation — each student receives a unique question and answer-option order. Correct answers are revealed only after you finish.</p>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz-screen">
+  <div class="quiz-header">
+    <div class="qh-left">
+      <div class="course-tag">Economy of Pakistan · QAU · Spring 2026</div>
+      <div class="student-name" id="hdr-name">—</div>
+    </div>
+    <div class="qh-right">
+      <span class="progress-pill" id="hdr-progress">Q 1 / 15</span>
+      <span class="timer-badge" id="timer-display">22:30</span>
+    </div>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  <div class="quiz-body" id="quiz-body"></div>
+</div>
+
+<!-- SHORT ANSWER -->
+<div id="short-screen">
+  <div class="short-header">
+    <div>
+      <div class="course-tag">Economy of Pakistan · QAU · Spring 2026</div>
+      <div class="student-name" id="short-hdr-name">—</div>
+    </div>
+    <div class="section-tag">Short Answer Questions</div>
+  </div>
+  <div class="short-body">
+    <h2>Short Answer Questions</h2>
+    <p class="short-intro">Answer each question in 2–3 sentences in your own words. Model answers will be shown alongside your responses after you submit. There is no time limit for this section.</p>
+    <div id="short-cards"></div>
+    <div class="submit-row">
+      <button class="submit-btn" onclick="submitShort()">Submit &amp; See Results →</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div id="results-screen">
+  <div class="results-hero">
+    <div class="results-ring" id="ring">
+      <span class="ring-score" id="ring-score">0</span>
+      <span class="ring-denom" id="ring-denom">/ 15</span>
+    </div>
+    <div class="results-verdict" id="verdict">—</div>
+    <div class="results-sub" id="results-sub">—</div>
+  </div>
+  <div class="results-msg" id="results-msg">—</div>
+  <div class="section-label">MCQ Review — correct answers &amp; explanations</div>
+  <div id="breakdown-list"></div>
+  <div id="short-review-wrap" style="display:none">
+    <div class="section-label">Short Answer Review — your response vs. model answer</div>
+    <div id="short-review-list"></div>
+  </div>
+  <button class="restart-btn" onclick="restartQuiz()">← New Attempt</button>
+</div>
+
+<script>
+const BANK = {
+  agri: [
+    { id:"A1", diff:"moderate", cat:"Sector overview", q:"Agriculture accounts for approximately what share of Pakistan's labour force, while contributing only ~22% of GDP?", opts:["~20% of labour force","~28% of labour force","~37% of labour force","~45% of labour force"], ans:2, exp:"~37% of the labour force works in agriculture yet produces only ~22% of GDP — a productivity gap that drives rural poverty and illustrates the Lewis dual-sector problem of stalled structural transformation." },
+    { id:"A2", diff:"moderate", cat:"Sector structure", q:"Within Pakistan's agricultural GDP, which sub-sector is the single largest component?", opts:["Crops (~38%)","Livestock (~61%)","Fisheries (~2%)","Forestry (~1%)"], ans:1, exp:"Livestock contributes ~61% of agricultural GDP and ~11% of total GDP — yet policy attention remains overwhelmingly focused on crops like wheat and cotton, misaligning priorities." },
+    { id:"A3", diff:"moderate", cat:"Water resources", q:"Pakistan uses approximately what share of its total freshwater resources for agriculture?", opts:["72%","85%","94%","99%"], ans:2, exp:"Pakistan uses 94% of freshwater for agriculture — one of the highest rates globally and far above the South Asian average of 91%, creating acute vulnerability to water stress." },
+    { id:"A4", diff:"moderate", cat:"Productivity & yields", q:"Pakistan's wheat yield is approximately 2.85 MT/ha. What is China's comparable wheat yield, illustrating the institutional productivity gap?", opts:["3.1 MT/ha","4.2 MT/ha","5.42 MT/ha","6.8 MT/ha"], ans:2, exp:"China achieves 5.42 MT/ha vs. Pakistan's 2.85 MT/ha — nearly double. The gap reflects institutional quality, extension services, and certified seed use rather than resource endowments." },
+    { id:"A5", diff:"moderate", cat:"Land structure", q:"The average farm holding in KP is 3.6 acres. Why does this primarily constrain agricultural transformation?", opts:["Too large for subsistence farming","Similar to Punjab — no practical difference","Too small to mechanise; terraced fields make it physically impossible","Above the commercial credit threshold of 12.5 acres"], ans:2, exp:"KP's 3.6-acre average with terraced mountain fields makes mechanisation both economically unviable and physically impossible, locking farmers into subsistence production." },
+    { id:"A6", diff:"moderate", cat:"Crop political economy", q:"Which crop is described as the most water-intensive yet politically protected — a 'policy paradox' in a water-scarce country?", opts:["Wheat","Cotton","Rice","Sugarcane"], ans:3, exp:"Sugarcane has the highest water requirement of any major Pakistani crop, yet mill owners and farmers lobby intensively to maintain support prices — rent-seeking overriding resource constraints." },
+    { id:"A7", diff:"moderate", cat:"Climate vulnerability", q:"The 2022 floods caused approximately how much in agricultural losses specifically?", opts:["$1.2 billion","$3.7 billion","$7.5 billion","$12 billion"], ans:1, exp:"The 2022 floods damaged 9 million acres of crops and caused $3.7 billion in agricultural losses. Total economy-wide losses reached ~$30 billion — roughly two years of GDP gains." },
+    { id:"A8", diff:"hard", cat:"Rural credit", q:"What share of Pakistan's farmers rely on informal credit, and what are informal interest rates in distress periods?", opts:["~40–50%; rates of 10–15%","~60–70%; rates of 20–25%","~80–90%; rates approaching 50%","~95%; rates of 5–8%"], ans:2, exp:"80–90% of farmers rely on informal credit because commercial banks do not lend below 12.5 acres. In distress, informal rates approach 50% — trapping farmers in debt cycles with middlemen." },
+    { id:"A9", diff:"hard", cat:"Post-harvest losses", q:"Pakistan's estimated annual post-harvest losses are valued at approximately how much, and which commodity suffers the highest percentage loss?", opts:["$1–2B; grains at 40%","$4–5B; fruits & vegetables at up to 40%","$8–10B; cotton at 35%","$500M; rice at 25%"], ans:1, exp:"Post-harvest losses are estimated at $4–5 billion annually. Fruits and vegetables suffer losses of up to 40% due to the near-total absence of cold chain infrastructure outside major cities." },
+    { id:"A10", diff:"hard", cat:"Development economics", q:"Why has the Lewis dual-sector mechanism NOT worked as expected to raise agricultural productivity in Pakistan?", opts:["Agricultural wages are legally capped","Industry has not grown fast enough to absorb surplus agricultural labour","Farmers prefer to remain due to support prices","Remittances have made agricultural wages irrelevant"], ans:1, exp:"The Lewis mechanism requires industrial growth to pull surplus labour out of agriculture. Pakistan's industrial stagnation means agriculture remains overcrowded and low-productivity." },
+    { id:"A11", diff:"hard", cat:"Rural credit", q:"Which of the following best describes the 'collateral trap' preventing smallholder farmers from accessing formal bank credit?", opts:["Banks require a university degree","No land title → no formal loan; many smallholders lack updated Fard records; land digitisation incomplete","Farmers refuse bank loans due to Islamic finance concerns","SBP has banned lending below 5 acres"], ans:1, exp:"Without documented land title (Fard), farmers cannot pledge collateral. Incomplete land record digitisation perpetuates this trap, leaving smallholders dependent on informal lenders." },
+    { id:"A12", diff:"hard", cat:"Policy trade-offs", q:"High wheat support prices in Pakistan have created what primary unintended long-run consequence in irrigated Punjab?", opts:["A surge in wheat exports crowding out rice","A near-monoculture in wheat that distorts land use and water allocation","A collapse in wheat production due to over-procurement","A shift of farmers into horticulture"], ans:1, exp:"Guaranteed prices make wheat the rational choice every season, creating near-monoculture in irrigated Punjab — distorting crop diversification and locking in water-intensive practices." },
+    { id:"A13", diff:"hard", cat:"Crop political economy", q:"Which sequence best describes the 'sugar cycle' of rent-seeking in Pakistan's sugar sector?", opts:["High cane price → bumper crop → export surplus → price crash → import ban","High cane price set → mills resist paying farmers → arrears pile up → export allowed → domestic shortage → import permitted → next year's price politics","Low support price → farmer protests → overproduction → export glut","Mill privatisation → FDI inflows → efficiency gains → lower consumer prices"], ans:1, exp:"The sugar cycle is deliberate rent extraction: mills delay farmer payments, lobby for export windows creating domestic shortages, then trigger import permissions — recycling political capture each season." },
+    { id:"A14", diff:"hard", cat:"Provincial variation", q:"Which provincial contrast most clearly illustrates why a uniform federal agricultural policy cannot be effective?", opts:["Punjab (5.6 ac) vs. Sindh (8.8 ac) — both irrigation-dependent","KP (3.6 ac, terraced, rainfed) vs. Balochistan (22.7 ac, water-scarce, orchard-based)","Punjab vs. KP alone — only mechanisation difference","Sindh (feudal) vs. Punjab (smallholder) alone"], ans:1, exp:"KP's tiny terraced rainfed farms and Balochistan's large arid orchard holdings represent completely different agricultural realities — neither fits a policy designed for Punjab's irrigated wheat belt." },
+    { id:"A15", diff:"hard", cat:"Reform agenda", q:"The lectures identify five priority 'shifts' for reforming Pakistan's agriculture. Which of the following is explicitly NOT among them?", opts:["From flood irrigation → efficient water use","From support prices → safety nets (BISP expansion)","From input subsidies → productivity investment (R&D, extension)","From smallholder farming → large commercial farm consolidation"], ans:3, exp:"The five shifts are: subsidies→productivity; flood→efficient irrigation; support prices→safety nets; fragmented policy→provincial strategies; trader capture→farmer connectivity. Farm consolidation is NOT proposed." }
+  ],
+  industry: [
+    { id:"I1", diff:"moderate", cat:"Industrial structure", q:"Pakistan's industry share of GDP declined from approximately 24% in 2005 to what level in 2024?", opts:["15%","18%","20%","23%"], ans:2, exp:"Pakistan's industrial share fell from ~24% (2005) to ~20% (2024) — a reversal of East Asian structural transformation, earning the label 'deindustrialising before industrialising'." },
+    { id:"I2", diff:"moderate", cat:"Export structure", q:"What share of Pakistan's merchandise exports does the textile and garment sector account for?", opts:["~30%","~45%","~60%","~75%"], ans:2, exp:"Textiles account for ~60% of merchandise exports, concentrated in low-value segments — yarn, grey cloth, and basic garments — with minimal diversification over decades." },
+    { id:"I3", diff:"moderate", cat:"Export competitiveness", q:"Pakistan's garment export unit value ($/kg) falls in which range compared to Vietnam ($18–22) and Bangladesh ($14–17)?", opts:["$18–22 — same as Vietnam","$14–17 — same as Bangladesh","$8–12 — below both","$25–30 — above both"], ans:2, exp:"Pakistan's garments command only $8–12/kg — the commodity tier. Bangladesh earns $14–17/kg and Vietnam $18–22/kg, reflecting their higher value-chain position." },
+    { id:"I4", diff:"moderate", cat:"Regional comparison", q:"Bangladesh's merchandise exports grew from $6B (2000) to ~$55B (2024). Over the same period Pakistan's grew to approximately:", opts:["$15B","$22B","$32B","$48B"], ans:2, exp:"Pakistan's merchandise exports grew from $9B to ~$32B over 2000–2024 — significant but far slower than Bangladesh, which started lower and grew nearly 9×." },
+    { id:"I5", diff:"hard", cat:"Fiscal analysis", q:"Why does the course treat Pakistan's three-consecutive-year primary fiscal surplus as a 'surface-level' achievement?", opts:["It was financed through Chinese loans","It was achieved by raising rates on a thin existing tax base — not broadening it","It resulted from a major cut in defence expenditure","It was driven by a surge in export revenues"], ans:1, exp:"The surplus came from super tax on corporations and punitive income tax on salaried workers — not from base-broadening reform. This disincentivises investment and is unsustainable long-run." },
+    { id:"I6", diff:"hard", cat:"Informal economy", q:"How does the size of Pakistan's informal economy compare to the formal documented economy?", opts:["~$150B informal vs. ~$500B formal","~$250B informal vs. ~$400B formal","~$457B informal vs. ~$340B formal","~$340B informal vs. ~$457B formal"], ans:2, exp:"The informal economy (~$457B) actually exceeds the formal documented economy (~$340B) — a direct consequence of a tax system that penalises formality." },
+    { id:"I7", diff:"moderate", cat:"Human capital", q:"Pakistan's R&D spending is ~0.2% of GDP. What is South Korea's comparable figure?", opts:["0.7%","1.5%","4.9%","2.1%"], ans:2, exp:"South Korea spends ~4.9% of GDP on R&D vs. Pakistan's 0.2% — a 25× gap that explains Pakistan's inability to climb the value chain into technology-intensive production." },
+    { id:"I8", diff:"hard", cat:"Boom-bust cycle", q:"Which sequence correctly describes the six-stage boom-bust cycle anatomy presented in the lectures?", opts:["IMF bailout → BoP crisis → consumption boom → stabilisation → growth → crisis","Import-driven boom → BoP crisis → IMF bailout → brief stabilisation → short growth → crisis returns","Export surge → BoP surplus → FDI inflows → growth → inflation → crisis","Fiscal surplus → investment boom → BoP deficit → devaluation → IMF → recovery"], ans:1, exp:"The cycle: (1) import-driven boom, (2) BoP crisis, (3) IMF bailout/austerity, (4) brief stabilisation, (5) short growth, (6) crisis returns. Pakistan has repeated this 25 times since 1950." },
+    { id:"I9", diff:"hard", cat:"Economic complexity", q:"Pakistan's Economic Complexity Index (ECI) rank declined 20 places over a decade. Which statement about regional peers is accurate?", opts:["Pakistan improved 15 places while India declined","Vietnam improved 11 places, India 8, Thailand 9 — all moving in the opposite direction to Pakistan","Pakistan remained stable while Bangladesh declined","Pakistan improved due to growth in IT exports"], ans:1, exp:"Pakistan's ECI fell 20 places. Vietnam added 48 new export products contributing $1,020 per capita; Pakistan added 21 products contributing just $2 per capita." },
+    { id:"I10", diff:"hard", cat:"Foreign direct investment", q:"Of Pakistan's reported net FDI of $2.5B in FY2025, what proportion represents genuinely fresh capital inflows?", opts:["All $2.5B is fresh","About $2B (80%) is fresh","Under $500M — less than 20% is fresh","About $1.2B (50%) is fresh"], ans:2, exp:"Over $2B of the $2.5B net FDI figure is retained earnings by existing firms. Fresh inflows under $500M signal a deep investor confidence deficit — among the lowest in the region." },
+    { id:"I11", diff:"moderate", cat:"Historical evolution", q:"The Bhutto-era nationalisations of the 1970s covered which industries?", opts:["Steel, textiles, banking, and telecom","Cotton ginning, rice husking, flour milling, vegetable ghee, and cement","Fertiliser, automobiles, pharmaceuticals, and mining","Railways, airlines, ports, and insurance"], ans:1, exp:"Bhutto's 1972–74 nationalisations targeted cotton ginning, rice husking, flour milling, vegetable ghee, and cement — destroying the private entrepreneurial class and creating the PSE burden that persists today." },
+    { id:"I12", diff:"moderate", cat:"Labour market", q:"Pakistan's female labour force participation rate (~24%) is identified as an industrial competitiveness challenge primarily because:", opts:["It reduces domestic consumer demand","It limits the scalable workforce needed for garment and manufacturing growth, unlike Bangladesh's model","It increases government social spending","It reduces remittance inflows"], ans:1, exp:"Bangladesh's export success was built on a large, trained female manufacturing workforce. Pakistan's 24% LFPR is a direct structural constraint on garment sector scaling and export growth." },
+    { id:"I13", diff:"hard", cat:"Taxation", q:"Which of the following correctly describes the self-reinforcing 'vicious circle' of Pakistan's narrow tax base?", opts:["Low exports → low forex → high imports → fiscal deficit → more debt","Narrow base → higher rates on formal sector → businesses go informal → base narrows further → rates rise again","High inflation → depreciation → import costs rise → fiscal burden → lower growth","High PSE losses → borrowing → crowding out → less development spending → low growth"], ans:1, exp:"The tax vicious circle: a narrow base forces higher rates → more businesses go informal → base narrows further → rates rise again. This sustains Pakistan's ~10% tax-to-GDP ratio." },
+    { id:"I14", diff:"moderate", cat:"IMF relationship", q:"Pakistan has engaged with the IMF approximately how many times since 1950, and what does the course identify as the core reason the cycle persists?", opts:["10 times; inadequate IMF conditionalities","18 times; insufficient foreign exchange reserves","25 times; structural issues are never addressed during stabilisation programs","30 times; geopolitical pressures prevent genuine reform"], ans:2, exp:"25 IMF programs since 1950. Each restores short-run macroeconomic metrics without touching structural drivers: low exports, extractive institutions, energy circular debt, and fiscal dominance." },
+    { id:"I15", diff:"hard", cat:"Policy & reform", q:"Which pair of pre-conditions does the course identify as things Pakistan currently lacks to replicate Vietnam's export-led growth model?", opts:["A large population and low wages","Competitive energy costs for manufacturing and reliable contract enforcement for foreign investors","A large domestic consumer market and a high savings rate","Proximity to China and a large services export sector"], ans:1, exp:"The full list includes: political stability, competitive energy costs, reliable infrastructure, rule of law/contract enforcement, and low effective tax burdens for export-oriented FDI — all currently absent." }
+  ]
+};
+
+const SHORT_QS = [
+  { q:"Pakistan's agriculture employs ~37% of the labour force yet contributes only ~22% of GDP, while industry employs ~25% but has seen its GDP share fall from 24% to 20% since 2005. What common structural failure explains both trends simultaneously?", model:"Both sectors suffer from a chronic productivity deficit rooted in the same causes — underinvestment in technology and R&D, policy distortions that reward incumbents over innovators, and the failure of structural transformation. Agriculture remains overcrowded with surplus labour that industry — itself stagnating — cannot absorb, trapping both sectors in a low-productivity equilibrium that reinforces itself over time." },
+  { q:"Both Pakistan's agricultural subsidies (fertiliser, tubewell electricity, wheat support prices) and its industrial protection regime (import tariffs, SROs, captive domestic markets) are designed to support domestic producers. Why do both ultimately harm long-run competitiveness?", model:"Both interventions protect existing inefficiencies rather than building productive capacity. Agricultural subsidies are captured by larger farmers and crowd out R&D spending, while industrial tariffs create an anti-export bias — making domestic sales more profitable than competing globally. In both cases, the political economy rewards visible short-run transfers over invisible long-run investment." },
+  { q:"The 2022 floods caused $3.7 billion in agricultural losses and accelerated deindustrialisation by disrupting cotton supply to the textile sector. What does this episode reveal about the structural interconnectedness of Pakistan's agriculture and industrial sectors?", model:"It reveals that agriculture and industry are linked through raw material supply chains — cotton underpins ~60% of merchandise exports, so crop failure directly translates into industrial output loss and foreign exchange pressure. Both sectors also share a climate vulnerability: neither has the resilience infrastructure needed to absorb a major shock without cascading fiscal damage." }
+];
+
+function seededRNG(seed) {
+  let s = 0;
+  for (let i = 0; i < seed.length; i++) s = (s * 31 + seed.charCodeAt(i)) >>> 0;
+  return () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };
+}
+function shuffleArr(arr, rng) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rng()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+
+let questions=[], shortQs=[], current=0, score=0, answered=[],
+    studentName="", rollNo="", timerInterval=null, timeLeft=0,
+    totalQ=15, showShort=false, shortResponses=[];
+
+function startQuiz() {
+  const roll = document.getElementById('roll-input').value.trim();
+  const name = document.getElementById('name-input').value.trim();
+  const topic= document.getElementById('topic-select').value;
+  const mode = document.getElementById('count-select').value;
+  const err  = document.getElementById('login-error');
+  if (!roll||!name) { err.style.display='block'; err.textContent='Please fill in your roll number and full name to continue.'; return; }
+  err.style.display='none';
+  rollNo=roll; studentName=name;
+  const rng = seededRNG(roll+name);
+  let pool = topic==='agri' ? [...BANK.agri] : topic==='industry' ? [...BANK.industry] : [...BANK.agri,...BANK.industry];
+  pool = pool.map(q => { const idx=q.opts.map((_,i)=>i); const shuf=shuffleArr(idx,rng); return {...q,opts:shuf.map(i=>q.opts[i]),ans:shuf.indexOf(q.ans)}; });
+  showShort=(mode==='short'); totalQ=Math.min(15,pool.length);
+  questions=shuffleArr(pool,rng).slice(0,totalQ);
+  shortQs=shuffleArr(SHORT_QS,rng);
+  answered=new Array(totalQ).fill(null); shortResponses=new Array(3).fill('');
+  current=0; score=0; timeLeft=totalQ*90;
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('quiz-screen').style.display='block';
+  document.getElementById('hdr-name').textContent=name+' · '+roll;
+  startTimer(); renderQuestion();
+}
+
+function startTimer() {
+  clearInterval(timerInterval); updateTimer();
+  timerInterval=setInterval(()=>{ timeLeft--; updateTimer(); if(timeLeft<=0){clearInterval(timerInterval);finishMCQ();} },1000);
+}
+function updateTimer() {
+  const m=Math.floor(timeLeft/60),s=timeLeft%60;
+  const el=document.getElementById('timer-display');
+  el.textContent=`${m}:${s.toString().padStart(2,'0')}`;
+  el.className='timer-badge'+(timeLeft<120?' urgent':'');
+}
+
+function renderQuestion() {
+  if(current>=questions.length){finishMCQ();return;}
+  const q=questions[current],ans=answered[current],L=['A','B','C','D'];
+  document.getElementById('hdr-progress').textContent=`Q ${current+1} / ${totalQ}`;
+  document.getElementById('progress-fill').style.width=`${(current/totalQ)*100}%`;
+  document.getElementById('quiz-body').innerHTML=`
+    <div class="q-meta">
+      <span class="q-badge badge-${q.diff}">${q.diff}</span>
+      <span class="q-category-tag">${q.cat}</span>
+    </div>
+    <div class="q-number">Q${current+1}</div>
+    <div class="q-text">${q.q}</div>
+    <div class="options">
+      ${q.opts.map((o,i)=>`<button class="opt${ans===i?' selected':''}" onclick="selectOpt(${i})" ${ans!==null?'disabled':''}>
+        <span class="opt-letter">${L[i]}</span><span class="opt-text">${o}</span></button>`).join('')}
+    </div>
+    <div class="nav-row">
+      <span class="q-counter">${current+1} of ${totalQ} questions</span>
+      <button class="next-btn" onclick="nextQ()" ${ans===null?'disabled':''}>
+        ${current<totalQ-1?'Next →':(showShort?'Short Questions →':'See Results →')}
+      </button>
+    </div>`;
+}
+
+function selectOpt(i) {
+  if(answered[current]!==null)return;
+  answered[current]=i; if(i===questions[current].ans)score++; renderQuestion();
+}
+function nextQ() { current++; if(current>=totalQ)finishMCQ(); else renderQuestion(); }
+function finishMCQ() {
+  clearInterval(timerInterval); document.getElementById('quiz-screen').style.display='none';
+  if(showShort)renderShortScreen(); else showResults();
+}
+
+function renderShortScreen() {
+  document.getElementById('short-screen').style.display='block';
+  document.getElementById('short-hdr-name').textContent=studentName+' · '+rollNo;
+  document.getElementById('short-cards').innerHTML=shortQs.map((sq,i)=>`
+    <div class="short-q-card">
+      <div class="sq-num">Short Question ${i+1}</div>
+      <p class="sq-text">${sq.q}</p>
+      <textarea class="sq-textarea" id="sq-${i}" placeholder="Write your answer here (2–3 sentences)..." oninput="shortResponses[${i}]=this.value"></textarea>
+    </div>`).join('');
+}
+function submitShort() {
+  shortQs.forEach((_,i)=>{ const el=document.getElementById('sq-'+i); if(el)shortResponses[i]=el.value.trim(); });
+  document.getElementById('short-screen').style.display='none'; showResults();
+}
+
+function showResults() {
+  document.getElementById('results-screen').style.display='block';
+  const pct=Math.round((score/totalQ)*100),L=['A','B','C','D'];
+  let verdict,msg,ringColor;
+  if(pct>=80){verdict='Distinction';ringColor='#1a6b3c';msg='Excellent command of Pakistan\'s agriculture and industrial sectors — structure, productivity gaps, water constraints, political economy, boom-bust mechanics, and reform trade-offs. Well-prepared for exam-level analysis.';}
+  else if(pct>=60){verdict='Satisfactory';ringColor='#b86a00';msg='Solid grasp of core concepts. Review before the exam: the rural credit collateral trap, the Lewis dual-sector mechanism, the sugar cycle, FDI quality breakdown, economic complexity trends, and the five agricultural reform priorities.';}
+  else{verdict='Needs Revision';ringColor='#b83232';msg='Revisit: the agriculture productivity gap, the industrial boom-bust cycle stages, Pakistan\'s ECI trajectory, the informal economy vicious circle, post-harvest losses, provincial farm size differences, and the Vietnam reform preconditions.';}
+  document.getElementById('ring').style.borderColor=ringColor;
+  document.getElementById('ring-score').style.color=ringColor;
+  document.getElementById('ring-score').textContent=score;
+  document.getElementById('ring-denom').textContent='/ '+totalQ;
+  document.getElementById('verdict').textContent=verdict;
+  document.getElementById('results-sub').textContent=`${pct}% · ${studentName} · ${rollNo}`;
+  document.getElementById('results-msg').textContent=msg;
+  document.getElementById('breakdown-list').innerHTML=questions.map((q,i)=>{
+    const sa=answered[i],ok=sa===q.ans;
+    const yourPill=sa===null?`<span class="bc-pill pill-skipped">Not answered</span>`:`<span class="bc-pill ${ok?'pill-your-correct':'pill-your-wrong'}">Your answer: ${L[sa]} — ${q.opts[sa]}</span>`;
+    const correctPill=(!ok)?`<span class="bc-pill pill-correct-ans">Correct: ${L[q.ans]} — ${q.opts[q.ans]}</span>`:'';
+    return `<div class="breakdown-card"><div class="bc-top"><span class="bc-icon">${ok?'✓':'✗'}</span><div class="bc-right"><div class="bc-cat">${q.cat}</div><div class="bc-question">${q.q}</div><div class="bc-answers">${yourPill}${correctPill}</div></div></div><div class="bc-exp">${q.exp}</div></div>`;
+  }).join('');
+  if(showShort){
+    document.getElementById('short-review-wrap').style.display='block';
+    document.getElementById('short-review-list').innerHTML=shortQs.map((sq,i)=>`
+      <div class="sr-card"><div class="sr-q">${sq.q}</div>
+      <div class="sr-label yours">Your response</div>
+      <div class="sr-student">${shortResponses[i]||'<em style="color:var(--muted)">No response entered.</em>'}</div>
+      <div class="sr-label model">Model answer</div>
+      <div class="sr-model">${sq.model}</div></div>`).join('');
+  }
+}
+function restartQuiz() {
+  document.getElementById('results-screen').style.display='none';
+  document.getElementById('short-screen').style.display='none';
+  document.getElementById('login-screen').style.display='flex';
+}
+</script>
+```

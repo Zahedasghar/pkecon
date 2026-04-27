@@ -1,0 +1,308 @@
+
+<style>
+  .quiz-wrap { padding: 1.5rem 0; font-size: 15px; }
+  .progress-bar-track { background: var(--color-border-tertiary); border-radius: 4px; height: 6px; margin-bottom: 1.5rem; }
+  .progress-bar-fill { height: 6px; border-radius: 4px; background: #3B6D11; transition: width 0.4s ease; }
+  .q-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+  .q-num { font-size: 12px; color: var(--color-text-secondary); }
+  .q-diff { font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
+  .diff-moderate { background: #E1F5EE; color: #0F6E56; }
+  .diff-hard { background: #FAECE7; color: #993C1D; }
+  .q-text { font-size: 15px; color: var(--color-text-primary); line-height: 1.65; margin-bottom: 1.25rem; font-weight: 500; }
+  .options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 1.25rem; }
+  .opt-btn { text-align: left; background: var(--color-background-primary); border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); padding: 0.65rem 1rem; cursor: pointer; font-size: 14px; color: var(--color-text-primary); transition: border-color 0.15s, background 0.15s; display: flex; gap: 10px; align-items: flex-start; }
+  .opt-btn:hover:not(:disabled) { background: var(--color-background-secondary); border-color: var(--color-border-primary); }
+  .opt-btn.correct { background: #EAF3DE; border-color: #3B6D11; color: #173404; }
+  .opt-btn.wrong { background: #FCEBEB; border-color: #A32D2D; color: #501313; }
+  .opt-btn.reveal-correct { background: #EAF3DE; border-color: #3B6D11; color: #173404; }
+  .opt-letter { font-weight: 500; min-width: 18px; color: var(--color-text-secondary); font-size: 13px; }
+  .opt-btn.correct .opt-letter, .opt-btn.reveal-correct .opt-letter { color: #3B6D11; }
+  .opt-btn.wrong .opt-letter { color: #A32D2D; }
+  .feedback-box { border-radius: var(--border-radius-md); padding: 0.75rem 1rem; font-size: 13px; line-height: 1.6; margin-bottom: 1.25rem; border: 0.5px solid; }
+  .fb-correct { background: #EAF3DE; border-color: #639922; color: #27500A; }
+  .fb-wrong { background: #FCEBEB; border-color: #E24B4A; color: #791F1F; }
+  .nav-row { display: flex; justify-content: space-between; align-items: center; }
+  .next-btn { padding: 0.55rem 1.4rem; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: var(--color-background-primary); cursor: pointer; font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+  .next-btn:disabled { opacity: 0.35; cursor: default; }
+  .score-chip { font-size: 13px; color: var(--color-text-secondary); }
+  .results-panel { text-align: center; padding: 2rem 0; }
+  .results-score { font-size: 48px; font-weight: 500; color: #3B6D11; line-height: 1; }
+  .results-label { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 1.5rem; }
+  .results-msg { font-size: 15px; color: var(--color-text-primary); line-height: 1.65; margin-bottom: 1.5rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+  .restart-btn { padding: 0.6rem 1.6rem; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: var(--color-background-primary); cursor: pointer; font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+  .result-row { display: flex; align-items: flex-start; gap: 10px; text-align: left; padding: 0.6rem 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; }
+  .result-icon { font-size: 14px; min-width: 18px; }
+  .breakdown { max-width: 560px; margin: 1rem auto 1.5rem; }
+  .q-category { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+</style>
+
+<div class="quiz-wrap">
+  <div class="progress-bar-track"><div class="progress-bar-fill" id="prog" style="width:0%"></div></div>
+  <div id="quiz-area"></div>
+</div>
+
+<script>
+const questions = [
+  {
+    q: "According to course data, Pakistan's industry share of GDP declined from approximately 24% in 2005 to what level in 2024?",
+    opts: ["15%", "18%", "20%", "23%"],
+    ans: 2,
+    diff: "moderate",
+    cat: "Industrial structure",
+    explanation: "Pakistan's industrial share fell from ~24% in 2005 to ~20% in 2024 — a reversal of the structural transformation pattern seen in successful East Asian economies."
+  },
+  {
+    q: "What share of Pakistan's merchandise exports does the textile and garment sector account for?",
+    opts: ["~30%", "~45%", "~60%", "~75%"],
+    ans: 2,
+    diff: "moderate",
+    cat: "Export structure",
+    explanation: "Textiles account for ~60% of merchandise exports, with Pakistan concentrated in low-value segments like yarn, grey cloth, and basic garments."
+  },
+  {
+    q: "Pakistan's garment export unit value ($/kg) compared to Vietnam and Bangladesh respectively falls in which range?",
+    opts: ["$18–22 (same as Vietnam)", "$14–17 (same as Bangladesh)", "$8–12 (below both)", "$25–30 (above both)"],
+    ans: 2,
+    diff: "moderate",
+    cat: "Export competitiveness",
+    explanation: "Pakistan's garment exports command only $8–12/kg — the lowest tier. Bangladesh earns $14–17/kg and Vietnam $18–22/kg, reflecting their higher value-chain position."
+  },
+  {
+    q: "Bangladesh's merchandise exports grew from $6B (2000) to approximately $55B (2024). Over the same period, Pakistan's merchandise exports grew to roughly:",
+    opts: ["$15B", "$22B", "$32B", "$48B"],
+    ans: 2,
+    diff: "moderate",
+    cat: "Regional comparison",
+    explanation: "Pakistan's merchandise exports grew from $9B to ~$32B between 2000–2024 — significant but far slower than Bangladesh, which started lower and grew nearly 9x."
+  },
+  {
+    q: "Which of the following best describes why Pakistan's fiscal primary surplus (achieved for 3 consecutive years) is considered a 'surface-level' achievement in the course material?",
+    opts: [
+      "It was achieved through borrowing from China rather than the IMF",
+      "It relied on raising rates on an existing thin tax base, not broadening it",
+      "It resulted from a major reduction in defence expenditure",
+      "It was driven by a surge in export revenues"
+    ],
+    ans: 1,
+    diff: "hard",
+    cat: "Fiscal analysis",
+    explanation: "The surplus was achieved by piling super taxes and higher rates onto corporations and salaried workers — not by widening the tax base. This disincentivises investment and is unsustainable."
+  },
+  {
+    q: "What is the approximate size of Pakistan's informal economy compared to the formal documented economy?",
+    opts: [
+      "~$150B informal vs. ~$500B formal",
+      "~$250B informal vs. ~$400B formal",
+      "~$457B informal vs. ~$340B formal",
+      "~$340B informal vs. ~$457B formal"
+    ],
+    ans: 2,
+    diff: "hard",
+    cat: "Informal economy",
+    explanation: "The informal economy (~$457B) actually exceeds the formal documented economy (~$340B) — a remarkable inversion that reflects how the tax system penalises formality."
+  },
+  {
+    q: "Pakistan's R&D spending as a share of GDP is approximately 0.2%. How does this compare to South Korea?",
+    opts: ["South Korea spends 0.7%", "South Korea spends 1.5%", "South Korea spends 4.9%", "South Korea spends 2.1%"],
+    ans: 2,
+    diff: "moderate",
+    cat: "Human capital",
+    explanation: "Pakistan's R&D at ~0.2% of GDP contrasts starkly with South Korea's ~4.9%, which explains why Pakistan cannot climb the value chain into technology-intensive production."
+  },
+  {
+    q: "The 'boom-bust cycle' described in the lectures involves six recurring stages. Which sequence is correct?",
+    opts: [
+      "IMF bailout → BoP crisis → consumption boom → stabilisation → growth → crisis",
+      "Import-driven boom → BoP crisis → IMF bailout → stabilisation → growth → crisis",
+      "Export surge → BoP surplus → FDI inflows → growth → inflation → crisis",
+      "Fiscal surplus → investment boom → BoP deficit → devaluation → IMF → growth"
+    ],
+    ans: 1,
+    diff: "hard",
+    cat: "Boom-bust cycle",
+    explanation: "The cycle: (1) import-driven boom, (2) BoP crisis, (3) IMF bailout/austerity, (4) brief stabilisation, (5) short growth period, (6) crisis returns as structural issues remain unaddressed."
+  },
+  {
+    q: "Pakistan's Economic Complexity Index (ECI) rank is approximately 99th globally. Which statement about its trajectory is accurate?",
+    opts: [
+      "It improved by 15 places in the last decade",
+      "It declined 20 places in a decade, while Vietnam improved 11 places",
+      "It remained stable while India declined",
+      "It improved due to growth in IT exports"
+    ],
+    ans: 1,
+    diff: "hard",
+    cat: "Economic complexity",
+    explanation: "Pakistan's ECI ranking declined 20 places over a decade — the wrong direction for structural transformation. Vietnam (+11), India (+8), and Thailand (+9) all improved."
+  },
+  {
+    q: "Of Pakistan's reported net FDI of $2.5B in FY2025, what proportion represents genuinely fresh inflows?",
+    opts: ["All $2.5B", "About $2B (80%)", "Under $500M (less than 20%)", "About $1.2B (50%)"],
+    ans: 2,
+    diff: "hard",
+    cat: "Foreign direct investment",
+    explanation: "Over $2B of the $2.5B net FDI figure is retained earnings by existing firms. Fresh inflows are under $500M — one of the lowest in the region, signalling a deep investor confidence deficit."
+  },
+  {
+    q: "The Bhutto-era nationalisations of the 1970s covered which industries?",
+    opts: [
+      "Steel, textiles, banking, and telecom",
+      "Cotton ginning, rice husking, flour milling, vegetable ghee, and cement",
+      "Fertiliser, automobiles, pharmaceuticals, and mining",
+      "Railways, airlines, ports, and insurance"
+    ],
+    ans: 1,
+    diff: "moderate",
+    cat: "Historical evolution",
+    explanation: "Bhutto's 1972–74 nationalisations targeted cotton ginning, rice husking, flour milling, vegetable ghee, and cement — destroying the entrepreneurial class and creating the PSE burden that persists today."
+  },
+  {
+    q: "Pakistan's female labour force participation rate (LFPR) is approximately 24%. Why is this specifically identified as an industrial challenge?",
+    opts: [
+      "It reduces domestic consumer demand for industrial goods",
+      "It limits the scalable workforce needed for garment and manufacturing sector growth",
+      "It increases the government's social spending obligations",
+      "It reduces remittance inflows from overseas workers"
+    ],
+    ans: 1,
+    diff: "moderate",
+    cat: "Labour market",
+    explanation: "Low female LFPR directly constrains garment scaling — Bangladesh's export success relied heavily on building a large, trained female manufacturing workforce. Pakistan's 24% rate is a structural constraint on export growth."
+  },
+  {
+    q: "Which of the following correctly describes the 'vicious circle' of Pakistan's narrow tax base?",
+    opts: [
+      "Low exports → low forex → high imports → fiscal deficit → more debt",
+      "Narrow tax base → higher rates on formal sector → more businesses go informal → base shrinks further → rates rise again",
+      "High inflation → currency depreciation → import costs rise → fiscal burden → lower growth",
+      "High PSE losses → government borrowing → interest payments → less development spending → low growth"
+    ],
+    ans: 1,
+    diff: "hard",
+    cat: "Taxation",
+    explanation: "The tax vicious circle: a narrow base forces higher rates on those already formal → formal sector shrinks as businesses migrate to informality → the base narrows further → rates rise again. This cycle sustains the ~10% tax-to-GDP ratio."
+  },
+  {
+    q: "Pakistan has engaged with the IMF approximately how many times since 1950, and what does the course identify as the core reason this cycle persists?",
+    opts: [
+      "10 times; due to inadequate IMF conditionalities",
+      "18 times; due to weak foreign exchange reserves",
+      "25 times; structural issues are never addressed during stabilisation",
+      "30 times; due to geopolitical pressures on Pakistan"
+    ],
+    ans: 2,
+    diff: "moderate",
+    cat: "IMF relationship",
+    explanation: "Pakistan has had 25 IMF programs since 1950. Each restores short-run macroeconomic metrics (inflation, reserves) without tackling structural drivers: low exports, extractive institutions, energy circular debt, and fiscal dominance."
+  },
+  {
+    q: "Which of the following pairs of pre-conditions does the course identify as things Pakistan currently lacks to replicate the Vietnam export-led model?",
+    opts: [
+      "Large population and low wages",
+      "Competitive energy costs for manufacturing and reliable contract enforcement for foreign investors",
+      "A large domestic consumer market and high savings rate",
+      "Proximity to China and a large services export sector"
+    ],
+    ans: 1,
+    diff: "hard",
+    cat: "Policy & reform",
+    explanation: "The course explicitly lists: political stability, competitive energy costs, reliable infrastructure, rule of law/contract enforcement, and low effective tax burdens for exporters — as conditions Pakistan currently lacks to replicate Vietnam's model."
+  }
+];
+
+let current = 0;
+let score = 0;
+let answered = [];
+let selected = null;
+
+function render() {
+  const area = document.getElementById('quiz-area');
+  const prog = document.getElementById('prog');
+  prog.style.width = ((current / questions.length) * 100) + '%';
+
+  if (current >= questions.length) {
+    renderResults(area);
+    return;
+  }
+
+  const q = questions[current];
+  const letters = ['A', 'B', 'C', 'D'];
+  const isAnswered = answered[current] !== undefined;
+
+  area.innerHTML = `
+    <div class="q-header">
+      <span class="q-num">Question ${current + 1} of ${questions.length}</span>
+      <span class="q-diff diff-${q.diff}">${q.diff}</span>
+    </div>
+    <div class="q-category">${q.cat}</div>
+    <div class="q-text">${q.q}</div>
+    <div class="options" id="opts">
+      ${q.opts.map((o, i) => `
+        <button class="opt-btn${isAnswered ? (i === q.ans ? ' reveal-correct' : (answered[current] === i ? ' wrong' : '')) : ''}"
+          data-i="${i}" ${isAnswered ? 'disabled' : ''}>
+          <span class="opt-letter">${letters[i]}</span>
+          <span>${o}</span>
+        </button>
+      `).join('')}
+    </div>
+    ${isAnswered ? `
+      <div class="feedback-box ${answered[current] === q.ans ? 'fb-correct' : 'fb-wrong'}">
+        ${answered[current] === q.ans ? '<strong>Correct.</strong> ' : '<strong>Incorrect.</strong> '}${q.explanation}
+      </div>
+    ` : ''}
+    <div class="nav-row">
+      <span class="score-chip">Score: ${score} / ${current + (isAnswered ? 1 : 0)}</span>
+      <button class="next-btn" id="next-btn" ${!isAnswered ? 'disabled' : ''}>
+        ${current < questions.length - 1 ? 'Next question' : 'See results'}
+      </button>
+    </div>
+  `;
+
+  if (!isAnswered) {
+    document.querySelectorAll('.opt-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const i = parseInt(btn.dataset.i);
+        answered[current] = i;
+        if (i === questions[current].ans) score++;
+        render();
+      });
+    });
+  }
+
+  const nb = document.getElementById('next-btn');
+  if (nb) nb.addEventListener('click', () => { current++; render(); });
+}
+
+function renderResults(area) {
+  document.getElementById('prog').style.width = '100%';
+  const pct = Math.round((score / questions.length) * 100);
+  let msg = '';
+  if (pct >= 80) msg = 'Excellent grasp of Pakistan\'s industrial challenges and policy landscape. You are well-prepared for exam-level analysis.';
+  else if (pct >= 60) msg = 'Good understanding of core themes. Review the boom-bust cycle mechanics, FDI quality breakdown, and tax structure details before the exam.';
+  else msg = 'Revisit the lectures on structural challenges, the informal economy vicious circle, and regional comparisons. Focus on the data figures and their policy implications.';
+
+  area.innerHTML = `
+    <div class="results-panel">
+      <div class="results-score">${score}/${questions.length}</div>
+      <div class="results-label">${pct}% — ${pct >= 80 ? 'Distinction level' : pct >= 60 ? 'Pass level' : 'Needs review'}</div>
+      <div class="results-msg">${msg}</div>
+      <div class="breakdown">
+        ${questions.map((q, i) => `
+          <div class="result-row">
+            <span class="result-icon">${answered[i] === q.ans ? '✓' : '✗'}</span>
+            <span style="color:var(--color-text-secondary); font-size:12px; min-width:70px;">${q.cat}</span>
+            <span style="color:var(--color-text-primary);">Q${i+1}: ${q.q.substring(0,70)}…</span>
+          </div>
+        `).join('')}
+      </div>
+      <button class="restart-btn" id="restart">Restart quiz</button>
+    </div>
+  `;
+
+  document.getElementById('restart').addEventListener('click', () => {
+    current = 0; score = 0; answered = []; selected = null; render();
+  });
+}
+
+render();
+</script>
