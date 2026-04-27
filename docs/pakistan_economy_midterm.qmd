@@ -489,7 +489,7 @@ execute:
 // ⚙️  CONFIGURATION
 // Paste your Google Apps Script web app URL here
 // ════════════════════════════════════════════════════════
-const SHEET_URL = "https://script.google.com/macros/s/AKfycbze89MDtWtMG3Nse6JIXWhEEjAE2zeCjnK1b6Ng4LkfD5PtmrdK7yfbOoe6KIlTY8Pe/exec";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbzcVSq2dG7HJ31Po-NAiFWAzecz6doJ6Pgz7M_Fq43uh5n9KPlsFxpimKrLFucZklth/exec";
 
 
 // ════════════════════════════════════════════════════════
