@@ -871,22 +871,27 @@ function showResults() {
       : L[a] + ') ' + q.opts[a];
   });
 
-  sendToSheet({
-    timestamp:  new Date().toISOString(),
-    rollNo,
-    name:       studentName,
-    programme,
-    score,
-    agriScore,
-    indScore,
-    pct,
-    verdict,
-    attempted,
-    timeTaken,
-    short1:     shortResponses[0] || '',
-    short2:     shortResponses[1] || '',
-    short3:     shortResponses[2] || '',
-    ...qAnswers   // Q1, Q2, … Q30
+  function sendToSheet(data) {
+  const el = document.getElementById('submission-status');
+  el.className   = 'submission-status sending';
+  el.textContent = '⏳ Sending result to record system…';
+
+  const body = new URLSearchParams();
+  Object.entries(data).forEach(([k, v]) => body.append(k, String(v == null ? '' : v)));
+
+  fetch(SHEET_URL, {
+    method:  'POST',
+    mode:    'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body:    body.toString()
+  })
+  .then(() => {
+    el.className   = 'submission-status sent';
+    el.textContent = '✓ Result recorded in faculty database.';
+  })
+  .catch(() => {
+    el.className   = 'submission-status failed';
+    el.textContent = '✗ Submission failed. Please inform the invigilator.';
   });
 }
 
