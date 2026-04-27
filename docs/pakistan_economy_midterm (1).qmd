@@ -491,7 +491,7 @@ execute:
 // ════════════════════════════════════════════════════════
 // ⚠️  PASTE YOUR NEW APPS SCRIPT /exec URL BELOW
 // Extensions → Apps Script → Deploy → New Deployment → Web App → Anyone → Copy URL
-const SHEET_URL = "AKfycbwyLIvJ2n0BS2SBF5Qwq1THRWLy4kQQujeSCRWq-1HEdn6rJmx-DgzbEssu6Ot1dhkV";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbwyLIvJ2n0BS2SBF5Qwq1THRWLy4kQQujeSCRWq-1HEdn6rJmx-DgzbEssu6Ot1dhkV/exec";
 
 
 // ════════════════════════════════════════════════════════
