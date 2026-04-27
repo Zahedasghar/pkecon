@@ -735,6 +735,14 @@ border-bottom: 3px solid rgba(0,0,0,.2);
 }
 .next-btn:hover { background: var(--green-mid); transform: translateY(-1px); }
 .next-btn:disabled { opacity: .35; cursor: default; transform: none; }
+.skip-btn {
+background: transparent; color: var(--muted);
+border: 1.5px solid var(--border); border-radius: var(--radius);
+padding: .62rem 1.1rem;
+font-family: 'DM Sans', sans-serif; font-size: .88rem; font-weight: 500;
+cursor: pointer; transition: border-color .2s, color .2s;
+}
+.skip-btn:hover { border-color: var(--muted); color: var(--text); }
 
 #short-screen { display: none; }
 .short-header {
@@ -1187,11 +1195,13 @@ function updateTimer() {
 
 // ════════════════════════════════════════════
 // Render question — no correctness feedback
+// Option change allowed; skipping allowed
 // ════════════════════════════════════════════
 function renderQ() {
   if (current >= TOTAL_Q) { finishMCQ(); return; }
-  const q = questions[current], ans = answered[current];
-  const L = ['A', 'B', 'C', 'D'];
+  const q   = questions[current];
+  const ans = answered[current];   // null = unanswered, -1 = skipped, 0-3 = chosen
+  const L   = ['A', 'B', 'C', 'D'];
 
   document.getElementById('hdr-progress').textContent  = `Q ${current + 1} / ${TOTAL_Q}`;
   document.getElementById('progress-fill').style.width = `${(current / TOTAL_Q) * 100}%`;
@@ -1206,6 +1216,11 @@ function renderQ() {
     ? '<span class="q-section-badge badge-agri">Agriculture</span>'
     : '<span class="q-section-badge badge-ind">Industry</span>';
 
+  const answeredCount = answered.filter(a => a !== null && a !== -1).length;
+  const isLast        = current === TOTAL_Q - 1;
+  const skipLabel     = isLast ? 'Skip &amp; Finish →' : 'Skip →';
+  const nextLabel     = isLast ? 'Proceed to Short Answers →' : 'Next →';
+
   document.getElementById('exam-body').innerHTML = `
     <div class="q-meta">
       ${secBadge}
@@ -1216,28 +1231,60 @@ function renderQ() {
     <div class="q-text">${q.q}</div>
     <div class="options">
       ${q.opts.map((o, i) => `
-        <button class="opt${ans === i ? ' selected' : ''}"
-          onclick="selectOpt(${i})" ${ans !== null ? 'disabled' : ''}>
+        <button class="opt${(ans !== null && ans !== -1 && ans === i) ? ' selected' : ''}"
+          onclick="selectOpt(${i})">
           <span class="opt-letter">${L[i]}</span>
           <span class="opt-text">${o}</span>
         </button>`).join('')}
     </div>
     <div class="nav-row">
-      <span class="q-counter">Answered: ${answered.filter(a => a !== null).length} / ${TOTAL_Q}</span>
-      <button class="next-btn" onclick="nextQ()" ${ans === null ? 'disabled' : ''}>
-        ${current < TOTAL_Q - 1 ? 'Next →' : 'Proceed to Short Answers →'}
-      </button>
+      <span class="q-counter">Answered: ${answeredCount} / ${TOTAL_Q}
+        ${answered.filter(a => a === -1).length > 0
+          ? ' · <span style="color:#b86a00">Skipped: ' + answered.filter(a => a === -1).length + '</span>'
+          : ''
+        }
+      </span>
+      <span style="display:flex;gap:.6rem;align-items:center;">
+        <button class="skip-btn" onclick="skipQ()">${skipLabel}</button>
+        <button class="next-btn" onclick="nextQ()" ${(ans === null || ans === -1) ? 'disabled' : ''}>
+          ${nextLabel}
+        </button>
+      </span>
     </div>`;
 }
 
 function selectOpt(i) {
-  if (answered[current] !== null) return;
+  // Allow changing selection freely — undo old score if switching
+  const prev = answered[current];
+  if (prev !== null && prev !== -1 && prev !== i) {
+    // Reverse old score
+    if (prev === questions[current].ans) {
+      score--;
+      if (current < 15) agriScore--; else indScore--;
+    }
+  }
   answered[current] = i;
-  if (i === questions[current].ans) {
+  // Award score for new selection
+  if (i === questions[current].ans && prev !== i) {
     score++;
     if (current < 15) agriScore++; else indScore++;
   }
   renderQ();
+}
+
+function skipQ() {
+  // Mark as skipped (value -1) without awarding any score
+  const prev = answered[current];
+  if (prev !== null && prev !== -1) {
+    // Undo score for previously selected answer
+    if (prev === questions[current].ans) {
+      score--;
+      if (current < 15) agriScore--; else indScore--;
+    }
+  }
+  answered[current] = -1;
+  current++;
+  if (current >= TOTAL_Q) finishMCQ(); else renderQ();
 }
 
 function nextQ() {
@@ -1290,7 +1337,7 @@ function showResults() {
   const indPct   = Math.round((indScore  / 15) * 100);
   const elapsed  = Math.floor((new Date() - startTime) / 1000);
   const timeTaken= `${Math.floor(elapsed / 60)}m ${elapsed % 60}s`;
-  const attempted= answered.filter(a => a !== null).length;
+  const attempted= answered.filter(a => a !== null && a !== -1).length;
 
   let verdict, ringColor, fbClass, fbText;
   if (pct >= 80) {
@@ -1339,9 +1386,9 @@ function showResults() {
 // ════════════════════════════════════════════
 function sendToSheet(data) {
   const el = document.getElementById('submission-status');
-  if (!SHEET_URL || SHEET_URL === 'YOUR_APPS_SCRIPT_URL_HERE') {
+  if (!SHEET_URL || SHEET_URL.trim() === '') {
     el.className   = 'submission-status failed';
-    el.textContent = '⚠️ Google Sheets not configured. See YAML comment for setup steps.';
+    el.textContent = '⚠️ Google Sheets URL not set. Contact your instructor.';
     return;
   }
   el.className   = 'submission-status sending';
