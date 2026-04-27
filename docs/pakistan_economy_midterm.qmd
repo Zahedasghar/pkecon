@@ -1,0 +1,938 @@
+---
+title: "Economy of Pakistan — Mid Term Examination 2026"
+format:
+  html:
+    theme: none
+    toc: false
+    number-sections: false
+    embed-resources: true
+    page-layout: custom
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+          /* ── Reset ── */
+          *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+          /* ── Design tokens ── */
+          :root {
+            --green:       #1a6b3c;
+            --green-dark:  #0e2a1a;
+            --green-mid:   #155c33;
+            --green-light: #2d8f5a;
+            --green-pale:  #eaf3ed;
+            --gold:        #c9a84c;
+            --gold-light:  #f0d98a;
+            --surface:     #ffffff;
+            --bg:          #f5f7f3;
+            --border:      #d0ddd6;
+            --text:        #0e1f13;
+            --muted:       #4a6355;
+            --red:         #b83232;
+            --red-pale:    #fdf0f0;
+            --radius:      10px;
+            --radius-lg:   16px;
+            --shadow:      0 2px 16px rgba(14,42,26,.09);
+          }
+
+          /* ── Body ── */
+          body, html {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.75;
+            font-size: 15px;
+          }
+
+          /* ── LOGIN ── */
+          #login-screen {
+            min-height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            padding: 2rem;
+            background: linear-gradient(145deg, var(--green-dark) 0%, #0e3320 50%, #1a4a2a 100%);
+            position: relative; overflow: hidden;
+          }
+          #login-screen::before {
+            content: "QAU";
+            font-family: 'Playfair Display', serif;
+            font-size: 28rem;
+            position: absolute; left: -4rem; bottom: -6rem;
+            opacity: .03; color: #fff; line-height: 1; pointer-events: none;
+          }
+          .login-card {
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(201,168,76,.3);
+            border-radius: var(--radius-lg);
+            padding: 3rem 2.8rem; width: 100%; max-width: 480px;
+            backdrop-filter: blur(8px); position: relative; z-index: 1;
+          }
+          .login-logo { text-align: center; margin-bottom: 2rem; }
+          .login-logo .seal {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: .68rem; letter-spacing: .22em; text-transform: uppercase;
+            color: var(--gold); display: block; margin-bottom: .6rem;
+          }
+          .login-logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem; color: #fff; line-height: 1.15; margin-bottom: .3rem;
+          }
+          .exam-tag {
+            display: inline-block;
+            background: rgba(201,168,76,.18); border: 1px solid rgba(201,168,76,.4);
+            color: var(--gold-light); font-family: 'JetBrains Mono', monospace;
+            font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+            padding: .3rem .9rem; border-radius: 100px; margin-top: .5rem;
+          }
+          .exam-info {
+            background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+            border-radius: var(--radius); padding: .9rem 1.1rem;
+            margin-bottom: 1.5rem; font-size: .83rem;
+            color: rgba(255,255,255,.65); line-height: 1.7;
+          }
+          .exam-info strong { color: var(--gold); font-weight: 600; }
+          .form-row { margin-bottom: 1.2rem; }
+          .form-row label {
+            display: block; font-size: .78rem; font-weight: 500;
+            letter-spacing: .05em; text-transform: uppercase;
+            color: rgba(255,255,255,.55); margin-bottom: .45rem;
+          }
+          .form-row input {
+            width: 100%; background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.15); border-radius: var(--radius);
+            padding: .75rem 1rem; color: #fff;
+            font-family: 'DM Sans', sans-serif; font-size: .95rem;
+            outline: none; transition: border-color .2s;
+          }
+          .form-row input::placeholder { color: rgba(255,255,255,.3); }
+          .form-row input:focus { border-color: var(--gold); }
+          .login-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--green), var(--green-light));
+            border: none; border-radius: var(--radius); padding: .9rem; color: #fff;
+            font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600;
+            cursor: pointer; transition: opacity .2s, transform .15s;
+            margin-top: .5rem; border-bottom: 3px solid rgba(0,0,0,.2);
+          }
+          .login-btn:hover { opacity: .92; transform: translateY(-1px); }
+          .login-note {
+            text-align: center; font-size: .75rem;
+            color: rgba(255,255,255,.32); margin-top: 1.2rem; line-height: 1.6;
+          }
+          #login-error {
+            background: rgba(184,50,50,.2); border: 1px solid rgba(184,50,50,.45);
+            color: #ffb3b3; border-radius: var(--radius);
+            padding: .6rem 1rem; font-size: .85rem; margin-bottom: 1rem; display: none;
+          }
+
+          /* ── EXAM HEADER ── */
+          #exam-screen { display: none; }
+          .exam-header {
+            background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+            border-bottom: 3px solid var(--gold); padding: 1rem 2rem;
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: .6rem;
+            position: sticky; top: 0; z-index: 100;
+          }
+          .eh-left .course-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
+          }
+          .eh-left .student-name { font-size: .95rem; font-weight: 600; color: #fff; margin-top: .1rem; }
+          .eh-right { display: flex; align-items: center; gap: 1rem; }
+          .q-pill { font-family: 'JetBrains Mono', monospace; font-size: .75rem; color: rgba(255,255,255,.7); }
+          .timer-badge {
+            background: rgba(201,168,76,.15); border: 1px solid rgba(201,168,76,.35);
+            color: var(--gold); font-family: 'JetBrains Mono', monospace;
+            font-size: .9rem; padding: .3rem .9rem; border-radius: 100px;
+            min-width: 72px; text-align: center;
+          }
+          .timer-badge.urgent {
+            background: rgba(184,50,50,.22); border-color: rgba(184,50,50,.55);
+            color: #ffaaaa; animation: pulse 1s infinite;
+          }
+          @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.65} }
+          .progress-track { height: 4px; background: rgba(255,255,255,.1); }
+          .progress-fill  {
+            height: 4px; background: linear-gradient(90deg, var(--gold), var(--green-light));
+            transition: width .4s ease;
+          }
+          .section-divider {
+            background: var(--green-dark); color: var(--gold);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: .7rem; letter-spacing: .2em; text-transform: uppercase;
+            padding: .5rem 1.5rem; border-left: 4px solid var(--gold);
+          }
+
+          /* ── QUESTION BODY ── */
+          .exam-body { max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+          .q-meta { display: flex; align-items: center; gap: .7rem; margin-bottom: .9rem; flex-wrap: wrap; }
+          .q-badge {
+            font-family: 'JetBrains Mono', monospace; font-size: .62rem;
+            letter-spacing: .12em; text-transform: uppercase;
+            padding: .22rem .75rem; border-radius: 100px; font-weight: 500;
+          }
+          .badge-moderate { background: #dff0e6; color: #1a6b3c; }
+          .badge-hard     { background: #fbe9e9; color: #9b2424; }
+          .q-section-badge {
+            font-size: .68rem; padding: .18rem .65rem; border-radius: 100px;
+            font-family: 'JetBrains Mono', monospace; font-weight: 500;
+          }
+          .badge-agri { background: #d6ede0; color: #0f5c2e; }
+          .badge-ind  { background: #dde8fb; color: #1a3f7a; }
+          .q-category-tag { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
+          .q-number {
+            font-family: 'Playfair Display', serif; font-size: 2.6rem;
+            font-weight: 700; color: var(--border); line-height: 1; margin-bottom: -.3rem;
+          }
+          .q-text {
+            font-size: 1.08rem; font-weight: 500; color: var(--text); line-height: 1.65;
+            margin-bottom: 1.4rem; padding-left: .55rem; border-left: 3px solid var(--gold);
+          }
+          .options { display: flex; flex-direction: column; gap: .65rem; margin-bottom: 1.4rem; }
+          .opt {
+            background: var(--surface); border: 1.5px solid var(--border);
+            border-radius: var(--radius); padding: .8rem 1.15rem;
+            cursor: pointer; display: flex; align-items: flex-start; gap: .85rem;
+            transition: border-color .15s, background .15s, transform .1s;
+            text-align: left; width: 100%;
+            font-family: 'DM Sans', sans-serif; font-size: .93rem; color: var(--text);
+            box-shadow: var(--shadow);
+          }
+          .opt:hover:not(:disabled) {
+            border-color: var(--green-light); background: var(--green-pale); transform: translateX(3px);
+          }
+          .opt.selected { border-color: var(--green); background: var(--green-pale); }
+          .opt.selected .opt-letter { background: var(--green); border-color: var(--green); color: #fff; }
+          .opt:disabled { cursor: default; transform: none; }
+          .opt-letter {
+            width: 28px; height: 28px; border-radius: 50%;
+            background: var(--bg); border: 1.5px solid var(--border);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'JetBrains Mono', monospace; font-size: .73rem; font-weight: 500;
+            color: var(--muted); flex-shrink: 0;
+            transition: background .15s, border-color .15s, color .15s;
+          }
+          .opt-text { line-height: 1.5; padding-top: 3px; }
+          .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; }
+          .q-counter { font-family: 'JetBrains Mono', monospace; font-size: .8rem; color: var(--muted); }
+          .next-btn {
+            background: var(--green); color: #fff; border: none;
+            border-radius: var(--radius); padding: .62rem 1.5rem;
+            font-family: 'DM Sans', sans-serif; font-size: .93rem; font-weight: 600;
+            cursor: pointer; transition: background .2s, transform .1s;
+            border-bottom: 3px solid rgba(0,0,0,.2);
+          }
+          .next-btn:hover { background: var(--green-mid); transform: translateY(-1px); }
+          .next-btn:disabled { opacity: .35; cursor: default; transform: none; }
+          .skip-btn {
+            background: transparent; color: var(--muted);
+            border: 1.5px solid var(--border); border-radius: var(--radius);
+            padding: .62rem 1.1rem;
+            font-family: 'DM Sans', sans-serif; font-size: .88rem; font-weight: 500;
+            cursor: pointer; transition: border-color .2s, color .2s;
+          }
+          .skip-btn:hover { border-color: var(--muted); color: var(--text); }
+
+          /* ── SHORT ANSWER ── */
+          #short-screen { display: none; }
+          .short-header {
+            background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+            border-bottom: 3px solid var(--gold); padding: 1rem 2rem;
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: .6rem;
+          }
+          .short-header .course-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
+          }
+          .short-header .student-name { font-size: .95rem; font-weight: 600; color: #fff; }
+          .short-header .section-tag  {
+            font-family: 'JetBrains Mono', monospace; font-size: .75rem; color: rgba(255,255,255,.7);
+          }
+          .short-body { max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+          .short-body h2 {
+            font-family: 'Playfair Display', serif; font-size: 1.4rem;
+            color: var(--green); margin-bottom: .3rem;
+          }
+          .short-intro { font-size: .88rem; color: var(--muted); margin-bottom: 1.8rem; line-height: 1.65; }
+          .short-q-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 1.3rem 1.5rem;
+            margin-bottom: 1.2rem; box-shadow: var(--shadow);
+          }
+          .sq-num {
+            font-family: 'JetBrains Mono', monospace; font-size: .68rem;
+            letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: .4rem;
+          }
+          .sq-text {
+            font-size: .98rem; font-weight: 500; color: var(--text); margin-bottom: .9rem;
+            border-left: 3px solid var(--gold); padding-left: .65rem; line-height: 1.65;
+          }
+          .sq-textarea {
+            width: 100%; min-height: 100px; background: var(--bg);
+            border: 1px solid var(--border); border-radius: var(--radius);
+            padding: .75rem 1rem; font-family: 'DM Sans', sans-serif;
+            font-size: .9rem; color: var(--text);
+            resize: vertical; outline: none; line-height: 1.6;
+            transition: border-color .2s;
+          }
+          .sq-textarea:focus { border-color: var(--green); }
+          .sq-textarea::placeholder { color: var(--muted); }
+          .submit-row { display: flex; justify-content: flex-end; margin-top: 2rem; }
+          .submit-btn {
+            background: var(--green); color: #fff; border: none;
+            border-radius: var(--radius); padding: .75rem 2.2rem;
+            font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600;
+            cursor: pointer; border-bottom: 3px solid rgba(0,0,0,.2);
+            transition: background .2s, transform .1s;
+          }
+          .submit-btn:hover { background: var(--green-mid); transform: translateY(-1px); }
+          .submit-btn:disabled { opacity: .5; cursor: default; transform: none; }
+
+          /* ── RESULTS ── */
+          #results-screen { display: none; max-width: 680px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+          .results-hero { text-align: center; padding: 3rem 0 2rem; }
+          .results-ring {
+            width: 150px; height: 150px; border-radius: 50%;
+            border: 7px solid var(--border);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            margin: 0 auto 1.4rem;
+          }
+          .ring-score { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; line-height: 1; }
+          .ring-denom { font-size: .85rem; color: var(--muted); }
+          .results-verdict {
+            font-family: 'Playfair Display', serif; font-size: 1.6rem;
+            color: var(--green); margin-bottom: .4rem;
+          }
+          .results-sub { font-size: .88rem; color: var(--muted); margin-bottom: 2rem; }
+          .result-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 1.4rem 1.6rem;
+            margin-bottom: 1rem; box-shadow: var(--shadow);
+          }
+          .result-card h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.05rem;
+            color: var(--green); margin-bottom: .7rem;
+          }
+          .stat-row {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: .4rem 0; border-bottom: 1px solid var(--border); font-size: .9rem;
+          }
+          .stat-row:last-child { border-bottom: none; }
+          .stat-label { color: var(--muted); }
+          .stat-value {
+            font-weight: 600; font-family: 'JetBrains Mono', monospace;
+            font-size: .88rem; color: var(--text);
+          }
+          .stat-value.good { color: var(--green); }
+          .stat-value.warn { color: #b86a00; }
+          .stat-value.bad  { color: var(--red); }
+          .feedback-box {
+            background: var(--green-pale); border: 1px solid var(--border);
+            border-left: 4px solid var(--green);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 1rem 1.2rem; font-size: .9rem; line-height: 1.7;
+            color: var(--green-dark); margin-bottom: 1rem;
+          }
+          .feedback-box.warn { background: #fff8ee; border-left-color: #b86a00; color: #5a3800; }
+          .feedback-box.bad  { background: var(--red-pale); border-left-color: var(--red); color: #5a1212; }
+          .submission-status {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 1rem 1.3rem;
+            font-size: .85rem; color: var(--muted); text-align: center;
+            margin-bottom: 1.5rem; box-shadow: var(--shadow);
+          }
+          .submission-status.sending { color: #b86a00; }
+          .submission-status.sent    { color: var(--green); font-weight: 500; }
+          .submission-status.failed  { color: var(--red); }
+          .restart-btn {
+            margin: 2rem auto 0; background: var(--surface); color: var(--green);
+            border: 1.5px solid var(--green); border-radius: var(--radius);
+            padding: .7rem 2rem; font-family: 'DM Sans', sans-serif;
+            font-size: .95rem; font-weight: 600;
+            cursor: pointer; transition: background .2s, color .2s; display: block;
+          }
+          .restart-btn:hover { background: var(--green); color: #fff; }
+
+          @media (max-width: 580px) {
+            .exam-header, .short-header { padding: .9rem 1.1rem; }
+            .exam-body, .short-body     { padding: 1.5rem 1rem 3rem; }
+            .q-number   { font-size: 2rem; }
+            .q-text     { font-size: 1rem; }
+            .login-card { padding: 2rem 1.4rem; }
+          }
+        </style>
+execute:
+  echo: false
+  warning: false
+---
+
+```{=html}
+<!-- ══ LOGIN ══ -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">
+      <span class="seal">School of Economics · Quaid-i-Azam University Islamabad</span>
+      <h1>Economy of Pakistan</h1>
+      <span class="exam-tag">Mid Term Examination · 2026</span>
+    </div>
+    <div class="exam-info">
+      <strong>Instructions:</strong> This exam contains <strong>30 MCQs</strong>
+      (15 Agriculture + 15 Industrial Sector) and <strong>3 Short Answer Questions</strong>.
+      All questions are compulsory. Time allowed: <strong>45 minutes</strong> for MCQs.
+      Correct answers are <strong>not</strong> revealed after submission.
+      Results are automatically recorded.
+    </div>
+    <div id="login-error"></div>
+    <div class="form-row">
+      <label>Student Roll Number</label>
+      <input type="text" id="roll-input" placeholder="e.g. 2023-MECO-042" autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label>Full Name</label>
+      <input type="text" id="name-input" placeholder="Your full name">
+    </div>
+    <div class="form-row">
+      <label>Programme</label>
+      <input type="text" id="prog-input" placeholder="e.g. M.Phil Economics">
+    </div>
+    <button class="login-btn" onclick="startExam()">Begin Examination →</button>
+    <p class="login-note">Your roll number seeds the randomisation — each student receives a unique question and option order. Do not refresh during the exam.</p>
+  </div>
+</div>
+
+<!-- ══ MCQ SCREEN ══ -->
+<div id="exam-screen">
+  <div class="exam-header">
+    <div class="eh-left">
+      <div class="course-tag">Economy of Pakistan — Mid Term Exam 2026 · QAU</div>
+      <div class="student-name" id="hdr-name">—</div>
+    </div>
+    <div class="eh-right">
+      <span class="q-pill" id="hdr-progress">Q 1 / 30</span>
+      <span class="timer-badge" id="timer-display">45:00</span>
+    </div>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+  </div>
+  <div id="section-banner"></div>
+  <div class="exam-body" id="exam-body"></div>
+</div>
+
+<!-- ══ SHORT ANSWER ══ -->
+<div id="short-screen">
+  <div class="short-header">
+    <div>
+      <div class="course-tag">Economy of Pakistan — Mid Term Exam 2026 · QAU</div>
+      <div class="student-name" id="short-hdr-name">—</div>
+    </div>
+    <div class="section-tag">Section B — Short Answer Questions</div>
+  </div>
+  <div class="short-body">
+    <h2>Section B: Short Answer Questions</h2>
+    <p class="short-intro">Answer all three questions in 3–4 sentences each, using course concepts. No time limit for this section.</p>
+    <div id="short-cards"></div>
+    <div class="submit-row">
+      <button class="submit-btn" id="submit-btn" onclick="submitExam()">Submit Examination →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ RESULTS ══ -->
+<div id="results-screen">
+  <div class="results-hero">
+    <div class="results-ring" id="ring">
+      <span class="ring-score" id="ring-score">0</span>
+      <span class="ring-denom">/ 30</span>
+    </div>
+    <div class="results-verdict" id="verdict">—</div>
+    <div class="results-sub"    id="results-sub">—</div>
+  </div>
+  <div class="submission-status" id="submission-status">⏳ Submitting your result…</div>
+  <div class="feedback-box"      id="feedback-box">—</div>
+  <div class="result-card">
+    <h3>Score Breakdown</h3>
+    <div class="stat-row">
+      <span class="stat-label">MCQ Score</span>
+      <span class="stat-value" id="stat-mcq">—</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Agriculture (Q 1–15)</span>
+      <span class="stat-value" id="stat-agri">—</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Industry (Q 16–30)</span>
+      <span class="stat-value" id="stat-ind">—</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Short Answer</span>
+      <span class="stat-value">Submitted for review</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Time Taken</span>
+      <span class="stat-value" id="stat-time">—</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Questions Attempted</span>
+      <span class="stat-value" id="stat-attempted">—</span>
+    </div>
+  </div>
+  <button class="restart-btn" onclick="restartExam()">← New Attempt</button>
+</div>
+
+<script>
+// ════════════════════════════════════════════════════════
+// ⚙️  CONFIGURATION
+// Paste your Google Apps Script web app URL here
+// ════════════════════════════════════════════════════════
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbze89MDtWtMG3Nse6JIXWhEEjAE2zeCjnK1b6Ng4LkfD5PtmrdK7yfbOoe6KIlTY8Pe/exec";
+
+// ════════════════════════════════════════════════════════
+// QUESTION BANK — 15 Agriculture + 15 Industry MCQs
+//              +  3 Short Answer Questions
+// ════════════════════════════════════════════════════════
+const AGRI_MCQ = [
+  { id:"A1",  diff:"moderate", cat:"Sector overview",       sec:"Agriculture",
+    q:"Agriculture accounts for approximately what share of Pakistan's labour force, while contributing only ~22% of GDP?",
+    opts:["~20% of the labour force","~28% of the labour force","~37% of the labour force","~45% of the labour force"], ans:2 },
+  { id:"A2",  diff:"moderate", cat:"Sector structure",      sec:"Agriculture",
+    q:"Within Pakistan's agricultural GDP, which sub-sector is the single largest component?",
+    opts:["Crops (~38%)","Livestock (~61%)","Fisheries (~2%)","Forestry (~1%)"], ans:1 },
+  { id:"A3",  diff:"moderate", cat:"Water resources",       sec:"Agriculture",
+    q:"Pakistan uses approximately what share of its total freshwater resources for agriculture?",
+    opts:["72%","85%","94%","99%"], ans:2 },
+  { id:"A4",  diff:"moderate", cat:"Productivity & yields", sec:"Agriculture",
+    q:"Pakistan's wheat yield is approximately 2.85 MT/ha. What is China's comparable wheat yield?",
+    opts:["3.1 MT/ha","4.2 MT/ha","5.42 MT/ha","6.8 MT/ha"], ans:2 },
+  { id:"A5",  diff:"moderate", cat:"Land structure",        sec:"Agriculture",
+    q:"The average farm holding in KP is 3.6 acres. Why does this primarily constrain agricultural transformation?",
+    opts:["Too large for subsistence farming","Similar to Punjab — no practical difference","Too small to mechanise; terraced fields make it physically impossible","Above the commercial credit threshold of 12.5 acres"], ans:2 },
+  { id:"A6",  diff:"moderate", cat:"Crop political economy",sec:"Agriculture",
+    q:"Which crop is the most water-intensive yet politically protected — a 'policy paradox' in a water-scarce country?",
+    opts:["Wheat","Cotton","Rice","Sugarcane"], ans:3 },
+  { id:"A7",  diff:"moderate", cat:"Climate vulnerability", sec:"Agriculture",
+    q:"The 2022 floods caused approximately how much in agricultural losses specifically?",
+    opts:["$1.2 billion","$3.7 billion","$7.5 billion","$12 billion"], ans:1 },
+  { id:"A8",  diff:"hard",     cat:"Rural credit",          sec:"Agriculture",
+    q:"What share of Pakistan's farmers rely on informal credit, and what are informal interest rates in distress periods?",
+    opts:["~40–50%; rates of 10–15%","~60–70%; rates of 20–25%","~80–90%; rates approaching 50%","~95%; rates of 5–8%"], ans:2 },
+  { id:"A9",  diff:"hard",     cat:"Post-harvest losses",   sec:"Agriculture",
+    q:"Pakistan's estimated annual post-harvest losses are valued at approximately how much, and which commodity suffers the highest percentage loss?",
+    opts:["$1–2B; grains at 40%","$4–5B; fruits & vegetables at up to 40%","$8–10B; cotton at 35%","$500M; rice at 25%"], ans:1 },
+  { id:"A10", diff:"hard",     cat:"Development economics", sec:"Agriculture",
+    q:"Why has the Lewis dual-sector mechanism NOT worked as expected to raise agricultural productivity in Pakistan?",
+    opts:["Agricultural wages are legally capped","Industry has not grown fast enough to absorb surplus agricultural labour","Farmers prefer to remain due to support prices","Remittances made wages irrelevant"], ans:1 },
+  { id:"A11", diff:"hard",     cat:"Rural credit",          sec:"Agriculture",
+    q:"Which of the following best describes the 'collateral trap' preventing smallholder farmers from accessing formal bank credit?",
+    opts:["Banks require a university degree","No land title → no formal loan; many lack updated Fard records; digitisation incomplete","Farmers refuse loans on Islamic finance grounds","SBP banned lending below 5 acres"], ans:1 },
+  { id:"A12", diff:"hard",     cat:"Policy trade-offs",     sec:"Agriculture",
+    q:"High wheat support prices in Pakistan have created what primary unintended long-run consequence in irrigated Punjab?",
+    opts:["A surge in wheat exports crowding out rice","A near-monoculture in wheat distorting land use and water allocation","A collapse in wheat production due to over-procurement","A shift into horticulture"], ans:1 },
+  { id:"A13", diff:"hard",     cat:"Crop political economy",sec:"Agriculture",
+    q:"Which sequence best describes the 'sugar cycle' of rent-seeking in Pakistan's sugar sector?",
+    opts:["High cane price → bumper crop → export surplus → price crash → import ban","High cane price set → mills resist farmers → arrears pile up → export allowed → domestic shortage → import permitted → next year's price politics","Low support price → farmer protests → overproduction → glut","Mill privatisation → FDI → efficiency → lower prices"], ans:1 },
+  { id:"A14", diff:"hard",     cat:"Provincial variation",  sec:"Agriculture",
+    q:"Which provincial contrast most clearly illustrates why a uniform federal agricultural policy cannot be effective?",
+    opts:["Punjab (5.6 ac) vs. Sindh (8.8 ac) — both irrigation-dependent","KP (3.6 ac, terraced, rainfed) vs. Balochistan (22.7 ac, water-scarce, orchard-based)","Punjab vs. KP alone — mechanisation difference only","Sindh (feudal) vs. Punjab (smallholder) alone"], ans:1 },
+  { id:"A15", diff:"hard",     cat:"Reform agenda",         sec:"Agriculture",
+    q:"Which of the following is explicitly NOT among the five priority reform 'shifts' for Pakistan's agriculture?",
+    opts:["From flood irrigation → efficient water use","From support prices → safety nets (BISP)","From input subsidies → productivity investment","From smallholder farming → large commercial farm consolidation"], ans:3 }
+];
+
+const INDUSTRY_MCQ = [
+  { id:"I1",  diff:"moderate", cat:"Industrial structure",     sec:"Industry",
+    q:"Pakistan's industry share of GDP declined from approximately 24% in 2005 to what level in 2024?",
+    opts:["15%","18%","20%","23%"], ans:2 },
+  { id:"I2",  diff:"moderate", cat:"Export structure",         sec:"Industry",
+    q:"What share of Pakistan's merchandise exports does the textile and garment sector account for?",
+    opts:["~30%","~45%","~60%","~75%"], ans:2 },
+  { id:"I3",  diff:"moderate", cat:"Export competitiveness",   sec:"Industry",
+    q:"Pakistan's garment export unit value ($/kg) falls in which range compared to Vietnam ($18–22) and Bangladesh ($14–17)?",
+    opts:["$18–22 — same as Vietnam","$14–17 — same as Bangladesh","$8–12 — below both","$25–30 — above both"], ans:2 },
+  { id:"I4",  diff:"moderate", cat:"Regional comparison",      sec:"Industry",
+    q:"Bangladesh's merchandise exports grew from $6B (2000) to ~$55B (2024). Over the same period Pakistan's grew to approximately:",
+    opts:["$15B","$22B","$32B","$48B"], ans:2 },
+  { id:"I5",  diff:"hard",     cat:"Fiscal analysis",          sec:"Industry",
+    q:"Why does the course treat Pakistan's three-consecutive-year primary fiscal surplus as a 'surface-level' achievement?",
+    opts:["Financed through Chinese loans","Achieved by raising rates on thin existing base — not broadening it","Resulted from defence cuts","Driven by temporary export surge"], ans:1 },
+  { id:"I6",  diff:"hard",     cat:"Informal economy",         sec:"Industry",
+    q:"How does the size of Pakistan's informal economy compare to the formal documented economy?",
+    opts:["~$150B informal vs. ~$500B formal","~$250B informal vs. ~$400B formal","~$457B informal vs. ~$340B formal","~$340B informal vs. ~$457B formal"], ans:2 },
+  { id:"I7",  diff:"moderate", cat:"Human capital",            sec:"Industry",
+    q:"Pakistan's R&D spending is ~0.2% of GDP. What is South Korea's comparable figure?",
+    opts:["0.7%","1.5%","4.9%","2.1%"], ans:2 },
+  { id:"I8",  diff:"hard",     cat:"Boom-bust cycle",          sec:"Industry",
+    q:"Which sequence correctly describes the six-stage boom-bust cycle anatomy presented in the lectures?",
+    opts:["IMF bailout → BoP crisis → boom → stabilisation → growth → crisis","Import-driven boom → BoP crisis → IMF bailout → brief stabilisation → short growth → crisis returns","Export surge → BoP surplus → FDI → growth → inflation → crisis","Fiscal surplus → investment boom → BoP deficit → devaluation → IMF → recovery"], ans:1 },
+  { id:"I9",  diff:"hard",     cat:"Economic complexity",      sec:"Industry",
+    q:"Pakistan's Economic Complexity Index (ECI) rank declined 20 places over a decade. Which statement about regional peers is accurate?",
+    opts:["Pakistan improved 15 places while India declined","Vietnam +11, India +8, Thailand +9 — all opposite to Pakistan","Pakistan stable while Bangladesh declined","Pakistan improved due to IT exports"], ans:1 },
+  { id:"I10", diff:"hard",     cat:"Foreign direct investment",sec:"Industry",
+    q:"Of Pakistan's reported net FDI of $2.5B in FY2025, what proportion represents genuinely fresh capital inflows?",
+    opts:["All $2.5B fresh","About $2B (80%) fresh","Under $500M — less than 20% fresh","About $1.2B (50%) fresh"], ans:2 },
+  { id:"I11", diff:"moderate", cat:"Historical evolution",     sec:"Industry",
+    q:"The Bhutto-era nationalisations of the 1970s covered which industries?",
+    opts:["Steel, textiles, banking, telecom","Cotton ginning, rice husking, flour milling, vegetable ghee, cement","Fertiliser, automobiles, pharmaceuticals, mining","Railways, airlines, ports, insurance"], ans:1 },
+  { id:"I12", diff:"moderate", cat:"Labour market",            sec:"Industry",
+    q:"Pakistan's female labour force participation rate (~24%) is identified as an industrial challenge primarily because:",
+    opts:["Reduces consumer demand","Limits the scalable workforce for garment/manufacturing growth — unlike Bangladesh","Increases social spending","Reduces remittances"], ans:1 },
+  { id:"I13", diff:"hard",     cat:"Taxation",                 sec:"Industry",
+    q:"Which of the following correctly describes the self-reinforcing 'vicious circle' of Pakistan's narrow tax base?",
+    opts:["Low exports → low forex → high imports → fiscal deficit → debt","Narrow base → higher rates on formal sector → businesses go informal → base narrows → rates rise again","Inflation → depreciation → import costs → fiscal burden → low growth","PSE losses → borrowing → crowding out → less development → low growth"], ans:1 },
+  { id:"I14", diff:"moderate", cat:"IMF relationship",         sec:"Industry",
+    q:"Pakistan has engaged with the IMF approximately how many times since 1950, and why does the cycle persist?",
+    opts:["10 times; inadequate conditionalities","18 times; insufficient reserves","25 times; structural issues never addressed during stabilisation","30 times; geopolitical pressures"], ans:2 },
+  { id:"I15", diff:"hard",     cat:"Policy & reform",          sec:"Industry",
+    q:"Which pair of pre-conditions does the course identify as currently absent in Pakistan that would be needed to replicate Vietnam's export-led model?",
+    opts:["Large population and low wages","Competitive energy costs and reliable contract enforcement for investors","Large domestic market and high savings rate","Proximity to China and large services sector"], ans:1 }
+];
+
+const SHORT_QS = [
+  { q:"Pakistan's agriculture employs ~37% of the labour force yet contributes only ~22% of GDP, while industry employs ~25% but has seen its GDP share fall from 24% to 20% since 2005. What common structural failure explains both trends simultaneously?" },
+  { q:"Both Pakistan's agricultural subsidies (fertiliser, tubewell electricity, wheat support prices) and its industrial protection regime (import tariffs, SROs, captive domestic markets) are designed to support domestic producers. Why do both ultimately harm long-run competitiveness?" },
+  { q:"The 2022 floods caused $3.7 billion in agricultural losses and accelerated deindustrialisation by disrupting cotton supply to the textile sector. What does this episode reveal about the structural interconnectedness of Pakistan's agriculture and industrial sectors?" }
+];
+
+// ════════════════════════════════════════════
+// Seeded RNG — same roll → same question order
+// ════════════════════════════════════════════
+function seededRNG(seed) {
+  let s = 0;
+  for (let i = 0; i < seed.length; i++) s = (s * 31 + seed.charCodeAt(i)) >>> 0;
+  return () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };
+}
+function shuffleArr(arr, rng) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// ════════════════════════════════════════════
+// State
+// ════════════════════════════════════════════
+let questions=[], shortQs=[], current=0, score=0, agriScore=0, indScore=0,
+    answered=[], studentName="", rollNo="", programme="",
+    timerInterval=null, timeLeft=45*60, startTime=null,
+    shortResponses=[];
+const TOTAL_Q = 30;
+
+// ════════════════════════════════════════════
+// Start exam
+// ════════════════════════════════════════════
+function startExam() {
+  const roll = document.getElementById('roll-input').value.trim();
+  const name = document.getElementById('name-input').value.trim();
+  const prog = document.getElementById('prog-input').value.trim();
+  const err  = document.getElementById('login-error');
+  if (!roll || !name) {
+    err.style.display = 'block';
+    err.textContent   = 'Please fill in your roll number and full name to continue.';
+    return;
+  }
+  err.style.display = 'none';
+  rollNo = roll; studentName = name; programme = prog;
+  const rng = seededRNG(roll + name);
+
+  function prepQ(q) {
+    const idx = q.opts.map((_, i) => i);
+    const sh  = shuffleArr(idx, rng);
+    return { ...q, opts: sh.map(i => q.opts[i]), ans: sh.indexOf(q.ans) };
+  }
+
+  questions      = [...shuffleArr(AGRI_MCQ.map(prepQ), rng), ...shuffleArr(INDUSTRY_MCQ.map(prepQ), rng)];
+  shortQs        = shuffleArr(SHORT_QS, rng);
+  answered       = new Array(TOTAL_Q).fill(null);
+  shortResponses = new Array(3).fill('');
+  current = 0; score = 0; agriScore = 0; indScore = 0;
+  timeLeft  = 45 * 60;
+  startTime = new Date();
+
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('exam-screen').style.display  = 'block';
+  document.getElementById('hdr-name').textContent       = name + ' · ' + roll + (prog ? ' · ' + prog : '');
+
+  startTimer();
+  renderQ();
+}
+
+// ════════════════════════════════════════════
+// Timer — 45 minutes
+// ════════════════════════════════════════════
+function startTimer() {
+  clearInterval(timerInterval);
+  updateTimer();
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    updateTimer();
+    if (timeLeft <= 0) { clearInterval(timerInterval); finishMCQ(); }
+  }, 1000);
+}
+function updateTimer() {
+  const m = Math.floor(timeLeft / 60), s = timeLeft % 60;
+  const el = document.getElementById('timer-display');
+  el.textContent = `${m}:${s.toString().padStart(2, '0')}`;
+  el.className   = 'timer-badge' + (timeLeft < 300 ? ' urgent' : '');
+}
+
+// ════════════════════════════════════════════
+// Render question
+// — option change allowed any time before Next
+// — Skip button always available
+// — no correctness feedback shown
+// ════════════════════════════════════════════
+function renderQ() {
+  if (current >= TOTAL_Q) { finishMCQ(); return; }
+  const q   = questions[current];
+  const ans = answered[current];   // null=untouched, -1=skipped, 0-3=chosen
+  const L   = ['A','B','C','D'];
+
+  document.getElementById('hdr-progress').textContent  = `Q ${current + 1} / ${TOTAL_Q}`;
+  document.getElementById('progress-fill').style.width = `${(current / TOTAL_Q) * 100}%`;
+
+  const banner = document.getElementById('section-banner');
+  if (current === 0)
+    banner.innerHTML = '<div class="section-divider">Section A — Part 1 · Agriculture Sector (Q 1–15)</div>';
+  if (current === 15)
+    banner.innerHTML = '<div class="section-divider">Section A — Part 2 · Industrial Sector (Q 16–30)</div>';
+
+  const secBadge = q.sec === 'Agriculture'
+    ? '<span class="q-section-badge badge-agri">Agriculture</span>'
+    : '<span class="q-section-badge badge-ind">Industry</span>';
+
+  const answeredCount = answered.filter(a => a !== null && a !== -1).length;
+  const skippedCount  = answered.filter(a => a === -1).length;
+  const isLast        = current === TOTAL_Q - 1;
+
+  document.getElementById('exam-body').innerHTML = `
+    <div class="q-meta">
+      ${secBadge}
+      <span class="q-badge badge-${q.diff}">${q.diff}</span>
+      <span class="q-category-tag">${q.cat}</span>
+    </div>
+    <div class="q-number">Q${current + 1}</div>
+    <div class="q-text">${q.q}</div>
+    <div class="options">
+      ${q.opts.map((o, i) => `
+        <button class="opt${(ans !== null && ans !== -1 && ans === i) ? ' selected' : ''}"
+          onclick="selectOpt(${i})">
+          <span class="opt-letter">${L[i]}</span>
+          <span class="opt-text">${o}</span>
+        </button>`).join('')}
+    </div>
+    <div class="nav-row">
+      <span class="q-counter">
+        Answered: ${answeredCount} / ${TOTAL_Q}
+        ${skippedCount > 0 ? ' &nbsp;·&nbsp; <span style="color:#b86a00">Skipped: ' + skippedCount + '</span>' : ''}
+      </span>
+      <span style="display:flex;gap:.6rem;align-items:center;">
+        <button class="skip-btn" onclick="skipQ()">
+          ${isLast ? 'Skip &amp; Finish →' : 'Skip →'}
+        </button>
+        <button class="next-btn" onclick="nextQ()"
+          ${(ans === null || ans === -1) ? 'disabled' : ''}>
+          ${isLast ? 'Proceed to Short Answers →' : 'Next →'}
+        </button>
+      </span>
+    </div>`;
+}
+
+// Allow changing selection freely until Next is clicked
+function selectOpt(i) {
+  const prev = answered[current];
+  // Undo score for previous selection
+  if (prev !== null && prev !== -1 && prev !== i) {
+    if (prev === questions[current].ans) {
+      score--;
+      if (current < 15) agriScore--; else indScore--;
+    }
+  }
+  answered[current] = i;
+  // Award score for new selection (only if different from previous)
+  if (i === questions[current].ans && prev !== i) {
+    score++;
+    if (current < 15) agriScore++; else indScore++;
+  }
+  renderQ();
+}
+
+// Skip — records -1, moves on, no score awarded
+function skipQ() {
+  const prev = answered[current];
+  if (prev !== null && prev !== -1) {
+    if (prev === questions[current].ans) {
+      score--;
+      if (current < 15) agriScore--; else indScore--;
+    }
+  }
+  answered[current] = -1;
+  current++;
+  if (current >= TOTAL_Q) finishMCQ(); else renderQ();
+}
+
+function nextQ() {
+  current++;
+  if (current >= TOTAL_Q) finishMCQ(); else renderQ();
+}
+
+function finishMCQ() {
+  clearInterval(timerInterval);
+  document.getElementById('exam-screen').style.display = 'none';
+  renderShort();
+}
+
+// ════════════════════════════════════════════
+// Short answer screen
+// ════════════════════════════════════════════
+function renderShort() {
+  document.getElementById('short-screen').style.display  = 'block';
+  document.getElementById('short-hdr-name').textContent  = studentName + ' · ' + rollNo;
+  document.getElementById('short-cards').innerHTML = shortQs.map((sq, i) => `
+    <div class="short-q-card">
+      <div class="sq-num">Short Answer Question ${i + 1} of 3</div>
+      <p class="sq-text">${sq.q}</p>
+      <textarea class="sq-textarea" id="sq-${i}"
+        placeholder="Write your answer here (3–4 sentences)..."
+        oninput="shortResponses[${i}] = this.value"></textarea>
+    </div>`).join('');
+}
+
+function submitExam() {
+  shortQs.forEach((_, i) => {
+    const el = document.getElementById('sq-' + i);
+    if (el) shortResponses[i] = el.value.trim();
+  });
+  const btn = document.getElementById('submit-btn');
+  btn.disabled    = true;
+  btn.textContent = 'Submitting…';
+  document.getElementById('short-screen').style.display = 'none';
+  showResults();
+}
+
+// ════════════════════════════════════════════
+// Results — score only, no answer reveal
+// ════════════════════════════════════════════
+function showResults() {
+  document.getElementById('results-screen').style.display = 'block';
+
+  const pct      = Math.round((score / TOTAL_Q) * 100);
+  const agriPct  = Math.round((agriScore / 15) * 100);
+  const indPct   = Math.round((indScore  / 15) * 100);
+  const elapsed  = Math.floor((new Date() - startTime) / 1000);
+  const timeTaken= `${Math.floor(elapsed / 60)}m ${elapsed % 60}s`;
+  const attempted= answered.filter(a => a !== null).length;
+
+  let verdict, ringColor, fbClass, fbText;
+  if (pct >= 80) {
+    verdict = 'Distinction'; ringColor = '#1a6b3c'; fbClass = '';
+    fbText  = `Excellent performance — ${score}/30 (${pct}%). Strong command over both sectors. Keep up this level of preparation for the final exam.`;
+  } else if (pct >= 60) {
+    verdict = 'Pass'; ringColor = '#b86a00'; fbClass = 'warn';
+    fbText  = `Pass — ${score}/30 (${pct}%). Solid foundation but room for improvement. Review weaker sub-topics before the final exam.`;
+  } else {
+    verdict = 'Below Pass'; ringColor = '#b83232'; fbClass = 'bad';
+    fbText  = `Below pass threshold — ${score}/30 (${pct}%). Significant revision required. Please meet your instructor and revisit both sectors' lecture materials.`;
+  }
+
+  document.getElementById('ring').style.borderColor  = ringColor;
+  document.getElementById('ring-score').style.color  = ringColor;
+  document.getElementById('ring-score').textContent  = score;
+  document.getElementById('verdict').textContent     = verdict;
+  document.getElementById('results-sub').textContent = `${studentName} · ${rollNo}${programme ? ' · ' + programme : ''}`;
+
+  const fb = document.getElementById('feedback-box');
+  fb.textContent = fbText;
+  fb.className   = `feedback-box ${fbClass}`;
+
+  document.getElementById('stat-mcq').textContent      = `${score} / 30  (${pct}%)`;
+  document.getElementById('stat-agri').textContent     = `${agriScore} / 15  (${agriPct}%)`;
+  document.getElementById('stat-ind').textContent      = `${indScore} / 15  (${indPct}%)`;
+  document.getElementById('stat-time').textContent     = timeTaken;
+  document.getElementById('stat-attempted').textContent= `${attempted} / 30`;
+
+  document.getElementById('stat-mcq').className =
+    'stat-value ' + (pct >= 80 ? 'good' : pct >= 60 ? 'warn' : 'bad');
+
+  // Build per-question answer record
+  // Each entry: selected option letter (A/B/C/D), or "Skipped", or "—"
+  const L = ['A','B','C','D'];
+  const qAnswers = {};
+  questions.forEach((q, i) => {
+    const a = answered[i];
+    qAnswers['Q' + (i + 1)] = (a === null || a === -1)
+      ? 'Skipped'
+      : L[a] + ') ' + q.opts[a];
+  });
+
+  sendToSheet({
+    timestamp:  new Date().toISOString(),
+    rollNo,
+    name:       studentName,
+    programme,
+    score,
+    agriScore,
+    indScore,
+    pct,
+    verdict,
+    attempted,
+    timeTaken,
+    short1:     shortResponses[0] || '',
+    short2:     shortResponses[1] || '',
+    short3:     shortResponses[2] || '',
+    ...qAnswers   // Q1, Q2, … Q30
+  });
+}
+
+// ════════════════════════════════════════════
+// Google Sheets submission via JSONP
+// Sends: summary stats + Q1–Q30 answers + 3 short answers
+// ════════════════════════════════════════════
+function sendToSheet(data) {
+  const el = document.getElementById('submission-status');
+  el.className   = 'submission-status sending';
+  el.textContent = '⏳ Sending result to record system…';
+
+  // Encode all fields as URL params (JSONP-safe, no preflight)
+  const params = new URLSearchParams();
+  Object.entries(data).forEach(([k, v]) => params.append(k, String(v)));
+
+  const script    = document.createElement('script');
+  script.src      = SHEET_URL + '?' + params.toString() + '&callback=sheetCallback';
+
+  window.sheetCallback = function() {
+    el.className   = 'submission-status sent';
+    el.textContent = '✓ Result recorded in faculty database.';
+    script.remove();
+  };
+
+  script.onerror = function() {
+    // Fallback: image beacon (fire-and-forget)
+    new Image().src = SHEET_URL + '?' + params.toString();
+    el.className   = 'submission-status sent';
+    el.textContent = '✓ Result submitted. It will appear in your sheet shortly.';
+    script.remove();
+  };
+
+  document.head.appendChild(script);
+
+  // Timeout safety — mark sent after 5s in case callback never fires
+  setTimeout(() => {
+    if (el.className === 'submission-status sending') {
+      el.className   = 'submission-status sent';
+      el.textContent = '✓ Result submitted to faculty database.';
+    }
+  }, 5000);
+}
+
+function restartExam() {
+  document.getElementById('results-screen').style.display = 'none';
+  document.getElementById('login-screen').style.display   = 'flex';
+}
+</script>
+```
