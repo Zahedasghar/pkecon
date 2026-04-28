@@ -6,7 +6,7 @@ institute: "School of Economics, Quaid-i-Azam University, Islamabad"
 date: "2026-04-06"
 format:
   revealjs:
-    theme: [default, pak-economy-theme.scss]
+    theme: [default, industrial_theme.scss]
     slide-number: true
     transition: fade
     transition-speed: fast
