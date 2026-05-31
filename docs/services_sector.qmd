@@ -1,0 +1,520 @@
+---
+title: "Pakistan's Services Sector"
+subtitle: "The Engine of a Modern Economy"
+author: "Prof. Dr. Zahid Asghar"
+institute: "School of Economics · Quaid-i-Azam University, Islamabad"
+date: "2025–26"
+format:
+  revealjs:
+    theme: [default]
+    slide-number: true
+    logo: ""
+    footer: "Economy of Pakistan · BS Programme · QAU"
+    transition: fade
+    transition-speed: fast
+    chalkboard: false
+    controls: true
+    progress: true
+    history: false
+    width: 1280
+    height: 720
+    margin: 0.08
+    highlight-style: github
+execute:
+  echo: false
+  warning: false
+---
+
+```{=html}
+<style>
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 1.2rem;
+}
+.stat-card {
+  background: #fff;
+  border: 1.5px solid #D4E8D4;
+  border-radius: 6px;
+  padding: 0;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.10);
+  overflow: hidden;
+}
+.stat-card .card-top {
+  background: #2C5F2D;
+  height: 10px;
+}
+.stat-card .stat-value {
+  font-family: Georgia, serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #2C5F2D;
+  margin: 0.7rem 0 0.2rem;
+  line-height: 1;
+}
+.stat-card .stat-label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #8B7355;
+  margin: 0.2rem 0;
+}
+.stat-card .stat-sub {
+  font-size: 0.72rem;
+  color: #9E9E9E;
+  margin-bottom: 0.8rem;
+}
+.context-note {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: #555;
+  margin-top: 1.2rem;
+  border-left: 3px solid #8B7355;
+  padding-left: 0.8rem;
+}
+.two-col-contrast {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 0.8rem;
+}
+.contrast-left {
+  padding-right: 1.5rem;
+  border-right: 1.5px solid #ccc;
+}
+.contrast-right {
+  padding-left: 1.5rem;
+}
+.col-label-green {
+  font-size: 0.82rem;
+  font-weight: bold;
+  color: #2C5F2D;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 3px solid #2C5F2D;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.7rem;
+}
+.col-label-brown {
+  font-size: 0.82rem;
+  font-weight: bold;
+  color: #8B7355;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 3px solid #8B7355;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.7rem;
+}
+.icon-row {
+  display: grid;
+  grid-template-columns: 42px 160px 1fr;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #EBEBEB;
+  font-size: 0.83rem;
+}
+.icon-row:last-child { border-bottom: none; }
+.icon-circle {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: #2C5F2D;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.icon-circle.brown { background: #8B7355; }
+.icon-circle.rust  { background: #A0522D; }
+.row-title {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 0.82rem;
+  color: #2C5F2D;
+}
+.row-desc { color: #3E3E3E; line-height: 1.4; }
+.takeaway-row {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.84rem;
+}
+.takeaway-row:last-child { border-bottom: none; }
+.tnum {
+  width: 34px; height: 34px;
+  background: #2C5F2D;
+  color: #fff;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.source-line {
+  font-size: 0.6rem;
+  color: #9E9E9E;
+  font-style: italic;
+  margin-top: 0.8rem;
+}
+</style>
+```
+
+# {.title-slide background-color="#2C5F2D"}
+
+::: {style="border-left: 8px solid #8B7355; padding-left: 1.5rem; margin-top: 2rem;"}
+<h1 style="font-family: Georgia, serif; font-size: 2.4rem; color: #fff; margin-bottom: 0.4rem;">Pakistan's Services Sector</h1>
+<h2 style="font-size: 1.25rem; color: #D4E8D4; font-weight: normal; margin-top: 0;">The Engine of a Modern Economy</h2>
+:::
+
+::: {style="margin-top: 2.5rem; font-size: 0.9rem; color: #97BC62;"}
+**Structure · Performance · Challenges · Opportunities · Way Forward**
+:::
+
+::: {style="position: absolute; bottom: 1.2rem; left: 2rem; font-size: 0.75rem; color: #8B7355;"}
+Economy of Pakistan · BS Programme · QAU · 2025–26
+:::
+
+---
+
+## Services is by far Pakistan's largest sector — bigger than agriculture and industry combined {background-color="#F7F7F2"}
+
+```{=html}
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="card-top"></div>
+    <div class="stat-value">58.4%</div>
+    <div class="stat-label">Share of GDP</div>
+    <div class="stat-sub">FY 2024–25</div>
+  </div>
+  <div class="stat-card">
+    <div class="card-top"></div>
+    <div class="stat-value">2.91%</div>
+    <div class="stat-label">Growth Rate</div>
+    <div class="stat-sub">FY 2024–25</div>
+  </div>
+  <div class="stat-card">
+    <div class="card-top"></div>
+    <div class="stat-value">38%</div>
+    <div class="stat-label">Workforce Employed</div>
+    <div class="stat-sub">Labour Force Survey 2024–25</div>
+  </div>
+</div>
+<div class="context-note">
+  Pakistan's overall GDP grew 2.68% in FY25. Services leads in GDP weight; industry led in pace (4.77%). Agriculture: 23.5% of GDP, Industry: 18.1%.
+</div>
+<div class="source-line">Source: Pakistan Economic Survey 2024–25, Ministry of Finance; IGI Research June 2025</div>
+```
+
+# Section 1 {.section-slide background-color="#2C5F2D"}
+
+::: {style="color: #8B7355; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3rem;"}
+Section 1
+:::
+
+::: {style="font-family: Georgia, serif; font-size: 2rem; color: #fff; margin-top: 0.5rem; line-height: 1.3;"}
+Understanding the Services Sector
+:::
+
+::: {style="color: #97BC62; font-size: 1rem; margin-top: 1rem;"}
+Definition, classification, and why it matters for Pakistan
+:::
+
+---
+
+## Services create value without producing a physical good — and they drive Pakistan's modern economy
+
+- **Definition:** Services are intangible economic activities — banking, retail, transport, education, health, ICT — where output is consumed as it is produced
+
+- **Also called the Tertiary Sector;** it follows from agriculture (primary) and manufacturing (secondary) in the structural transformation ladder
+
+- **PBS classifies services into:** Wholesale & Retail Trade · Transport & Storage · ICT · Finance & Insurance · Real Estate · Public Administration · Education · Health · Other Private Services
+
+- **Services differ from goods in four ways —** Intangibility (cannot be touched), Inseparability (produced and consumed simultaneously), Variability (quality varies), and Perishability (cannot be stored)
+
+::: {.source-line}
+Source: Pakistan Bureau of Statistics, National Accounts Methodology; Ministry of Finance
+:::
+
+---
+
+## Wholesale & retail trade is the single largest sub-sector — nearly one-third of all services {background-color="#F7F7F2"}
+
+```{=html}
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="card-top"></div>
+    <div class="stat-value">30.8%</div>
+    <div class="stat-label">Wholesale & Retail Trade</div>
+    <div class="stat-sub">% of total services</div>
+  </div>
+  <div class="stat-card">
+    <div class="card-top"></div>
+    <div class="stat-value">18.2%</div>
+    <div class="stat-label">Transport & Storage</div>
+    <div class="stat-sub">% of total services</div>
+  </div>
+  <div class="stat-card">
+    <div class="card-top"></div>
+    <div class="stat-value">10.1%</div>
+    <div class="stat-label">Real Estate</div>
+    <div class="stat-sub">% of total services</div>
+  </div>
+</div>
+<div class="context-note">
+  Finance & Insurance, IT/Telecom, Education, and Health account for the remaining ~41%. ICT and finance are the fastest-growing sub-sectors in value terms.
+</div>
+<div class="source-line">Source: Ministry of Finance; Bank of Scotland Trade Pakistan Overview, FY2024</div>
+```
+
+# Section 2 {.section-slide background-color="#2C5F2D"}
+
+::: {style="color: #8B7355; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3rem;"}
+Section 2
+:::
+
+::: {style="font-family: Georgia, serif; font-size: 2rem; color: #fff; margin-top: 0.5rem; line-height: 1.3;"}
+Four Sub-Sectors Shaping Pakistan's Future
+:::
+
+::: {style="color: #97BC62; font-size: 1rem; margin-top: 1rem;"}
+IT & Telecom · Banking & Finance · Formal vs Informal · Education & Health
+:::
+
+---
+
+## Pakistan's IT and telecom sectors are growing rapidly — but remain far below their potential
+
+- **Telecom:** ~200 million subscriptions by March 2025; sector revenues Rs 803 billion (Jul–Mar FY25); mobile data usage jumped 68.9% YoY to 4.3 GB per subscriber
+
+- **IT Exports:** Reached ~$3.2 billion annually; Pakistan ranks among the world's top-5 freelancing nations by earnings
+
+- **Startups:** Over 1,900 startups incubated under National Incubation Centres (NICs); 185,000+ jobs created; Rs 30.8 billion in investments; 12,000 women entrepreneurs empowered
+
+- **Government Push:** e-Rozgaar targeting 50 active centres by FY2025; China–Pakistan JWG for ICT, cybersecurity, and 5G cooperation
+
+- **Constraint:** High duties on mobile devices, rupee depreciation (−17% in 2024) inflating spectrum fees, and limited 5G rollout throttle competitiveness
+
+::: {.source-line}
+Source: Pakistan Economic Survey 2024–25; SBP; Mordor Intelligence Telecom Pakistan Report 2026
+:::
+
+---
+
+## Banking is modernising fast — but financial exclusion leaves most Pakistanis outside the formal economy
+
+- **Finance & Insurance** contribute ~4% of GDP but function as the nerve centre of investment, credit, and economic confidence
+
+- **SBP cut policy rates** by 450 basis points to 17.5% through FY2025 — easing credit and spurring private investment growth of 9.9%
+
+- **Mobile banking surge:** JazzCash alone has 48 million registered wallets; mobile banking transactions hit 1.69 billion in FY2025 — financial inclusion from the bottom up
+
+- **Capital markets:** PSX market capitalisation surged 50% to Rs 10.2 trillion; KSE-100 gained 78,000 points; corporate bond issuance up 38% to Rs 480 billion
+
+- **Key gap:** Only ~35% of adults hold bank accounts; 72% of non-agricultural workers are in the informal economy without access to credit, insurance, or pensions
+
+::: {.source-line}
+Source: Pakistan Economic Survey 2024–25; SBP Annual Report; Express Tribune June 2025
+:::
+
+---
+
+## Pakistan's services sector is split: a growing formal economy alongside a vast informal one
+
+```{=html}
+<div class="two-col-contrast">
+  <div class="contrast-left">
+    <div class="col-label-green">Formal Services (Registered &amp; Taxed)</div>
+    <ul style="font-size:0.83rem; line-height:1.8; color:#3E3E3E; padding-left:1.2rem;">
+      <li>Banks, telecom firms, listed companies</li>
+      <li>Pays taxes, counted fully in GDP</li>
+      <li>Regulated by SBP, SECP, PTA</li>
+      <li>Workers have contracts, benefits, pensions</li>
+      <li>Accessible to foreign investment &amp; credit</li>
+    </ul>
+  </div>
+  <div class="contrast-right">
+    <div class="col-label-brown">Informal Services (Unregistered &amp; Untaxed)</div>
+    <ul style="font-size:0.83rem; line-height:1.8; color:#3E3E3E; padding-left:1.2rem;">
+      <li>Street vendors, informal retail, rickshaws</li>
+      <li>Largely invisible to GDP measurement</li>
+      <li>No regulatory oversight or consumer protection</li>
+      <li>Workers lack social safety nets</li>
+      <li><strong>72.1% of non-agricultural employment</strong> — the majority</li>
+    </ul>
+  </div>
+</div>
+<div class="source-line">Source: Labour Force Survey 2024–25; Wikipedia Economy of Pakistan 2025; Bank of Scotland Trade 2024</div>
+```
+
+# Section 3 {.section-slide background-color="#2C5F2D"}
+
+::: {style="color: #8B7355; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3rem;"}
+Section 3
+:::
+
+::: {style="font-family: Georgia, serif; font-size: 2rem; color: #fff; margin-top: 0.5rem; line-height: 1.3;"}
+Challenges Holding the Services Sector Back
+:::
+
+::: {style="color: #97BC62; font-size: 1rem; margin-top: 1rem;"}
+Six structural barriers limiting growth, jobs, and tax revenue
+:::
+
+---
+
+## Six structural barriers prevent Pakistan's services sector from reaching its full potential
+
+```{=html}
+<div style="margin-top: 0.4rem;">
+  <div class="icon-row">
+    <div class="icon-circle">1</div>
+    <div class="row-title">Low Tax Base</div>
+    <div class="row-desc">Services = 58% of GDP but contribute a disproportionately small share of taxes — most providers operate outside the formal tax net</div>
+  </div>
+  <div class="icon-row">
+    <div class="icon-circle brown">2</div>
+    <div class="row-title">Skills Gap</div>
+    <div class="row-desc">Education spending is only 2.1% of GDP (UNESCO benchmark: 4–5%); workforce skills do not match what services employers need</div>
+  </div>
+  <div class="icon-row">
+    <div class="icon-circle">3</div>
+    <div class="row-title">Digital Divide</div>
+    <div class="row-desc">Internet growth is uneven — rural areas and women remain largely excluded from digital services, e-commerce, and online work</div>
+  </div>
+  <div class="icon-row">
+    <div class="icon-circle rust">4</div>
+    <div class="row-title">Energy Crisis</div>
+    <div class="row-desc">Utility tariffs rose 29% in FY2025; erratic power supply inflates operational costs for service firms and reduces competitiveness</div>
+  </div>
+  <div class="icon-row">
+    <div class="icon-circle">5</div>
+    <div class="row-title">Regulatory Burden</div>
+    <div class="row-desc">Complex registration, high telecom taxes, and bureaucratic red tape deter formalisation and discourage foreign direct investment</div>
+  </div>
+  <div class="icon-row">
+    <div class="icon-circle brown">6</div>
+    <div class="row-title">Informality</div>
+    <div class="row-desc">72.1% of non-agricultural workers are informal — shrinking the tax base and leaving most service workers without social protection</div>
+  </div>
+</div>
+<div class="source-line">Source: Pakistan Economic Survey 2024–25; World Bank June 2025; Mordor Intelligence 2026; PBS Labour Force Survey</div>
+```
+
+# Section 4 {.section-slide background-color="#2C5F2D"}
+
+::: {style="color: #8B7355; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3rem;"}
+Section 4
+:::
+
+::: {style="font-family: Georgia, serif; font-size: 2rem; color: #fff; margin-top: 0.5rem; line-height: 1.3;"}
+Opportunities for Growth
+:::
+
+::: {style="color: #97BC62; font-size: 1rem; margin-top: 1rem;"}
+Digital economy · Youth dividend · Remittances · CPEC · Tourism
+:::
+
+---
+
+## Demographics, geography, and digital momentum create a genuine window for services-led growth
+
+```{=html}
+<div style="margin-top: 0.4rem;">
+  <div class="icon-row">
+    <div class="icon-circle">✦</div>
+    <div class="row-title">Youth Dividend</div>
+    <div class="row-desc">53.8% of Pakistan is working-age (15–59); with the right skills this demographic bulge can power IT, fintech, education, and health services</div>
+  </div>
+  <div class="icon-row">
+    <div class="icon-circle brown">✦</div>
+    <div class="row-title">IT & Freelancing</div>
+    <div class="row-desc">$3.2 billion in IT exports; English-speaking, young tech talent offers a competitive cost advantage in the $7 trillion global services market</div>
+  </div>
+  <div class="icon-row">
+    <div class="icon-circle">✦</div>
+    <div class="row-title">Remittances $32bn</div>
+    <div class="row-desc">Remittances grew 11% to $32 billion in FY25 — the largest forex source — sustaining household consumption and retail services demand</div>
+  </div>
+  <div class="icon-row">
+    <div class="icon-circle rust">✦</div>
+    <div class="row-title">CPEC Connectivity</div>
+    <div class="row-desc">CPEC enhances logistics, transport corridors, and cross-border trade; CPEC-II adds digital and green corridor components</div>
+  </div>
+  <div class="icon-row">
+    <div class="icon-circle">✦</div>
+    <div class="row-title">Financial Inclusion</div>
+    <div class="row-desc">Mobile wallets (JazzCash: 48mn users) and SBP's digital push can bring millions of unbanked Pakistanis into formal financial services</div>
+  </div>
+  <div class="icon-row">
+    <div class="icon-circle brown">✦</div>
+    <div class="row-title">Tourism Potential</div>
+    <div class="row-desc">Pakistan's scenic North, cultural heritage sites, and hospitality sector offer significant growth if security and infrastructure improve</div>
+  </div>
+</div>
+<div class="source-line">Source: Pakistan Economic Survey 2024–25; SBP; Mordor Intelligence; World Bank 2025</div>
+```
+
+---
+
+## Five reforms would unlock the services sector's true potential and make it an engine of inclusive growth
+
+1. **Formalise the Informal:** Simplify business registration, offer tax amnesties, and use digital payment data to bring service providers into the tax net — widening the base without raising rates
+
+2. **Invest in Human Capital:** Raise education spending toward 4–5% of GDP; expand vocational and digital skills training aligned with what services employers actually need
+
+3. **Deepen Financial Inclusion:** Use SBP's digital infrastructure and mobile money platforms to extend credit, insurance, and savings products to the unbanked majority
+
+4. **Reform Telecom Taxation:** Reduce duties on mobile devices and dollar-linked spectrum fees to accelerate 5G rollout, smartphone adoption, and the digital economy
+
+5. **Promote Services Exports:** Strengthen PSEB, invest in IT parks, offer R&D incentives, and negotiate bilateral services trade agreements to capture global market share
+
+::: {.source-line}
+Source: IMF Article IV 2024; World Bank Pakistan Development Update 2025; Pakistan Economic Survey 2024–25
+:::
+
+---
+
+## Key Takeaways {background-color="#F7F7F2"}
+
+```{=html}
+<div style="margin-top: 0.5rem;">
+  <div class="takeaway-row">
+    <div class="tnum">1</div>
+    <div>Services account for <strong>58.4% of GDP</strong> and employ <strong>38% of Pakistan's workforce</strong> — making it the single most important sector in the economy today</div>
+  </div>
+  <div class="takeaway-row">
+    <div class="tnum">2</div>
+    <div>Wholesale & retail trade (30.8%), transport (18.2%), and real estate (10.1%) are the three largest sub-sectors; <strong>IT/telecom and finance are the fastest-growing</strong></div>
+  </div>
+  <div class="takeaway-row">
+    <div class="tnum">3</div>
+    <div>A massive <strong>informal economy — 72% of non-agricultural employment</strong> — is Pakistan's biggest structural challenge: it shrinks the tax base and denies workers social protection</div>
+  </div>
+  <div class="takeaway-row">
+    <div class="tnum">4</div>
+    <div>Pakistan's IT sector ($3.2bn exports, 200mn telecom subscribers, 1,900+ incubated startups) is a genuine growth engine <strong>constrained by high taxes, skills gaps, and energy costs</strong></div>
+  </div>
+  <div class="takeaway-row">
+    <div class="tnum">5</div>
+    <div>The way forward requires <strong>five parallel reforms:</strong> formalisation, human capital, financial inclusion, telecom tax reduction, and a deliberate services export strategy</div>
+  </div>
+</div>
+```
+
+# {background-color="#2C5F2D"}
+
+::: {style="margin-top: 1.5rem; font-family: Georgia, serif; font-size: 1.9rem; color: #fff; line-height: 1.4;"}
+Pakistan's services sector is its largest —<br>but not yet its most productive.<br>**That gap is the reform opportunity.**
+:::
+
+::: {style="margin-top: 2rem; border-left: 4px solid #8B7355; padding-left: 1rem; color: #97BC62; font-size: 0.95rem;"}
+**Discussion Question:** Which service sub-sector should Pakistan prioritise for export-led growth, and why?
+:::
+
+::: {style="position: absolute; bottom: 1.2rem; left: 2rem; font-size: 0.75rem; color: #8B7355;"}
+Prof. Dr. Zahid Asghar · School of Economics · Quaid-i-Azam University, Islamabad
+:::

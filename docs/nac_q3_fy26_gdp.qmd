@@ -1,0 +1,382 @@
+---
+title: "Pakistan GDP — Q3 FY 2025-26"
+subtitle: "Sector & Sub-sector Growth Data from the 117th National Accounts Committee Meeting"
+author: "Prof. Dr. Zahid Asghar"
+affiliation: "School of Economics, Quaid-i-Azam University"
+date: "May 14, 2026"
+date-format: "MMMM D, YYYY"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    toc-title: "Contents"
+    toc-location: left
+    number-sections: true
+    smooth-scroll: true
+    embed-resources: true
+    page-layout: article
+    css: |
+      /* ── Brand palette ─────────────────────────────── */
+      :root {
+        --green:       #1a6b3c;
+        --green-dark:  #0e2a1a;
+        --green-mid:   #155c33;
+        --green-light: #2d8f5a;
+        --green-pale:  #eef5f0;
+        --gold:        #c9a84c;
+        --gold-light:  #f0d98a;
+        --text-dark:   #0e1f13;
+        --text-muted:  #4a6355;
+        --border:      #cce0d4;
+        --red:         #c0392b;
+        --red-pale:    #fdf2f2;
+        --amber:       #b86a00;
+        --amber-pale:  #fffbeb;
+        --blue:        #1d5fa8;
+        --blue-pale:   #eff6ff;
+      }
+
+      /* ── Page shell ────────────────────────────────── */
+      body { font-family: 'Georgia', serif; color: var(--text-dark); }
+      #quarto-content { background: #f6f8f3; }
+      .quarto-title-meta { color: var(--text-muted); }
+
+      /* ── Title block ───────────────────────────────── */
+      .quarto-title-block {
+        background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, var(--green-light) 100%);
+        border-bottom: 4px solid var(--gold);
+        padding: 2.5rem 2rem 2rem;
+        margin-bottom: 2rem;
+        border-radius: 0 0 8px 8px;
+      }
+      .quarto-title-block .title {
+        color: #ffffff !important;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+      }
+      .quarto-title-block .subtitle {
+        color: rgba(255,255,255,0.78) !important;
+        font-size: 1rem;
+        font-style: italic;
+      }
+      .quarto-title-block .quarto-title-meta {
+        color: rgba(255,255,255,0.65) !important;
+        font-size: 0.85rem;
+        margin-top: 0.8rem;
+      }
+      .quarto-title-meta-heading { color: var(--gold) !important; }
+
+      /* ── Section headings ──────────────────────────── */
+      h2 {
+        color: var(--green);
+        font-size: 1.4rem;
+        border-bottom: 2px solid var(--border);
+        padding-bottom: 0.3rem;
+        margin-top: 2.2rem;
+      }
+      h2::before {
+        content: '';
+        display: inline-block;
+        width: 5px; height: 0.9em;
+        background: var(--gold);
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        border-radius: 2px;
+      }
+      h3 {
+        color: var(--green-dark);
+        font-size: 1.1rem;
+        margin-top: 1.6rem;
+      }
+
+      /* ── KPI grid ──────────────────────────────────── */
+      .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0 2rem;
+      }
+      .kpi-card {
+        background: var(--green-dark);
+        border: 1px solid var(--gold);
+        border-radius: 8px;
+        padding: 1.2rem 1rem;
+        text-align: center;
+      }
+      .kpi-value {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1.1;
+        margin-bottom: 0.35rem;
+      }
+      .kpi-label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.2rem;
+      }
+      .kpi-sub {
+        font-size: 0.72rem;
+        color: rgba(255,255,255,0.55);
+        font-style: italic;
+      }
+
+      /* ── Tables ────────────────────────────────────── */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+        margin: 1rem 0 1.5rem;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(10,42,26,0.08);
+      }
+      thead th {
+        background: var(--green);
+        color: #ffffff;
+        padding: 0.65rem 0.9rem;
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      tbody td {
+        padding: 0.55rem 0.9rem;
+        border-bottom: 1px solid var(--border);
+        vertical-align: middle;
+      }
+      tbody tr:last-child td { border-bottom: none; }
+      tbody tr:nth-child(even) td { background: #f0f5f1; }
+      tbody tr:hover td { background: var(--green-pale); transition: background 0.15s; }
+      .sector-row td { background: var(--green-pale) !important; font-weight: 600; color: var(--green-dark); }
+      .sub-row td:first-child { padding-left: 2rem; color: var(--text-muted); }
+      .pos { color: #0f6e56; font-weight: 600; }
+      .neg { color: var(--red); font-weight: 600; }
+      .amber-val { color: var(--amber); font-weight: 600; }
+      td:not(:first-child) { text-align: center; }
+      th:not(:first-child) { text-align: center; }
+
+      /* ── Callout overrides ─────────────────────────── */
+      .callout { border-radius: 6px; margin: 1rem 0; }
+      .callout-note    { border-left-color: var(--green) !important; background: var(--green-pale); }
+      .callout-warning { border-left-color: var(--amber) !important; background: var(--amber-pale); }
+      .callout-important { border-left-color: var(--red) !important; background: var(--red-pale); }
+      .callout-tip     { border-left-color: var(--blue) !important; background: var(--blue-pale); }
+      .callout-note .callout-title-container    { color: var(--green-dark) !important; }
+      .callout-warning .callout-title-container { color: var(--amber) !important; }
+      .callout-important .callout-title-container { color: var(--red) !important; }
+      .callout-tip .callout-title-container     { color: var(--blue) !important; }
+
+      /* ── Source note ───────────────────────────────── */
+      .source-note {
+        border-top: 1px solid var(--border);
+        padding-top: 0.6rem;
+        margin-top: 2rem;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        text-align: center;
+        font-style: italic;
+      }
+
+      /* ── Revision badge ────────────────────────────── */
+      .rev-up { color: #0f6e56; font-size: 0.75rem; }
+      .rev-dn { color: var(--red); font-size: 0.75rem; }
+---
+
+```{=html}
+<!-- KPI headline cards -->
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <div class="kpi-value">4.0%</div>
+    <div class="kpi-label">Q3 GDP growth</div>
+    <div class="kpi-sub">Provisional</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-value">4.0%</div>
+    <div class="kpi-label">9-month average</div>
+    <div class="kpi-sub">Q1–Q3 FY 2025-26</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-value">$452B</div>
+    <div class="kpi-label">Economy size</div>
+    <div class="kpi-sub">vs $408B prior year</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-value">$1,901</div>
+    <div class="kpi-label">Per capita income</div>
+    <div class="kpi-sub">2023 Census population</div>
+  </div>
+</div>
+```
+
+::: {.callout-tip title="Source & scope"}
+All figures are from the **117th Meeting of the National Accounts Committee**, held on 14 May 2026 under the chairmanship of the Secretary, Ministry of Planning and Development. Q3 estimates are **provisional**; Q1 and Q2 estimates have been **revised** from those approved at the 116th NAC meeting. The 9-month average growth rate of 4.0% falls within the State Bank of Pakistan's projected range of **3.75 – 4.75 percent**.
+:::
+
+---
+
+# Q3 FY 2025-26 — Provisional Estimates
+
+## Sector-level headline growth
+
+Overall GDP grew at **3.99 percent** in Q3 FY 2025-26 (reported as 4.0%). All three major sectors contributed positively.
+
+| Sector | Q3 Growth | Status |
+|:-------|:---------:|:-------|
+| [**Agriculture**]{.sector-row} | [3.01%]{.pos} | All five sub-sectors positive |
+| [**Industry**]{.sector-row} | [4.65%]{.pos} | LSM-driven; two sub-sectors in contraction |
+| [**Services**]{.sector-row} | [4.18%]{.pos} | All eight sub-sectors positive |
+| [**Overall GDP**]{.sector-row} | [3.99%]{.pos} | Within SBP 3.75–4.75% projected range |
+
+---
+
+## Agriculture — Q3 FY 2025-26 {#sec-agri-q3}
+
+All five agricultural sub-sectors posted positive growth — a notable improvement on earlier quarters. Livestock remains the single largest sub-sector, contributing approximately 61% of agricultural GDP and around 11% of total GDP.
+
+| Sub-sector | Q3 Growth | Note |
+|:-----------|:---------:|:-----|
+| Livestock | [+3.70%]{.pos} | Largest sub-sector; ~61% of agri GDP |
+| Other crops | [+2.27%]{.pos} | Q1 revised sharply upward from −6.90% |
+| Forestry | [+1.62%]{.pos} | — |
+| Fishing | [+1.37%]{.pos} | Both Q1 & Q2 revised upward |
+| Important crops | [+1.10%]{.pos} | Wheat 29 MT; rice ~9 MT (above estimates) |
+
+::: {.callout-note title="Analytical note — wheat and rice"}
+Wheat output reached **29 million tonnes** despite deeply negative farm economics — input costs (diesel, fertiliser) exceeded support prices, yet farmers had no viable alternative crop. Rice production hit approximately **9 million tonnes**, above earlier estimates despite flood-damaged acreage, due to a favourable late-season weather window. Cotton remained weak at around **4.8 million bales**, below the historical baseline, with downstream consequences for the textile sector.
+:::
+
+---
+
+## Industry — Q3 FY 2025-26 {#sec-industry-q3}
+
+Industry grew 4.65% in Q3, almost entirely on the back of large-scale manufacturing at 9.53%. Two sub-sectors contracted, with electricity recording a sharp double-digit decline.
+
+| Sub-sector | Q3 Growth | Note |
+|:-----------|:---------:|:-----|
+| Large-scale manufacturing (LSM) | [+9.53%]{.pos} | Main drivers: apparel, automobiles, cement |
+| Construction | [+0.48%]{.pos} | High base: +14.27% in Q3 FY25 |
+| Mining & quarrying | [−2.55%]{.neg} | Continued contraction |
+| Electricity, gas & water supply | [−13.53%]{.neg} | Base-year artefact — see note below |
+
+::: {.callout-warning title="Methodological note — electricity contraction"}
+The **−13.53%** contraction in electricity, gas and water supply is primarily a **base-year statistical artefact**. In Q3 FY 2024-25, this sub-sector recorded +129% growth because PKR 2,842 billion in circular debt payments were recognised in that period. The current-year figure reflects the reversal of that one-off effect. However, the underlying structural problem — circular debt stock of PKR 2,842B and high industrial tariffs — remains unresolved and continues to impair manufacturing competitiveness.
+:::
+
+::: {.callout-important title="Quality of growth — class discussion point"}
+LSM growth is concentrated in **three sub-sectors**: apparel assembly, automobile assembly, and cement. All three have limited domestic value-added content relative to their measured output:
+
+- Automobile "production" in Pakistan is primarily final assembly of imported kits — value added is a small fraction of the unit price.
+- Apparel assembly is the **lowest-margin** segment of the textile value chain.
+- Assembly-type growth **does not absorb** the 3–4 million new labour force entrants per year at the scale required for the Lewis dual-sector transformation.
+:::
+
+---
+
+## Services — Q3 FY 2025-26 {#sec-services-q3}
+
+Services posted 4.18% growth with all eight sub-sectors contributing positively. Information & communication and public administration were the fastest-growing components.
+
+| Sub-sector | Q3 Growth |
+|:-----------|:---------:|
+| Information & communication | [+9.78%]{.pos} |
+| Public administration & social security | [+8.88%]{.amber-val} |
+| Education | [+4.14%]{.pos} |
+| Wholesale & retail trade | [+4.13%]{.pos} |
+| Health & social work | [+4.07%]{.pos} |
+| Other private services | [+3.35%]{.pos} |
+| Finance & insurance | [+2.90%]{.pos} |
+| Transportation & storage | [+2.02%]{.pos} |
+
+::: {.callout-warning title="Methodological note — government services growth"}
+Public administration & social security grew **8.88%** in real terms during a stated period of fiscal consolidation. This estimate is derived from **budgeted** rather than **actual** expenditure. A downward revision is expected in October 2026 once final spending outturns are incorporated. The same caveat applies to education (+4.14%) and health (+4.07%), both of which are largely remuneration-based estimates.
+:::
+
+---
+
+# Q1 & Q2 Revisions — 116th vs 117th NAC
+
+The 117th NAC meeting also approved revised estimates for Q1 and Q2 FY 2025-26. The overall pattern: **agriculture and services revised upward; industry revised downward**, with construction the dominant drag in both quarters.
+
+## Overall GDP revisions
+
+| Quarter | Old estimate | Revised estimate | Change |
+|:--------|:-----------:|:----------------:|:------:|
+| Q1 FY 2025-26 | 3.63% | [3.92%]{.pos} | [+0.29 pp ▲]{.rev-up} |
+| Q2 FY 2025-26 | 3.89% | [4.05%]{.pos} | [+0.16 pp ▲]{.rev-up} |
+
+---
+
+## Agriculture revisions
+
+| Sub-sector | Q1 old | Q1 revised | Q2 old | Q2 revised |
+|:-----------|:------:|:----------:|:------:|:----------:|
+| **Agriculture total** | 2.72% | [2.95% ▲]{.rev-up} | 1.76% | [2.64% ▲]{.rev-up} |
+| Other crops | −6.90% | [+1.93% ▲]{.rev-up} | −5.69% | [+2.39% ▲]{.rev-up} |
+| Fishing | 0.91% | [2.45% ▲]{.rev-up} | 0.77% | [1.47% ▲]{.rev-up} |
+| Livestock | 6.18% | [4.67% ▼]{.rev-dn} | — | — |
+
+The large Q1 upgrade in other crops (from −6.90% to +1.93%) and Q2 upgrade (from −5.69% to +2.39%) drove most of the overall agriculture revision. Livestock was revised downward in Q1 from 6.18% to 4.67%.
+
+---
+
+## Industry revisions
+
+| Sub-sector | Q1 old | Q1 revised | Q2 old | Q2 revised |
+|:-----------|:------:|:----------:|:------:|:----------:|
+| **Industry total** | 8.86% | [7.80% ▼]{.rev-dn} | 7.40% | [6.68% ▼]{.rev-dn} |
+| Electricity & water supply | 24.51% | [21.38% ▼]{.rev-dn} | — | — |
+| Construction | 19.22% | [15.93% ▼]{.rev-dn} | 10.53% | [6.42% ▼]{.rev-dn} |
+
+Construction is the primary driver of industry's downward revision in both quarters — cut from 19.22% to 15.93% in Q1 and from 10.53% to 6.42% in Q2.
+
+---
+
+## Services revisions
+
+| Sub-sector | Q1 old | Q1 revised | Q2 old | Q2 revised |
+|:-----------|:------:|:----------:|:------:|:----------:|
+| **Services total** | 2.44% | [3.16% ▲]{.rev-up} | 3.69% | [3.83% ▲]{.rev-up} |
+| Information & communication | −29.66% | [−7.63% ▲]{.rev-up} | −5.95% | [−1.27% ▲]{.rev-up} |
+| Wholesale & retail trade | — | — | 4.46% | [4.66% ▲]{.rev-up} |
+
+The dramatic revision in information & communication — from −29.66% to −7.63% in Q1 — drove most of the services upgrade. The sector appears to have suffered from initial data gaps that have since been partially filled.
+
+---
+
+# Key Observations for Class Discussion
+
+::: {.callout-note title="1. Growth is real — but lopsided"}
+The 4% headline figure is within the SBP forecast band and represents a genuine recovery from the 2022-23 crisis. However, it rests on three LSM sub-sectors (apparel assembly, automobiles, cement) with limited employment creation. The **Lewis dual-sector mechanism** requires broad industrial absorption of agricultural surplus labour — agriculture employs ~37% of the workforce but contributes only ~22% of GDP. This growth pattern does not resolve that structural imbalance.
+:::
+
+::: {.callout-note title="2. The revision pattern reveals a structural story"}
+Across both Q1 and Q2, agriculture and services were revised upward; industry was revised downward — and **construction drove the downgrade in both quarters**. This pattern is consistent with an economy where formal capital investment in productive capacity remains subdued even as macro conditions stabilise.
+:::
+
+::: {.callout-warning title="3. Electricity contraction is partly statistical — but the underlying problem is real"}
+The −13.53% electricity figure reflects a base-year effect from prior-year circular debt clearance. The underlying crisis — circular debt stock of **PKR 2,842 billion** (2.7% of GDP), electricity tariffs raised ~PKR 5/kWh in FY25, and industrial tariffs among the highest in the region — remains unresolved and continues to erode manufacturing competitiveness.
+:::
+
+::: {.callout-important title="4. Data methodology requires scrutiny"}
+Two methodological concerns warrant critical attention:
+
+1. **Private investment in construction and SMEs** is estimated via survey pro-formas that are not cross-checked against SBP credit-to-private-sector data, utility connections, or construction material output indices — making the investment series difficult to validate independently.
+
+2. **Government services growth** is based on budgeted rather than actual expenditure. The National Accounts Member post at PBS has been vacant for over two years — an institutional capacity gap that compromises the quality of national accounts across multiple dimensions.
+
+Critical reading of official statistics is itself a core economics competency.
+:::
+
+---
+
+::: {.source-note}
+**Source:** National Accounts Committee, 117th Meeting, 14 May 2026 · Ministry of Planning & Development, Islamabad  
+Economy of Pakistan · School of Economics, Quaid-i-Azam University · Prof. Dr. Zahid Asghar · Spring 2026
+:::

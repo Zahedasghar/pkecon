@@ -1,0 +1,745 @@
+---
+title: "How China Escaped the Poverty Trap"
+subtitle: "Yuen Yuen Ang · A Coevolutionary Framework"
+author: "Prof. Dr. Zahid Asghar"
+institute: "School of Economics, Quaid-i-Azam University, Islamabad"
+date: "Spring 2026"
+format:
+  revealjs:
+    theme: [default]
+    slide-number: true
+    transition: fade
+    background-transition: fade
+    incremental: false
+    width: 1280
+    height: 720
+    margin: 0.08
+    highlight-style: github
+    footer: "How China Escaped the Poverty Trap · Yuen Yuen Ang · QAU School of Economics"
+    css: |
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Sans+3:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap');
+
+      :root {
+        --green:      #1a6b3c;
+        --green-dark: #0e2a1a;
+        --green-mid:  #155c33;
+        --green-light:#2d8f5a;
+        --green-pale: #e8f3ed;
+        --gold:       #c9a84c;
+        --gold-light: #f0d98a;
+        --warm-white: #f6f8f3;
+        --text-dark:  #0e1f13;
+        --text-muted: #4a6355;
+        --border:     #cce0d4;
+        --red:        #c0392b;
+        --blue:       #1d5fa8;
+      }
+
+      .reveal .slides {
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 300;
+      }
+
+      /* ── Title slide ── */
+      .reveal .title-slide {
+        background: linear-gradient(135deg, #0e2a1a 0%, #1a6b3c 60%, #2d8f5a 100%);
+        text-align: left;
+        padding: 3rem 4rem;
+      }
+
+      .reveal .title-slide h1.title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.4rem;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: .5rem;
+      }
+
+      .reveal .title-slide .subtitle {
+        color: var(--gold);
+        font-family: 'JetBrains Mono', monospace;
+        font-size: .85rem;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+
+      .reveal .title-slide .author,
+      .reveal .title-slide .institute,
+      .reveal .title-slide .date {
+        color: rgba(255,255,255,.75);
+        font-size: .9rem;
+      }
+
+      /* ── Section headers (h1) ── */
+      .reveal section h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.4rem;
+        color: var(--green-dark);
+        border-bottom: 3px solid var(--gold);
+        padding-bottom: .4rem;
+        margin-bottom: 1.2rem;
+      }
+
+      /* ── Slide headings (h2) ── */
+      .reveal section h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.65rem;
+        color: var(--green);
+        margin-bottom: 1rem;
+        padding-bottom: .3rem;
+        border-left: 5px solid var(--gold);
+        padding-left: .75rem;
+      }
+
+      /* ── h3 ── */
+      .reveal section h3 {
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--green-dark);
+        margin-bottom: .5rem;
+      }
+
+      /* ── Body text ── */
+      .reveal section p, .reveal section li {
+        font-size: 1rem;
+        line-height: 1.75;
+        color: var(--text-dark);
+      }
+
+      .reveal section ul { padding-left: 1.2rem; }
+      .reveal section li { margin-bottom: .35rem; }
+      .reveal section strong { color: var(--green-dark); font-weight: 700; }
+      .reveal section em { color: var(--green-mid); }
+
+      /* ── Blockquote ── */
+      .reveal blockquote {
+        background: var(--green-pale);
+        border-left: 5px solid var(--gold);
+        border-radius: 0 8px 8px 0;
+        padding: 1rem 1.5rem;
+        margin: 1rem 0;
+        font-style: normal;
+        font-size: .95rem;
+        color: var(--green-dark);
+        box-shadow: 0 2px 12px rgba(10,42,26,.08);
+      }
+
+      /* ── Callout-style boxes ── */
+      .box-green {
+        background: var(--green-pale);
+        border-left: 4px solid var(--green);
+        border-radius: 0 8px 8px 0;
+        padding: .9rem 1.3rem;
+        margin: .7rem 0;
+        font-size: .95rem;
+      }
+
+      .box-gold {
+        background: #fffbeb;
+        border-left: 4px solid var(--gold);
+        border-radius: 0 8px 8px 0;
+        padding: .9rem 1.3rem;
+        margin: .7rem 0;
+        font-size: .95rem;
+      }
+
+      .box-red {
+        background: #fdf2f2;
+        border-left: 4px solid var(--red);
+        border-radius: 0 8px 8px 0;
+        padding: .9rem 1.3rem;
+        margin: .7rem 0;
+        font-size: .95rem;
+      }
+
+      .box-blue {
+        background: #eff6ff;
+        border-left: 4px solid var(--blue);
+        border-radius: 0 8px 8px 0;
+        padding: .9rem 1.3rem;
+        margin: .7rem 0;
+        font-size: .95rem;
+      }
+
+      /* ── Two-column helper ── */
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+
+      /* ── Pill / badge ── */
+      .pill {
+        display: inline-block;
+        padding: .2rem .7rem;
+        border-radius: 100px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: .72rem;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-right: .3rem;
+      }
+      .pill-green { background: var(--green); color: #fff; }
+      .pill-gold  { background: var(--gold);  color: #fff; }
+      .pill-red   { background: var(--red);   color: #fff; }
+      .pill-blue  { background: var(--blue);  color: #fff; }
+
+      /* ── Big number / stat ── */
+      .stat {
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--green);
+        line-height: 1;
+      }
+
+      /* ── Step circle ── */
+      .step-row { display: flex; gap: 1.2rem; align-items: flex-start; margin: .5rem 0; }
+      .step-num {
+        width: 36px; height: 36px;
+        border-radius: 50%;
+        background: var(--green);
+        color: #fff;
+        font-family: 'Playfair Display', serif;
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0;
+        margin-top: 3px;
+      }
+      .step-content { flex: 1; }
+      .step-content strong { color: var(--green-dark); }
+
+      /* ── Arrow connector ── */
+      .arrow-row {
+        display: flex; align-items: center; gap: .8rem;
+        font-size: .9rem; margin: .5rem 0; flex-wrap: wrap;
+      }
+      .arr-box {
+        background: var(--green-pale);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: .5rem .9rem;
+        font-size: .88rem;
+        font-weight: 600;
+        color: var(--green-dark);
+        text-align: center;
+      }
+      .arr-arrow { color: var(--gold); font-size: 1.3rem; font-weight: 700; }
+
+      /* ── Section divider slide ── */
+      .section-slide {
+        background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 3rem 4rem;
+      }
+
+      .reveal .footer { font-family: 'JetBrains Mono', monospace; font-size: .6rem; }
+
+      /* progress bar color */
+      .reveal .progress span { background: var(--gold); }
+---
+
+## {.title-slide background-color="#0e2a1a"}
+
+::: {style="padding-top:2rem;"}
+<span style="font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:#c9a84c;">Yuen Yuen Ang · Cambridge University Press · 2016</span>
+
+<h1 style="font-family:'Playfair Display',serif;font-size:2.8rem;color:#fff;line-height:1.1;margin:.6rem 0;">How China Escaped<br>the Poverty Trap</h1>
+
+<p style="color:rgba(255,255,255,.7);font-size:1rem;margin-top:1rem;max-width:700px;">A coevolutionary theory of development — and what it means for understanding economic transformation in the 21st century</p>
+
+<hr style="border:none;border-top:1px solid rgba(201,168,76,.4);margin:1.5rem 0;"/>
+
+<p style="color:rgba(255,255,255,.6);font-size:.9rem;">
+<strong style="color:#c9a84c;">Prof. Dr. Zahid Asghar</strong><br>
+School of Economics · Quaid-i-Azam University, Islamabad · Spring 2026
+</p>
+:::
+
+---
+
+## The Central Puzzle
+
+<br>
+
+::: {.cols}
+::: {}
+**In 1978, China was poorer than most sub-Saharan African countries**
+
+- Poorer than Chad, Bangladesh, Malawi
+- Recovering from 30 years of Maoist upheaval
+- No private property rights
+- No rule of law
+- No democratic institutions
+:::
+::: {}
+<br>
+<div class="box-gold">
+<strong>The Puzzle</strong><br>
+Conventional development theory says you need <em>good institutions first</em> — democracy, rule of law, property rights — before markets can grow.<br><br>
+China had <strong>none of these</strong> and yet grew for 40+ consecutive years to become the world's second-largest economy.
+</div>
+:::
+:::
+
+---
+
+## The Parable of the Pauper and Two Gurus
+
+::: {.cols}
+::: {}
+<div class="box-red">
+<strong>🧙 First Guru — "Growth First"</strong><br>
+<em>"Earn your first paycheck. Once you earn money, your circumstances will improve and you will escape poverty."</em><br><br>
+<strong>Problem:</strong> How does a poor person get the first job without education, address, or connections?
+</div>
+:::
+::: {}
+<div class="box-blue">
+<strong>🧙 Second Guru — "Institutions First"</strong><br>
+<em>"Do what my rich clients do: attend college, move to a safe neighbourhood, buy health insurance."</em><br><br>
+<strong>Problem:</strong> All these prerequisites require wealth you don't yet have.
+</div>
+:::
+:::
+
+<br>
+
+> **Both advice falls short.** Attaining the preconditions of wealth also depends on the level of economic wealth. So how do poor, weak societies escape poverty traps?
+
+---
+
+## Three Competing Theories of Development
+
+<br>
+
+::: {.cols3}
+::: {}
+<div class="box-green">
+<span class="pill pill-green">Theory 1</span><br>
+**Growth → Institutions**
+
+*Modernisation theory:* As countries grow rich, a middle class demands accountability and rights.
+
+<small>*Harrod-Domar: growth from capital investment; Sachs: aid from rich nations*</small>
+</div>
+:::
+::: {}
+<div class="box-gold">
+<span class="pill pill-gold">Theory 2</span><br>
+**Institutions → Growth**
+
+*World Bank / IMF consensus:* First build a checklist of "best practices" — rule of law, property rights, democracy. Then markets will follow.
+
+<small>*Why Nations Fail (Acemoglu & Robinson) — inclusive institutions*</small>
+</div>
+:::
+::: {}
+<div class="box-blue">
+<span class="pill pill-blue">Theory 3</span><br>
+**History → Institutions → Growth**
+
+*Path dependence:* Favourable historical legacies created strong institutions that enabled prosperity.
+
+<small>*"Once society gets organised a certain way, this tends to persist"*</small>
+</div>
+:::
+:::
+
+<br>
+<div class="box-red">
+<strong>Ang's critique:</strong> All three theories treat development as a <em>linear</em>, one-directional process. None can explain China — or most of the developing world.
+</div>
+
+---
+
+## Why Standard Explanations Fail for China {background-color="#f6f8f3"}
+
+<br>
+
+| Conventional Explanation | Why It Falls Short |
+|---|---|
+| *"Inclusive, democratic institutions"* | China has authoritarian, one-party rule — yet sustained 40 years of growth |
+| *"Growth will eventually slow"* | True for everyone — not an explanation |
+| *"Plenty of catch-up room"* | Then why haven't other poor countries caught up? |
+| *"Cheap labour + foreign capital"* | Many countries offer this — they didn't grow like China |
+| *"Bureaucratic incentives for growth"* | China is huge — incentives alone can't explain it |
+| *"Confucian culture of hard work"* | Culture is roughly constant — can't explain 1978 as the turning point |
+| *"Sheer luck"* | Forty years of sustained growth by luck? |
+
+<br>
+
+> **Ang's argument:** These explanations each capture a piece of reality but no single one — or combination — explains the *process* by which China moved from poverty to prosperity.
+
+---
+
+## {background-color="#0e2a1a"}
+
+::: {style="display:flex;flex-direction:column;justify-content:center;height:100%;padding:2rem 3rem;"}
+<span style="font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#c9a84c;">Ang's Core Argument</span>
+
+<h2 style="font-family:'Playfair Display',serif;font-size:2.2rem;color:#fff;border:none;padding:0;margin:.8rem 0 1.2rem;">Development is not a linear process.<br>It is a <em style="color:#c9a84c;">coevolutionary</em> one.</h2>
+
+<p style="color:rgba(255,255,255,.8);font-size:1.1rem;max-width:800px;line-height:1.8;">
+Markets and institutions do not have a fixed causal sequence. They <strong style="color:#c9a84c;">mutually constitute</strong> each other — changing and adapting in response to each other over time, in a process that is neither linear nor predetermined.
+</p>
+
+<p style="color:rgba(255,255,255,.6);font-size:.95rem;margin-top:1.5rem;">
+<em>"The economy and the bureaucracy interact and change together... The government can't reform overnight."</em>
+</p>
+:::
+
+---
+
+## The Chicken-and-Egg Problem — Dissolved
+
+<br>
+
+**The conventional framing creates a false dilemma:**
+
+::: {.arrow-row}
+<div class="arr-box">Good Governance /<br>Strong Institutions</div>
+<div class="arr-arrow">→ ?<br>← ?</div>
+<div class="arr-box">Economic Growth /<br>Functioning Markets</div>
+:::
+
+<br>
+
+**Ang's answer: Both arrows operate *simultaneously* — through a coevolutionary process**
+
+<div class="box-gold">
+<strong>The key insight:</strong> You do not need <em>strong</em> institutions to begin building markets. You need institutions that are <em>good enough</em> — and adapted to the specific level of development — to serve as a foundation. Markets then generate resources that allow institutions to strengthen, which in turn enables more complex markets.
+</div>
+
+<br>
+
+> **"Spark change in poor societies by leveraging what they already have — not with what we wish they could have."**
+
+---
+
+## The Three-Step Coevolutionary Sequence
+
+<br>
+
+::: {.step-row}
+<div class="step-num">1</div>
+<div class="step-content">
+<strong>Harness existing weak institutions to build markets</strong><br>
+<span style="color:var(--text-muted);font-size:.92rem;">Poor countries already have <em>some</em> institutions, even if weak, informal, or corrupt. The task is not to wait for perfect institutions but to leverage what exists — redirecting bureaucratic incentives, local authority, and informal norms toward facilitating exchange and investment.</span>
+</div>
+:::
+
+::: {.step-row}
+<div class="step-num">2</div>
+<div class="step-content">
+<strong>Emerging markets stimulate stronger institutions</strong><br>
+<span style="color:var(--text-muted);font-size:.92rem;">As markets grow and generate wealth, new demands arise for more reliable property rights, contract enforcement, and regulatory capacity. Economic actors invest in improving institutions because they now have resources and incentives to do so.</span>
+</div>
+:::
+
+::: {.step-row}
+<div class="step-num">3</div>
+<div class="step-content">
+<strong>Stronger institutions preserve and deepen markets</strong><br>
+<span style="color:var(--text-muted);font-size:.92rem;">Once markets reach sufficient complexity, stronger formal institutions become essential. By this stage, the economy has generated the surplus to finance them and the political will to demand them.</span>
+</div>
+:::
+
+---
+
+## The Blind Men and the Elephant {background-color="#f6f8f3"}
+
+<br>
+
+::: {.cols}
+::: {}
+Ang uses the parable of blind men describing an elephant to explain why all existing models of China are **partially correct but collectively incomplete**.
+
+<br>
+
+- The "democracy causes growth" scholar sees one part
+- The "institutions-first" economist sees another
+- The cultural-Confucian theorist sees yet another
+
+<br>
+
+**Each description is accurate from its vantage point. None captures the whole animal.**
+:::
+::: {}
+<div class="box-gold" style="margin-bottom:.8rem;">
+<strong>Complexity ≠ Complicated</strong><br>
+China is not simply a very complicated system that requires very complicated models. It is a <em>complex adaptive system</em> — emergent, self-organising, path-dependent, but not random.
+</div>
+<div class="box-green">
+<strong>Ang's method:</strong> Instead of connecting snapshots (cross-sectional data), trace the <em>process</em> through which China's economy and institutions changed each other over time — using both historical depth and provincial-level variation within China.
+</div>
+:::
+:::
+
+---
+
+## What Made 1978 the Turning Point?
+
+<br>
+
+**Not:** A sudden adoption of Western institutions
+**Not:** Discovery of a new natural resource
+**Not:** Foreign aid or geopolitical windfall
+
+<br>
+
+::: {.cols}
+::: {}
+<div class="box-green">
+<strong>The Household Responsibility System (HRS)</strong><br>
+Deng Xiaoping allowed villages to keep surpluses above state quotas. This used the *existing* collective institution — production teams — to create private incentives. A weak institution was redirected, not replaced.
+</div>
+:::
+::: {}
+<div class="box-gold">
+<strong>Township and Village Enterprises (TVEs)</strong><br>
+Hybrid organisations — collectively owned, market-oriented — that operated outside state planning. Not private firms, not state firms: a transitional form suited to China's weak property rights environment.
+</div>
+:::
+:::
+
+<br>
+
+> **The lesson:** Neither reform was textbook "best practice." Both leveraged existing conditions rather than imposing transplanted institutions.
+
+---
+
+## Directed Improvisation: China's Bureaucratic Model
+
+<br>
+
+::: {.cols}
+::: {}
+**Two components working together:**
+
+<div class="step-row" style="margin-top:.8rem;">
+<div class="step-num" style="background:var(--gold);">D</div>
+<div class="step-content"><strong>Directed</strong><br>Central government sets broad performance targets — especially GDP growth — and holds local officials accountable via the cadre evaluation system.</div>
+</div>
+
+<div class="step-row" style="margin-top:.5rem;">
+<div class="step-num" style="background:var(--green-light);">I</div>
+<div class="step-content"><strong>Improvisation</strong><br>Local officials have enormous discretion to achieve targets using whatever means suit local conditions. This produced enormous variation in strategy across provinces.</div>
+</div>
+:::
+::: {}
+<div class="box-gold">
+<strong>Why this matters</strong><br>
+This is not "corruption" or "chaos" — it is a deliberate administrative design that allows a country as vast and heterogeneous as China to adapt policies to local realities rather than imposing uniform rules from Beijing.
+</div>
+<br>
+<div class="box-red">
+<strong>The trade-off</strong><br>
+Directed improvisation also generates corruption, inequality across regions, and policy inconsistency. Ang explicitly acknowledges these costs — they are not bugs, but features of the transitional model.
+</div>
+:::
+:::
+
+---
+
+## Three Stages — What "Good Enough" Institutions Look Like
+
+<br>
+
+| Stage | Economy | Institutions Needed | China's Equivalent |
+|---|---|---|---|
+| **Early** | Subsistence / barter | Basic order, property norms, local exchange | Village collectives, party cadres |
+| **Middle** | Emerging markets | Enforceable contracts, credit, infrastructure | TVEs, special economic zones, informal courts |
+| **Advanced** | Complex global markets | Formal rule of law, IP protection, independent judiciary | Still evolving — ongoing challenge |
+
+<br>
+
+<div class="box-gold">
+<strong>Ang's key insight:</strong> The institutions appropriate for one stage are <em>not</em> the same as those needed at the next stage. Transplanting advanced-stage institutions into early-stage economies does not accelerate development — it disrupts the coevolutionary process.
+</div>
+
+---
+
+## The Implication for Development Policy
+
+<br>
+
+::: {.cols}
+::: {}
+**The standard prescription (World Bank, IMF, "good governance" agenda):**
+
+<div class="box-red">
+Adopt a comprehensive package of formal institutions — property rights, independent judiciary, anti-corruption agencies, democratic elections — as a *prerequisite* for growth.
+
+<br>
+
+<em>"The imposition of good governance standards has been a root cause of the deep problems encountered by developing countries."</em>
+— Pritchett & Woolcock
+</div>
+:::
+::: {}
+**Ang's alternative prescription:**
+
+<div class="box-green">
+Identify the institutions that are <em>good enough</em> for the current stage of development. Design interventions that redirect existing institutional capacity toward market-building, rather than waiting for ideal institutions to materialise.
+
+<br>
+
+Focus on the <strong>sequence</strong> and <strong>conditions for adaptation</strong> — not on replicating any single country's institutional model.
+</div>
+:::
+:::
+
+---
+
+## Why China's Model Cannot Be Simply Replicated
+
+<br>
+
+::: {.cols}
+::: {}
+**What appears to be "the China model":**
+
+- Strong central party control
+- Government-directed investment
+- SOE dominance in strategic sectors
+- Suppressed political opposition
+
+<br>
+
+**But none of these is the actual mechanism.** China is a large, evolving elephant — it changes colour and size constantly.
+:::
+::: {}
+<div class="box-gold">
+<strong>What IS replicable — in principle</strong><br>
+
+The <em>logic</em> of coevolution:<br>
+Start with what you have → create conditions for markets to emerge → let market-generated resources strengthen institutions → repeat at the next level of complexity.
+</div>
+
+<div class="box-green" style="margin-top:.8rem;">
+<strong>What varies by country</strong><br>
+The specific starting institutions, the path of adaptation, the pace of change, and the political constraints — all differ. There is no universal blueprint.
+</div>
+:::
+:::
+
+---
+
+## Connecting to Pakistan: What Does This Framework Reveal?
+
+<br>
+
+::: {.cols}
+::: {}
+**Pakistan's conventional reform narrative:**
+
+<div class="box-red">
+"We need good governance / rule of law / anti-corruption reforms first — then investment will come, growth will follow."
+<br><br>
+Result: 25 IMF programs, each restoring macrostability without structural transformation. The chicken-and-egg trap persists.
+</div>
+:::
+::: {}
+**The coevolutionary question instead:**
+
+<div class="box-gold">
+- What institutions does Pakistan <em>already have</em> that can be redirected toward market-building?
+- Which local-level incentives can be restructured without waiting for national reform?
+- Where has improvisation <em>worked</em> in Pakistan — SEZs, IT sector, remittance corridors — and why?
+</div>
+:::
+:::
+
+<br>
+
+> **The lesson from Ang is not "copy China." It is: find your own coevolutionary path — building on what exists rather than transplanting what does not.**
+
+---
+
+## Key Takeaways
+
+<br>
+
+::: {.step-row}
+<div class="step-num">1</div>
+<div class="step-content"><strong>Development is coevolutionary, not linear.</strong> Markets and institutions build each other simultaneously — there is no fixed causal sequence.</div>
+:::
+
+::: {.step-row}
+<div class="step-num">2</div>
+<div class="step-content"><strong>Weak institutions are not an excuse for inaction.</strong> They are the starting point. The task is to redirect them, not wait for ideal ones to appear from outside.</div>
+:::
+
+::: {.step-row}
+<div class="step-num">3</div>
+<div class="step-content"><strong>Stage-appropriate institutions matter.</strong> Institutions suited to one level of development are not the same as those needed at the next. Transplanting advanced-stage rules into early-stage economies disrupts rather than accelerates development.</div>
+:::
+
+::: {.step-row}
+<div class="step-num">4</div>
+<div class="step-content"><strong>Local variation and directed improvisation are features, not bugs.</strong> Uniform top-down prescriptions cannot accommodate the diversity of conditions across regions and stages.</div>
+:::
+
+::: {.step-row}
+<div class="step-num">5</div>
+<div class="step-content"><strong>The question is not "which model to copy."</strong> It is "what conditions enable a society to continuously adapt its institutions as its markets grow in complexity."</div>
+:::
+
+---
+
+## Discussion Questions
+
+<br>
+
+::: {.box-gold}
+**1.** Ang argues that China used *weak* institutions to build markets first. Can you identify any sector in Pakistan where this logic has operated — even partially?
+:::
+
+::: {.box-green}
+**2.** The "good governance first" prescription has been applied to Pakistan through 25 IMF programs. Using Ang's framework, what is the fundamental problem with this approach?
+:::
+
+::: {.box-blue}
+**3.** Ang distinguishes between "complicated" (requiring complex models) and "complex" (adaptive, emergent). Why does this distinction matter for how economists study development?
+:::
+
+::: {.box-red}
+**4.** China's coevolutionary path involved significant corruption, regional inequality, and political repression. Is this a necessary cost of the model, or a feature that can be avoided?
+:::
+
+---
+
+## {background-color="#0e2a1a"}
+
+::: {style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;padding:2rem 4rem;"}
+
+<span style="font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#c9a84c;">Core Reference</span>
+
+<h2 style="font-family:'Playfair Display',serif;font-size:2rem;color:#fff;border:none;padding:0;margin:.6rem 0 1.5rem;">Yuen Yuen Ang (2016)</h2>
+
+<p style="color:rgba(255,255,255,.8);font-size:1rem;line-height:1.8;max-width:700px;">
+<strong style="color:#c9a84c;">How China Escaped the Poverty Trap</strong><br>
+Cornell University Press · Cornell Studies in Political Economy
+</p>
+
+<hr style="border:none;border-top:1px solid rgba(201,168,76,.3);margin:1.5rem 0;width:400px;"/>
+
+<p style="color:rgba(255,255,255,.6);font-size:.85rem;line-height:1.8;">
+<strong style="color:rgba(255,255,255,.9);">Companion reading:</strong><br>
+Acemoglu & Robinson — <em>Why Nations Fail</em> (2012) · For contrast with the institutions-first view<br>
+Dani Rodrik — <em>One Economics, Many Recipes</em> (2007) · On heterodox development strategies<br>
+Pritchett & Woolcock — <em>Solutions When the Solution is the Problem</em> (2004) · On governance failures
+</p>
+
+<hr style="border:none;border-top:1px solid rgba(201,168,76,.3);margin:1.5rem 0;width:400px;"/>
+
+<p style="color:rgba(255,255,255,.5);font-size:.8rem;">
+Prof. Dr. Zahid Asghar · School of Economics, QAU · Spring 2026
+</p>
+:::

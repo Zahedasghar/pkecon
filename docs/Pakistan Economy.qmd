@@ -23,14 +23,14 @@ Hi everybody! Thank you so much for joining today's session.
 
 ## What is wrong
 
--   Pakistan economy crashes every once in a while: feature by design
-    -   Very low investment rate
-    -   Fiscal problem: For every USD govt raises in revenue, it has to spend 2.7 USD Income 1000 USD, spending 2700 USD
-    -   Sins: Income and pensions
-    -   If no borrowing, country to shut down
--   Balance of Payment: X=1000, M=2750 USD
--   Liquidity Problem: Short maturity term on average 1 to 2 years
-    -   Loss of sovereignty due to economic situation international and financial
+- Pakistan economy crashes every once in a while: feature by design
+  - Very low investment rate
+  - Fiscal problem: For every USD govt raises in revenue, it has to spend 2.7 USD Income 1000 USD, spending 2700 USD
+  - Sins: Income and pensions
+  - If no borrowing, country to shut down
+- Balance of Payment: X=1000, M=2750 USD
+- Liquidity Problem: Short maturity term on average 1 to 2 years
+  - Loss of sovereignty due to economic situation international and financial
 
 ## 
 
@@ -40,25 +40,25 @@ Hi everybody! Thank you so much for joining today's session.
 
 ## Why Export Matters
 
--   global competitiveness
+- global competitiveness
 
--   Capacity to innovate and compete with the rest of the world
+- Capacity to innovate and compete with the rest of the world
 
--   1992: Indian export increased 13 times while Pak only doubles
+- 1992: Indian export increased 13 times while Pak only doubles
 
--   Vietnam : 15 B USD in 2001 and 220 B USD in 2018
+- Vietnam : 15 B USD in 2001 and 220 B USD in 2018
 
--   Export per capital India increased by 6.8 times while BD by 6.2 as compared to Pakistan
+- Export per capital India increased by 6.8 times while BD by 6.2 as compared to Pakistan
 
-    -   Uncompetitiveness as compared to neighboring countries
+  - Uncompetitiveness as compared to neighboring countries
 
--   Export : dynamism, technology absorption and adaptation, building reputation, brand names
+- Export : dynamism, technology absorption and adaptation, building reputation, brand names
 
--   Sports, textile, surgical: no branding
+- Sports, textile, surgical: no branding
 
--   No MNCs developed
+- No MNCs developed
 
--   Reasons: Mangerial skills, organizational skills
+- Reasons: Mangerial skills, organizational skills
 
 ## GDP calculation in process
 
@@ -112,13 +112,13 @@ NFC : Devolution is good with responsibility but NFC More resources to provinces
 
 ## Economic History
 
--   China, India, Pakistan, Bangladesh, Indonesia, Malaysia
--   1960 : Pakistan Better than others (23-24% rich in terms of GDP/capita)
--   Lags Behind in
-    -   1970s: 18%
-    -   1980s : 7%
-    -   1990s: 34 %
-    -   2000s: 20%
+- China, India, Pakistan, Bangladesh, Indonesia, Malaysia
+- 1960 : Pakistan Better than others (23-24% rich in terms of GDP/capita)
+- Lags Behind in
+  - 1970s: 18%
+  - 1980s : 7%
+  - 1990s: 34 %
+  - 2000s: 20%
 
 ## 
 
@@ -134,199 +134,199 @@ Reality: Software is primary requirement
 
 ## SOFTWARE
 
--   Rule of Law (Contracts are honored)
+- Rule of Law (Contracts are honored)
 
--   Property Rights (China's economic growth after PR Changed)
+- Property Rights (China's economic growth after PR Changed)
 
--   Allocation of Talent (Meritocracy)
+- Allocation of Talent (Meritocracy)
 
--   Organisational and managerial capacity
+- Organisational and managerial capacity
 
--   Knowledge acquisition
+- Knowledge acquisition
 
--   All this : Cant be bought, domestic capacity and domestic reforms One has to built all this as it can not be imported
+- All this : Cant be bought, domestic capacity and domestic reforms One has to built all this as it can not be imported
 
--   Keynes: A madman who knows the world is a slave of defunct economist
+- Keynes: A madman who knows the world is a slave of defunct economist
 
--   Stuck in MH paradigm
+- Stuck in MH paradigm
 
 ## Why economic growth matters
 
--   Hayek
+- Hayek
 
-    -   Freedom
-    -   Individual rights
-    -   Knowledge acquisition
-    -   How people can collaborate (Networking)
-    -   Transactions
-    -   Idea sharing
-    -   Knowledge generation
+  - Freedom
+  - Individual rights
+  - Knowledge acquisition
+  - How people can collaborate (Networking)
+  - Transactions
+  - Idea sharing
+  - Knowledge generation
 
--   Lucas (1988) Once you start thinking of growth of nations, everything else loses interest,this is the most important questions
+- Lucas (1988) Once you start thinking of growth of nations, everything else loses interest,this is the most important questions
 
--   Amrtya Sen :Dev as Freedom , Capabilities
+- Amrtya Sen :Dev as Freedom , Capabilities
 
-    -   Freedom to think , choices, more productive
+  - Freedom to think , choices, more productive
 
--   
+- 
 
-    ## All this needs creative cities
+  ## All this needs creative cities
 
--   How can start this journey: Hard choice, long term phenomenon
+- How can start this journey: Hard choice, long term phenomenon
 
--   Economic Corridor : F-16 Protocol (China, Saudia ...)
+- Economic Corridor : F-16 Protocol (China, Saudia ...)
 
--   Government needs similar commitment to software, freedom, tolerance, diversity...
+- Government needs similar commitment to software, freedom, tolerance, diversity...
 
--   Intolerance, hate, lack of property rights, social justice, inequality\
-    (Social Goods)
+- Intolerance, hate, lack of property rights, social justice, inequality\
+  (Social Goods)
 
 -- - Subsidies - SROs - Protection Cement, Textile, Fertilizers, Cars.... (all domestic consumption, no export) - Profits of rent-seekers are secured - No need for innovation, and growth is happening only due to increase in population
 
 ## Short-termism: MYOPIC APPROACH
 
--   Successive governments suffering from myopia
--   Occasional consumption booms from borrowing and remittances (2002-05), 2016-18
--   Increased informal economy weakening state control and governace besides erosion of tax-base
--   Pakistan remained married to begging bowl
--   Sought FDI without terms
--   Pipenomics : Someone build for us
--   Poor aid governance led to poor aid practices \> This distracts one not to think hard
+- Successive governments suffering from myopia
+- Occasional consumption booms from borrowing and remittances (2002-05), 2016-18
+- Increased informal economy weakening state control and governace besides erosion of tax-base
+- Pakistan remained married to begging bowl
+- Sought FDI without terms
+- Pipenomics : Someone build for us
+- Poor aid governance led to poor aid practices \> This distracts one not to think hard
 
 ## Extractive economic institutions
 
--   Lack of law and order
--   Insecure property rights
--   Entry barriers and regulation that prevented functioning of markets and created a un-leveled playing field
--   System designed by and for the benefit of the elite
+- Lack of law and order
+- Insecure property rights
+- Entry barriers and regulation that prevented functioning of markets and created a un-leveled playing field
+- System designed by and for the benefit of the elite
 
 ## Inclusive economic institutions
 
--   Secure property rights
--   Law and order
--   Markets and state support (public services and regulations) for markets
--   Free entry of new businesses
--   Contract enforcement
--   Access to education and opportunity for the great majority of citizens
+- Secure property rights
+- Law and order
+- Markets and state support (public services and regulations) for markets
+- Free entry of new businesses
+- Contract enforcement
+- Access to education and opportunity for the great majority of citizens
 
 > Why Nations Fail: Daren Acemoglu and James A. Robinson
 
 ## What to do ?
 
--   Pakistan's economic and export problems are deep and structural
+- Pakistan's economic and export problems are deep and structural
 
--   Focusing on fixing twin deficit (CAD & FD) is misplaced. Addressing symptoms will not cure the disease
+- Focusing on fixing twin deficit (CAD & FD) is misplaced. Addressing symptoms will not cure the disease
 
--   Build up domestic capacity to innovate, to organize and to manage - An Economist Job: not to tell what to do and what not
+- Build up domestic capacity to innovate, to organize and to manage - An Economist Job: not to tell what to do and what not
 
--   But tell cost of doing business as usual vs develop your software and progress
+- But tell cost of doing business as usual vs develop your software and progress
 
--   Talent will not stay
+- Talent will not stay
 
--   Production over Commerce
+- Production over Commerce
 
--   Our full focus on meeting dollar demand is misplaced
+- Our full focus on meeting dollar demand is misplaced
 
--   Social contract goods
+- Social contract goods
 
--   Cities have key role in provision of social contract goods
+- Cities have key role in provision of social contract goods
 
 ## 
 
--   Most of economic thinking: "How can living-standards be improved for most of humanity"
+- Most of economic thinking: "How can living-standards be improved for most of humanity"
 
--   Answers vary while Question remain same
+- Answers vary while Question remain same
 
--   Eternal struggle for mankind Preachers, utopians philosophers and many others: Everyone defends one's utopia that people lot can be improved if follow their description
+- Eternal struggle for mankind Preachers, utopians philosophers and many others: Everyone defends one's utopia that people lot can be improved if follow their description
 
--   Dev. Community: prey to descriptive approach
+- Dev. Community: prey to descriptive approach
 
--   Experts: pretend to have solutions
+- Experts: pretend to have solutions
 
--   We are all told : Implement, Implement ...
+- We are all told : Implement, Implement ...
 
--   Monitoring mechanisms: MDGs, SDGs
+- Monitoring mechanisms: MDGs, SDGs
 
--   70 years of experts dev.policy, aid funding and many consultant, plan...
+- 70 years of experts dev.policy, aid funding and many consultant, plan...
 
--   Development has eluded a large number of countries : Why is that? \##
+- Development has eluded a large number of countries : Why is that? \##
 
--   Donors and Experts : Easy answers
+- Donors and Experts : Easy answers
 
--   Prescriptions are not implemented
+- Prescriptions are not implemented
 
--   Lack of political will : If success, they celebrate otherwise blame
+- Lack of political will : If success, they celebrate otherwise blame
 
--   Best practices
+- Best practices
 
--   How can same policies for all countries
+- How can same policies for all countries
 
--   Practices well known ,govt implementing agency
+- Practices well known ,govt implementing agency
 
--   Approach : Top-down (All solutions from foreign experts) Land-cruisers, consultants ... results are the same
+- Approach : Top-down (All solutions from foreign experts) Land-cruisers, consultants ... results are the same
 
 ## What is wrong with this model/approach
 
--   Ideological models and experts assume: Society and development: Eng phenomenon
+- Ideological models and experts assume: Society and development: Eng phenomenon
 
--   Plan properly and then everyone will live according to the plan and good things will happen
+- Plan properly and then everyone will live according to the plan and good things will happen
 
--   Eng: Inert materials
+- Eng: Inert materials
 
--   Social problems: self-willed, individualistic human beings
+- Social problems: self-willed, individualistic human beings
 
--   People: ambitions, plans &desires individually and collectively People don't change because consultant want
+- People: ambitions, plans &desires individually and collectively People don't change because consultant want
 
--   Most serious economists moved away from this approach
+- Most serious economists moved away from this approach
 
 ## 
 
--   Economy: set of ind and groups decisions
+- Economy: set of ind and groups decisions
 
--   Bottom-up
+- Bottom-up
 
-    -   Economy: Productivity, products, activity, trade and exchange, transaction among many others
-    -   Even well motivated plans to send children to schools failed
-    -   Parents decisions more complex than donors assume
-    -   Development not uniform across the countries
+  - Economy: Productivity, products, activity, trade and exchange, transaction among many others
+  - Even well motivated plans to send children to schools failed
+  - Parents decisions more complex than donors assume
+  - Development not uniform across the countries
 
--   Local issues, cultures & community, social and human capital plays a critical role
+- Local issues, cultures & community, social and human capital plays a critical role
 
--   Planners try their best even out these difficult often at huge cost with very little success
+- Planners try their best even out these difficult often at huge cost with very little success
 
 ## 
 
 Revenue Targets missed: More taxes 64 WHT
 
--   Is starving PSEs and Universities of working capital something to cheer?
+- Is starving PSEs and Universities of working capital something to cheer?
 
--   Complexities of the 21st Century
+- Complexities of the 21st Century
 
--   Energy: Lack of professional regularity capacity
+- Energy: Lack of professional regularity capacity
 
--   Rent seeking commitments to IPPs
+- Rent seeking commitments to IPPs
 
--   Losses due to structural and poor governance problems
+- Losses due to structural and poor governance problems
 
--   Circular debt chokes up the system
+- Circular debt chokes up the system
 
 ## Getting the basics right
 
--   Economy is not rocket science
--   Qs" What are the basics?
--   Basics: high revenue, high export, high growth, low dollar rupee ER etc with low inflation
--   WOW: Simple and easy : Economy is not rocket science
--   Wishing all good things is economics and economist is supposed to help governments to do all these good things with magic stick
--   5-Year plans for all Basics
+- Economy is not rocket science
+- Qs" What are the basics?
+- Basics: high revenue, high export, high growth, low dollar rupee ER etc with low inflation
+- WOW: Simple and easy : Economy is not rocket science
+- Wishing all good things is economics and economist is supposed to help governments to do all these good things with magic stick
+- 5-Year plans for all Basics
 
 ## 
 
--   Securing property rights
--   Strengthening contracting
--   Reducing transaction costs
--   Reducing and reforming markets for efficiency
--   Removing incentives for rent seeking and putting incentives for entrepreneurship
-    -   For Example : W/o good governance: no wish list will happen as plan after plan failed due to poor governance
+- Securing property rights
+- Strengthening contracting
+- Reducing transaction costs
+- Reducing and reforming markets for efficiency
+- Removing incentives for rent seeking and putting incentives for entrepreneurship
+  - For Example : W/o good governance: no wish list will happen as plan after plan failed due to poor governance
 
 > > "All of us have to come out of our comfort zone and encourage discussion and debate"
 
@@ -336,10 +336,10 @@ Revenue Targets missed: More taxes 64 WHT
 
 ## Get the growth model
 
--   Export led policies help China, SK and others
--   Special Economic Zones
--   Digitization (Inequality)
--   Reverse Myopia Build the capacity to play long game where decisions 20 years from now -\> Long game: who we are as a nation? -\> Where we want to go?
+- Export led policies help China, SK and others
+- Special Economic Zones
+- Digitization (Inequality)
+- Reverse Myopia Build the capacity to play long game where decisions 20 years from now -\> Long game: who we are as a nation? -\> Where we want to go?
 
 ## Boosting Domestic Productivity
 
@@ -357,42 +357,42 @@ WB reports that South Asia will grow at 3.4 % over the three year period. India 
 
 ### Major components of current account deficit
 
--   Trade
--   Remittances and
--   financial accounts Unsustainable CAD has been the main reason for Pakistan's 23rd entry into the IMF program.
--   fuel and edible oil cost 1/3rd of total import bill
+- Trade
+- Remittances and
+- financial accounts Unsustainable CAD has been the main reason for Pakistan's 23rd entry into the IMF program.
+- fuel and edible oil cost 1/3rd of total import bill
 
 > ## .pink\[Economic theory dictates that if a CAD is being financed by borrowing, with associated costs, it will become unsustainable and today the rise in domestic and foreign debt has crossed all previous records. In addition, loss of currency from Rs.152 to Rs.187 rupees to the dollar would raise the risk of capital flight as there will be loss of faith in the value of currency by both foreign and residents.\]
 
 ## Sustained Flawed Policies
 
--   Zardari : Costly energy deals beneficials to sellers
--   Nawaz Sharif: Power generation plants on same TORs as Zardari
--   Imran Khan : Failure to import RLNG on time All this led to unsustainable circular debt. Rs. 1.2 trillion before this government and 1.2 Rs is further accumulated totalling to 2.4 trillion Rs.
--   Little room to play : Debt, Defence, Pension, Government Expenditure, with PM focus for more resources to Kamyab Jawan and Ehsas program.
--   Government fulfills its commitment of shifting the burden to consumers but never fulfils its commitment of deep structural reforms
--   The sustained flawed policies over decades of postponing the hour of reckoning have not only made the donors reluctant to accept pledges for meaningful non-reversible reforms, a situation exacerbated by lack of US support on their boards, but also due to the presentation of half-truths to the executive which prevents meaningful reforms.
+- Zardari : Costly energy deals beneficials to sellers
+- Nawaz Sharif: Power generation plants on same TORs as Zardari
+- Imran Khan : Failure to import RLNG on time All this led to unsustainable circular debt. Rs. 1.2 trillion before this government and 1.2 Rs is further accumulated totalling to 2.4 trillion Rs.
+- Little room to play : Debt, Defence, Pension, Government Expenditure, with PM focus for more resources to Kamyab Jawan and Ehsas program.
+- Government fulfills its commitment of shifting the burden to consumers but never fulfils its commitment of deep structural reforms
+- The sustained flawed policies over decades of postponing the hour of reckoning have not only made the donors reluctant to accept pledges for meaningful non-reversible reforms, a situation exacerbated by lack of US support on their boards, but also due to the presentation of half-truths to the executive which prevents meaningful reforms.
 
 ## IMF and Pakistan
 
--   22 programs -23rd Shaukat Tarin : different from his 2008 expectations due to low engagement of Pakistan with US
+- 22 programs -23rd Shaukat Tarin : different from his 2008 expectations due to low engagement of Pakistan with US
 
--   
+- 
 
-    a)  Implementation of harsh conditions:
+  a)  Implementation of harsh conditions:
 
-    -   In almost all 22 IMF programs, govts never made any progress in any challenging reform(s) and all govts shifted the onus of achieving full cost of recovery on to the consumers by raising tariff.
-    -   Circular debt 1.2 trillion in 2018 to 2.2 trillion rupees today (Nov.2021)
+  - In almost all 22 IMF programs, govts never made any progress in any challenging reform(s) and all govts shifted the onus of achieving full cost of recovery on to the consumers by raising tariff.
+  - Circular debt 1.2 trillion in 2018 to 2.2 trillion rupees today (Nov.2021)
 
--   
+- 
 
-    b)  Focus on raising revenue
+  b)  Focus on raising revenue
 
-    -   Given current scenario, only indirect taxes leading to more burden on poor than rich. Instead of slashing expenditure, Tarin increased current expenditure significantly.
+  - Given current scenario, only indirect taxes leading to more burden on poor than rich. Instead of slashing expenditure, Tarin increased current expenditure significantly.
 
--   
+- 
 
-    c)  28.5 billion dollar funding is a condition of 39 month ongoing programing or in other words roll-over of loans by `friendly` countries mainly China and Saudi Arabia till Sep-2022.
+  c)  28.5 billion dollar funding is a condition of 39 month ongoing programing or in other words roll-over of loans by `friendly` countries mainly China and Saudi Arabia till Sep-2022.
 
 ## World Bank Report on Reviving Pakistan Exports
 
@@ -445,21 +445,21 @@ The conclusions from the foregoing data and argument are as follows: 1. Pakistan
 
 #### Why IMF agree for debt relief
 
--   IMF Report 2002: Restructuing if debt unsustainable
+- IMF Report 2002: Restructuing if debt unsustainable
 
 ### Restructuring Concept
 
--   principal ammount
--   interest payment
--   time to repay Either or combination
+- principal ammount
+- interest payment
+- time to repay Either or combination
 
 ### Domestic Debt solvency (SDD)
 
 ### Risks from SDD
 
--   domestic banks
--   pension funds
--   pensioners
+- domestic banks
+- pension funds
+- pensioners
 
 ## 6 Steps for SDD
 
@@ -494,9 +494,9 @@ Tax base: indirect taxes whose incidence on poor is greater than the rich with l
 
 ## 
 
--   Pro-growth policies which lead to increase in import and hence widening trade deficit
--   Traditional export : sensitive to international market
--   Trade deficit swallow all remittances \> unsustainable CAD M increase implies increase in revenue if M goes down, revenue goes down **CATCH 22 Situation**
+- Pro-growth policies which lead to increase in import and hence widening trade deficit
+- Traditional export : sensitive to international market
+- Trade deficit swallow all remittances \> unsustainable CAD M increase implies increase in revenue if M goes down, revenue goes down **CATCH 22 Situation**
 
 ### How to come out of vicious cycle?
 
@@ -550,8 +550,8 @@ Macro policy , macroprudential regulations ER (flexible), Future stance, Reserve
 
 Supply side to be more productive before opening up Scientific thinking mode rather preaching or political thinking mode - Post covid-IT sector -Value chain missing -Start ups but are other countries prefer to come to Pakistan to invest No such signs, scaling is important
 
--   Energies are spent in negative wat into building narrative
--   Growth leads to TRADE
+- Energies are spent in negative wat into building narrative
+- Growth leads to TRADE
 
 Why BOP crisis despite ER depreciation - One time is ok But if not consistent, long run investment will not come - ER as instrument not sufficient , government investment and secure property rights are must for investment
 
@@ -561,7 +561,7 @@ BD textile much better than Pakistan, Why Becuase Pakistani upper class has alte
 
 ## Pakistan 13th IMF programs
 
--   IMF conditions
+- IMF conditions
 
 1.  Revnue generation Porducing power in a wrong way, high taxes on utlities are regressive taxes Its upper, middle income who put pressure on oil, cars.
 
@@ -597,118 +597,118 @@ Balance: Government in public investment in certain sectors and come out of non-
 
 ## What to do ?
 
--   Pakistan's economic and export problems are deep and structural
+- Pakistan's economic and export problems are deep and structural
 
--   Focusing on fixing twin deficit (CAD & FD) is misplaced. Addressing symptoms will not cure the disease
+- Focusing on fixing twin deficit (CAD & FD) is misplaced. Addressing symptoms will not cure the disease
 
--   Build up domestic capacity to innovate, to organize and to manage - An Economist Job: not to tell what to do and what not
+- Build up domestic capacity to innovate, to organize and to manage - An Economist Job: not to tell what to do and what not
 
--   But tell cost of doing business as usual vs develop your software and progress
+- But tell cost of doing business as usual vs develop your software and progress
 
--   Talent will not stay
+- Talent will not stay
 
--   Production over Commerce
+- Production over Commerce
 
--   Our full focus on meeting dollar demand is misplaced
+- Our full focus on meeting dollar demand is misplaced
 
--   Social contract goods
+- Social contract goods
 
--   Cities have key role in provision of social contract goods
+- Cities have key role in provision of social contract goods
 
--   Most of economic thinking: "How can living-standards be improved for most of humanity"
+- Most of economic thinking: "How can living-standards be improved for most of humanity"
 
--   Answers vary while Question remain same
+- Answers vary while Question remain same
 
--   Eternal struggle for mankind Preachers, utopians philosophers and many others: Everyone defends one's utopia that people lot can be improved if follow their description
+- Eternal struggle for mankind Preachers, utopians philosophers and many others: Everyone defends one's utopia that people lot can be improved if follow their description
 
--   Dev. Community: prey to descriptive approach
+- Dev. Community: prey to descriptive approach
 
--   Experts: pretend to have solutions
+- Experts: pretend to have solutions
 
--   We are all told : Implement, Implement ...
+- We are all told : Implement, Implement ...
 
--   Monitoring mechanisms: MDGs, SDGs
+- Monitoring mechanisms: MDGs, SDGs
 
--   70 years of experts dev.policy, aid funding and many consultant, plan...
+- 70 years of experts dev.policy, aid funding and many consultant, plan...
 
--   Development has eluded a large number of countries : Why is that?
+- Development has eluded a large number of countries : Why is that?
 
--   Donors and Experts : Easy answers
+- Donors and Experts : Easy answers
 
--   Prescriptions are not implemented
+- Prescriptions are not implemented
 
--   Lack of political will : If success, they celebrate otherwise blame
+- Lack of political will : If success, they celebrate otherwise blame
 
--   Best practices
+- Best practices
 
--   How can same policies for all countries
+- How can same policies for all countries
 
--   Practices well known ,govt implementing agency
+- Practices well known ,govt implementing agency
 
--   Approach : Top-down (All solutions from foreign experts) Land-cruisers, consultants ... results are the same
+- Approach : Top-down (All solutions from foreign experts) Land-cruisers, consultants ... results are the same
 
 ## What is wrong with this model/approach
 
--   Ideological models and experts assume: Society and development: Eng phenomenon
+- Ideological models and experts assume: Society and development: Eng phenomenon
 
--   Plan properly and then everyone will live according to the plan and good things will happen
+- Plan properly and then everyone will live according to the plan and good things will happen
 
--   Eng: Inert materials
+- Eng: Inert materials
 
--   Social problems: self-willed, individualistic human beings
+- Social problems: self-willed, individualistic human beings
 
--   People: ambitions, plans &desires individually and collectively People don't change because consultant want
+- People: ambitions, plans &desires individually and collectively People don't change because consultant want
 
--   Most serious economists moved away from this approach
+- Most serious economists moved away from this approach
 
 ## 
 
--   Economy: set of ind and groups decisions
+- Economy: set of ind and groups decisions
 
--   Bottom-up
+- Bottom-up
 
-    -   Economy: Productivity, products, activity, trade and exchange, transaction among many others
-    -   Even well motivated plans to send children to schools failed
-    -   Parents decisions more complex than donors assume
-    -   Development not uniform across the countries
+  - Economy: Productivity, products, activity, trade and exchange, transaction among many others
+  - Even well motivated plans to send children to schools failed
+  - Parents decisions more complex than donors assume
+  - Development not uniform across the countries
 
--   Local issues, cultures & community, social and human capital plays a critical role
+- Local issues, cultures & community, social and human capital plays a critical role
 
--   Planners try their best even out these difficult often at huge cost with very little success
+- Planners try their best even out these difficult often at huge cost with very little success
 
 ## 
 
 Revenue Targets missed: More taxes 64 WHT
 
--   Is starving PSEs and Universities of working capital something to cheer?
+- Is starving PSEs and Universities of working capital something to cheer?
 
--   Complexities of the 21st Century
+- Complexities of the 21st Century
 
--   Energy: Lack of professional regularity capacity
+- Energy: Lack of professional regularity capacity
 
--   Rent seeking commitments to IPPs
+- Rent seeking commitments to IPPs
 
--   Losses due to structural and poor governance problems
+- Losses due to structural and poor governance problems
 
--   Circular debt chokes up the system
+- Circular debt chokes up the system
 
 ## Getting the basics right
 
--   Economy is not rocket science
--   Qs" What are the basics?
--   Basics: high revenue, high export, high growth, low dollar rupee ER etc with low inflation
--   WOW: Simple and easy : Economy is not rocket science
--   Wishing all good things is economics and economist is supposed to help governments to do all these good things with magic stick
--   5-Year plans for all Basics
+- Economy is not rocket science
+- Qs" What are the basics?
+- Basics: high revenue, high export, high growth, low dollar rupee ER etc with low inflation
+- WOW: Simple and easy : Economy is not rocket science
+- Wishing all good things is economics and economist is supposed to help governments to do all these good things with magic stick
+- 5-Year plans for all Basics
 
 ## 
 
--   Securing property rights
--   Strengthening contracting
--   Reducing transaction costs
--   Reducing and reforming markets for efficiency
--   Removing incentives for rent seeking and putting incentives for entrepreneurship
-    -   For Example : W/o good governance: no wish list will happen as plan after plan failed due to poor governance
+- Securing property rights
+- Strengthening contracting
+- Reducing transaction costs
+- Reducing and reforming markets for efficiency
+- Removing incentives for rent seeking and putting incentives for entrepreneurship
+  - For Example : W/o good governance: no wish list will happen as plan after plan failed due to poor governance
 
 > > "All of us have to come out of our comfort zone and encourage discussion and debate"
 
@@ -718,10 +718,10 @@ Revenue Targets missed: More taxes 64 WHT
 
 ## Get the growth model
 
--   Export led policies help China, SK and others
--   Special Economic Zones
--   Digitization (Inequality)
--   Reverse Myopia Build the capacity to play long game where decisions 20 years from now -\> Long game: who we are as a nation? -\> Where we want to go?
+- Export led policies help China, SK and others
+- Special Economic Zones
+- Digitization (Inequality)
+- Reverse Myopia Build the capacity to play long game where decisions 20 years from now -\> Long game: who we are as a nation? -\> Where we want to go?
 
 ## Boosting Domestic Productivity
 
@@ -739,24 +739,24 @@ Need to have linkages among these themes
 
 ## 
 
--   2.1 trillion tax exemptions (according to WB Dawn Jan-2024)
--   Economic Sectors not working independently (e.g. Agriculture, Industry, Services)
--   Export to be increased but how?
--   Power losses: highest (collect statistics from reports)
-    -   Is it a management issue or software issues
-    -   Postpaid to pre-paid
-    -   Commerical landlords
--   5.2 trillion circular debt in power sector
+- 2.1 trillion tax exemptions (according to WB Dawn Jan-2024)
+- Economic Sectors not working independently (e.g. Agriculture, Industry, Services)
+- Export to be increased but how?
+- Power losses: highest (collect statistics from reports)
+  - Is it a management issue or software issues
+  - Postpaid to pre-paid
+  - Commerical landlords
+- 5.2 trillion circular debt in power sector
 
 ## Prioritize things
 
--   Reform internally and externally
+- Reform internally and externally
 
--   Why own people not investing in Pakistan?
+- Why own people not investing in Pakistan?
 
--   How can we attract FDI?
+- How can we attract FDI?
 
--   Is it cheap labour which is making us less productive?
+- Is it cheap labour which is making us less productive?
 
 # We want solutions of our problems but dont know what are questions?
 
@@ -766,10 +766,10 @@ Main reason there was very low base effect. Pakistan was a very poor country. So
 
 ## Local governments by local (mean it)
 
--   Not through bureaucracy
--   Not through provincial governments
--   Not through federal government
--   Not through military
+- Not through bureaucracy
+- Not through provincial governments
+- Not through federal government
+- Not through military
 
 Public services have not been at pace with population growth. No primary schools
 
@@ -777,29 +777,29 @@ Public services have not been at pace with population growth. No primary schools
 
 # 18th Amendment
 
--   Ministeries given to province are back to federal government with new names as every elected representative wants to have a ministry. Every bureaucrat wants to have a seat as Secretary.
+- Ministeries given to province are back to federal government with new names as every elected representative wants to have a ministry. Every bureaucrat wants to have a seat as Secretary.
 
--   Merit is absent, kinship is a priority.
+- Merit is absent, kinship is a priority.
 
--   Technocrats, Professionals, and Experts are not given a chance to serve the country.
+- Technocrats, Professionals, and Experts are not given a chance to serve the country.
 
--   Smart and efficient cabinet is a need of the hour.
+- Smart and efficient cabinet is a need of the hour.
 
 ## Police is being misused
 
--   Urban policing
--   accountability
--   law and order
+- Urban policing
+- accountability
+- law and order
 
 ## Trade openess
 
 Global value chain, Pakistan is absent. It is highly protected economy. - Only Egypt, Pakistan and Argentina have very high protectionism. These are the countries which have approached IMF for several times and have maximum IMF programs. - Pakistan is not a part of global value chain. - Anti-export bias
 
--   Apple is not a manufacturing but and R&D company. It has a global value chain. It has a huge market capitalization.
+- Apple is not a manufacturing but and R&D company. It has a global value chain. It has a huge market capitalization.
 
--   Pharma industry: many multinationals 20 years ago. Now, they are not here. They have left Pakistan.
+- Pharma industry: many multinationals 20 years ago. Now, they are not here. They have left Pakistan.
 
--   Why its happening
+- Why its happening
 
 ## Export comparison of Pakistan, Vietnam and Thailand 2002, 2012 and 2022 table
 
@@ -813,10 +813,10 @@ Need to confirm these numbers
 
 ## [In search of reasonable thinking](https://www.brecorder.com/news/40287483)
 
--   Pakistan produces about 50% less cotton per hectare , as compared to what is produced in China, We produce almost half the yield of sugarcane per hectare as compared to Egypt. Same goes for maize, rice and other crops.
+- Pakistan produces about 50% less cotton per hectare , as compared to what is produced in China, We produce almost half the yield of sugarcane per hectare as compared to Egypt. Same goes for maize, rice and other crops.
 
--   Pakistan enegergy cricular debt is above 5 trillion. According to fair estimates, the cost of electricity constitutes one-third the actual cost of producing it, one third attributable to line losses and theft and one-third for the capacity charge that is there because generation capacity cannot be utilized due to various factors, including low demand, lack of foreign exchange for fuel or inability of transmission lines to transport power, etc.
+- Pakistan enegergy cricular debt is above 5 trillion. According to fair estimates, the cost of electricity constitutes one-third the actual cost of producing it, one third attributable to line losses and theft and one-third for the capacity charge that is there because generation capacity cannot be utilized due to various factors, including low demand, lack of foreign exchange for fuel or inability of transmission lines to transport power, etc.
 
--   Losses where one needs to focus as negotiation is neither feasible nor augurs well for the country and economy for future investments.
+- Losses where one needs to focus as negotiation is neither feasible nor augurs well for the country and economy for future investments.
 
--   Need to invest in transmission and distribution mechanism improvement.
+- Need to invest in transmission and distribution mechanism improvement.

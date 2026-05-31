@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pakistan Power Sector — Key Facts</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0d1b3e;
+    --navy-mid: #162550;
+    --teal: #0a8a6f;
+    --teal-light: #0fb88f;
+    --gold: #d4a843;
+    --red: #c0392b;
+    --white: #f2f4f8;
+    --muted: #8b9ab5;
+    --card: #1a2d5a;
+    --card2: #0e2244;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 0 0 60px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #0a1628 0%, #0d2149 50%, #0a3d62 100%);
+    padding: 60px 40px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid var(--teal);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 50% 120%, rgba(10,138,111,0.18) 0%, transparent 70%);
+  }
+  .hero-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 7vw, 80px);
+    letter-spacing: 3px;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero-sub {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--teal-light);
+    text-transform: uppercase;
+    margin: 48px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── STAT CARDS ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .stat-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent-color, var(--teal));
+  }
+  .stat-card.gold { --accent-color: var(--gold); }
+  .stat-card.red  { --accent-color: var(--red); }
+  .stat-card.teal { --accent-color: var(--teal-light); }
+  .stat-card.white-acc { --accent-color: #4a90d9; }
+
+  .stat-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    letter-spacing: 1px;
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .stat-value .unit {
+    font-size: 20px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+  }
+  .stat-change {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    margin-top: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  .stat-change.down { background: rgba(192,57,43,0.18); color: #e74c3c; }
+  .stat-change.up   { background: rgba(10,138,111,0.18); color: var(--teal-light); }
+
+  /* ── TARIFF TABLE ── */
+  .tariff-wrap {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .tariff-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tariff-table th {
+    background: rgba(255,255,255,0.05);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .tariff-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .tariff-table tr:last-child td { border-bottom: none; }
+  .tariff-table tr:hover td { background: rgba(255,255,255,0.03); }
+  .rate-old { color: var(--red); font-family: 'DM Mono', monospace; font-size: 13px; }
+  .rate-new { color: var(--teal-light); font-family: 'DM Mono', monospace; font-size: 15px; font-weight: 600; }
+  .rate-arrow { color: var(--gold); margin: 0 8px; }
+  .category { font-weight: 600; color: var(--white); }
+  .pct-badge {
+    background: rgba(10,138,111,0.2);
+    color: var(--teal-light);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  /* ── SUBSIDY BREAKDOWN ── */
+  .subsidy-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .subsidy-bar-wrap { grid-column: 1 / -1; }
+  .bar-label { font-size: 12px; color: var(--muted); margin-bottom: 8px; display: flex; justify-content: space-between; }
+  .bar-track { background: rgba(255,255,255,0.08); border-radius: 4px; height: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
+  .bar-fill.gov { background: var(--gold); }
+  .bar-fill.cross { background: var(--red); }
+
+  /* ── ENERGY MIX ── */
+  .energy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .energy-card {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .energy-pct {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--teal-light);
+    line-height: 1;
+  }
+  .energy-card.target .energy-pct { color: var(--gold); }
+  .energy-desc { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; }
+
+  /* ── CAPACITY ── */
+  .capacity-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+  }
+  .cap-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 16px;
+  }
+  .cap-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 34px;
+    color: var(--gold);
+  }
+  .cap-unit { font-size: 13px; color: var(--muted); }
+  .cap-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+  /* ── REFORM LIST ── */
+  .reform-list { display: flex; flex-direction: column; gap: 12px; }
+  .reform-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    transition: border-color 0.2s;
+  }
+  .reform-item:hover { border-color: var(--teal); }
+  .reform-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10,138,111,0.12);
+    border-radius: 8px;
+  }
+  .reform-text strong { display: block; color: var(--white); font-size: 14px; margin-bottom: 4px; }
+  .reform-text span { color: var(--muted); font-size: 13px; }
+  .reform-num {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: var(--teal-light);
+    text-align: right;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 56px;
+    padding: 28px 40px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  @media (max-width: 600px) {
+    .energy-grid { grid-template-columns: 1fr 1fr; }
+    .subsidy-split { grid-template-columns: 1fr; }
+    .hero { padding: 40px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-label">Pakistan Power Sector · Minister's Press Conference</div>
+  <h1>Power Facts<br><span>By the Numbers</span></h1>
+  <p class="hero-sub">Key figures from Pakistan's Energy Ministry briefing — subsidies, tariffs, reforms & capacity</p>
+</div>
+
+<div class="container">
+
+  <!-- SUBSIDIES -->
+  <div class="section-label">⚡ Electricity Subsidy</div>
+  <div class="stats-grid">
+    <div class="stat-card gold">
+      <div class="stat-value">Rs 527<span class="unit">B</span></div>
+      <div class="stat-label">Annual subsidy to<br>protected consumers</div>
+      <div class="stat-change up">↑ Total annual outgo</div>
+    </div>
+    <div class="stat-card teal">
+      <div class="stat-value">Rs 249<span class="unit">B</span></div>
+      <div class="stat-label">Govt budget share<br>(taxpayer funded)</div>
+    </div>
+    <div class="stat-card red">
+      <div class="stat-value">Rs 278<span class="unit">B</span></div>
+      <div class="stat-label">Cross-subsidy from<br>non-subsidized consumers</div>
+      <div class="stat-change down">↑ Hidden burden on others</div>
+    </div>
+    <div class="stat-card white-acc">
+      <div class="stat-value">2.15<span class="unit">Cr</span></div>
+      <div class="stat-label">Protected consumers<br>(≤200 units/month)</div>
+      <div class="stat-change down">↑ Up from 95 lakh in 4 yrs</div>
+    </div>
+  </div>
+
+  <!-- SUBSIDY BARS -->
+  <div style="margin-top:18px; background: var(--card2); border:1px solid var(--border); border-radius:12px; padding:24px;">
+    <div style="margin-bottom:16px;">
+      <div class="bar-label"><span>Govt Budget Contribution (Rs 249B)</span><span style="color:var(--gold)">47%</span></div>
+      <div class="bar-track"><div class="bar-fill gov" style="width:47%"></div></div>
+    </div>
+    <div>
+      <div class="bar-label"><span>Cross-subsidy from other consumers (Rs 278B)</span><span style="color:var(--red)">53%</span></div>
+      <div class="bar-track"><div class="bar-fill cross" style="width:53%"></div></div>
+    </div>
+    <p style="font-size:12px; color:var(--muted); margin-top:14px; font-style:italic;">QR-code registration drive: 20 lakh consumers linked their CNIC to meter within 1 month</p>
+  </div>
+
+  <!-- TARIFF CUTS -->
+  <div class="section-label">📉 Tariff Reductions (Mar 2024 → 2026)</div>
+  <div class="tariff-wrap">
+    <table class="tariff-table">
+      <thead>
+        <tr>
+          <th>Consumer Category</th>
+          <th>Old Rate (Mar 2024)</th>
+          <th>New Rate</th>
+          <th>Reduction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="category">🏠 Domestic</span></td>
+          <td><span class="rate-old">Rs 43–44 /unit</span></td>
+          <td><span class="rate-new">Rs 36.35 /unit</span></td>
+          <td><span class="pct-badge">↓ ~17%</span></td>
+        </tr>
+        <tr>
+          <td><span class="category">🏭 Industrial</span></td>
+          <td><span class="rate-old">Rs 62–63 /unit</span></td>
+          <td><span class="rate-new">Rs 42.40 /unit</span></td>
+          <td><span class="pct-badge">↓ ~33%</span></td>
+        </tr>
+        <tr>
+          <td><span class="category">🌾 Agricultural</span></td>
+          <td><span class="rate-old">—</span></td>
+          <td><span class="rate-new">—</span></td>
+          <td><span class="pct-badge">↓ 14%</span></td>
+        </tr>
+        <tr>
+          <td><span class="category">🏪 Commercial</span></td>
+          <td><span class="rate-old">—</span></td>
+          <td><span class="rate-new">—</span></td>
+          <td><span class="pct-badge">↓ 8%</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- POWER DIVISION BUDGET SHARE -->
+  <div class="section-label">🏛 Power Division — Federal Budget Share</div>
+  <div style="background:var(--card2); border:1px solid var(--border); border-radius:12px; padding:28px 28px 24px;">
+    <p style="font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:2px; margin-bottom:24px; font-family:'DM Mono',monospace;">Rs Billion drawn from Finance Ministry (taxpayer funds) per year</p>
+    <div style="display:flex; flex-direction:column; gap:18px;">
+
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+          <span style="font-size:13px; color:var(--muted);">Previous Year (FY2023-24)</span>
+          <span style="font-family:'Bebas Neue',sans-serif; font-size:28px; color:var(--red);">Rs 1,287B</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.08); border-radius:4px; height:12px; overflow:hidden;">
+          <div style="width:100%; height:100%; background:var(--red); border-radius:4px;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+          <span style="font-size:13px; color:var(--muted);">Current Year (FY2024-25)</span>
+          <span style="font-family:'Bebas Neue',sans-serif; font-size:28px; color:var(--gold);">Rs 890B</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.08); border-radius:4px; height:12px; overflow:hidden;">
+          <div style="width:69%; height:100%; background:var(--gold); border-radius:4px;"></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+          <span style="font-size:13px; color:var(--muted);">Upcoming Budget (FY2025-26)</span>
+          <span style="font-family:'Bebas Neue',sans-serif; font-size:28px; color:var(--teal-light);">Rs 830B</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.08); border-radius:4px; height:12px; overflow:hidden;">
+          <div style="width:64%; height:100%; background:var(--teal-light); border-radius:4px;"></div>
+        </div>
+      </div>
+
+    </div>
+    <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-size:12px; color:var(--muted); font-style:italic;">Total reduction over 2 years</span>
+      <span style="font-family:'Bebas Neue',sans-serif; font-size:32px; color:var(--teal-light);">↓ Rs 457B</span>
+    </div>
+  </div>
+
+  <!-- BUDGET SAVINGS -->
+  <div class="section-label">💰 Budget & Reforms Savings</div>
+  <div class="reform-list">
+    <div class="reform-item">
+      <div class="reform-icon">🔄</div>
+      <div class="reform-text">
+        <strong>IPP Renegotiations</strong>
+        <span>Future payments saved from IPP contracts (plants retiring 2025–2053)</span>
+      </div>
+      <div class="reform-num">Rs 3,500B</div>
+    </div>
+    <div class="reform-item">
+      <div class="reform-icon">📉</div>
+      <div class="reform-text">
+        <strong>Circular Debt Reduction</strong>
+        <span>Girdishi qarza reduced over the reform period</span>
+      </div>
+      <div class="reform-num">Rs 780B</div>
+    </div>
+    <div class="reform-item">
+      <div class="reform-icon">🏦</div>
+      <div class="reform-text">
+        <strong>Budget Subsidy Cut (Power Division)</strong>
+        <span>From Rs 1,287B (FY prev) → Rs 890B → Rs 830B (upcoming budget)</span>
+      </div>
+      <div class="reform-num">Rs 457B saved</div>
+    </div>
+    <div class="reform-item">
+      <div class="reform-icon">📊</div>
+      <div class="reform-text">
+        <strong>Distribution Company Loss Reduction</strong>
+        <span>DISCOs losses cut within one year</span>
+      </div>
+      <div class="reform-num">Rs 193B</div>
+    </div>
+    <div class="reform-item">
+      <div class="reform-icon">🏭</div>
+      <div class="reform-text">
+        <strong>Idle Plant Staff Payroll Savings</strong>
+        <span>Staff at closed plants (drawing salaries for idle time) redeployed to DISCOs; idle plant assets auctioned for Rs 47B</span>
+      </div>
+      <div class="reform-num">Rs 5.25B/yr</div>
+    </div>
+    <div class="reform-item">
+      <div class="reform-icon">⚙️</div>
+      <div class="reform-text">
+        <strong>Zero Cross-Subsidy for Industry</strong>
+        <span>Industry previously paying Rs 250B/yr extra in cross-subsidy — eliminated</span>
+      </div>
+      <div class="reform-num">Rs 250B/yr</div>
+    </div>
+  </div>
+
+  <!-- CLEAN ENERGY -->
+  <div class="section-label">🌿 Energy Mix & Clean Energy</div>
+  <div class="energy-grid">
+    <div class="energy-card">
+      <div class="energy-pct">55%</div>
+      <div class="energy-desc">Clean energy share<br>Pakistan 2025</div>
+    </div>
+    <div class="energy-card">
+      <div class="energy-pct">57%</div>
+      <div class="energy-desc">Renewable share<br>Turkey 2025 (for comparison)</div>
+    </div>
+    <div class="energy-card target">
+      <div class="energy-pct">90%</div>
+      <div class="energy-desc">Clean energy target<br>Pakistan 2035 (IGCEF plan)</div>
+    </div>
+  </div>
+
+  <!-- FUEL IMPORT -->
+  <div style="margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+    <div class="energy-card">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--red);">$24B</div>
+      <div class="energy-desc">Fuel imports spend<br>2025 (current)</div>
+    </div>
+    <div class="energy-card target">
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--gold);">$3.8B</div>
+      <div class="energy-desc">Projected fuel import<br>2035 (IGCEF target)</div>
+    </div>
+  </div>
+
+  <!-- INSTALLED CAPACITY -->
+  <div class="section-label">⚙️ Installed Capacity vs Peak Demand</div>
+  <div class="capacity-row">
+    <div class="cap-card">
+      <div class="cap-num">58,000 <span class="cap-unit">MW</span></div>
+      <div class="cap-label">Pakistan — Total installed capacity (all sources)</div>
+    </div>
+    <div class="cap-card">
+      <div class="cap-num">36,000 <span class="cap-unit">MW</span></div>
+      <div class="cap-label">Grid-connected installed capacity</div>
+    </div>
+    <div class="cap-card">
+      <div class="cap-num">32,000 <span class="cap-unit">MW</span></div>
+      <div class="cap-label">Derated capacity (capacity payments basis)</div>
+    </div>
+    <div class="cap-card" style="border-color: var(--gold);">
+      <div class="cap-num">27,000 <span class="cap-unit">MW</span></div>
+      <div class="cap-label">Peak demand (actual)</div>
+    </div>
+    <div class="cap-card" style="background:var(--card2);">
+      <div class="cap-num">128,000 <span class="cap-unit">MW</span></div>
+      <div class="cap-label">Turkey — installed capacity (peak demand: 60,000 MW)</div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<div class="footer">
+  Source: Pakistan Ministry of Energy — Power Division Press Conference &nbsp;|&nbsp; May–June 2026
+</div>
+
+</body>
+</html>
